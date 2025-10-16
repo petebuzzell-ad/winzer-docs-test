@@ -1,57 +1,78 @@
 # Deployment Guide
 
-## Test Deployment Steps
+## GitHub Pages Deployment Steps
 
 ### 1. Create GitHub Repository
 ```bash
-# Create new repo: winzer-documentation
+# Create new repository on GitHub
+# Repository name: winzer-documentation (or your preferred name)
 # Make sure it's public for GitHub Pages
+# Initialize with README (optional)
 ```
 
-### 2. Push Code
+### 2. Clone and Push Code
 ```bash
-cd /Users/pete/dev/shopify/onesource/winzer-docs-test
-git init
+# Clone your new repository
+git clone https://github.com/YOUR-USERNAME/winzer-documentation.git
+cd winzer-documentation
+
+# Copy all files from this documentation package
+# (All HTML, CSS, markdown files, and code directories)
+
+# Initialize git and push
 git add .
-git commit -m "Initial Jekyll documentation setup"
+git commit -m "Initial Winzer documentation deployment"
 git branch -M main
-git remote add origin https://github.com/petebuzzell-ad/winzer-documentation.git
 git push -u origin main
 ```
 
 ### 3. Enable GitHub Pages
-1. Go to repository Settings
-2. Scroll to "Pages" section
+1. Go to your repository Settings
+2. Scroll to "Pages" section in the left sidebar
 3. Source: "Deploy from a branch"
 4. Branch: "main" / "/ (root)"
 5. Click "Save"
 
-### 4. Test URLs
-- **Current HTML docs:** `https://petebuzzell-ad.github.io/winzer/`
-- **New documentation:** `https://petebuzzell-ad.github.io/winzer-documentation/`
+### 4. Access Your Documentation
+- **Your documentation will be available at:** `https://YOUR-USERNAME.github.io/winzer-documentation/`
+- **Custom domain:** You can also configure a custom domain in the Pages settings
 
-## Comparison Testing
+## Post-Deployment Testing
 
 ### What to Test
-1. **Navigation** - All internal links work
-2. **Styling** - Arcadia branding preserved
-3. **Content** - All documentation present
-4. **Mobile** - Responsive design
-5. **Performance** - Load times
+1. **Navigation** - All internal links work correctly
+2. **Styling** - Arcadia Digital branding is preserved
+3. **Content** - All documentation sections are accessible
+4. **Mobile** - Responsive design works on mobile devices
+5. **Performance** - Page load times are acceptable
+6. **Downloads** - Zip file downloads work properly
 
-### Key Differences
-- **Jekyll** - Better navigation, search, maintainability
-- **HTML** - Simpler, no build process needed
+### Customization Options
 
-## Next Steps
+#### Repository Name
+- Change `winzer-documentation` to your preferred name
+- Update all references in `index.html`, `README.md`, and `DEVELOPER_HANDOFF.md`
+- Update GitHub Pages URL accordingly
 
-If Jekyll version works well:
-1. Update `_config.yml` with final URL
-2. Replace current HTML docs
-3. Update Winzer with new URL
-4. Archive old HTML files
+#### Branding
+- Modify `arcadia-style.css` to match your organization's branding
+- Update contact information in `index.html`
+- Replace Arcadia Digital references with your organization
 
-If issues found:
-1. Fix in test repo
-2. Re-test before migration
-3. Keep HTML as fallback
+#### Content
+- Update documentation content in the `.html` and `.md` files
+- Modify source code in the `code/` directory
+- Update developer handoff information
+
+## Troubleshooting
+
+### Common Issues
+1. **GitHub Pages not updating** - Check repository is public and Pages is enabled
+2. **Links broken** - Verify all internal links use relative paths
+3. **Styling issues** - Ensure `arcadia-style.css` is properly linked
+4. **Download links** - Verify zip files are committed to the repository
+
+### Support
+- Check GitHub Pages documentation for deployment issues
+- Review repository settings if site doesn't appear
+- Test locally by opening `index.html` in a browser
