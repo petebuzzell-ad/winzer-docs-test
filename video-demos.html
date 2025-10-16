@@ -23,7 +23,9 @@
         </div>
 
         <div class="video-grid" id="videoGrid">
-            <!-- Videos will be dynamically loaded here -->
+            <div class="loading-message">
+                <p>Loading videos...</p>
+            </div>
         </div>
 
         <div class="video-info">
@@ -157,7 +159,16 @@
                 // In a real implementation, this would fetch from a server endpoint
                 const videos = videoData;
                 
-                videoCount.textContent = `${videos.length} video${videos.length !== 1 ? 's' : ''} available`;
+                console.log('Loading videos:', videos.length);
+                
+                if (videoCount) {
+                    videoCount.textContent = `${videos.length} video${videos.length !== 1 ? 's' : ''} available`;
+                }
+                
+                if (!videoGrid) {
+                    console.error('Video grid element not found');
+                    return;
+                }
                 
                 if (videos.length === 0) {
                     videoGrid.innerHTML = `
@@ -209,12 +220,12 @@
                 }
             }
 
-            // Initialize page
+            // Initialize page immediately
+            loadVideos();
+            updateLastUpdated();
+            
+            // Add refresh functionality
             document.addEventListener('DOMContentLoaded', function() {
-                loadVideos();
-                updateLastUpdated();
-                
-                // Add refresh functionality
                 document.getElementById('refreshVideos').addEventListener('click', function() {
                     loadVideos();
                     updateLastUpdated();

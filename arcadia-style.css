@@ -844,3 +844,16 @@ tr:nth-child(even) {
     margin-top: 0.5rem;
     display: inline-block;
 }
+
+/* Loading message styling */
+.loading-message {
+    text-align: center;
+    padding: 3rem;
+    color: var(--digital-gray-2);
+    font-style: italic;
+}
+
+.loading-message p {
+    margin: 0;
+    font-size: 1.1rem;
+}
