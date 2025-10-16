@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winzer Product Data Map - Oracle PIM to Shopify</title>
+    <link rel="stylesheet" href="arcadia-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="winzer-product-data-map">Winzer Product Data Map - Oracle PIM to Shopify</h1>
+        
+        <div class="toc">
+            <h2 id="table-of-contents">Table of Contents</h2>
+            <ol>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#data-flow-architecture">Data Flow Architecture</a></li>
+                <li><a href="#oracle-pim-fields">Oracle PIM Fields</a></li>
+                <li><a href="#middleware-transformations">Middleware Transformations</a></li>
+                <li><a href="#shopify-metafields">Shopify Metafields</a></li>
+                <li><a href="#special-logic">Special Logic & Business Rules</a></li>
+                <li><a href="#data-quality-considerations">Data Quality Considerations</a></li>
+            </ol>
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>This document maps the complete data flow from Oracle PIM (Product Information Management) through the AWS Middleware system to Shopify metafields. The middleware system performs critical transformations and data enrichment during this process.</p>
+
+        <div class="alert info">
+            <p><strong>Data Source:</strong> Oracle ERP exports CSV files via SFTP to AWS S3, which are then processed by Lambda functions and transformed into Shopify products with custom metafields.</p>
+        </div>
+
+        <h2 id="data-flow-architecture">Data Flow Architecture</h2>
+        <div class="flow-diagram">
+            <div class="flow-step">Oracle PIM</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">CSV Export</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">SFTP Transfer</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">AWS S3</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">Lambda Processing</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">Shopify API</div>
+        </div>
+
+        <h2 id="oracle-pim-fields">Oracle PIM Fields</h2>
+        <p>The following table shows all Oracle PIM fields from the CSV export and their corresponding transformations:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="oracle-col">Oracle PIM Field</th>
+                    <th class="middleware-col">Middleware Processing</th>
+                    <th class="shopify-col">Shopify Destination</th>
+                    <th>Data Type</th>
+                    <th>Required</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="oracle-col"><code>ID</code></td>
+                    <td class="middleware-col">Used for product identification and variant grouping</td>
+                    <td class="shopify-col">Product ID (if updating existing)</td>
+                    <td>String</td>
+                    <td class="required">Yes</td>
+                    <td>Unique product identifier from Oracle</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>PARENT_PRODUCT_ID</code></td>
+                    <td class="middleware-col">Used to group variants under parent products</td>
+                    <td class="shopify-col">Product grouping logic</td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Determines product hierarchy and variant relationships</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>PRIMARY_ITEM_NUMBER</code></td>
+                    <td class="middleware-col">Direct mapping to SKU</td>
+                    <td class="shopify-col">Variant SKU</td>
+                    <td>String</td>
+                    <td class="required">Yes</td>
+                    <td>Primary identifier for the variant</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>ALTERNATE_ITEM_NUMBERS</code></td>
+                    <td class="middleware-col">Mapped to metafield</td>
+                    <td class="shopify-col"><code>cql.alternate_item_numbers</code></td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Additional SKU references</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>OPTION1_NAME</code><br><code>OPTION2_NAME</code><br><code>OPTION3_NAME</code></td>
+                    <td class="middleware-col">Used to create Shopify product options</td>
+                    <td class="shopify-col">Product Options (Size, Color, etc.)</td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Defines variant option names</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>OPTION1_VALUE</code><br><code>OPTION2_VALUE</code><br><code>OPTION3_VALUE</code></td>
+                    <td class="middleware-col">Mapped to variant option values</td>
+                    <td class="shopify-col">Variant Option Values</td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Specific values for each option</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>PRODUCT_NAME</code></td>
+                    <td class="middleware-col">Direct mapping</td>
+                    <td class="shopify-col">Product Title</td>
+                    <td>String</td>
+                    <td class="required">Yes</td>
+                    <td>Main product name</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>PRODUCT_DESCRIPTION</code></td>
+                    <td class="middleware-col">Direct mapping with HTML processing</td>
+                    <td class="shopify-col">Product Description (HTML)</td>
+                    <td>HTML</td>
+                    <td class="optional">No</td>
+                    <td>Rich text product description</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>SORT_ORDER</code></td>
+                    <td class="middleware-col">Used for variant ordering</td>
+                    <td class="shopify-col">Variant Position</td>
+                    <td>Integer</td>
+                    <td class="optional">No</td>
+                    <td>Determines variant display order</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>IMAGE_URL</code></td>
+                    <td class="middleware-col">Aggregated with additional images</td>
+                    <td class="shopify-col">Product Images</td>
+                    <td>URL</td>
+                    <td class="optional">No</td>
+                    <td>Primary product image</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>ADDITIONAL_IMAGE_URLS</code></td>
+                    <td class="middleware-col">Split by comma and aggregated</td>
+                    <td class="shopify-col">Additional Product Images</td>
+                    <td>URL Array</td>
+                    <td class="optional">No</td>
+                    <td>Comma-separated list of additional images</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>WEBSITE_CATEGORY</code></td>
+                    <td class="middleware-col">Split by '>' and converted to JSON array</td>
+                    <td class="shopify-col"><code>cql.categories</code> (list.single_line_text_field)</td>
+                    <td>JSON Array</td>
+                    <td class="optional">No</td>
+                    <td>Hierarchical category structure</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>METRIC_VERSION</code></td>
+                    <td class="middleware-col">Mapped to metafield</td>
+                    <td class="shopify-col"><code>cql.metric_version</code> (product_reference)</td>
+                    <td>Product Reference</td>
+                    <td class="optional">No</td>
+                    <td>Reference to metric version product</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>IMPERIAL_VERSION</code></td>
+                    <td class="middleware-col">Mapped to metafield</td>
+                    <td class="shopify-col"><code>cql.imperial_version</code> (product_reference)</td>
+                    <td>Product Reference</td>
+                    <td class="optional">No</td>
+                    <td>Reference to imperial version product</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>UOM</code></td>
+                    <td class="middleware-col">Mapped to variant metafield</td>
+                    <td class="shopify-col"><code>cql.winzer_uom</code></td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Unit of measure</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>VENDOR_NAME</code></td>
+                    <td class="middleware-col">Mapped to metafield</td>
+                    <td class="shopify-col"><code>cql.vendor_name</code></td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Brand/manufacturer name</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>WARNING_BADGES</code></td>
+                    <td class="middleware-col">Split by comma and converted to JSON array</td>
+                    <td class="shopify-col"><code>cql.warning_badges</code> (list.single_line_text_field)</td>
+                    <td>JSON Array</td>
+                    <td class="optional">No</td>
+                    <td>Safety warning badges</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>PRODUCT_BADGE</code></td>
+                    <td class="middleware-col">Split by comma and converted to JSON array</td>
+                    <td class="shopify-col"><code>cql.product_badge</code> (list.single_line_text_field)</td>
+                    <td>JSON Array</td>
+                    <td class="optional">No</td>
+                    <td>Product feature badges</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>MINIMUM_ORDER_QUANTITTY</code></td>
+                    <td class="middleware-col">Mapped to variant metafield as integer</td>
+                    <td class="shopify-col"><code>cql.minimum_order_quantity</code> (number_integer)</td>
+                    <td>Integer</td>
+                    <td class="optional">No</td>
+                    <td>Minimum order quantity for variant</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>FEATURES</code></td>
+                    <td class="middleware-col">Mapped to metafield</td>
+                    <td class="shopify-col"><code>cql.features_text</code></td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Product features and specifications</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>DOCUMENTS</code></td>
+                    <td class="middleware-col">Mapped to metafield</td>
+                    <td class="shopify-col"><code>cql.documents</code></td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Document links (SDS, manuals, etc.)</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>ATTTRIBUTE_NAMES</code><br><code>ATTRIBUTE_VALUES</code></td>
+                    <td class="middleware-col">Split by '|' and combined into JSON object</td>
+                    <td class="shopify-col"><code>cql.attributes_json</code> (json)</td>
+                    <td>JSON Object</td>
+                    <td class="optional">No</td>
+                    <td>Dynamic product attributes for SearchSpring filtering</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>PACKAGE_DISPLAY</code></td>
+                    <td class="middleware-col">Mapped to variant metafield</td>
+                    <td class="shopify-col"><code>cql.package_display</code></td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Package display information</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>STATUS</code></td>
+                    <td class="middleware-col">Converted to uppercase</td>
+                    <td class="shopify-col">Product Status</td>
+                    <td>String</td>
+                    <td class="required">Yes</td>
+                    <td>Product availability status</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>ISTAXABLE</code></td>
+                    <td class="middleware-col">Converted to boolean (defaults to true)</td>
+                    <td class="shopify-col">Variant Taxable</td>
+                    <td>Boolean</td>
+                    <td class="optional">No</td>
+                    <td>Tax calculation setting</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>TAXCODE</code></td>
+                    <td class="middleware-col">Direct mapping</td>
+                    <td class="shopify-col">Variant Tax Code</td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Tax code for variant</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>MINIMUM_ORDER_INCREMENT</code></td>
+                    <td class="middleware-col">Not currently mapped</td>
+                    <td class="shopify-col">-</td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Available for future use</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>LEAD_TIME</code></td>
+                    <td class="middleware-col">Mapped to variant metafield as integer</td>
+                    <td class="shopify-col"><code>cql.product_lead_time</code> (number_integer)</td>
+                    <td>Integer</td>
+                    <td class="optional">No</td>
+                    <td>Product lead time in days</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>LOW_INVENTORY_QUANTITY</code></td>
+                    <td class="middleware-col">Mapped to variant metafield as integer</td>
+                    <td class="shopify-col"><code>cql.low_inventory_quantity</code> (number_integer)</td>
+                    <td>Integer</td>
+                    <td class="optional">No</td>
+                    <td>Low stock threshold</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>PROMO_MESSAGING</code></td>
+                    <td class="middleware-col">Mapped to variant metafield</td>
+                    <td class="shopify-col"><code>cql.promo_messaging</code></td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Promotional messaging for variant</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>WEIGHT</code></td>
+                    <td class="middleware-col">Converted to decimal with unit handling</td>
+                    <td class="shopify-col">Variant Weight</td>
+                    <td>Decimal</td>
+                    <td class="optional">No</td>
+                    <td>Product weight for shipping</td>
+                </tr>
+                <tr>
+                    <td class="oracle-col"><code>WEIGHT_UNIT</code></td>
+                    <td class="middleware-col">Converted to Shopify format (LB→POUNDS, OZ→OUNCES)</td>
+                    <td class="shopify-col">Variant Weight Unit</td>
+                    <td>String</td>
+                    <td class="optional">No</td>
+                    <td>Weight unit for shipping calculations</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="middleware-transformations">Middleware Transformations</h2>
+        <p>The AWS Lambda middleware performs several critical transformations during the data processing:</p>
+
+        <h3>Data Type Conversions</h3>
+        <ul>
+            <li><strong>String to Boolean:</strong> <code>ISTAXABLE</code> field converted to boolean (defaults to true if empty)</li>
+            <li><strong>String to Integer:</strong> <code>MINIMUM_ORDER_QUANTITTY</code>, <code>LEAD_TIME</code>, <code>LOW_INVENTORY_QUANTITY</code> converted to integers</li>
+            <li><strong>String to Decimal:</strong> <code>WEIGHT</code> field converted to decimal for shipping calculations</li>
+            <li><strong>String to JSON Array:</strong> <code>WEBSITE_CATEGORY</code> split by '>' and converted to JSON array</li>
+            <li><strong>String to JSON Object:</strong> <code>ATTTRIBUTE_NAMES</code> and <code>ATTRIBUTE_VALUES</code> combined into key-value JSON object</li>
+        </ul>
+
+        <h3>Special Processing Logic</h3>
+        <ul>
+            <li><strong>Variant Grouping:</strong> Products with <code>PARENT_PRODUCT_ID</code> are grouped as variants under the parent product</li>
+            <li><strong>Image Aggregation:</strong> Primary and additional images are collected from all variants and assigned to the product level</li>
+            <li><strong>Option Creation:</strong> <code>OPTION1_NAME</code>, <code>OPTION2_NAME</code>, <code>OPTION3_NAME</code> create Shopify product options</li>
+            <li><strong>Duplicate Prevention:</strong> Variants with identical option combinations are filtered out</li>
+            <li><strong>Variant Limiting:</strong> Maximum 250 variants per product (first 100 if exceeded)</li>
+        </ul>
+
+        <h2 id="shopify-metafields">Shopify Metafields</h2>
+        <p>All custom data is stored in Shopify metafields with the namespace <code>cql</code>:</p>
+
+        <h3>Product-Level Metafields</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metafield Key</th>
+                    <th>Type</th>
+                    <th>Source Field</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>cql.categories</code></td>
+                    <td>list.single_line_text_field</td>
+                    <td>WEBSITE_CATEGORY</td>
+                    <td>SearchSpring filtering and navigation</td>
+                </tr>
+                <tr>
+                    <td><code>cql.metric_version</code></td>
+                    <td>product_reference</td>
+                    <td>METRIC_VERSION</td>
+                    <td>Reference to metric version product</td>
+                </tr>
+                <tr>
+                    <td><code>cql.imperial_version</code></td>
+                    <td>product_reference</td>
+                    <td>IMPERIAL_VERSION</td>
+                    <td>Reference to imperial version product</td>
+                </tr>
+                <tr>
+                    <td><code>cql.vendor_name</code></td>
+                    <td>single_line_text_field</td>
+                    <td>VENDOR_NAME</td>
+                    <td>Brand identification</td>
+                </tr>
+                <tr>
+                    <td><code>cql.product_badge</code></td>
+                    <td>list.single_line_text_field</td>
+                    <td>PRODUCT_BADGE</td>
+                    <td>Product feature badges</td>
+                </tr>
+                <tr>
+                    <td><code>cql.features_text</code></td>
+                    <td>single_line_text_field</td>
+                    <td>FEATURES</td>
+                    <td>Product features and specifications</td>
+                </tr>
+                <tr>
+                    <td><code>cql.documents</code></td>
+                    <td>single_line_text_field</td>
+                    <td>DOCUMENTS</td>
+                    <td>Document links (SDS, manuals, etc.)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Variant-Level Metafields</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metafield Key</th>
+                    <th>Type</th>
+                    <th>Source Field</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>cql.alternate_item_numbers</code></td>
+                    <td>single_line_text_field</td>
+                    <td>ALTERNATE_ITEM_NUMBERS</td>
+                    <td>Additional SKU references</td>
+                </tr>
+                <tr>
+                    <td><code>cql.variant_description</code></td>
+                    <td>multi_line_text_field</td>
+                    <td>PRODUCT_DESCRIPTION</td>
+                    <td>Variant-specific description</td>
+                </tr>
+                <tr>
+                    <td><code>cql.winzer_uom</code></td>
+                    <td>single_line_text_field</td>
+                    <td>UOM</td>
+                    <td>Unit of measure</td>
+                </tr>
+                <tr>
+                    <td><code>cql.minimum_order_quantity</code></td>
+                    <td>number_integer</td>
+                    <td>MINIMUM_ORDER_QUANTITTY</td>
+                    <td>Minimum order quantity</td>
+                </tr>
+                <tr>
+                    <td><code>cql.package_display</code></td>
+                    <td>single_line_text_field</td>
+                    <td>PACKAGE_DISPLAY</td>
+                    <td>Package display information</td>
+                </tr>
+                <tr>
+                    <td><code>cql.warning_badges</code></td>
+                    <td>list.single_line_text_field</td>
+                    <td>WARNING_BADGES</td>
+                    <td>Safety warning badges</td>
+                </tr>
+                <tr>
+                    <td><code>cql.product_lead_time</code></td>
+                    <td>number_integer</td>
+                    <td>LEAD_TIME</td>
+                    <td>Product lead time in days</td>
+                </tr>
+                <tr>
+                    <td><code>cql.low_inventory_quantity</code></td>
+                    <td>number_integer</td>
+                    <td>LOW_INVENTORY_QUANTITY</td>
+                    <td>Low stock threshold</td>
+                </tr>
+                <tr>
+                    <td><code>cql.promo_messaging</code></td>
+                    <td>single_line_text_field</td>
+                    <td>PROMO_MESSAGING</td>
+                    <td>Promotional messaging</td>
+                </tr>
+                <tr>
+                    <td><code>cql.attributes_json</code></td>
+                    <td>json</td>
+                    <td>ATTTRIBUTE_NAMES + ATTRIBUTE_VALUES</td>
+                    <td>Dynamic attributes for SearchSpring filtering</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="special-logic">Special Logic & Business Rules</h2>
+
+        <h3>Pricing Logic</h3>
+        <div class="special-logic">
+            <p><strong>Default Pricing:</strong> Winzer and FastServ products are set to $1,000,000 by default to allow catalog pricing to fall back as expected. This enables the B2B pricing system to override with actual customer-specific pricing.</p>
+        </div>
+
+        <h3>Variant Processing</h3>
+        <div class="special-logic">
+            <p><strong>Variant Validation:</strong> Variants missing required option values are skipped with warning logs. Duplicate variants (same option combination) are filtered out.</p>
+        </div>
+
+        <h3>Image Processing</h3>
+        <div class="special-logic">
+            <p><strong>Image Aggregation:</strong> All images from variants are collected and assigned to the product level. Maximum 250 images per product. Image filenames are stored in the Alt text field for matching purposes.</p>
+        </div>
+
+        <h3>Category Processing</h3>
+        <div class="special-logic">
+            <p><strong>Hierarchical Categories:</strong> <code>WEBSITE_CATEGORY</code> is split by '>' and converted to a JSON array for SearchSpring filtering. Example: "Abrasives>Brushes>Wire Wheels & Brushes" becomes ["Abrasives", "Brushes", "Wire Wheels & Brushes"].</p>
+        </div>
+
+        <h3>Attribute Processing</h3>
+        <div class="special-logic">
+            <p><strong>Dynamic Attributes:</strong> <code>ATTTRIBUTE_NAMES</code> and <code>ATTRIBUTE_VALUES</code> are split by '|' and combined into a JSON object for SearchSpring filtering. This enables dynamic product filtering based on technical specifications.</p>
+        </div>
+
+        <h2 id="data-quality-considerations">Data Quality Considerations</h2>
+
+        <!--<div class="alert critical">
+            <p><strong>Data Inconsistencies:</strong> The meeting summary highlighted several data quality issues that affect the mapping process:</p>
+            <ul>
+                <li>Product descriptions and specifications are inconsistently pulled from Oracle</li>
+                <li>Manual overrides in Shopify are common for missing or incorrect data</li>
+                <li>Missing or incorrect variant descriptions and specifications</li>
+                <li>Inconsistent data formatting between Oracle and Shopify</li>
+            </ul>
+        </div>-->
+
+        <h3>Common Data Issues</h3>
+        <ul>
+            <li><strong>Missing Required Fields:</strong> Some products may lack essential data like <code>PRIMARY_ITEM_NUMBER</code> or <code>PRODUCT_NAME</code></li>
+            <li><strong>Format Inconsistencies:</strong> Weight units, measurements, and other fields may have inconsistent formatting</li>
+            <li><strong>HTML Content:</strong> Product descriptions may contain malformed HTML that needs cleaning</li>
+            <li><strong>Image URLs:</strong> Some image URLs may be broken or inaccessible</li>
+            <li><strong>Attribute Mismatches:</strong> <code>ATTTRIBUTE_NAMES</code> and <code>ATTRIBUTE_VALUES</code> arrays may have different lengths</li>
+        </ul>
+
+        <h3>Error Handling</h3>
+        <ul>
+            <li><strong>Validation Errors:</strong> Products with critical missing data are logged and skipped</li>
+            <li><strong>Type Conversion Errors:</strong> Invalid numeric values are handled gracefully with defaults</li>
+            <li><strong>Duplicate Prevention:</strong> Duplicate variants are logged and filtered out</li>
+            <li><strong>Size Limits:</strong> Products exceeding variant limits are truncated with warnings</li>
+        </ul>
+
+        <hr />
+        <p><strong>Document Version:</strong> 1.0<br />
+        <strong>Last Updated:</strong> September 24, 2025<br />
+        <strong>Next Review:</strong> December 24, 2025<br />
+        <strong>Document Owner:</strong> Winzer eCommerce Team<br />
+        <strong>Related Documentation:</strong> <a href="winzer-middleware-documentation.html">AWS Middleware Documentation</a> | <a href="winzer-documentation.html">Main Platform Documentation</a></p>
+        
+        <div class="download-section">
+            <h3>📄 Download Markdown Version</h3>
+            <p>Download the markdown version of this document for easier editing and version control:</p>
+            <a href="winzer-product-data-map.md" download class="download-btn download-btn-success">📄 Download Markdown</a>
+        </div>
+    </div>
+</body>
+</html>

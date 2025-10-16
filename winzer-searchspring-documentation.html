@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winzer SearchSpring Custom Implementation Documentation</title>
+    <link rel="stylesheet" href="arcadia-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SearchSpring Custom Implementation Documentation</h1>
+      
+        <h2 id="table-of-contents">Table of Contents</h2>
+        <ol>
+            <li><a href="#custom-implementation-overview">Custom Implementation Overview</a></li>
+            <li><a href="#site-specific-configurations">Site-Specific Configurations</a></li>
+            <li><a href="#custom-filter-components">Custom Filter Components</a></li>
+            <li><a href="#image-filter-implementations">Image Filter Implementations</a></li>
+            <li><a href="#custom-pricing-logic">Custom Pricing Logic</a></li>
+            <li><a href="#custom-styling-branding">Custom Styling & Branding</a></li>
+            <li><a href="#dynamic-variant-handling">Dynamic Variant Handling</a></li>
+            <li><a href="#metafield-integrations">Metafield Integrations</a></li>
+            <li><a href="#custom-search-behaviors">Custom Search Behaviors</a></li>
+            <li><a href="#technical-maintenance">Technical Maintenance</a></li>
+        </ol>
+        <hr />
+
+        <h2 id="custom-implementation-overview">Custom Implementation Overview</h2>
+        
+        <p>This document details the custom SearchSpring implementations built specifically for the Winzer eCommerce ecosystem. The implementation includes site-specific configurations, custom components, and brand-specific functionality across three distinct stores.</p>
+        
+        <h3>Implementation Architecture</h3>
+        <ul>
+            <li><strong>Multi-Site Configuration:</strong> Single codebase supporting three distinct brand experiences</li>
+            <li><strong>Custom Components:</strong> Branded filter displays, pricing logic, and variant handling</li>
+            <li><strong>Site-Specific Features:</strong> Different pricing models, authentication requirements, and styling per brand</li>
+            <li><strong>Custom Metafield Integration:</strong> Advanced filtering using structured product attributes</li>
+            <li><strong>Dynamic Variant Selection:</strong> Custom variant handling with image swapping and pricing</li>
+        </ul>
+
+        <div class="alert-box alert-info">
+            <strong>Technical Note:</strong> The implementation uses a single SearchSpring codebase with site-specific configurations determined by <code>window.Resources.searchspring.liquid_data.sitename</code> to deliver customized experiences for each brand.
+        </div>
+
+        <h2 id="site-specific-configurations">Site-Specific Configurations</h2>
+        
+        <p>The implementation uses site-specific feature flags to deliver different functionality across the three Winzer brands:</p>
+
+        <h3>Site Feature Configuration</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>OneSource</th>
+                    <th>FastServ</th>
+                    <th>Winzer Corp</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Bulk Pricing</strong></td>
+                    <td>✅ Enabled</td>
+                    <td>❌ Disabled</td>
+                    <td>❌ Disabled</td>
+                    <td>Volume-based pricing calculations</td>
+                </tr>
+                <tr>
+                    <td><strong>Force Sign In</strong></td>
+                    <td>❌ Disabled</td>
+                    <td>✅ Enabled</td>
+                    <td>✅ Enabled</td>
+                    <td>Requires authentication to view pricing</td>
+                </tr>
+                <tr>
+                    <td><strong>Exact Pricing</strong></td>
+                    <td>❌ Disabled</td>
+                    <td>✅ Enabled</td>
+                    <td>✅ Enabled</td>
+                    <td>Real-time pricing via API calls</td>
+                </tr>
+                <tr>
+                    <td><strong>B2B Pricing</strong></td>
+                    <td>❌ Disabled</td>
+                    <td>✅ Enabled</td>
+                    <td>✅ Enabled</td>
+                    <td>Customer-specific pricing tiers</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Site Identification Logic</h3>
+        
+        <div class="code-block">
+            <code>const stores = {
+  onesource: {
+    storeAddress: "winzeronesource.myshopify.com",
+    siteId: "t047mf"
+  },
+  fastserv: {
+    storeAddress: "winzerfastserv.myshopify.com", 
+    siteId: "wk4j0d"
+  },
+  corp: {
+    storeAddress: "winzercorp.myshopify.com",
+    siteId: "fsqw40"
+  }
+}</code>
+        </div>
+
+        <h2 id="custom-filter-components">Custom Filter Components</h2>
+        
+        <p>The implementation includes several custom components built specifically for the Winzer brands:</p>
+
+        <h3>CustomFacetPaletteOptions</h3>
+        
+        <p>Custom implementation for image-based filters that dynamically constructs image URLs and applies site-specific styling:</p>
+        
+        <div class="code-block">
+            <code>const CustomFacetPaletteOptions = ({ facet, values }) => {
+  const { field } = facet;
+  const { label } = facet;
+  const shopifyFileURL = window.Resources.searchspring.shopifyURLs.fileURL.split('/placeholder')[0];
+  let columns = label.includes('olor') ? 4 : 3;
+
+  const transformedValues = useMemo(() => {
+    return values.filter(v => v.label);
+  }, [values]);
+
+  const facetCss = useMemo(() => {
+    const styles = {};
+    transformedValues.forEach(v => {
+      let extension = field === "variant_head_style" || field === "ss_generic_head_type" ? ".svg" : ".png";
+      let filterLabel = v.label.replaceAll(' ', '-').toLowerCase();
+      let filterImage = shopifyFileURL + "/" + field + "__" + filterLabel + extension;
+      let background = `url("${filterImage}")`;
+      
+      styles[`& .ss__facet-palette-options__option__palette--${filterLabel}`] = {
+        display: 'block',
+        background: background,
+      };
+    });
+    return [css(styles)];
+  }, [transformedValues]);
+
+  return &lt;FacetPaletteOptions css={facetCss} values={transformedValues} facet={facet} columns={columns} hideCount={true} hideIcon gapSize='0px' /&gt;;
+};</code>
+        </div>
+
+        <h3>CustomFeaturedFilter</h3>
+        
+        <p>Custom carousel component for featured filters with mobile/desktop responsive design:</p>
+        
+        <div class="code-block">
+            <code>const CustomFeaturedFilter = ({ label, url, imageUrl }) => {
+  const isSelected = (window.location.href.includes(label) ? 'selected-filter' : '')
+  return &lt;a href={url.href} className={`ss__featured-filter ${isSelected}`}&gt;
+    &lt;img src={imageUrl} /&gt;
+    &lt;span&gt;{label}&lt;/span&gt;
+  &lt;/a&gt;
+};</code>
+        </div>
+
+        <h2 id="custom-pricing-logic">Custom Pricing Logic</h2>
+        
+        <p>The implementation includes sophisticated pricing logic that varies by site and customer authentication status:</p>
+
+        <h3>Pricing API Integration</h3>
+        
+        <p>For sites with exact pricing enabled (FastServ, Winzer Corp), the system makes real-time API calls to fetch customer-specific pricing:</p>
+        
+        <div class="code-block">
+            <code>const fetchB2BPricing = async () => {
+  const pricing_json_response = await fetch(`${core.url}?view=pricing_json`);
+  const pricing_json = await pricing_json_response.json();
+  setb2bPricing(pricing_json);
+}
+
+// API call for exact pricing
+fetch(`/apps/pricing-api/customer-product-pricing?current_company_id=${companyId}&product_ids=${productId}`, {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  }
+})</code>
+        </div>
+
+        <h3>Pricing Display Logic</h3>
+        
+        <div class="code-block">
+            <code>// Pricing display based on site features
+if (currentSiteFeatures.b2b_pricing) {
+  // Show B2B pricing with API calls
+} else if (currentSiteFeatures.bulk_pricing) {
+  // Show bulk pricing calculations
+} else {
+  // Show standard Shopify pricing
+}</code>
+        </div>
+
+        <h3>Force Sign-In Implementation</h3>
+        
+        <p>For B2B sites, pricing is hidden until user authentication:</p>
+        
+        <div class="code-block">
+            <code>export const force_sign_in = (currentSiteFeatures.force_sign_in && !signed_in);
+
+// In component render
+{force_sign_in ? (
+  &lt;span className="not-in-catalog"&gt;{plpLocales.not_in_catalog}&lt;/span&gt;
+) : (
+  // Show pricing
+)}</code>
+        </div>
+
+        <h2 id="custom-styling-branding">Custom Styling & Branding</h2>
+        
+        <p>The implementation includes extensive custom styling with site-specific branding and responsive design:</p>
+
+        <h3>Site-Specific CSS Classes</h3>
+        
+        <p>Each site has dedicated CSS classes for brand-specific styling:</p>
+        
+        <div class="code-block">
+            <code>/* OneSource specific styling */
+.site-winzeronesource .ss__facet-hierarchy-options__option--return:before {
+  content: url('data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 10"&gt;&lt;path stroke="%23db3700" stroke-linecap="round" stroke-width="1.2" d="M5 1 1 5l4 4"/&gt;&lt;path fill="%23db3700" d="M9.535 5.606a.6.6 0 1 0 0-1.2v1.2Zm-8 0h8v-1.2h-8v1.2Z"/&gt;&lt;/svg&gt;')!important;
+}
+/* Winzer Corp specific styling */
+.site-winzercorp .ss__facet-hierarchy-options__option--return:before {
+  content: url('data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 10"&gt;&lt;path stroke="%2300679b" stroke-linecap="round" stroke-width="1.2" d="M5 1 1 5l4 4"/&gt;&lt;path fill="%2300679b" d="M9.535 5.606a.6.6 0 1 0 0-1.2v1.2Zm-8 0h8v-1.2h-8v1.2Z"/&gt;&lt;/svg&gt;')!important;
+}
+/* FastServ specific styling */
+.site-winzerfastserv .ss__facet-hierarchy-options__option--return:before {
+  content: url('data:image/svg+xml,&lt;svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 11 10"&gt;&lt;path stroke="%23d32028" stroke-linecap="round" stroke-width="1.2" d="M5 1 1 5l4 4"/&gt;&lt;path fill="%23d32028" d="M9.535 5.606a.6.6 0 1 0 0-1.2v1.2Zm-8 0h8v-1.2h-8v1.2Z"/&gt;&lt;/svg&gt;')!important;
+}</code>
+        </div>
+
+        <h3>Brand Color Implementation</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Primary Color</th>
+                    <th>Hex Code</th>
+                    <th>Usage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>OneSource</strong></td>
+                    <td>Orange/Red</td>
+                    <td>#db3700</td>
+                    <td>Filter icons, buttons, accents</td>
+                </tr>
+                <tr>
+                    <td><strong>Winzer Corp</strong></td>
+                    <td>Blue</td>
+                    <td>#00679b</td>
+                    <td>Filter icons, buttons, accents</td>
+                </tr>
+                <tr>
+                    <td><strong>FastServ</strong></td>
+                    <td>Red</td>
+                    <td>#d32028</td>
+                    <td>Filter icons, buttons, accents</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="dynamic-variant-handling">Dynamic Variant Handling</h2>
+        
+        <p>The implementation includes sophisticated variant selection and display logic that responds to user interactions and search filters:</p>
+
+        <h3>Dynamic Variant Configuration</h3>
+        
+        <div class="code-block">
+            <code>let dynamicVariantsConfig = {
+  field: 'ss_swatches',
+  limit: 4,
+  swap: function(result, variant) {
+    const core = result.mappings.core;
+    const { attributes, custom } = result;
+
+    if(variant.image) {
+      core.imageUrl = variant.image;
+    }
+
+    custom.variantSelected = variant;
+  }
+};</code>
+        </div>
+
+        <h3>Variant Weight Calculation</h3>
+        
+        <p>The system calculates variant relevance based on search terms and active filters:</p>
+        
+        <div class="code-block">
+            <code>// Filter matching for variant weighting
+currentFilters.forEach((filter, i) => {
+  let filterMultiplier = i + 1;
+  
+  if (simpleData) {
+    variant.weight = calculateWeight(filter, simpleData, variant.weight, 10, filterMultiplier);
+  }
+  groupData.forEach((data) => {
+    variant.weight = calculateWeight(filter, data, variant.weight, 5, filterMultiplier);
+  });
+});
+
+// Sort variants by weight
+attributes[variantsConfig.field].sort((a, b) => {
+  return b.weight - a.weight;
+});</code>
+        </div>
+
+        <h3>Variant Image Swapping</h3>
+        
+        <p>When users interact with variant swatches, the main product image updates dynamically:</p>
+        
+        <div class="code-block">
+            <code>const handleSelectedClass = (e, index) => {
+  let swatchIndex = e.target.getAttribute('swatchIndex');
+  if(swatchIndex == index) {
+    setSelectedSwatch(swatchIndex);
+  }
+};
+
+const handleSelectedURL = () => {
+  const { custom } = result;
+  const variantURL = custom.variantSelected.url;
+  let variantID = variantURL.slice(-14)
+  setSelectedURL(variantID);
+}</code>
+        </div>
+
+        <h2 id="metafield-integrations">Metafield Integrations</h2>
+        
+        <p>The implementation leverages multiple Shopify metafields for advanced filtering and product display:</p>
+
+        <h3>Product Display Metafields</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Metafield</th>
+                    <th>Usage</th>
+                    <th>Data Type</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>mfield_cql_badge_label</code></td>
+                    <td>Product badge text</td>
+                    <td>String</td>
+                    <td>"New", "Sale", "Featured"</td>
+                </tr>
+                <tr>
+                    <td><code>mfield_cql_product_badges</code></td>
+                    <td>JSON array of badges</td>
+                    <td>JSON</td>
+                    <td>["badge1", "badge2"]</td>
+                </tr>
+                <tr>
+                    <td><code>mfield_cql_swatches_json</code></td>
+                    <td>Variant swatch data</td>
+                    <td>JSON</td>
+                    <td>Color/pattern data</td>
+                </tr>
+                <tr>
+                    <td><code>mfield_cql_vendor_name</code></td>
+                    <td>Custom vendor display</td>
+                    <td>String</td>
+                    <td>Brand name override</td>
+                </tr>
+                <tr>
+                    <td><code>mfield_cql_promo_messaging</code></td>
+                    <td>Promotional text</td>
+                    <td>String</td>
+                    <td>Special offers, discounts</td>
+                </tr>
+                <tr>
+                    <td><code>mfield_cql_attributes_json</code></td>
+                    <td>Structured product attributes</td>
+                    <td>JSON</td>
+                    <td>Filterable product specs</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Filter Processing Logic</h3>
+        
+        <p>The system processes filters through multiple data sources with fallback logic:</p>
+        
+        <div class="code-block">
+            <code>function filterVariants(variants, options, filters) {
+  function extractFromAttributes(key, attributesField) {
+    if (!attributesField) {
+      return false;
+    }
+    const attributes_json = JSON.parse(attributesField);
+    const formattedKey = key.replace('ss_', '').split('_').map(g => g.charAt(0).toUpperCase() + g.slice(1)).join(' ');
+    return attributes_json[formattedKey] ?? false;
+  }
+  
+  return variants.filter((v) => {
+    const filter_map = filters.reduce((acc, filter) => {
+      acc[filter.field] = filter.values.map((val) => val.value);
+      return acc;
+    }, {});
+    
+    return Object.keys(filter_map).map((key) => {
+      if (key === "ss_price") {
+        return filter_map[key].low <= parseFloat(v.price) && parseFloat(v.price) <= filter_map[key].high;
+      } else if (v[key]) {
+        return v[key].split('|').some((v) => filter_map[key].indexOf(v) > -1);
+      } else if (extractFromAttributes(key, v.mfield_cql_attributes_json)) {
+        return extractFromAttributes(key, v.mfield_cql_attributes_json).split('|').some((v) => filter_map[key].indexOf(v) > -1);
+      } else {
+        return key.indexOf('ss_generic') === -1;
+      }
+    }).every((t) => t);
+  });
+}</code>
+        </div>
+
+        <h2 id="custom-search-behaviors">Custom Search Behaviors</h2>
+        
+        <p>The implementation includes several custom search and filtering behaviors tailored to the Winzer product catalog:</p>
+
+        <h3>Sorting Logic</h3>
+        
+        <div class="code-block">
+            <code>function sortVariants(variants, sortParams) {
+  let sortedVariants = variants.sort((a, b) => {
+    const sortableAttrA = a[sortParams.option].toLowerCase();
+    const sortableAttrB = b[sortParams.option].toLowerCase();
+    
+    if (!isNaN(sortableAttrA) && !isNaN(sortableAttrA)) {
+      return parseFloat(sortableAttrA) - parseFloat(sortableAttrB);
+    }
+    return sortableAttrA > sortableAttrB ? 1 : -1;
+  });
+  
+  if (!sortParams.asc) sortedVariants.reverse();
+  return sortedVariants;
+}</code>
+        </div>
+
+        <h3>Filter Visibility Rules</h3>
+        
+        <ul>
+            <li><strong>Minimum Product Count:</strong> Filters only appear when 3+ products match</li>
+            <li><strong>Value Variation:</strong> Filters hidden when all values are identical</li>
+            <li><strong>Site-Specific Logic:</strong> Different visibility rules per brand</li>
+            <li><strong>Dynamic Updates:</strong> Filters update in real-time as search terms change</li>
+        </ul>
+
+        <h3>Mobile Optimization</h3>
+        
+        <div class="code-block">
+            <code>// Mobile-specific filter display
+const { width, height, valuesWithImages } = useMemo(() => {
+  const width = isMobile ? 110 : 120
+  const height = isMobile ? 72 : 80
+  const valuesWithImages = values.filter(value => !!getImageObj(facet.field, value.value))
+  return { width, height, valuesWithImages }
+}, [facet.field, values, isMobile])</code>
+        </div>
+
+        <h2 id="technical-maintenance">Technical Maintenance</h2>
+        
+        <p>This section covers ongoing maintenance and troubleshooting for the custom SearchSpring implementation:</p>
+
+        <h3>Data Synchronization</h3>
+        
+        <ul>
+            <li><strong>Daily Reindexing:</strong> SearchSpring automatically rebuilds its index daily</li>
+            <li><strong>Manual Reindex:</strong> Available through SearchSpring dashboard when needed.</li>
+            <ul>
+                <li>Takes anywhere from 10 - 30 minutes to complete.</li>
+                <li>Once index has rebuilt, it takes ~5 minutes for changes to appear on the Shopify storefront.</li>
+            </ul>
+            <li><strong>Metafield Updates:</strong> Changes to Shopify metafields require reindexing to appear in filters</li>
+            <li><strong>Product Updates:</strong> New products and variants are included in next scheduled reindex</li>
+        </ul>
+
+        <h3>Common Issues & Solutions</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Issue</th>
+                    <th>Cause</th>
+                    <th>Solution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Filter images not displaying</td>
+                    <td>Incorrect file naming or missing files</td>
+                    <td>Verify naming convention: <code>[field]__[value].[ext]</code></td>
+                </tr>
+                <tr>
+                    <td>Filters not appearing</td>
+                    <td>Insufficient product variation</td>
+                    <td>Ensure 3+ products with different values</td>
+                </tr>
+                <tr>
+                    <td>Pricing not updating</td>
+                    <td>API connection or authentication issues</td>
+                    <td>Check B2B pricing API status and credentials</td>
+                </tr>
+                <tr>
+                    <td>Variant selection not working</td>
+                    <td>JavaScript errors or missing metafields</td>
+                    <td>Verify <code>ss_swatches</code> metafield data structure</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Performance Monitoring</h3>
+        
+        <ul>
+            <li><strong>SearchSpring Dashboard:</strong> Monitor search performance and filter usage</li>
+            <li><strong>Google Analytics:</strong> Track user interactions with filters and search</li>
+            <li><strong>API Response Times:</strong> Monitor B2B pricing API performance</li>
+            <li><strong>Mobile Performance:</strong> Test filter responsiveness on mobile devices</li>
+            <li><strong>Cumulative Layout Shift:</strong> Searchspring gets loaded late on the page. Monitor for any layout shifts that could impact user experience and core web vitals.</li>
+        </ul>
+
+        <h3>Code Maintenance</h3>
+        
+        <div class="alert-box alert-warning">
+            <strong>Important:</strong> Any changes to the SearchSpring codebase should be tested on all three sites (OneSource, FastServ, Winzer Corp) to ensure site-specific features continue to function correctly.
+        </div>
+
+        <hr />
+        
+        <div class="download-section">
+            <h3>Download Documentation</h3>
+            <p>This documentation is also available in Markdown format for easy editing and version control:</p>
+            <a href="winzer-searchspring-documentation.md" class="download-link" download>Download Markdown Version</a>
+        </div>
+        
+        <div class="contact-section">
+            <h3>Questions or Issues?</h3>
+            <p>For technical questions about this SearchSpring implementation, contact:</p>
+            <p><strong>Arcadia Digital</strong><br />
+            <a href="mailto:pete.buzzell@arcadiadigital.com">pete.buzzell@arcadiadigital.com</a></p>
+            
+            <h3>Additional Resources</h3>
+            <p>For general SearchSpring questions and documentation:</p>
+            <ul>
+                <li><strong>SearchSpring User Documentation:</strong> <a href="https://help.searchspring.net/hc/en-us" target="_blank">https://help.searchspring.net/hc/en-us</a></li>
+                <li><strong>SearchSpring API Reference:</strong> <a href="https://docs.searchspring.com/reference/getting-started-welcome" target="_blank">https://docs.searchspring.com/reference/getting-started-welcome</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
