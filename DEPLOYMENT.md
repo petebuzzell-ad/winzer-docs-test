@@ -4,7 +4,7 @@
 
 ### 1. Create GitHub Repository
 ```bash
-# Create new repo: winzer-docs-test
+# Create new repo: winzer-documentation
 # Make sure it's public for GitHub Pages
 ```
 
@@ -15,7 +15,7 @@ git init
 git add .
 git commit -m "Initial Jekyll documentation setup"
 git branch -M main
-git remote add origin https://github.com/petebuzzell-ad/winzer-docs-test.git
+git remote add origin https://github.com/petebuzzell-ad/winzer-documentation.git
 git push -u origin main
 ```
 
@@ -28,7 +28,7 @@ git push -u origin main
 
 ### 4. Test URLs
 - **Current HTML docs:** `https://petebuzzell-ad.github.io/winzer/`
-- **New Jekyll docs:** `https://petebuzzell-ad.github.io/winzer-docs-test/`
+- **New documentation:** `https://petebuzzell-ad.github.io/winzer-documentation/`
 
 ## Comparison Testing
 

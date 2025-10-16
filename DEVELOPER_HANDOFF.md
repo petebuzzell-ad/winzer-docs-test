@@ -28,7 +28,7 @@ winzer-docs-test/
 ## Quick Start
 
 ### 1. Access Documentation
-- **Live Site**: https://petebuzzell-ad.github.io/winzer-docs-test/
+- **Live Site**: https://petebuzzell-ad.github.io/winzer-documentation/
 - **Local**: Open `index.html` in any browser
 
 ### 2. Source Code Access

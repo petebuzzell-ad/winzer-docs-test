@@ -25,6 +25,10 @@ Simply open `index.html` in your browser to access the complete documentation hu
 - **Source Code** - Full codebase for both frontend and backend systems
 - **Developer Handoff** - Comprehensive guide for new developers
 
+## Live Documentation
+
+The documentation is available at: **https://petebuzzell-ad.github.io/winzer-documentation/**
+
 ### Documentation Access
 - **HTML files** - Ready-to-view documentation with Arcadia Digital styling
 - **Markdown files** - Source files for editing and version control
