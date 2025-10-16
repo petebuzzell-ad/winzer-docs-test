@@ -1,0 +1,81 @@
+{%- capture section_settings -%}
+  {
+    "videoType": {{ section.settings.video_url.type | json }},
+    "videoId": {{ section.settings.video_url.id | json }},
+    "requestHost": {{ request.host | json }}
+  }
+{%- endcapture -%}
+
+{%- capture mobile_size -%}750x{% if section.settings.image.height >= 960 %}960{% else %}{{ section.settings.image.height }}{% endif %}{%- endcapture -%}
+
+<div class="video__media
+  {% if section.settings.background_video == false or section.settings.full_width == false %} page-width{% endif %}"
+  {% if section.settings.cover_image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;{% endif %}"
+  >
+  <div class="video__poster media media--transparent media--landscape{% if section.settings.cover_image == blank %} video__placeholder{% endif %}">
+    {% render 'video-placeholder' %}
+  </div>
+
+  <div class="video__player" id="player-widget"></div>
+</div>
+
+<div class="video__mute-controls muted" id="section-{{ section.id }}-mute-control">
+  <span class="mute">
+    {% render 'icon-mute' %}
+  </span>
+  <span class="unmute">
+    {% render 'icon-unmute' %}
+  </span>
+</div>
+
+<script>
+  let tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+
+  let firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  let player;
+
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player-widget', {
+      videoId: '{{ section.settings.video_url.id }}',
+      playerVars: {
+        'playsinline': 1
+      },
+      events: {
+        onStateChange: onStateChange,
+        onError: onError
+      }
+    });
+
+    player.addEventListener('onReady', onPlayerReady)
+    function onPlayerReady(event) {
+      if(typeof player != 'undefined') {
+        player.mute();
+        player.playVideo();
+      }
+    }
+
+    function onStateChange(event) {
+      if (event.data === YT.PlayerState.ENDED) {
+        player.playVideo();
+      }
+    }
+
+    function onError(event) {
+      player.classList.add('display', 'none');
+    }
+
+    let muteUnmuteButton = document.getElementById('section-{{ section.id }}-mute-control')
+    muteUnmuteButton.addEventListener('click', () => {
+      if (muteUnmuteButton.classList.contains('muted')) {
+        player.unMute();
+        muteUnmuteButton.classList.remove('muted')
+      } else {
+        player.mute();
+        muteUnmuteButton.classList.add('muted')
+      }
+    })
+  }
+</script>

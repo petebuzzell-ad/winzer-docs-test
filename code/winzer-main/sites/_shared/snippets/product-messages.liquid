@@ -1,0 +1,28 @@
+{% comment %}
+
+Usage: Intended usage is for the buy stack / product information section of the PDP, very similar to the addon-form
+
+Parameters:
+
+    product_messages: String - Formatted to be something like: product-handle1,product-handle2,product-handle3
+
+{% endcomment %}
+
+{{ 'component-product-messages.css' | asset_url | stylesheet_tag }}
+
+{% assign associated_product_messages_handles = product_messages | split: ' ' %}
+
+{% assign messages = product_messages | split: "," %}
+
+{% for message in messages %}
+    {% assign message_handle = message | remove: '[' | remove: ']' | remove: '"' | strip | downcase %}
+    {% assign msg_metaobject = shop.metaobjects.product_message[message_handle] %}
+    
+    {% if msg_metaobject != nil %}
+        <div class="product_messages__item">
+            <span class="icon"><img src="{{ msg_metaobject.icon | image_url }}" alt="" /></span>
+            <div class="product_messages__text">{{ msg_metaobject.message | metafield_tag }}</div>
+            </div>
+    {% endif %}
+{% endfor %}
+

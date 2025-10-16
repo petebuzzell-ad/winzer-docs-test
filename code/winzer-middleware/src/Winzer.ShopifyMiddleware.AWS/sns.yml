@@ -1,0 +1,59 @@
+Resources:
+  InventoryFailureNotificationTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: "The notification topic for Inventory Feed failures"
+      TopicName: InventoryFailureNotificationTopic-${self:provider.stage}
+  emailInventoryFailureNotificationTopicSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: "eric.kennedy@cqlcorp.com"
+      Protocol: "email"
+      TopicArn: !Ref InventoryFailureNotificationTopic
+  ProductFeedFailureNotificationTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: "The notification topic for product feed failures"
+      TopicName: ProductFeedFailureNotificationTopic-${self:provider.stage}
+  emailProductFeedFailureNotificationTopicSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: "eric.petroelje@cqlcorp.com"
+      Protocol: "email"
+      TopicArn: !Ref ProductFeedFailureNotificationTopic
+
+  OrderExportFailureNotificationTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: "The notification topic for Order Export failures"
+      TopicName: OrderExportFailureNotificationTopic-${self:provider.stage}
+  emailOrderExportFailureNotificationTopicSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: "eric.kennedy@cqlcorp.com"
+      Protocol: "email"
+      TopicArn: !Ref OrderExportFailureNotificationTopic
+
+  FulfillmentFailureNotificationTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: "The notification topic for Fulfillment Feed failures"
+      TopicName: FulfillmentFailureNotificationTopic-${self:provider.stage}
+  emailFulfillmentFailureNotificationTopicSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: "eric.kennedy@cqlcorp.com"
+      Protocol: "email"
+      TopicArn: !Ref FulfillmentFailureNotificationTopic
+
+  ReturnExportFailureNotificationTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: "The notification topic for Return Export failures"
+      TopicName: ReturnExportFailureNotificationTopic-${self:provider.stage}
+  emailReturnExportFailureNotificationTopicSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      Endpoint: "eric.kennedy@cqlcorp.com"
+      Protocol: "email"
+      TopicArn: !Ref ReturnExportFailureNotificationTopic

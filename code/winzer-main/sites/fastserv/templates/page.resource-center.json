@@ -1,0 +1,980 @@
+{
+  "wrapper": "div.about-us",
+  "sections": {
+    "16484545291ecbe325": {
+      "type": "image-banner",
+      "blocks": {
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "Resource Center",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color_desktop": "#ffffff",
+            "eyebrow_color_mobile": "#ffffff"
+          }
+        },
+        "1648454529bf74fe13-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Catalogs & Brochures",
+            "heading_size": "h1",
+            "heading_color_desktop": "#ffffff",
+            "heading_color_mobile": "#ffffff"
+          }
+        },
+        "text_adQpQw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Download what you need, when you need it<\/p>",
+            "text_style": "text-body-large",
+            "text_color_desktop": "#ffffff",
+            "text_color_mobile": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343",
+        "1648454529bf74fe13-0",
+        "text_adQpQw"
+      ],
+      "settings": {
+        "desktop_large_image": "shopify:\/\/shop_images\/resource-center-hero.webp",
+        "desktop_image": "shopify:\/\/shop_images\/resource-center-hero.webp",
+        "mobile_image": "shopify:\/\/shop_images\/resource-center-hero-mobile.webp",
+        "enable_parallax": false,
+        "desktop_max_height": 250,
+        "section_background_color": "#ffffff",
+        "content_background_color": "#000000",
+        "box_border_color": "#ffffff",
+        "show_text_box": false,
+        "show_container_mobile": true,
+        "content_background_opacity": 100,
+        "content_area_max_width": 600,
+        "show_border_desktop": false,
+        "show_border_offset_desktop": false,
+        "show_border_mobile": false,
+        "show_border_offset_mobile": false,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "hide_image_mobile": false,
+        "section_url": "",
+        "hide_section_mobile": false,
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false,
+        "custom_class": ""
+      }
+    },
+    "featured_links_AX6hpw": {
+      "type": "featured-links",
+      "blocks": {
+        "link_batxXX": {
+          "type": "link",
+          "settings": {
+            "heading": "Full Catalog",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD9F0360223092B091C6BAFCD4D5F6E5126CDF2141BE\/fileview\/D548FDD5D293C7E770BBA487E6D269489E954B5020C9\/_FastServ-Catalog__4-1.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_FUQApr": {
+          "type": "link",
+          "settings": {
+            "heading": "Abrasives",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDC73842F3CAF3F76568A5527B0AF4AD9415B1A6A760\/fileview\/D114297B92A6F4AB776233EA8589DD43DDCD74885EE1\/_FS__5_Abrasives.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_cP8DrU": {
+          "type": "link",
+          "settings": {
+            "heading": "Assortments",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD39CB82B11BEE8B94310608C76377A2712E143A510A\/fileview\/D9222C2E506A29B23F46FB1C1DCC9F8741A76099A47C\/_FS__ASSORTMENTS.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_rTBJ98": {
+          "type": "link",
+          "settings": {
+            "heading": "Automotive",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD41C4C785AFE5EBC6A2EFB7176CFF328003797F36F4\/fileview\/D108EEB918484E20BE7267C17A98A4EA2F30519A20A6\/_FS__8_Automotive.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_TVh4KL": {
+          "type": "link",
+          "settings": {
+            "heading": "Chemicals",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD7FB9EE66C7BDA3A8FE03F5B43318EF69841AE59E79\/fileview\/DD6AD24599BDFAB73D7FC1443194DBDB06CC7F275D13\/_FS__3_Chemicals.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_TBjnj8": {
+          "type": "link",
+          "settings": {
+            "heading": "Cutting Tools",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD2F436EB814B12927E586DCFFB91DBBD4690906D18D\/fileview\/DECED282124F5B3818ADF8E86AB88D2E81B71CDA7A26\/_FS__6_Cutting_tools.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_YAUjRx": {
+          "type": "link",
+          "settings": {
+            "heading": "Electrical",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDBA202760E0F0080B89E8AC072E39BB5F725C5B4885\/fileview\/D72B78714BF5DAD921D6CC69272461316A80F72407AD\/_FS__2_Electrical.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_REh4GW": {
+          "type": "link",
+          "settings": {
+            "heading": "Fasteners",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD2E5B8000707033E3CBF5ADDA1D8518243C6C9143E7\/fileview\/D1259843E0D97B5261F21C1BD63C50637EFDC64228AA\/_FS__1_Fasteners.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "link_batxXX",
+        "link_FUQApr",
+        "link_cP8DrU",
+        "link_rTBJ98",
+        "link_TVh4KL",
+        "link_TBjnj8",
+        "link_YAUjRx",
+        "link_REh4GW"
+      ],
+      "settings": {
+        "background_color": "",
+        "heading": "Catalogs",
+        "heading_size": "h2",
+        "heading_color": "",
+        "eyebrow": "",
+        "eyebrow_color": "",
+        "heading_wrapper_animation": "NoEffect",
+        "heading_wrapper_animation_time": "0.2s",
+        "link_display": "margins",
+        "desktop_columns": "4",
+        "desktop_tile_layout": "image-on-top",
+        "desktop_content_alignment": "left",
+        "mobile_tile_layout": "image-on-top",
+        "mobile_content_alignment": "center",
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "featured_links_YdeMnK": {
+      "type": "featured-links",
+      "blocks": {
+        "link_atJQiX": {
+          "type": "link",
+          "settings": {
+            "heading": "Fluid Power",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD984F4298A0E12B3B8036EE648BA24739DF27EFCBBF\/fileview\/DAB82FE39A289BD017F9C66BCF1A7BB26B9338FF421B\/_FS__7_Fluid_power.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_ngFUYa": {
+          "type": "link",
+          "settings": {
+            "heading": "Security",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD2A5047D9A823C0B9911525B3249D0BA7A051C1EC81\/fileview\/D5FBFAB0FDCFE9A5FFA57B5E76FCBCDFEC075F3DDFD8\/_FS__9_Security.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_QXQ8DY": {
+          "type": "link",
+          "settings": {
+            "heading": "Shop Supplies",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD22C02FD56FB0308A68EA513729170692B034F3E120\/fileview\/DEAC0D0508341C95FC3999F89B807D1473FDF941D45F\/_FS__4_Shop_supplies.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_CdC4F6": {
+          "type": "link",
+          "settings": {
+            "heading": "",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "link_atJQiX",
+        "link_ngFUYa",
+        "link_QXQ8DY",
+        "link_CdC4F6"
+      ],
+      "settings": {
+        "background_color": "",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_color": "",
+        "eyebrow": "",
+        "eyebrow_color": "",
+        "heading_wrapper_animation": "NoEffect",
+        "heading_wrapper_animation_time": "0.2s",
+        "link_display": "margins",
+        "desktop_columns": "4",
+        "desktop_tile_layout": "image-on-top",
+        "desktop_content_alignment": "left",
+        "mobile_tile_layout": "image-on-top",
+        "mobile_content_alignment": "center",
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "featured_links_KHbY6b": {
+      "type": "featured-links",
+      "blocks": {
+        "link_MmD8fV": {
+          "type": "link",
+          "settings": {
+            "heading": "Brand Aerosols",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD503E1925481EA7859E5E7B86818E015CE0320B2A7E\/fileview\/D592B70AEC1014AFB964088349220EAEC566C10EBB68\/_fw495668_979.150fs-brand-aerosols.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_cBapQV": {
+          "type": "link",
+          "settings": {
+            "heading": "Chain & Cable",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDBF446B30E39E28142C484B0FF2DD4D10A725952B1C\/fileview\/DA04813AB58F298FFE2FFA475CA709F72F8A1CDF122B\/_979.0032fs_fb77_fs_chaincable_brochure-web.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_bnzdmf": {
+          "type": "link",
+          "settings": {
+            "heading": "Chemicals",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD2EF603B4FBD1893201C2590EC242E1295407C1924A\/fileview\/DDE6956DA0C8D165C6E4939C9125F7E55A1DA49D4275\/_fb343_fs_chemicals.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_PCngkC": {
+          "type": "link",
+          "settings": {
+            "heading": "COVID-19 Protection",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDDECAA3EEBA74F0D54D679BFA09D5661C4F39825186\/fileview\/DFA590F0FC18FBA832241AA29EDF8B9638076C7D1A42\/_fb314_covid_protection_guide.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_H7FVwN": {
+          "type": "link",
+          "settings": {
+            "heading": "Cutting Tools",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDD8C84DA7C894CF974DB3EDF9658BEB27CCBEDBA830\/fileview\/DCF7AC2F095A80D08C6C5283BBE8AC577C62232C85D9\/_cutting-tools-abrasives.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_HWMmrF": {
+          "type": "link",
+          "settings": {
+            "heading": "Fabric Structures",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDEF3E0882B6C52C5FDF51B191A7900E5217720AC0D1\/fileview\/DDBD1CBD846B6E0502087D8E409C97B65D6271EF152C\/_fs-fabric-structure-brochure-web.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_cbfi3E": {
+          "type": "link",
+          "settings": {
+            "heading": "Fastserv System",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDFD212E38EE48B479B53599EC393F4E697465A7A1DD\/fileview\/D6355DA2D6117CD199FF821CC7107CB302DCB5AD939E\/_979.00.06fs_fb29_fs_system_brochure.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_4kkm4F": {
+          "type": "link",
+          "settings": {
+            "heading": "Fleet Solutions",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDAC302145E21AE7F91E98A43C8B54C967A046F5FDB8\/fileview\/DC8655C014AC48AD478D5FC2A6552A46B06196F92CA8\/_fw17775_fs_fleet_solutions-web.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "link_MmD8fV",
+        "link_cBapQV",
+        "link_bnzdmf",
+        "link_PCngkC",
+        "link_H7FVwN",
+        "link_HWMmrF",
+        "link_cbfi3E",
+        "link_4kkm4F"
+      ],
+      "settings": {
+        "background_color": "",
+        "heading": "Brochures",
+        "heading_size": "h2",
+        "heading_color": "",
+        "eyebrow": "",
+        "eyebrow_color": "",
+        "heading_wrapper_animation": "NoEffect",
+        "heading_wrapper_animation_time": "0.2s",
+        "link_display": "margins",
+        "desktop_columns": "4",
+        "desktop_tile_layout": "image-on-top",
+        "desktop_content_alignment": "left",
+        "mobile_tile_layout": "image-on-top",
+        "mobile_content_alignment": "center",
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "featured_links_wxkQYw": {
+      "type": "featured-links",
+      "blocks": {
+        "link_KrT7Gn": {
+          "type": "link",
+          "settings": {
+            "heading": "Heavy Equipment",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDFFBA7CFA1C768F8217715F603069353A4E3113E678\/fileview\/DD249A12D95A3F50DA46C990BA17F48FB3F0C6E62F89\/_fb340_heavy_equipment.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_YwdpQx": {
+          "type": "link",
+          "settings": {
+            "heading": "Hospitality",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD94CA5194BD444630CC6EBDCDABDE5AF5517ECC819C\/fileview\/D64D48B3A78269058ED4521CF13D6F2D32FCEC21E52E\/_979.00.13fs_fb190_fs_hospitality_brochure.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_gD7Nkj": {
+          "type": "link",
+          "settings": {
+            "heading": "Industrial",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD79F9904AF2290B64014C8A9805080B8BC5908783EF\/fileview\/DD532339CE4A274F62E9410D748F4E944002A32601A4\/_979.00.10fs_fb119_fs_industrial_solutions.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_xVbF78": {
+          "type": "link",
+          "settings": {
+            "heading": "Made in America",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDE52CE92D7266421D3C13065634239C85AD7FFE135B\/fileview\/DA5A8121BD80A5C84A5B0B067F6E785E18ED03750BEE\/_FB349-Made_in_America_Brochure.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_khhqQQ": {
+          "type": "link",
+          "settings": {
+            "heading": "Organization",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD8C8C74139829E222F4A6BD8A962AE752163A120A3E\/fileview\/D9517AA495263CF238EBFBD397A4E853BB950F65BD06\/_fb341_organization_solutions.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_KpeTQ3": {
+          "type": "link",
+          "settings": {
+            "heading": "Powersports",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD77E6A9A5E76979E0EA8F03047C5E29D67875155188\/fileview\/DFE095FF1976B5E08CAB8EB8FA818880F4EEC5187ECE\/_979.00.07fs_fb223_fs_powersports_brochure.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_nayPWF": {
+          "type": "link",
+          "settings": {
+            "heading": "Quality Assurance",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDCAC8C10690517F5C6F68FBEA35D3143872255EC8CB\/fileview\/D48290B5433B2C81B69642075108C70D33CB35D7D191\/_979.00.12fs-fb344-fs_quality_assurance_brochure-web.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_M7heiT": {
+          "type": "link",
+          "settings": {
+            "heading": "Safety Solutions",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDB974C5055006583D8B11EF79E4DA9ADDACC58F7C0C\/fileview\/DA734E546C47F5BCE87158FB4F7D12C07193A502B327\/_fs-safety-solutions.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "link_KrT7Gn",
+        "link_YwdpQx",
+        "link_gD7Nkj",
+        "link_xVbF78",
+        "link_khhqQQ",
+        "link_KpeTQ3",
+        "link_nayPWF",
+        "link_M7heiT"
+      ],
+      "settings": {
+        "background_color": "",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_color": "",
+        "eyebrow": "",
+        "eyebrow_color": "",
+        "heading_wrapper_animation": "NoEffect",
+        "heading_wrapper_animation_time": "0.2s",
+        "link_display": "margins",
+        "desktop_columns": "4",
+        "desktop_tile_layout": "image-on-top",
+        "desktop_content_alignment": "left",
+        "mobile_tile_layout": "image-on-top",
+        "mobile_content_alignment": "center",
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "featured_links_NyD9fP": {
+      "type": "featured-links",
+      "blocks": {
+        "link_gYi6Ad": {
+          "type": "link",
+          "settings": {
+            "heading": "Smart Washers",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDEB57E9F21414C66DAA8769F3ABF6536954D1A7E562\/fileview\/D53BC0807CE617C436F8FE7AA281A75CEB4714FF8B2F\/_fb324_smart_washer_brochure.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_4zHzXd": {
+          "type": "link",
+          "settings": {
+            "heading": "Safety Gloves",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDB7D091058D879B36368AB699C568E4B1E467386DD3\/fileview\/D9C94219047E21E4D90652823D72962080881167B63C\/_fb342_disposable_safety_gloves.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_6QMmBw": {
+          "type": "link",
+          "settings": {
+            "heading": "Tire & Wheel",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD17026AA29F9EBE4EC0380783B7B399CF611BAA04BC\/fileview\/D68952706144EDBFDCB89B7C3352F70B88AEB74EC46B\/_fb263-tire-wheel-brochure.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_UXwBzg": {
+          "type": "link",
+          "settings": {
+            "heading": "Product Linecard (Online Only)",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD344F70B3F9A8C73F808D554ABCF5FDD9B37D84864A\/fileview\/DA4C6764DA1175AB14A23304C60BA4BB5586E93FC110\/_fastserv_linecard_979.029fs.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_Xp86RX": {
+          "type": "link",
+          "settings": {
+            "heading": "TitenTurbo Flyer (Online Only)",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD602FDE1A20C4D1995E0E54E19FF4420FD3C65D0E1B\/fileview\/DE6F5496BE38947E110BBE40E548B27099B409A45A0F\/_fs-titenturboflyer.pdf",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_Ykw7bV": {
+          "type": "link",
+          "settings": {
+            "heading": "",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_Fx6ndT": {
+          "type": "link",
+          "settings": {
+            "heading": "",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_99Y9cM": {
+          "type": "link",
+          "settings": {
+            "heading": "",
+            "heading_size": "cql-headline-3",
+            "heading_color": "",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "Download",
+            "background_color": "",
+            "button_style": "link-1",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "link_gYi6Ad",
+        "link_4zHzXd",
+        "link_6QMmBw",
+        "link_UXwBzg",
+        "link_Xp86RX",
+        "link_Ykw7bV",
+        "link_Fx6ndT",
+        "link_99Y9cM"
+      ],
+      "settings": {
+        "background_color": "",
+        "heading": "",
+        "heading_size": "h2",
+        "heading_color": "",
+        "eyebrow": "",
+        "eyebrow_color": "",
+        "heading_wrapper_animation": "NoEffect",
+        "heading_wrapper_animation_time": "0.2s",
+        "link_display": "margins",
+        "desktop_columns": "4",
+        "desktop_tile_layout": "image-on-top",
+        "desktop_content_alignment": "left",
+        "mobile_tile_layout": "image-on-top",
+        "mobile_content_alignment": "center",
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "rich_text_mfLTmx": {
+      "type": "rich-text",
+      "blocks": {
+        "eyebrow_TMhjnG": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "Business Customers",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color": ""
+          }
+        },
+        "heading_mqhcpw": {
+          "type": "heading",
+          "settings": {
+            "headline_animation": "NoEffect",
+            "headline_animation_time": "0.2s",
+            "heading": "Looking for Parts for Your Business?",
+            "heading_color": "#000000",
+            "heading_size": "h1"
+          }
+        },
+        "text_n9p7PY": {
+          "type": "text",
+          "settings": {
+            "richtext_animation": "NoEffect",
+            "richtext_animation_time": "0.2s",
+            "text": "<p>Contact us, and we can help you get started.<\/p>",
+            "text_color": "#000000",
+            "text_style": "body-special-large"
+          }
+        },
+        "button_JrxgLh": {
+          "type": "button",
+          "settings": {
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "Contact Us",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style": "secondary",
+            "button_shape": "",
+            "button_size": "medium",
+            "mobile_button_size": "medium",
+            "button_arrow": "none"
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_TMhjnG",
+        "heading_mqhcpw",
+        "text_n9p7PY",
+        "button_JrxgLh"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "#f3f1ee",
+        "desktop_max_content_width": 600,
+        "container_alignment": "center",
+        "text_alignment": "center",
+        "height_desktop": 0,
+        "height_mobile": 0,
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 40,
+        "mobile_bottom_padding": 40,
+        "display_margins": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "16484545291ecbe325",
+    "featured_links_AX6hpw",
+    "featured_links_YdeMnK",
+    "featured_links_KHbY6b",
+    "featured_links_wxkQYw",
+    "featured_links_NyD9fP",
+    "rich_text_mfLTmx",
+    "main"
+  ]
+}

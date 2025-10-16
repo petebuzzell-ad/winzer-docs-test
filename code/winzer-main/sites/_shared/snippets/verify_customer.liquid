@@ -1,0 +1,44 @@
+{% comment %}
+  Usage:
+  Capture the content the needs to be gatekept behind a login:
+  {% capture product_price %}
+    <div class="price">
+      {{product.price}}
+    </div>
+  {% endcapture %}
+  include the content variable with the render:
+  {% render 'verify_customer', content: product_price, style: 'product_page' %}
+
+  Use the 'style' variable when an alternate layout
+  for the sign in button & information is needed.
+{% endcomment %}
+
+{%- if customer -%}
+  {{ content }}
+{%- else -%}
+  {%- case style -%}
+  {%- when 'product_page' -%}
+    <div class="pdp__price-login-wrap">
+      <p>{{ 'products.product.product_price_sign_in.text' | t }}</p>
+      <div class="pdp__price-login-cta-wrap">
+        <modal-opener class="login-prompt-modal__opener no-js-hidden" data-modal="#login-prompt-modal">
+          <button class="button" href="{{ routes.account_login_url }}">{{ 'products.product.product_price_sign_in.sign_in_cta' | t }}</button>
+        </modal-opener>
+
+        <span>
+        {{ 'products.product.product_price_sign_in.more_link' | t | link_to: '/'}}
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 16 16">
+          <path fill="currentColor" d="m13.184 6.53-.957.982-5.549 5.549-.981-.98 4.88-4.88H-.021V5.788h10.526L5.697.981 6.678 0l5.549 5.55Z"/>
+        </svg>
+        </span>
+      </div>
+    </div>
+  {%- else -%}
+    <modal-opener class="login-prompt-modal__opener no-js-hidden" data-modal="#login-prompt-modal">
+      <button class="button">{{ 'products.product.product_price_sign_in.sign_in_cta' | t }}</button>
+    </modal-opener>
+  {%- endcase -%}
+
+  {% render 'sign-in-modal' %}
+
+{%- endif -%}

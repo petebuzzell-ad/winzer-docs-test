@@ -1,0 +1,77 @@
+.search__button .icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* Remove extra spacing for search inputs in Safari */
+input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.search__input-buttons {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  top: 0rem;
+  right: 2rem;
+}
+
+.search__input-reset {
+  display: none;
+  top: .1rem;
+  right: 4.2rem;
+}
+
+.search__input-submit {
+  right: 2rem;
+  top: .2rem;
+}
+
+.search__input-reset,
+.search__input-submit {
+  height: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.search__input-reset:hover,
+.search__input-submit:hover {
+  cursor: pointer;
+}
+
+.search__input-reset.visible {
+  display: block;
+}
+
+.search__input-reset.visible svg {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.search__input-submit svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.search__input-reset.visible svg path,
+.search__input-submit svg path,
+.search__input-submit svg circle {
+  stroke: var(--color-brand-secondary-variant);
+}
+
+.site-winzercorp .search__input-reset.visible svg path,
+.site-winzercorp .search__input-submit svg path,
+.site-winzercorp .search__input-submit svg circle {
+  stroke: #1c478b;
+}
+
+@media screen and (min-width: 990px) {
+  .search__input-reset {
+    right: 3.2rem;
+  }
+
+  .search__input-submit {
+    right: 3rem;
+  }
+}

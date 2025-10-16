@@ -1,0 +1,104 @@
+.horizontal-nav {
+    padding: 1.6rem 0;
+    background-color: var(--color-brand-accent-1);
+  }
+
+  @media screen and (min-width: 750px) {
+    .horizontal-nav__inner {
+      position: relative;
+    }
+  }
+
+  .horizontal-nav__title {
+    font-family: var(--font-body-alt-family);
+    font-size: 1.2rem;
+    font-style: var(--font-body-alt-style);
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    margin: 0 0 1.2rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .horizontal-nav__title {
+      display: inline-block;
+      margin: 0;
+      padding-right: 2.2rem;
+      position: absolute;
+      left: 6rem;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+  }
+
+  .horizontal-nav__link {
+    display: block;
+    padding: .6rem 1.6rem;
+    border-radius: 1.8rem;
+    border: 1px solid var(--color-accent-2);
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    font-style: var(--font-body-style);
+    font-weight: var(--font-body-weight);
+    line-height: 1.5;
+    color: var(--color-brand-primary);
+    background-color: var(--color-brand-white);
+    transition: .1s ease;
+  }
+
+  .horizontal-nav__link:hover, .horizontal-nav__link:focus {
+    text-decoration: none;
+    background-color: var(--color-accent-3);
+    border-color: var(--color-brand-text);
+  }
+
+  @media screen and (min-width: 750px) {
+    .horizontal-nav__link {
+      font-size: 1.6rem;
+    }
+  }
+
+  .horz-nav-swiper__wrap {
+    padding: 0 2.7rem;
+    position: relative;
+  }
+
+  .horz-nav-swiper__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    cursor: pointer;
+  }
+
+  .horz-nav-swiper__button.swiper-button-disabled {
+    opacity: .15;
+  }
+
+  .horz-nav-swiper__button .icon-caret {
+    width: 1.4rem;
+    height: auto;
+  }
+
+  .horz-nav-swiper__button-prev {
+    left: 0;
+  }
+
+  .horz-nav-swiper__button-prev .icon-caret {
+    position: relative;
+    transform: rotate(180deg);
+  }
+
+  .horz-nav-swiper__button-next {
+    right: 0;
+  }
+
+.horz-nav-swiper__button-next .icon ,
+.horz-nav-swiper__button-next .icon *,
+.horz-nav-swiper__button-prev .icon ,
+.horz-nav-swiper__button-prev .icon *{
+    stroke: var(--color-brand-primary);
+    fill: none;
+    stroke-opacity: 1;
+}

@@ -1,0 +1,306 @@
+{{ 'section-page-classic-orders.css' | asset_url | stylesheet_tag }}
+
+<div class="orders-container">
+  <h1>{{ 'customer.offline_orders.title' | t }}</h1>
+
+  {% if customer %}
+    <div class="orders-table">
+      <div class="orders-header">
+        <div class="order-cell">Order</div>
+        <div class="order-cell">Items</div>
+        <div class="order-cell">Total</div>
+        <div class="order-cell">Location</div>
+      </div>
+      <div class="orders-list">
+        <div class="order" id="offline-order-template">
+          <div class="order-head">
+            <div class="order-cell">
+              <span class="order-name">
+                Order <span data-order-key="order_number"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="a8x1wu10 a8x1wuz _1fragem1y _1fragemod _1fragemkk _1fragemka _1fragemnm" focusable="false" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m11.9 5.6-4.653 4.653a.35.35 0 0 1-.495 0L2.1 5.6"></path></svg>
+              </span>
+              <span>
+                <strong data-order-remove="fullfilments__0__steps__0__status" data-order-key="fullfilments__0__steps__0__status"></strong>
+                <span data-order-key="fullfilments__0__steps__0__date" data-order-remove="fullfilments__0__steps__0__date"></span>
+              </span>
+            </div>
+            <div class="order-cell" data-order-special="grand-total"></div>
+            <div class="order-cell"><span data-order-key="total"></span> USD</div>
+            <div class="order-cell" data-order-remove="billing_address__company" data-order-key="billing_address__company"></div>
+          </div>
+          <div class="order-details-accordion">
+            <div class="order-details">
+              <div class="detail-column">
+                <div class="fulfillments-list" data-order-iterable="fullfilments">
+                  <div class="detail-box fulfillment">
+                    <div class="fulfillment-line-items" data-order-iterable="fullfilments__line_items">
+                      <div class="line-item">
+                        <div class="image-wrapper tooltip-container">
+                          <img src="{{'account_no_image.svg' | file_url}}" data-order-key="fullfilments__line_items__image_url">
+                          <span data-order-key="fullfilments__line_items__quantity"></span>
+                          <p class="tooltip-box" data-order-key="fullfilments__line_items__title"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="steps-list" data-order-iterable="fullfilments__steps">
+                      <div class="step">
+                        <h4 data-order-key="fullfilments__steps__status"></h4>
+                        <p class="subdue">Updated <span data-order-key="fullfilments__steps__date"></span></p>
+                        <p class="subdue" data-order-key="fullfilments__steps__message"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail-box details">
+                  <h4>Order details</h4>
+                  <div class="detail-inner">
+                    <div class="box-inner-bit">
+                      <p class="subdue">Contact information</p>
+                      <p>{{ customer.email }}</p>
+                    </div>
+
+                    <div data-order-remove="billing_address__company" class="box-inner-bit">
+                      <p class="subdue">Company</p>
+                      <p data-order-key="billing_address__company"></p>
+                    </div>
+
+                    <div class="box-inner-bit">
+                      <p class="subdue">Shipping address</p>
+                      <p>
+                        <span data-order-key="shipping_address__name"></span><br/>
+                        <span data-order-key="shipping_address__company"></span><br/>
+                        <span data-order-key="shipping_address__address1"></span><br/>
+                        <span data-order-key="shipping_address__address2"></span><br/>
+                        <span data-order-key="shipping_address__city"></span> <span data-order-key="shipping_address__province"></span> <span data-order-key="shipping_address__zip"></span><br/>
+                        <span data-order-key="shipping_address__country"></span>
+                      </p>
+                    </div>
+                    
+                    <div data-order-remove="payment" class="box-inner-bit">
+                      <p class="subdue">Payment</p>
+                      <p>
+                        <span data-order-key="payment__type "></span> $<span data-order-key="payment__amount"></span>
+                        <span class="small" data-order-key="payment__date"></span>
+                      </p>
+                    </div>
+                    <div class="box-inner-bit">
+                      <p class="subdue">Billing address</p>
+                      <p>
+                        <span data-order-key="billing_address__name"></span><br/>
+                        <span data-order-key="billing_address__company"></span><br/>
+                        <span data-order-key="billing_address__address1"></span><br/>
+                        <span data-order-key="billing_address__address2"></span><br/>
+                        <span data-order-key="billing_address__city"></span> <span data-order-key="billing_address__province"></span> <span data-order-key="billing_address__zip"></span><br/>
+                        <span data-order-key="billing_address__country"></span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="detail-column">
+                <div class="detail-box summary">
+                  <h4>Order summary</h4>
+                  <div class="line-items" data-order-iterable="line_items">
+                    <div class="line-item">
+                      <div class="image-wrapper">
+                        <img src="https://cdn.shopify.com/shopifycloud/customer-account-web/production/assets/b7cfc5371106d49e708f.svg" data-order-key="line_items__image_url">
+                        <span data-order-key="line_items__quantity"></span>
+                      </div>
+                      <div class="line-item-info">
+                        <p data-order-key="line_items__title"></p>
+                        <p class="subdue" data-order-key="line_items__variant_title"></p>
+                      </div>
+                      <p data-order-key="line_items__price"></p>
+                    </div>
+                  </div>
+                  <p class="summary-footer">
+                    <span>Subtotal</span>
+                    <span data-order-key="subtotal"></span>
+                  </p>
+                  <p class="summary-footer">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                  </p>
+                  <p class="summary-footer">
+                    <span>Total</span>
+                    <span><span class="subdue">USD</span> <span data-order-key="total"></span></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      (() => {
+        const companyId = '{{customer.current_company.external_id}}';
+        const shopifySection = document.getElementById("shopify-section-{{section.id}}");
+        let depth = 0;
+
+        function accordionTrigger(e) {
+          e.currentTarget.classList.toggle('open');
+        }
+
+        function renderAttributes(dataPoint, ongoingKey, dataHTML, presentAttributes) {
+          depth++;
+          // let presentAttributes = [];
+          // recursively search object to generate dyanmic keys that map to the template
+          // the corrosponfing html elements will have an data-order-key with the acculated
+          // sequence of keys in the object
+          // arrays will look for an element with a corrsponding data-order-iterable to fill in the
+          if (dataPoint != null) {
+
+            Object.keys(dataPoint).forEach((key) => {
+              const currentKey = `${ongoingKey}${ongoingKey && "__"}${key}`;
+              presentAttributes.push(currentKey);
+              const value = dataPoint[key];
+
+              if (typeof value === "object") {
+                // if the current value is an array, produce an element for each of it's unknown number of items
+                if (Array.isArray(value)) {
+                  // fetch iterable container
+                  let iterableContainer = dataHTML.querySelector(`[data-order-iterable=${currentKey}]`);
+                  // console.log('vvvvv', iterableContainer, ongoingKey, currentKey);
+                  if (iterableContainer?.childElementCount) {
+                    // prepare iterable template for mass production
+                    let iterableTemplate = iterableContainer.children[0];
+                    iterableTemplate.remove();
+
+                    // render template for each element of the array
+                    value.forEach((iterableItem) => {
+                      let iterableHTML = iterableTemplate.cloneNode(true);
+                      renderAttributes(iterableItem, currentKey, iterableHTML, presentAttributes);
+
+                      iterableContainer.append(iterableHTML);
+                    });
+                  }
+                  
+                  if (value.length === 0) {
+                    iterableContainer.remove();
+                  }
+
+                  renderAttributes(value, currentKey, dataHTML, presentAttributes);
+                // if the current value is an object, recursivly search each one. 
+                } else {
+                  renderAttributes(value, currentKey, dataHTML, presentAttributes);
+                }
+              } else {
+                // we've reached the termination of the recurrsion, find the proper field and replace it's value
+                let keyEls = dataHTML.querySelectorAll(`[data-order-key=${currentKey}]`);
+
+                if (keyEls) {
+                  keyEls.forEach((keyEl) => {
+                    if (currentKey.indexOf('date') > -1) {
+                      // format dates for readibility
+                      keyEl.innerHTML = new Date(value).toLocaleString(undefined , {month: 'long', day: 'numeric', year: 'numeric'});
+                    } else if (currentKey.indexOf('image') > -1) {
+                      // edit 'src' for images instead of innerHTML
+                      keyEl.src = value;
+                    } else if ((currentKey.indexOf('price') > -1 || currentKey.indexOf('total') > -1) && value.toString().indexOf('$') === -1) {
+                      // add '$' to prices if they don't have any
+                      keyEl.innerHTML = `$${value}`;
+                    } else {
+                      keyEl.innerHTML = value;
+                    }
+                  });
+                }
+              }
+            });
+          }
+
+          depth--;
+        }
+
+
+        function renderOrder(order, template) {
+          const orderHTML = template.cloneNode(true);
+          // add accordionTrigger to each order template
+          orderHTML.querySelector('.order-head').addEventListener('click', accordionTrigger);
+          // accrue comprehensive list of attributes for the data-remove checks
+          let presentAttributes = [];
+          // start the recursive function call
+          renderAttributes(order, '', orderHTML, presentAttributes);
+
+          // add info that doesn't have an exact field in the data
+          orderHTML.querySelector('[data-order-special="grand-total"]').innerHTML = order.line_items.reduce((a, b) => a + b.quantity, 0);
+
+          // remove attributes labeled for removal unless presant in presentAttributes
+          orderHTML.querySelectorAll('[data-order-remove]').forEach((el) => {
+            if (presentAttributes.indexOf(el.getAttribute('data-order-remove')) === -1) el.remove();
+          });
+
+          shopifySection.querySelector('.orders-list').append(orderHTML);
+        }
+
+        function renderOrders(orders) {
+          // prepare order template for mass production
+          const orderTemplate = document.getElementById("offline-order-template");
+          orderTemplate.removeAttribute('id');
+          orderTemplate.remove();
+          
+          for (var order of orders.orders) {
+            renderOrder(order, orderTemplate);
+          }
+        }
+
+        fetch(`/apps/pricing-api/erp-orders?external_id=${companyId}`, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('orders:', data);
+          renderOrders(data);
+        })
+        .catch(error => {
+          console.error('Error fetching orders:', error);
+
+          const orderTemplate = document.getElementById("offline-order-template");
+          const errorMessage = document.createElement('p');
+
+          errorMessage.classList.add('error');
+          errorMessage.innerHTML = "{{ 'customer.offline_orders.error' | t }}";
+
+          orderTemplate.removeAttribute('id');
+          orderTemplate.replaceChildren();
+          orderTemplate.append(errorMessage);
+        });
+
+        // renderOrders(provided_example_orders_json);
+        // renderOrders(dm_example_orders_json);
+      })();
+    </script>
+
+  {% else %}
+    <div class="pdp__price-login-wrap">
+      <p>{{ 'customer.offline_orders.sign_in' | t }}</p>
+      <div class="pdp__price-login-cta-wrap">
+        <a class="button" href="{{ routes.account_login_url }}">{{ 'products.product.product_price_sign_in.sign_in_cta' | t }}</a>
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Historical Orders",
+  "tag": "section",
+  "class": "offline-orders",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background",
+      "info": "No settings required."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Historical Orders",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

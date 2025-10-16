@@ -1,0 +1,145 @@
+{
+  "wrapper": "div.main-collection",
+  "sections": {
+    "breadcrumb_bar_bztFWc": {
+      "type": "breadcrumb-bar",
+      "settings": {}
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "blocks": {
+        "c74861ab-95e0-450c-a34d-e4f2ba4cd626": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "{{ collection.metafields.custom.collection_parent_category.value }}",
+            "eyebrow_color_desktop": "#ffffff",
+            "eyebrow_color_mobile": "#ffffff"
+          }
+        },
+        "a19e470c-e80c-43ea-8bcb-3c15e9c0050c": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "heading_color_desktop": "#ffffff",
+            "heading_color_mobile": "#ffffff"
+          }
+        },
+        "2f138bbf-049f-4e37-a6be-799dfd8e2392": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ collection.metafields.cql.seo_collection_tagline | metafield_tag }}<\/p>",
+            "text_style": "text-body-small",
+            "text_color_desktop": "#ffffff",
+            "text_color_mobile": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "c74861ab-95e0-450c-a34d-e4f2ba4cd626",
+        "a19e470c-e80c-43ea-8bcb-3c15e9c0050c",
+        "2f138bbf-049f-4e37-a6be-799dfd8e2392"
+      ],
+      "custom_css": [],
+      "settings": {
+        "desktop_min_height": 288,
+        "section_background_color": "#002437",
+        "content_background_color": "rgba(0,0,0,0)",
+        "box_border_color": "rgba(0,0,0,0)",
+        "show_text_box": false,
+        "show_container_mobile": false,
+        "content_background_opacity": 100,
+        "content_area_max_width": 538,
+        "show_border_desktop": false,
+        "show_border_offset_desktop": false,
+        "show_border_mobile": false,
+        "show_border_offset_mobile": false,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "show_text_below": false,
+        "hide_image_mobile": true,
+        "section_url": "",
+        "hide_section_mobile": false,
+        "animation": "NoEffect",
+        "animation_time": "0.2s"
+      }
+    },
+    "collections_horizontal_nav_nMAaUn": {
+      "type": "horizontal-nav",
+      "disabled": true,
+      "settings": {
+        "menu_list": "top-categories",
+        "menu_heading": "Top Categories"
+      }
+    },
+    "in_page_promo_banner_VPB4jT": {
+      "type": "in-page-promo-banner",
+      "disabled": true,
+      "settings": {
+        "section_theme": "dark_theme",
+        "hide_mobile_image": false,
+        "desktop_layout": "text_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "eyebrow_text": "",
+        "headline_text": "",
+        "headline_size": "h3",
+        "message_text": "",
+        "link_text": "",
+        "link": ""
+      }
+    },
+    "in_page_promo_banner_WwTcgi": {
+      "type": "in-page-promo-banner",
+      "disabled": true,
+      "settings": {
+        "section_theme": "light_theme",
+        "hide_mobile_image": false,
+        "desktop_layout": "text_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "eyebrow_text": "",
+        "headline_text": "",
+        "headline_size": "h6",
+        "message_text": "",
+        "link_text": "",
+        "link": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "image_hover": "noeffect",
+        "product_grid_animation": "NoEffect",
+        "product_grid_time": "5s",
+        "show_image_outline": false,
+        "show_vendor": false,
+        "show_rating": true,
+        "show_product_labels": true,
+        "enable_filtering": true,
+        "custom_swatch_name": "color, material",
+        "enable_sorting": true,
+        "collapse_on_larger_devices": false
+      }
+    },
+    "seo_content": {
+      "type": "main-collection-seo-content",
+      "settings": {
+        "max_content_width": 873
+      }
+    }
+  },
+  "order": [
+    "breadcrumb_bar_bztFWc",
+    "banner",
+    "collections_horizontal_nav_nMAaUn",
+    "in_page_promo_banner_VPB4jT",
+    "in_page_promo_banner_WwTcgi",
+    "product-grid",
+    "seo_content"
+  ]
+}

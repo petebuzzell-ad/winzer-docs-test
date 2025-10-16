@@ -1,0 +1,297 @@
+.ss__autocomplete {
+  left: 50%;
+  transform: translate(-50%, 0);
+  max-width: 70rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 3rem;
+  gap: 3rem;
+  border-radius: .6rem;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.ss__autocomplete.ss__autocomplete--only-terms {
+  width: 100%;
+}
+
+.ss__autocomplete .close-autocomplete {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  padding: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.ss__autocomplete .close-autocomplete svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.ss__autocomplete__result article.ss__result {
+  background-color: unset!important;
+}
+
+@media screen and (min-width: 990px) {
+  .ss__autocomplete {
+    top: 7rem;
+    width: 100%;
+    border: unset!important;
+    justify-content: center;
+  }
+}
+
+.ss__autocomplete--target .ss__autocomplete__terms {
+  padding: 0;
+  width: 22rem;
+  max-width: none;
+  flex-shrink: 0;
+}
+
+.ss__autocomplete--target .ss__autocomplete__content {
+  padding: 0;
+}
+
+.ss__autocomplete__terms__option a {
+  font-style: normal;
+  font-weight: bold !important;
+  word-break: normal;
+  line-height: 2.4rem !important;
+  text-transform: capitalize;
+}
+
+.ss__autocomplete__terms__option a:hover {
+  text-decoration: underline;
+}
+
+.ss__autocomplete__terms__option a em {
+  font-weight: normal !important;
+  text-transform: capitalize;
+}
+
+.ss__autocomplete__results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ss__autocomplete__result {
+  padding: 0 1rem 0 0;
+}
+
+.ss__autocomplete__title {
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #D8D8D8;
+  margin-bottom: 1.6rem;
+}
+
+.ss__autocomplete__terms .ss__autocomplete__title {
+  margin-bottom: 1.2rem;
+}
+
+.ss__autocomplete__no-result {
+  padding: 0 3.5rem;
+}
+
+.ss__autocomplete__terms {
+  background: #ffffff !important;
+}
+
+.ss__autocomplete__results-wrap .button {
+  width: 100%;
+  margin-top: 1.6rem;
+}
+
+@media screen and (max-width: 989px) {
+  .ss__autocomplete {
+    top: auto;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    border-radius: 0 0 .6rem .6rem;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .ss__autocomplete {
+    height: calc(100vh - 10.5rem);
+    overflow-y: auto;
+    border-radius: 0;
+  }
+  
+  .ss__autocomplete--target .ss__autocomplete__terms {
+    flex: 0 0 auto !important;
+    width: 100%;
+  }
+
+  .ss__autocomplete__content {
+    overflow: visible !important;
+  }
+
+  .ss__autocomplete__terms .ss__autocomplete__terms__options .ss__autocomplete__terms__option {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  /* .ss__autocomplete__terms {
+    padding: 4rem 4rem;
+    width: 100%;
+    max-width: 21rem !important;
+  }
+
+  .ss__autocomplete__content {
+    padding: 4rem 4rem 4rem 0 !important;
+    max-width: 80rem;
+  }
+
+  .ss__autocomplete__results-wrap {
+    padding-left: 3.5rem;
+  } */
+}
+
+.ss__autocomplete__terms__option,
+.ss__autocomplete__terms__option--active {
+  background: transparent !important;
+  text-decoration: none;
+}
+
+.ss__autocomplete__terms__option a {
+  display: inline-block;
+  text-align: left;
+  text-decoration: none;
+  padding: 0 0 1.2rem !important;
+}
+
+.ss__autocomplete__result .ss__result__details {
+  text-align: left;
+}
+
+.ss__autocomplete .ss__image {
+  margin-bottom: 0;
+}
+
+.ss__autocomplete h5 {
+  margin: 0 !important;
+}
+
+.ss__autocomplete__title.ss__autocomplete__title--trending {
+  padding: 0 0 2.3rem 0;
+}
+
+.ss__autocomplete__inner-wrapper__divider {
+  border: 0.05rem solid #cccccc;
+}
+
+.ss__autocomplete__content__results {
+  position: relative;
+}
+
+.ss__autocomplete .ss__autocomplete__content__info {
+  display: none;
+  visibility: hidden;
+}
+
+.ss__autocomplete__view-all__link {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 750px) {
+  .ss__autocomplete .ss__result__details__age {
+    font-size: 1rem;
+  }
+
+  .ss__autocomplete .ss__result__details__title {
+    font-size: 1.4rem;
+  }
+
+  .ss__autocomplete__terms:empty + .ss__autocomplete__content .ss__autocomplete__content__results::before {
+    display: none !important;
+  }
+}
+
+/******************************
+SS Autocomplete Product Result 
+******************************/
+
+.ss__autocomplete .product-card-top-wrapper {
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.ss__autocomplete .ss__result__image-wrapper {
+  padding: 0;
+  width: 8rem;
+  height: 8rem;
+}
+
+.ss__autocomplete .ss__result__image {
+  padding: 1rem;
+  /* background-color: #FAFAFA; */
+  background-color: #f7f6f9;
+}
+
+.ss__autocomplete .ss__result__details {
+  padding: 0;
+}
+
+.ss__autocomplete .ss__result__details__line__image {
+  margin-bottom: 0;
+  max-width: 7.5rem;
+  height: auto;
+}
+
+.ss__autocomplete .ss__result__vendor,
+.ss__autocomplete .ss__results__promo-msg {
+  display: none;
+}
+
+.ss__autocomplete .ss__result__details__title {
+  margin: 0 0 .5rem;
+}
+
+.ss__autocomplete .ss__result__uom::before {
+  content: ' /';
+}
+
+@media screen and (max-width: 749px) {
+  
+  .ss__autocomplete__view-all {
+    /* Extra padding for actual mobile devices */
+    text-align: center;
+    margin-top: 3rem;
+    padding-bottom: 7rem;
+  }
+
+  .ss__autocomplete__terms-heading {
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .ss__autocomplete__recommended-heading {
+    margin: 0 0 2rem;
+  }
+
+  .ss__autocomplete__terms__options {
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+
+  .ss__autocomplete__terms__option a {
+    text-align: left;
+  }
+
+  .ss__autocomplete__inner-wrapper__divider {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .ss__autocomplete__results {
+    flex-wrap: wrap;
+  }
+}

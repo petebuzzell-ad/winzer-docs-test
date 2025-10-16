@@ -1,0 +1,110 @@
+.ss__facet-options-display {
+    padding: 0;
+    margin: 1rem 0 2rem 2rem;
+}
+
+.ss__facet--mfield_cql_generic_colors .ss__facet-options-display {
+    padding: 0;
+    margin: 1rem 0 2rem 4rem;
+}
+
+@media screen and (min-width: 990px) {
+    .ss__facet--mfield_cql_generic_colors .ss__facet-options-display {
+        margin: 1rem 0 2rem 4rem;
+    }
+
+    .ss__facet-options-display {
+        padding: 0;
+        margin: 1rem 0 2rem 3rem;
+    }
+}
+
+.clear-all {
+    display: none;
+    visibility: hidden;
+}
+
+.ss__slideout .ss__facet-grid-options {
+    margin: 1rem 0 2rem;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+}
+
+.ss__facet,
+.ss__facet.ss__facets__facet {
+    margin: 0;
+}
+
+.ss__slideout .ss__facet-grid-options:before {
+    content: none;
+}
+
+.ss__facet-grid-options .ss__facet-grid-options__option:nth-child(1n) {
+    grid-column: 1 / span 2;
+    grid-row: auto;
+}
+
+.ss__facet-grid-options .ss__facet-grid-options__option:nth-child(2n) {
+    grid-column: 3 / span 2;
+    grid-row: auto;
+}
+
+.ss__facet.ss__facet--grid.ss__facet--variant_size .ss__facet-grid-options .ss__facet-grid-options__option {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.ss__facet-grid-options .ss__facet-grid-options__option {
+    height: 5rem;
+    border: 1px solid #ccc;
+    color: #444;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ss__facet-grid-options .ss__facet-grid-options__option,
+.ss__facet-grid-options__option .ss__facet-grid-options__option__value--smaller {
+    font-size: 1.5rem !important;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.ss__facet-grid-options  .ss__facet-grid-options__option.ss__facet-grid-options__option--filtered {
+    background: white;
+    color: #444;
+    border: 2px solid;
+}
+
+
+@media screen and (min-width: 990px) {
+    .ss__facet-grid-options {
+        gap: 1rem;
+        margin: 0 auto 5rem;
+    }
+
+    .ss__facet-grid-options .ss__facet-grid-options__option:nth-child(1n),
+    .ss__facet-grid-options .ss__facet-grid-options__option:nth-child(2n) {
+        grid-column: auto / span 2;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .ss__facet-grid-options {
+        max-width: 50rem !important;
+        margin: 0 auto;
+    }
+
+    .ss__facet-grid-options__option {
+        flex: 0 0 15%;
+    }
+}
+
+.ss-sidebar-container-left-column .ss__facet-options-display.Color {
+    margin: 2.5rem 2rem;
+}
+
+.ss-sidebar-container-left-column .ss__facet-options-display {
+    margin: 1rem 0 2rem 1rem;
+}

@@ -1,0 +1,363 @@
+{
+  "wrapper": "div.pdp-default-wrapper",
+  "sections": {
+    "1735919746320a9e7b": {
+      "type": "apps",
+      "blocks": {
+        "breadcrumbs_category_breadcrumbs_9VTF7P": {
+          "type": "shopify:\/\/apps\/breadcrumbs\/blocks\/category-breadcrumbs\/dba51573-4328-452d-90db-1ad2dc5be363",
+          "settings": {
+            "override_linktext_colour": false,
+            "linktext_colour": "#0000ee",
+            "separator_colour": "#555555",
+            "producttitle_colour": "#555555",
+            "title_decoration": "",
+            "title_transform": "",
+            "spacing_above": 0,
+            "spacing_below": 0,
+            "sep_plus_class": "breadcrumb__sep_plus5",
+            "separator_char_code": "rsaquo;",
+            "hide_old_breadcrumb": false,
+            "show_catroot": true,
+            "link_catroot": "\/",
+            "text_catroot": "Home",
+            "show_tags": true,
+            "show_finalbread_as_textonly": false,
+            "insert_jsonld": true,
+            "insert_shortlinkfix": false,
+            "prod_multicat_sel": "leastprod",
+            "link_catall": "\/collections\/all",
+            "text_catall": "All Products",
+            "show_product_title": true,
+            "truncate_limit": 0,
+            "prod_ignore_referrer": false,
+            "old_breadcrumb_class": "breadcrumb"
+          }
+        }
+      },
+      "block_order": [
+        "breadcrumbs_category_breadcrumbs_9VTF7P"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "share_VxDnm9": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "product_vendor_eyebrow_W3iHT8": {
+          "type": "product_vendor_eyebrow",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "item_number_wrap_LRzxiK": {
+          "type": "item_number_wrap",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "show_swatches": true
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "hide_button_price": true
+          }
+        },
+        "bulk_pricing_table_GEJt3k": {
+          "type": "bulk_pricing_table",
+          "settings": {
+            "toggle_txt": "Buy in Bulk and Save"
+          }
+        },
+        "stock_messaging_NjQ4Dd": {
+          "type": "stock_messaging",
+          "settings": {
+            "low_qty_text": "{{ product.metafields.cql.product_lead_time.value }}"
+          }
+        },
+        "warranty_info_KtKG3j": {
+          "type": "warranty_info",
+          "settings": {
+            "badge_image": "shopify:\/\/shop_images\/onsesource-pdp-guarantee.svg",
+            "headline": "We Stand Behind Our Products",
+            "content": "with our 100% quality assurance guarantee.",
+            "trigger_text": "Details",
+            "modal_headline": "Quality Assurance Guarantee",
+            "modal_text": "<p>OneSource warrants that products delivered by OneSource to customers will be free from defects in material or workmanship under normal use for a period of ninety (90) days from the date of delivery. It is the responsibility of the customer to return defective products within the warranty period. If OneSource determines that the products returned for warranty refund are not defective within the terms of the warranty, the purchaser shall be responsible for all handling and transportation costs.<\/p><p>If an item is returned as defective and it is determined that the product is not, a restocking fee may be charged.  Refunds will be issued in the form of an account credit or back to the original payment method.<\/p>"
+          }
+        },
+        "product_description_a7AMK9": {
+          "type": "product_description",
+          "settings": {
+            "toggle_txt": "Description"
+          }
+        },
+        "collapsible_tab_wDQCre": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Features",
+            "content": "{{ product.metafields.cql.features_text | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "product_specifications_YiUDf4": {
+          "type": "product_specifications",
+          "settings": {
+            "product_specifications_title": "Specifications"
+          }
+        },
+        "product_downloads_iG4XWY": {
+          "type": "product_downloads",
+          "settings": {
+            "product_downloads_title": "Documents"
+          }
+        },
+        "product_messages_AFBN4g": {
+          "type": "product_messages",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "share_VxDnm9",
+        "product_vendor_eyebrow_W3iHT8",
+        "title",
+        "item_number_wrap_LRzxiK",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "bulk_pricing_table_GEJt3k",
+        "stock_messaging_NjQ4Dd",
+        "warranty_info_KtKG3j",
+        "product_description_a7AMK9",
+        "collapsible_tab_wDQCre",
+        "product_specifications_YiUDf4",
+        "product_downloads_iG4XWY",
+        "product_messages_AFBN4g"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "gallery_layout": "thumbnail_slider",
+        "show_image_border": false,
+        "media_size": "medium",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "text_color": "",
+        "background_color": "",
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "image_ratio": "adapt",
+        "image_hover": "noeffect",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_product_labels": true,
+        "desktop_top_padding": 60,
+        "desktop_bottom_padding": 60,
+        "mobile_top_padding": 45,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "searchspring_recommendations_DFQPRc": {
+      "type": "searchspring-recommendations",
+      "blocks": {
+        "recommendations_hkAKrF": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "pdp-customers-also-viewed",
+            "max_recommendations": 12,
+            "seed_profile": true,
+            "tab_title": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_desktop": "primary",
+            "button_style_mobile": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "recommendations_hkAKrF"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_theme": "section_theme_light",
+        "heading": "Customers Also Viewed",
+        "heading_size": "h2",
+        "content_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "desktop_top_padding": 50,
+        "desktop_bottom_padding": 108,
+        "mobile_top_padding": 5,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "searchspring_recommendations_ahXp9C": {
+      "type": "searchspring-recommendations",
+      "blocks": {
+        "recommendations_XPQcpE": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "pdp-recently-viewed",
+            "max_recommendations": 12,
+            "seed_profile": true,
+            "tab_title": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_desktop": "primary",
+            "button_style_mobile": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "recommendations_XPQcpE"
+      ],
+      "disabled": true,
+      "settings": {
+        "section_theme": "section_theme_light",
+        "heading": "Recently Viewed",
+        "heading_size": "h2",
+        "content_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "desktop_top_padding": 50,
+        "desktop_bottom_padding": 108,
+        "mobile_top_padding": 5,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "searchspring_recommendations_xbg3eX": {
+      "type": "searchspring-recommendations",
+      "blocks": {
+        "recommendations_fcMwET": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "pdp-test-profile",
+            "max_recommendations": 8,
+            "seed_profile": true,
+            "tab_title": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_desktop": "primary",
+            "button_style_mobile": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "recommendations_fcMwET"
+      ],
+      "settings": {
+        "section_theme": "section_theme_dark",
+        "heading": "Customers Also Viewed",
+        "heading_size": "h2",
+        "content_alignment": "center",
+        "background_color": "#131c3b",
+        "text_color": "rgba(0,0,0,0)",
+        "desktop_top_padding": 50,
+        "desktop_bottom_padding": 108,
+        "mobile_top_padding": 7,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "searchspring_recommendations_CHEYG4": {
+      "type": "searchspring-recommendations",
+      "blocks": {
+        "recommendations_iFy4ki": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "pdp-recently-viewed",
+            "max_recommendations": 8,
+            "seed_profile": true,
+            "tab_title": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_desktop": "primary",
+            "button_style_mobile": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "recommendations_iFy4ki"
+      ],
+      "settings": {
+        "section_theme": "section_theme_light",
+        "heading": "Recently Viewed",
+        "heading_size": "h2",
+        "content_alignment": "center",
+        "background_color": "#f3f1ee",
+        "text_color": "",
+        "desktop_top_padding": 50,
+        "desktop_bottom_padding": 108,
+        "mobile_top_padding": 7,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "custom_liquid_t9BVD4": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom_liquid_K4yQY9": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "1735919746320a9e7b",
+    "main",
+    "product-recommendations",
+    "searchspring_recommendations_DFQPRc",
+    "searchspring_recommendations_ahXp9C",
+    "searchspring_recommendations_xbg3eX",
+    "searchspring_recommendations_CHEYG4",
+    "custom_liquid_t9BVD4",
+    "custom_liquid_K4yQY9"
+  ]
+}

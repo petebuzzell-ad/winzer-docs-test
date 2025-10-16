@@ -1,0 +1,232 @@
+{
+  "wrapper": "div.pdp-default-wrapper",
+  "sections": {
+    "breadcrumb_bar_QHawpp": {
+      "type": "breadcrumb-bar",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "share_VxDnm9": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        },
+        "product_vendor_eyebrow_W3iHT8": {
+          "type": "product_vendor_eyebrow",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "item_number_wrap_LRzxiK": {
+          "type": "item_number_wrap",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "show_swatches": true
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "hide_button_price": true
+          }
+        },
+        "bulk_pricing_table_GEJt3k": {
+          "type": "bulk_pricing_table",
+          "settings": {
+            "toggle_txt": "Buy in Bulk and Save"
+          }
+        },
+        "stock_messaging_NjQ4Dd": {
+          "type": "stock_messaging",
+          "settings": {
+            "low_qty_text": "Only a few left"
+          }
+        },
+        "warranty_info_KtKG3j": {
+          "type": "warranty_info",
+          "settings": {
+            "badge_image": "shopify:\/\/shop_images\/winzer-pdp-guarantee.svg",
+            "headline": "We Stand Behind Our Products",
+            "content": "If you are not satisfied, return within 90 days for a full refund.",
+            "trigger_text": "Details",
+            "modal_headline": "Buy in Bulk and Save",
+            "modal_text": "<p>If a customer is not satisfied with their purchase, they may choose to return the unused, resalable portion of their merchandise within ninety (90) days for a full refund.  <\/p><p>Winzer Corporation is committed to providing the highest quality automotive and industrial repair supplies and support services. Winzer’s growth and stability in the marketplace have been based on a single principle: Great products, and attentive service, create lifetime customers.<\/p><p>Winzer warrants that products delivered by Winzer to customers will be free from defects in material or workmanship under normal use for a period of ninety (90) days from the date of delivery. It is the responsibility of the customer to return defective products within the warranty period. If Winzer determines that the products returned for warranty refund are not defective within the terms of the warranty, the purchaser shall be responsible for all handling and transportation costs. Winzer’s sole responsibility under warranty shall be, at Winzer’s option, to either repair or replace (using standard delivery service) any product that fails during the warranty period due to a defect in workmanship and\/or material, provided the purchaser has promptly reported the defect to Winzer in writing, and Winzer has, upon inspection, found such products to be indeed defective. This stated warranty is in lieu of all liabilities or obligations of Winzer for damages arising out of, or in connection with, the delivery, use, or performance of Approved Winzer Products. Winzer stands behind its goods with significant product liability insurance.<\/p><p>This limited warranty is the only warranty from Winzer. Winzer makes, and the purchaser receives, no other warranty, either express or implied, including without limitation, all warranties of merchantability or fitness for a particular purpose with respect to the products, and Winzer expressly disclaims the same.<\/p><p>In no event shall Winzer be liable for any consequential, exemplary, or incidental damages, direct or indirect, including but not limited to loss of use, revenue, or profit arising in connection with Approved Winzer Products, even if Winzer has been advised of the possibility of such damages.<\/p><p>It is also important to note that any product purchased by a franchisee for a customer from a company other than Winzer is not covered under the Winzer warranty.<\/p>"
+          }
+        },
+        "product_description_a7AMK9": {
+          "type": "product_description",
+          "settings": {
+            "toggle_txt": "Description"
+          }
+        },
+        "collapsible_tab_mGgQyL": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Features",
+            "content": "{{ product.metafields.cql.features_text | metafield_tag }}",
+            "page": ""
+          }
+        },
+        "product_specifications_93rzPk": {
+          "type": "product_specifications",
+          "settings": {
+            "product_specifications_title": "Specifications"
+          }
+        },
+        "product_downloads_iG4XWY": {
+          "type": "product_downloads",
+          "settings": {
+            "product_downloads_title": "Documents"
+          }
+        },
+        "product_messages_AFBN4g": {
+          "type": "product_messages",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "share_VxDnm9",
+        "product_vendor_eyebrow_W3iHT8",
+        "title",
+        "item_number_wrap_LRzxiK",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "bulk_pricing_table_GEJt3k",
+        "stock_messaging_NjQ4Dd",
+        "warranty_info_KtKG3j",
+        "product_description_a7AMK9",
+        "collapsible_tab_mGgQyL",
+        "product_specifications_93rzPk",
+        "product_downloads_iG4XWY",
+        "product_messages_AFBN4g"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "gallery_layout": "thumbnail_slider",
+        "show_image_border": false,
+        "media_size": "medium",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "text_color": "",
+        "background_color": "",
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "image_ratio": "adapt",
+        "image_hover": "noeffect",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_product_labels": true,
+        "desktop_top_padding": 60,
+        "desktop_bottom_padding": 60,
+        "mobile_top_padding": 45,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "searchspring_recommendations_brMyaQ": {
+      "type": "searchspring-recommendations",
+      "blocks": {
+        "recommendations_fzUeVY": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "custom",
+            "max_recommendations": 8,
+            "seed_profile": true,
+            "tab_title": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_desktop": "primary",
+            "button_style_mobile": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "recommendations_fzUeVY"
+      ],
+      "settings": {
+        "section_theme": "section_theme_dark",
+        "heading": "Customers Also Viewed",
+        "heading_size": "h2",
+        "content_alignment": "center",
+        "background_color": "#002437",
+        "text_color": "",
+        "desktop_top_padding": 50,
+        "desktop_bottom_padding": 108,
+        "mobile_top_padding": 5,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "searchspring_recommendations_RfXzjp": {
+      "type": "searchspring-recommendations",
+      "blocks": {
+        "recommendations_jVxMnk": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "custom",
+            "max_recommendations": 8,
+            "seed_profile": true,
+            "tab_title": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_desktop": "primary",
+            "button_style_mobile": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "recommendations_jVxMnk"
+      ],
+      "settings": {
+        "section_theme": "section_theme_light",
+        "heading": "Recently Viewed",
+        "heading_size": "h2",
+        "content_alignment": "center",
+        "background_color": "#f4f4f4",
+        "text_color": "",
+        "desktop_top_padding": 50,
+        "desktop_bottom_padding": 108,
+        "mobile_top_padding": 5,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    }
+  },
+  "order": [
+    "breadcrumb_bar_QHawpp",
+    "main",
+    "product-recommendations",
+    "searchspring_recommendations_brMyaQ",
+    "searchspring_recommendations_RfXzjp"
+  ]
+}

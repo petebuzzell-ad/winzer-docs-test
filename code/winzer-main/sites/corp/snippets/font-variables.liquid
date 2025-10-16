@@ -1,0 +1,57 @@
+{% style %}
+  /* Fonts */
+  @font-face {
+    font-family: CQL;
+    src: url({{ "CQL-BoldItalic.woff2" | asset_url }}) format('woff2'),
+          url({{ "CQL-BoldItalic.woff" | asset_url }}) format('woff');
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: CQL;
+    src: url({{ "CQL-Bold.woff2" | asset_url }}) format('woff2'),
+          url({{ "CQL-Bold.woff" | asset_url }}) format('woff');
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: CQL;
+    src: url({{ "CQL-Italic.woff2" | asset_url }}) format('woff2'),
+          url({{ "CQL-Italic.woff" | asset_url }}) format('woff');
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: CQL;
+    src: url({{ "CQL-Regular.woff2" | asset_url }}) format('woff2'),
+          url({{ "CQL-Regular.woff" | asset_url }}) format('woff');
+    font-weight: 300;
+  }
+
+  :root {
+    --font-heading-family: "eurostile", sans-serif;
+    --font-heading-style: normal;
+    --font-heading-weight: 800;
+
+    --font-body-family: "poppins", helvetica, Arial, sans-serif;
+    --font-body-style: normal;
+    --font-body-weight: 400;
+
+    --font-body-alt-family: "eurostile", sans-serif;
+    --font-body-alt-style: normal;
+    --font-body-alt-weight: 400;
+
+    --font-eyebrow-family: "poppins", sans-serif;
+    --font-eyebrow-style: normal;
+    --font-eyebrow-weight: 400;
+
+    --font-button-family: "eurostile", sans-serif;
+    --font-button-style: normal;
+    --font-button-weight: 800;
+
+    --font-body-scale: 1;
+    --font-heading-scale: 1;
+  }
+{% endstyle %}

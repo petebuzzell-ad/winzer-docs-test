@@ -1,0 +1,132 @@
+{{ 'swiper-carousel-custom.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection-horzontal-nav.css' | asset_url | stylesheet_tag }}
+
+
+<div id="horz-nav-{{ section.id }}" class="horizontal-nav">
+    <div class="horizontal-nav__inner page-width">
+        {% if section.settings.menu_heading != blank %}
+        <h2 class="horizontal-nav__title">{{ section.settings.menu_heading }}</h2>
+        {% endif %}
+
+        {% if section.settings.menu_list.links != blank %}
+            <div>
+        <div class="horz-nav-swiper__wrap">
+            <div id="horz-nav-swiper-{{ section.id }}" class="swiper horz-nav-swiper">
+
+                <div id="Slider-{{ section.id }}" class="swiper-wrapper" >
+                    {%- for link in section.settings.menu_list.links -%}
+                        {% unless link.object.handle == collection.handle %}
+                        <div id="Slide-{{ section.id }}-{{ forloop.index }}" class="swiper-slide" style="width: auto;">
+                          <a href="{{ link.url }}" class="horizontal-nav__link">
+                              {{ link.title | escape }}
+                          </a>
+                        </div>
+                        {% endunless %}
+                    {%- endfor -%}
+                </div>
+            </div>
+
+            <div class="horz-nav-swiper__button horz-nav-swiper__button-prev">
+                {% render 'icon-caret' %}
+                <span class="visually-hidden">Previous</span>
+            </div>
+            <div class="horz-nav-swiper__button horz-nav-swiper__button-next">
+                {% render 'icon-caret' %}
+                <span class="visually-hidden">Next</span>
+            </div>
+        </div>
+    </div>
+        {% endif %}
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
+      let swiper = new Swiper(
+        "#horz-nav-swiper-{{ section.id }}",
+        {
+            slidesPerView: "auto",
+            slidesPerGroup: 1,
+            spaceBetween: 8,
+            navigation: {
+                nextEl: '.horz-nav-swiper__button-next',
+                prevEl: '.horz-nav-swiper__button-prev',
+            },
+            a11y: true,
+            watchSlidesProgress: true,
+            on: {
+                'afterInit': () => {
+                    forceSliderResize();
+                },
+                'slideChangeTransitionEnd': () => {
+                    checkAllSlidesShowing();
+                },
+            }
+        }
+      );
+
+        // hide arrows when both are diabled/all slides are showing
+        function checkAllSlidesShowing() {
+            const ArrowEls = Array.from(document.querySelectorAll('#horz-nav-{{ section.id }} .horz-nav-swiper__button'));
+
+            if (ArrowEls.every(el => el.classList.contains('swiper-button-disabled'))) {
+                ArrowEls.forEach(el => el.classList.add('visually-hidden'));
+            } else {
+                ArrowEls.forEach(el => el.classList.remove('visually-hidden'));
+            }
+        }
+
+        // slider breaks if parents are flexed
+        // in order to allow for a dynamic title - using maring to make space for the title rather than flex
+        function forceSliderResize() {
+            const sliderWrapEl = document.querySelector('#horz-nav-{{ section.id }} .horz-nav-swiper__wrap');
+            const titleEl = document.querySelector('#horz-nav-{{ section.id }} .horizontal-nav__title');
+
+            if (window.innerWidth >= 750) {
+                if(!!titleEl.offsetWidth) {
+                  sliderWrapEl ? sliderWrapEl.style.marginLeft = titleEl.offsetWidth + 'px' : null;
+                }
+            } else {
+              sliderWrapEl ? sliderWrapEl.removeAttribute('style'): null;
+            }
+
+            checkAllSlidesShowing();
+        }
+
+        window.addEventListener('resize', function() {
+            forceSliderResize();
+        });
+    })
+  </script>
+
+{% schema %}
+{
+  "name": "Horizontal Menu",
+  "tag": "section",
+  "class": "horizontal-menu",
+  "limit": 1,
+  "settings": [
+    {
+        "type": "header",
+        "content": "Content settings"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_list",
+      "label": "Menu"
+    },
+    {
+      "type": "text",
+      "id": "menu_heading",
+      "label": "Menu headline",
+      "default": "Top Categories"
+    }
+  ],
+  "presets": [{
+    "name": "Horizontal Menu"
+  }]
+}
+{% endschema %}

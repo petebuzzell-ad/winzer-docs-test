@@ -1,0 +1,255 @@
+{
+  "wrapper": "div.about-us",
+  "sections": {
+    "16484545291ecbe325": {
+      "type": "image-banner",
+      "blocks": {
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "Product Satisfaction",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color_desktop": "#ffffff",
+            "eyebrow_color_mobile": "#ffffff"
+          }
+        },
+        "1648454529bf74fe13-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Stand Behind The Products We Sell",
+            "heading_size": "h1",
+            "heading_color_desktop": "#ffffff",
+            "heading_color_mobile": "#ffffff"
+          }
+        },
+        "text_adQpQw": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>We understand that one size does not fit all. FastServ specializes in personal custom industrial product solutions for your business.<\/p>",
+            "text_style": "text-body-large",
+            "text_color_desktop": "#ffffff",
+            "text_color_mobile": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343",
+        "1648454529bf74fe13-0",
+        "text_adQpQw"
+      ],
+      "settings": {
+        "desktop_large_image": "shopify:\/\/shop_images\/homepage-hero_copy.webp",
+        "desktop_image": "shopify:\/\/shop_images\/homepage-hero_copy.webp",
+        "mobile_image": "shopify:\/\/shop_images\/products-mobile.webp",
+        "enable_parallax": false,
+        "desktop_max_height": 250,
+        "section_background_color": "#ffffff",
+        "content_background_color": "#000000",
+        "box_border_color": "#ffffff",
+        "show_text_box": false,
+        "show_container_mobile": true,
+        "content_background_opacity": 100,
+        "content_area_max_width": 600,
+        "show_border_desktop": false,
+        "show_border_offset_desktop": false,
+        "show_border_mobile": false,
+        "show_border_offset_mobile": false,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "hide_image_mobile": false,
+        "section_url": "",
+        "hide_section_mobile": false,
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false,
+        "custom_class": ""
+      }
+    },
+    "image_with_text_49c9ap": {
+      "type": "image-with-text",
+      "blocks": {
+        "eyebrow_8nkY7f": {
+          "type": "eyebrow",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "text_color": "",
+            "text_alignment": "align-left"
+          }
+        },
+        "heading_Fxqa3n": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Hard-Working Parts",
+            "heading_size": "cql-headline-2",
+            "heading_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        },
+        "text_A6ykPm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FastServ Supply stands behind the products we sell and offers the industry’s highest quality fasteners and MRO products from the brands you know and trust. Combined with an industry-leading product satisfaction guarantee, you can rest assured that a FastServ Supply Solution has your best interest in mind.<\/p><p>To be eligible for a return, products must be purchased from FastServ within the last 30 days and be in good, resalable condition, properly labeled, and in the product’s original packaging. Special product and quantity purchases are not eligible for return. All returns may be subject to a restocking fee.<\/p><p>For product questions and\/or returns don’t hesitate to get in touch with your local sales representative or branch.<\/p>",
+            "text_style": "body-special-large",
+            "text_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        },
+        "button_bjUtBb": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Our Brands",
+            "button_link_1": "#",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_8nkY7f",
+        "heading_Fxqa3n",
+        "text_A6ykPm",
+        "button_bjUtBb"
+      ],
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#000000",
+        "content_background_color": "#000000",
+        "dark_mode": false,
+        "image": "shopify:\/\/shop_images\/hard-working-parts.webp",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": true,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "none",
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "rich_text_mfLTmx": {
+      "type": "rich-text",
+      "blocks": {
+        "eyebrow_TMhjnG": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "Business Customers",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color": ""
+          }
+        },
+        "heading_mqhcpw": {
+          "type": "heading",
+          "settings": {
+            "headline_animation": "NoEffect",
+            "headline_animation_time": "0.2s",
+            "heading": "Looking for Parts for Your Business?",
+            "heading_color": "#000000",
+            "heading_size": "h1"
+          }
+        },
+        "text_n9p7PY": {
+          "type": "text",
+          "settings": {
+            "richtext_animation": "NoEffect",
+            "richtext_animation_time": "0.2s",
+            "text": "<p>Contact us, and we can help you get started.<\/p>",
+            "text_color": "#000000",
+            "text_style": "body-special-large"
+          }
+        },
+        "button_JrxgLh": {
+          "type": "button",
+          "settings": {
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "Contact Us",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style": "secondary",
+            "button_shape": "",
+            "button_size": "medium",
+            "mobile_button_size": "medium",
+            "button_arrow": "none"
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_TMhjnG",
+        "heading_mqhcpw",
+        "text_n9p7PY",
+        "button_JrxgLh"
+      ],
+      "settings": {
+        "background_color": "#f3f1ee",
+        "desktop_max_content_width": 600,
+        "container_alignment": "center",
+        "text_alignment": "center",
+        "height_desktop": 0,
+        "height_mobile": 0,
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 40,
+        "mobile_bottom_padding": 40,
+        "display_margins": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "16484545291ecbe325",
+    "image_with_text_49c9ap",
+    "rich_text_mfLTmx",
+    "main"
+  ]
+}

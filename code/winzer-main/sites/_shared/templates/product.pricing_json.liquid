@@ -1,0 +1,9 @@
+{%- layout none -%}
+{%- capture pricing_json -%}
+{
+{% for variant in product.variants %}
+  "{{ variant.id }}": "{{ variant.price | money_without_currency }}"{% unless forloop.last %},{% endunless %}
+{% endfor %}
+}
+{%- endcapture -%}
+{{ pricing_json | strip_newlines }}

@@ -1,0 +1,265 @@
+{
+  "wrapper": "div.about-us",
+  "sections": {
+    "16484545291ecbe325": {
+      "type": "image-banner",
+      "blocks": {
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "Store Locator",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color_desktop": "#ffffff",
+            "eyebrow_color_mobile": "#ffffff"
+          }
+        },
+        "1648454529bf74fe13-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Local Stores, Local People",
+            "heading_size": "h1",
+            "heading_color_desktop": "#ffffff",
+            "heading_color_mobile": "#ffffff"
+          }
+        },
+        "text_adQpQw": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>We understand that one size does not fit all. FastServ specializes in personal custom industrial product solutions for your business.<\/p>",
+            "text_style": "text-body-large",
+            "text_color_desktop": "#ffffff",
+            "text_color_mobile": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343",
+        "1648454529bf74fe13-0",
+        "text_adQpQw"
+      ],
+      "settings": {
+        "desktop_large_image": "shopify:\/\/shop_images\/about-hero.webp",
+        "desktop_image": "shopify:\/\/shop_images\/about-hero.webp",
+        "mobile_image": "shopify:\/\/shop_images\/store-locator-hero-mobile.webp",
+        "enable_parallax": false,
+        "desktop_max_height": 250,
+        "section_background_color": "#ffffff",
+        "content_background_color": "#000000",
+        "box_border_color": "#ffffff",
+        "show_text_box": false,
+        "show_container_mobile": true,
+        "content_background_opacity": 100,
+        "content_area_max_width": 600,
+        "show_border_desktop": false,
+        "show_border_offset_desktop": false,
+        "show_border_mobile": false,
+        "show_border_offset_mobile": false,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "hide_image_mobile": false,
+        "section_url": "",
+        "hide_section_mobile": false,
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false,
+        "custom_class": ""
+      }
+    },
+    "multicolumn_DARxFw": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_zXDT7e": {
+          "type": "column",
+          "settings": {
+            "title": "FastServ Georgetown",
+            "text": "<p>1303 Blue Ridge<br\/>Suite 301<br\/>Georgetown, TX<br\/>(512) 836-1611<\/p><p><strong>Hours: 7:30am – 4:30pm<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_T4aX89": {
+          "type": "column",
+          "settings": {
+            "title": "FastServ Brownsville",
+            "text": "<p>1945 International Blvd<br\/>Brownsville, TX 78521<br\/>956-544-1957<\/p><p><strong>Hours: 8am – 5pm<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_XGkhMY": {
+          "type": "column",
+          "settings": {
+            "title": "FastServ Bryan",
+            "text": "<p>1214 S. Texas Ave<br\/>Bryan, TX 77803<br\/>979-779-7666<\/p><p><strong>Hours: 8am – 4pm<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yw6QUx": {
+          "type": "column",
+          "settings": {
+            "title": "FastServ Corpus Christi",
+            "text": "<p>4822 Baldwin Blvd<br\/>Corpus Christi, TX 78408<br\/>361-888-4228<\/p><p><strong>Hours: 8am – 5pm<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_pBqgdb": {
+          "type": "column",
+          "settings": {
+            "title": "FastServ Laredo",
+            "text": "<p>520 Market St<br\/>Laredo, TX 78040<br\/>956-722-0049<\/p><p><strong>Hours: 8am – 5pm<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_LVEUAJ": {
+          "type": "column",
+          "settings": {
+            "title": "FastServ Pharr",
+            "text": "<p>1117 W. HWY 83<br\/>Pharr, TX 78577<br\/>956-787-5569<\/p><p><strong>Hours: 8am – 5pm<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WXnzHW": {
+          "type": "column",
+          "settings": {
+            "title": "FastServ San Antonio",
+            "text": "<p>200 Brooklyn Ave<br\/>San Antonio, TX 78215<br\/>800-292-5890<\/p><p><strong>Hours: 7:30am – 4:30pm<\/strong><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_x4zY4H": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_gAPPqK": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_zXDT7e",
+        "column_T4aX89",
+        "column_XGkhMY",
+        "column_yw6QUx",
+        "column_pBqgdb",
+        "column_LVEUAJ",
+        "column_WXnzHW",
+        "column_x4zY4H",
+        "column_gAPPqK"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_mfLTmx": {
+      "type": "rich-text",
+      "blocks": {
+        "eyebrow_TMhjnG": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "Business Customers",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color": ""
+          }
+        },
+        "heading_mqhcpw": {
+          "type": "heading",
+          "settings": {
+            "headline_animation": "NoEffect",
+            "headline_animation_time": "0.2s",
+            "heading": "Looking for Parts for Your Business?",
+            "heading_color": "#000000",
+            "heading_size": "h1"
+          }
+        },
+        "text_n9p7PY": {
+          "type": "text",
+          "settings": {
+            "richtext_animation": "NoEffect",
+            "richtext_animation_time": "0.2s",
+            "text": "<p>Contact us, and we can help you get started.<\/p>",
+            "text_color": "#000000",
+            "text_style": "body-special-large"
+          }
+        },
+        "button_JrxgLh": {
+          "type": "button",
+          "settings": {
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "Contact Us",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style": "secondary",
+            "button_shape": "",
+            "button_size": "medium",
+            "mobile_button_size": "medium",
+            "button_arrow": "none"
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_TMhjnG",
+        "heading_mqhcpw",
+        "text_n9p7PY",
+        "button_JrxgLh"
+      ],
+      "settings": {
+        "background_color": "#f3f1ee",
+        "desktop_max_content_width": 600,
+        "container_alignment": "center",
+        "text_alignment": "center",
+        "height_desktop": 0,
+        "height_mobile": 0,
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 40,
+        "mobile_bottom_padding": 40,
+        "display_margins": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "16484545291ecbe325",
+    "multicolumn_DARxFw",
+    "rich_text_mfLTmx",
+    "main"
+  ]
+}

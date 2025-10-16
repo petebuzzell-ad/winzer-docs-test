@@ -1,0 +1,28 @@
+.facet-options-footer {
+    display: flex;
+    flex-flow: column;
+    padding: 0 5rem 3.4rem;
+    margin-top: 5rem;
+}
+
+.facet-options-footer hr {
+    width: 100%;
+    margin: 0 0 1rem;
+}
+
+.facet-options-footer__close {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: var(--font-body-family);
+    font-weight: bold;
+    background: none;
+    color: var(--sr-blue);
+    border: none;
+    padding: 0;
+    outline: inherit;
+    align-self: flex-end;
+}
+
+.facet-options-footer__close:hover {
+    cursor: pointer;
+}

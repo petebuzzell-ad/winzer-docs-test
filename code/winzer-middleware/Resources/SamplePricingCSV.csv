@@ -1,0 +1,6 @@
+Product_ID,Variant_ID,Company_ID,Company_Location_ID,Quantity,Contract_Price,Last_Purchase_Price,Template_Name,Template_Price
+100000007979999,100000007983077,1234,234,1,685.1313,11.1111,"Template1",64
+155_300000003628279,2345,,,,,,"Template1",0
+,100000007982309,3456,,,,,"Template1",7.5584
+,100000008024944,3456,,,,,"Template1",100.0000
+,100000007996329,,,,,,"Template1",19.9418

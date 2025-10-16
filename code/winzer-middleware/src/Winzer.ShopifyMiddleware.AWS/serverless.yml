@@ -1,0 +1,194 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: Winzer-ShopifyMiddleware
+# app and org for use with dashboard.serverless.com
+#app: your-app-name
+#org: your-org-name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: '3'
+configValidationMode: error
+
+provider:
+  name: aws
+  runtime: dotnet6
+  tracing:
+    lambda: true
+  region: us-east-1
+  stage: ${opt:stage,'dev'}
+  memorySize: 512
+  timeout: 900
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "xray:PutTraceSegments"
+            - "xray:PutTelemetryRecords"
+          Resource: "*"
+        - Effect: Allow
+          Action:
+            - SNS:Publish
+          Resource: "*"
+  deploymentMethod: direct
+
+custom:
+  inventoryAccessTokenValue: ${env:INVENTORY_ACCESS_TOKEN_VALUE, null}
+  storeInventoryAccessTokenValue: ${env:STORE_INVENTORY_ACCESS_TOKEN_VALUE, null}
+  orderAccessTokenValue: ${env:ORDER_ACCESS_TOKEN_VALUE, null}
+  fulfillmentAccessTokenValue: ${env:FULFILLMENT_ACCESS_TOKEN_VALUE, null}
+  storeName: ${env:STORE_NAME, null}
+  sftpPassword: ${env:SFTP_PASSWORD, null}
+  kwiSftpPassword: ${env:KWI_SFTP_PASSWORD, null}
+  crmAuthorizationHeader: ${env:CRM_AUTHORIZATION_HEADER, null}
+  bucketName: ${env:BUCKET_NAME, null}
+  locationId: ${env:LOCATION_ID, "gid://shopify/Location/68262232296"}
+  returnAuthorizationHeader: ${env:RETURN_AUTHORIZATION_HEADER, null}
+  dev:
+    scheduleEnabled: false
+  staging:
+    scheduleEnabled: false
+  prod:
+    scheduleEnabled: true
+
+package:
+  individually: true
+
+functions:
+  EcommerceInventoryFeedHandler:
+    handler: Winzer.ShopifyMiddleware.AWS::Winzer.ShopifyMiddleware.AWS.EcommerceInventoryFeedHandler::Handler
+    name: EcommerceInventoryFeedHandler-${self:provider.stage}
+    description: Function to sync main Inventory Feed info to shopify
+    timeout: 900
+    onError: !Ref InventoryFailureNotificationTopic
+    package:
+      artifact: out/ShopifyMiddleware.zip
+    events:
+      - schedule:
+          enabled: false
+          rate: cron(01 4,10,16,22 * * ? *)
+          input:
+            path: "/inventory/"
+            pattern: "BRI-INV-[0-9-]*.csv"
+            dryrun: false
+            locationId: ${self:custom.locationId}
+    environment:
+      ENVIRONMENT: ${self:provider.stage}
+      SNSTopicArn: !Ref InventoryFailureNotificationTopic
+      ShopifyGraphQL__StoreName: ${self:custom.storeName, null}
+      ShopifyGraphQL__AccessTokenValue: ${self:custom.inventoryAccessTokenValue, null}
+      Sftp__Password: ${self:custom.sftpPassword, null}
+      S3__BucketName:  ${self:custom.bucketName, null}
+      Inventory__ActivateInventorySkus: false
+
+  StoreInventoryFeedHandler:
+    handler: Winzer.ShopifyMiddleware.AWS::Winzer.ShopifyMiddleware.AWS.StoreInventoryFeedHandler::Handler
+    name: StoreInventoryFeedHandler-${self:provider.stage}
+    description: Function to sync Inventory Feed info to shopify store locations
+    timeout: 900
+    onError: !Ref InventoryFailureNotificationTopic
+    package:
+      artifact: out/ShopifyMiddleware.zip
+    events:
+      - schedule:
+          enabled: false
+          rate: cron(01 * * * ? *)
+          input:
+            path: "/inventory/"
+            pattern: "BRIGHTON-INV-[0-9-]*.txt"
+            dryrun: false
+    environment:
+      ENVIRONMENT: ${self:provider.stage}
+      SNSTopicArn: !Ref InventoryFailureNotificationTopic
+      ShopifyGraphQL__StoreName: ${self:custom.storeName, null}
+      ShopifyGraphQL__AccessTokenValue: ${self:custom.storeInventoryAccessTokenValue, null}
+      Sftp__Password: ${self:custom.sftpPassword, null}
+      S3__BucketName:  ${self:custom.bucketName, null}
+
+  OrderExportHandler:
+    handler: Winzer.ShopifyMiddleware.AWS::Winzer.ShopifyMiddleware.AWS.OrderExportHandler::Handler
+    name: OrderExportHandler-${self:provider.stage}
+    description: Function to Export Orders feed from Shopify
+    timeout: 900
+    onError: !Ref OrderExportFailureNotificationTopic
+    package:
+      artifact: out/ShopifyMiddleware.zip
+    events:
+      - schedule:
+          enabled: ${self:custom.${self:provider.stage}.scheduleEnabled, false}
+          rate: cron(0,15,30,45 * * * ? *)
+          input:
+            dryrun: false
+    environment:
+      ENVIRONMENT: ${self:provider.stage}
+      SNSTopicArn: !Ref OrderExportFailureNotificationTopic
+      ShopifyGraphQL__StoreName: ${self:custom.storeName, null}
+      ShopifyGraphQL__AccessTokenValue: ${self:custom.orderAccessTokenValue, null}
+      Sftp__Password:  ${self:custom.sftpPassword, null}
+      KWI__Sftp__Password: ${self:custom.kwiSftpPassword, null}
+      S3__BucketName:  ${self:custom.bucketName, null}
+      WinzerCrm__AuthorizationHeader: ${self:custom.crmAuthorizationHeader, null}
+
+  FulfillmentFeedHandler:
+    handler: Winzer.ShopifyMiddleware.AWS::Winzer.ShopifyMiddleware.AWS.FulfillmentFeedHandler::Handler
+    name: FulfillmentFeedHandler-${self:provider.stage}
+    description: Function to import fulfillment feed to Shopify
+    timeout: 900
+    onError: !Ref FulfillmentFailureNotificationTopic
+    package:
+      artifact: out/ShopifyMiddleware.zip
+    events:
+      - schedule:
+          enabled: ${self:custom.${self:provider.stage}.scheduleEnabled, false}
+          rate: cron(0,15,30,45 * * * ? *)
+          input:
+            path: "/shipments/"
+            pattern: "SHOP-SHIP-[0-9-]*.csv"
+            dryrun: false
+    environment:
+      ENVIRONMENT: ${self:provider.stage}
+      SNSTopicArn: !Ref FulfillmentFailureNotificationTopic
+      ShopifyGraphQL__StoreName: ${self:custom.storeName, null}
+      ShopifyGraphQL__AccessTokenValue: ${self:custom.fulfillmentAccessTokenValue, null}
+      KWI__Sftp__Password: ${self:custom.kwiSftpPassword, null}
+      Sftp__Password:  ${self:custom.sftpPassword, null}
+      S3__BucketName:  ${self:custom.bucketName, null}
+
+  ReturnExportHandler:
+    handler: Winzer.ShopifyMiddleware.AWS::Winzer.ShopifyMiddleware.AWS.ReturnExportHandler::Handler
+    name: ReturnExportHandler-${self:provider.stage}
+    description: Function to Export Returns KWI feed from Loop
+    timeout: 900
+    onError: !Ref ReturnExportFailureNotificationTopic
+    package:
+      artifact: out/ShopifyMiddleware.zip
+    events:
+      - schedule:
+          enabled: ${self:custom.${self:provider.stage}.scheduleEnabled, false}
+          rate: cron(0,15,30,45 * * * ? *)
+          input:
+            dryrun: false
+    environment:
+      ENVIRONMENT: ${self:provider.stage}
+      SNSTopicArn: !Ref ReturnExportFailureNotificationTopic
+      ShopifyGraphQL__StoreName: ${self:custom.storeName, null}
+      ShopifyGraphQL__AccessTokenValue: ${self:custom.orderAccessTokenValue, null}
+      Sftp__Password:  ${self:custom.sftpPassword, null}
+      KWI__Sftp__Password: ${self:custom.kwiSftpPassword, null}
+      S3__BucketName:  ${self:custom.bucketName, null}
+      Return__AuthorizationHeader: ${self:custom.returnAuthorizationHeader, null}
+
+resources:
+  - ${file(sns.yml)}

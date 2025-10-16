@@ -1,0 +1,85 @@
+{{ 'section-breadcrumb-bar.css' | asset_url | stylesheet_tag }}
+
+{% if template contains 'product' or template == 'search' or template == 'collection' %}
+  <div class="breadcrumb-bar">
+    <div class="page-width breadcrumb-bar__inner">
+      <nav>
+        <ul>
+          <li class="small-hide"><a href="/" title="Home">Home</a></li>
+          {%- case template -%}
+            {%- when 'product' -%}
+              {% if collection %}
+                {% assign parent_collection = collection.metafields.custom.collection_parent_category | metafield_tag %}
+                {% unless parent_collection == blank %}
+                  <li class="small-hide">
+                    {{ parent_collection }}
+                  </li>
+                {% endunless %}
+                <li>
+                  <span class="medium-hide large-up-hide">{{ 'breadcrumb.mobile-text' | t }}</span>
+                  <a href="{{ collection.url }}">{{ collection.title }}</a>
+                </li>
+              {% else %}
+                <li class="medium-hide large-up-hide">
+                  <span>{{ 'breadcrumb.mobile-text' | t }}</span>
+                  <a href="/" title="Home">Home</a>
+                </li>
+              {% endif %}
+
+              <li class="current small-hide">{{ product.title }}</li>
+
+            {%- when 'search' -%}
+              <li class="current">Search{% if search.terms != blank %}: {% endif %}{{ search.terms }}</li>
+
+            {%- when 'collection' -%}
+              {% assign parent_collection = collection.metafields.custom.collection_parent_category | metafield_tag %}
+              {% unless parent_collection == blank %}
+                <li>
+                  <span class="medium-hide large-up-hide">{{ 'breadcrumb.mobile-text' | t }}</span>
+                  {{ parent_collection }}
+                </li>
+              {% else %}
+                <li class="medium-hide large-up-hide">
+                  <span>{{ 'breadcrumb.mobile-text' | t }}</span>
+                  <a href="/" title="Home">Home</a>
+                </li>
+              {% endunless %}
+              <li class="current small-hide">
+                {{ collection.title }}
+              </li>
+          {% endcase %}
+        </ul>
+      </nav>
+
+      <span id="js-share-link-target"></span>
+
+    </div>
+  </div>
+{% endif %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // if share element exists move into breadcrumb bar
+        const shareElement = document.querySelector('.js-breadcrumbs-share');
+        const targetElement = document.getElementById('js-share-link-target');
+
+        if (!!shareElement && !!targetElement) {
+            shareElement.classList.remove('visually-hidden');
+            shareElement.parentNode.removeChild(shareElement);
+            targetElement.appendChild(shareElement);
+        }
+    });
+</script>
+
+{% schema %}
+  {
+    "name": "Breadcrumbs",
+    "tag": "section",
+    "class": "shopify-section",
+    "presets": [
+      {
+        "name": "Breadcrumbs"
+      }
+    ]
+  }
+{% endschema %}

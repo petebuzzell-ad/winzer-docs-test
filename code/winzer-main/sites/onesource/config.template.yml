@@ -1,0 +1,14 @@
+development:
+  password: <your themekit password>
+  theme_id: <your development theme id>
+  store: winzeronesource.myshopify.com
+
+staging:
+  password: <your themekit password>
+  theme_id: "128003932336"
+  store: winzeronesource.myshopify.com
+
+production:
+  password: <your themekit password>
+  theme_id: "128003899568"
+  store: winzeronesource.myshopify.com

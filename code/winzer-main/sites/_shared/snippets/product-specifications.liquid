@@ -1,0 +1,36 @@
+{% comment %}
+
+Usage: Intended usage is for the buy stack / product information section of the PDP, very similar to the addon-form
+
+Parameters:
+
+    product_documents: String - Formatted to be something like: product-handle1,product-handle2,product-handle3
+    title: String - Heading
+
+{% endcomment %}
+<div class="product__accordion accordion attributes-json" {{ block.shopify_attributes }}>
+  {%- if product_specifications != blank -%}
+    <details>
+        <summary>
+            <div class="summary__title">
+                <h2 class="h4 accordion__title">
+                    {{ title | default: block.settings.page.title }}
+                </h2>
+            </div>
+            <div class="status-indicator"></div>
+        </summary>
+        <div class="accordion__content rte">
+            {% assign specs = product_specifications | parse_json %}
+            {% if specs.size > 0 %}
+              <ul>
+                {% for spec in specs %}
+                  {% if spec[1] != blank %}
+                    <li>{{ spec[0] }}: {{ spec[1] }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+        </div>
+    </details>
+  {%- endif -%}
+</div>

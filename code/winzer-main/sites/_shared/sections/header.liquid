@@ -1,0 +1,1054 @@
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{% capture margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% capture mobile_margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.mobile_margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% style %}
+#shopify-section-{{ section.id }} {
+  margin-top: {{ margin_size | divided_by: 10 }}rem;
+  margin-bottom: {{ margin_size | divided_by: 10 }}rem;
+}
+@media screen and (max-width: 750px) {
+  #shopify-section-{{ section.id }} {
+    margin-top: {{ mobile_margin_size | divided_by: 10 }}rem;
+    margin-bottom: {{ mobile_margin_size | divided_by: 10 }}rem;
+  }
+}
+{% endstyle %}
+
+{%- if settings.predictive_search_enabled -%}
+  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
+
+{% unless settings.hide_store_panel %}
+  {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+  {{ 'section-store-details-dropdown.css' | asset_url | stylesheet_tag }}
+{% endunless %}
+
+{%- if settings.cart_type == "drawer" -%}
+  {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+  {{ 'component-cart.css' | asset_url | stylesheet_tag }}
+  {{ 'component-totals.css' | asset_url | stylesheet_tag }}
+  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+  {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+  {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
+
+<script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+
+{% unless settings.hide_store_panel %}
+  <script src="{{ 'store-details-drawer.js' | asset_url }}" defer="defer"></script>
+{% endunless %}
+
+{%- if settings.cart_type == "drawer" -%}
+  <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+  <symbol id="icon-search" viewbox="0 0 20 20" fill="none">
+    <path d="M15.00057,7.96425A6.718,6.718,0,0,1,11.5632,13.802a6.99314,6.99314,0,0,1-6.87473,0A6.718,6.718,0,0,1,1.2511,7.96425,6.80879,6.80879,0,0,1,8.12583,1.22337,6.8088,6.8088,0,0,1,15.00057,7.96425Zm-.32249,4.71127A7.85817,7.85817,0,0,0,13.41283,1.91846a8.24284,8.24284,0,0,0-11.03519.41692A7.85367,7.85367,0,0,0,1.96033,13.156,8.23832,8.23832,0,0,0,12.9319,14.38893h-.00125a1.43942,1.43942,0,0,0,.12249.14094l4.81231,4.71862a1.26783,1.26783,0,0,0,1.76806.00061,1.20905,1.20905,0,0,0,.00063-1.73363l-4.81232-4.71862a1.25321,1.25321,0,0,0-.14374-.12256Z" fill="currentColor"/>
+  </symbol>
+
+  <symbol id="icon-close" class="icon icon-close" fill="none" viewBox="0 0 18 17">
+    <polygon points="17.061 1.061 16 0 8.53 7.47 1.061 0 0 1.061 7.47 8.53 0 16 1.061 17.061 8.53 9.591 16 17.061 17.061 16 9.591 8.53 17.061 1.061" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper {% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+  <header class="header page-width {% if section.settings.menu != blank %} header--has-menu{% endif %}">
+    {%- if section.settings.menu != blank -%}
+      <header-drawer data-breakpoint="tablet">
+        <details id="Details-menu-drawer-container" class="menu-drawer-container">
+          <summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
+            {% if section.settings.enable_mobile_icon_animation %}
+              <span class="menu-icon"></span>
+            {% else %}
+              <span>
+                {% render 'icon-hamburger' %}
+                {% render 'icon-close' %}
+              </span>
+            {% endif %}
+          </summary>
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'menu_icons' %}
+                {% assign icons = block %}
+            {% endcase %}
+          {% endfor %}
+          {%- render 'menu-header-drawer', menu: section.settings.menu, blocks: section.blocks, secondary_menu: section.settings.utility_menu, icons: icons -%}
+        </details>
+      </header-drawer>
+    {%- endif -%}
+
+    {%- if section.settings.menu == blank -%}
+      <details-modal class="header__search">
+        <details>
+          <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+            <span>
+              <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+                <use href="#icon-search">
+              </svg>
+              <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                <use href="#icon-close">
+              </svg>
+            </span>
+          </summary>
+          {%- render 'menu-search' -%}
+        </details>
+      </details-modal>
+    {%- endif -%}
+
+    {%- if request.page_type == 'index' -%}
+      <h1 class="header__heading">
+    {%- endif -%}
+        <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+          {%- if section.settings.logo != blank -%}
+            {%- assign image_size = section.settings.logo_width_mobile | append: 'x' -%}
+            <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x, {{ section.settings.logo | img_url: image_size, scale: 3}} 3x"
+              src="{{ section.settings.logo | img_url: image_size }}"
+              loading="lazy"
+              class="header__heading-logo large-up-hide"
+              width="{{ section.settings.logo_width_mobile }}"
+              height="{{ section.settings.logo_width_mobile | divided_by: section.settings.logo.aspect_ratio | ceil }}"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
+          {%- else -%}
+            <span class="h2 large-up-hide">{{ shop.name }}</span>
+          {%- endif -%}
+
+          {%- if section.settings.logo_mobile != blank -%}
+            {%- assign image_size = section.settings.logo_width_mobile_sticky | append: 'x' -%}
+            <img srcset="{{ section.settings.logo_mobile | img_url }} 1x, {{ section.settings.logo_mobile | img_url: image_size, scale: 2 }} 2x, {{ section.settings.logo_mobile | img_url: image_size, scale: 3 }} 3x"
+              src="{{ section.settings.logo_mobile | img_url }}"
+              loading="lazy"
+              class="header__heading-logo__mobile large-up-hide"
+              width="{{ section.settings.logo_width_mobile_sticky }}"
+              height="{{ section.settings.logo_width_mobile_sticky | divided_by: section.settings.logo_mobile.aspect_ratio | ceil }}"
+              alt="{{ section.settings.logo_mobile.alt | default: shop.name | escape }}"
+            >
+          {%- endif -%}
+
+          {%- if section.settings.logo != blank -%}
+            {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+            <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x, {{ section.settings.logo | img_url: image_size, scale: 3 }} 3x"
+              src="{{ section.settings.logo | img_url: image_size }}"
+              loading="lazy"
+              class="header__heading-logo medium-hide small-hide"
+              width="{{ section.settings.logo_width }}"
+              height="{{ section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio | ceil }}"
+              alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+            >
+          {%- else -%}
+            <span class="h2 medium-hide small-hide">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+    {%- if request.page_type == 'index' -%}
+      </h1>
+    {%- endif -%}
+
+    {%- if section.settings.menu != blank -%}
+      <nav class="header__inline-menu">
+        {% render 'menu-list', menu: section.settings.menu, blocks: section.blocks, animation: section.settings.enable_header_animation  %}
+      </nav>
+    {%- endif -%}
+
+    {% if section.settings.show_search_form %}
+      <form class="header__search-form" action="{{ routes.search_url }}">
+        <div class="header__search-form-inner" style="position: relative;">
+          <input type="text"
+            id="header__search-form_input"
+            class="field__input search__input"
+            placeholder=""
+            name="q"
+            value="{{ search.terms | escape }}"
+          />
+          <label class="field__label" for="header__search-form_input">
+            {{ 'general.search.search_placeholder' | t }}
+          </label>
+          <div class="search__input-buttons">
+            <button type="button" onClick="resetSearchForm();" class="search__input-reset" aria-label="{{ 'general.search.reset' | t }}">{% render 'icon-close-small' %}</button>
+            <button class="search__input-submit" aria-label="{{ 'general.search.search' | t }}">{% render 'icon-search-v2' %}</button>
+          </div>
+        </div>
+        <input type="hidden" name="type" value="product,page" />
+        <input type="hidden" name="options[unavailable_products]" value="hide" />
+        <input type="hidden" name="options[prefix]" value="last" />
+        <input class="header__search-form-submit visually-hidden" type="submit" value="Search" />
+      </form>
+    {%- endif -%}
+
+    <div class="header__icons">
+      {% unless section.settings.show_search_form %}
+        <details-modal class="header__search">
+          <details>
+            <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+              <span>
+                <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+                  <use href="#icon-search">
+                </svg>
+                <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
+                  <use href="#icon-close">
+                </svg>
+              </span>
+            </summary>
+            {%- render 'menu-search' -%}
+          </details>
+        </details-modal>
+      {% endunless %}
+
+      {% unless section.settings.hide_help_icon  %}
+
+        {%- assign customer_service_url = "" -%}
+
+        {% if section.settings.help_link == blank %}
+          {% if pages['customer-service'] != blank %}
+            {% assign customer_service_url = pages['customer-service'].url %}
+          {% endif %}
+        {% else %}
+          {% assign customer_service_url = section.settings.help_link %}
+        {% endif %}
+
+        <a href="{{ customer_service_url }}" class="header__icon header__icon--help link focus-inset" id="help-icon">
+          {% render 'icon-question' %}
+          <span class="header__icon-text-wrap">
+            <span class="header__icon-text">
+              {%- liquid
+                echo 'sections.header.customer_care' | t
+              -%}
+            </span>
+          </span>
+        </a>
+      {% endunless %}
+
+      {%- if shop.customer_accounts_enabled -%}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %}{% endif %}">
+          {% render 'icon-account-v2' %}
+          <span class="header__icon-text-wrap">
+            <span class="header__icon-text">
+              {%- liquid
+                if customer
+                  echo 'customer.account_fallback' | t
+                else
+                  echo 'customer.log_in' | t
+                endif
+              -%}
+            </span>
+          </span>
+        </a>
+      {%- endif -%}
+
+     {% unless settings.hide_store_locator_icon  %}
+        <a href="{{ settings.store_locator_url }}" class="header__icon header__icon--locator link focus-inset" id="store-locator-icon">
+          {% render 'icon-location' %}
+          <span class="header__icon-text-wrap">
+            <span class="header__icon-text">
+              {%- liquid
+                echo 'sections.header.store_locator' | t
+              -%}
+            </span>
+          </span>
+        </a>
+      {% endunless %}
+
+      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+        {%- liquid
+          if cart == empty
+            render 'icon-cart-empty'
+          else
+            render 'icon-cart'
+          endif
+        -%}
+        <span class="header__icon-text-wrap">
+          <span class="header__icon-text">{{ 'templates.cart.cart' | t }}</span>
+        </span>
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            <span aria-hidden="true">{{ cart.item_count }}</span>
+          </div>
+        {%- endif -%}
+      </a>
+    </div>
+  </header>
+</{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
+
+{%- if settings.cart_type == "notification" -%}
+  {%- render 'cart-notification' -%}
+{%- endif -%}
+
+{%- if settings.cart_type == "modalwithupsell" -%}
+  {%- render 'cart-notification-modal' -%}
+{%- endif -%}
+
+{% javascript %}
+  resetSearchForm = () => {
+    const input = document.getElementById('header__search-form_input');
+    input.value = "";
+  }
+
+  class StickyHeader extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      this.header = document.getElementById('shopify-section-header');
+      this.headerBounds = {};
+      this.currentScrollTop = 0;
+      this.preventReveal = false;
+      this.predictiveSearch = this.querySelector('predictive-search');
+
+      this.onScrollHandler = this.onScroll.bind(this);
+      this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+
+      this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.addEventListener('scroll', this.onScrollHandler, false);
+      window.addEventListener('scroll', this.fadeBetweenLogos);
+
+      this.createObserver();
+    }
+
+    disconnectedCallback() {
+      this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.removeEventListener('scroll', this.onScrollHandler);
+    }
+
+    createObserver() {
+      let observer = new IntersectionObserver((entries, observer) => {
+        this.headerBounds = entries[0].intersectionRect;
+        observer.disconnect();
+      });
+
+      observer.observe(this.header);
+    }
+
+    onScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
+
+      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        requestAnimationFrame(this.hide.bind(this));
+      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        if (!this.preventReveal) {
+          requestAnimationFrame(this.reveal.bind(this));
+        } else {
+          window.clearTimeout(this.isScrolling);
+
+          this.isScrolling = setTimeout(() => {
+            this.preventReveal = false;
+          }, 66);
+
+          requestAnimationFrame(this.hide.bind(this));
+        }
+      } else if (scrollTop <= this.headerBounds.top) {
+        requestAnimationFrame(this.reset.bind(this));
+      }
+
+
+      this.currentScrollTop = scrollTop;
+    }
+
+    hide() {
+      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+      this.closeMenuDisclosure();
+      this.closeSearchModal();
+    }
+
+    reveal() {
+      this.header.classList.add('shopify-section-header-sticky', 'animate');
+      this.header.classList.remove('shopify-section-header-hidden');
+    }
+
+    reset() {
+      this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+    }
+
+    closeMenuDisclosure() {
+      this.disclosures = this.disclosures || this.header.querySelectorAll('details-disclosure');
+      this.disclosures.forEach(disclosure => disclosure.close());
+    }
+
+    closeSearchModal() {
+      this.searchModal = this.searchModal || this.header.querySelector('details-modal');
+      this.searchModal?.close(false);
+    }
+
+    fadeBetweenLogos() {
+      const checkpoint = 200;
+      const currentScroll = window.pageYOffset;
+      let opacity = 0;
+      let logo = document.querySelector(".header__heading-logo.large-up-hide");
+      let logoMobile = document.querySelector(".header__heading-logo__mobile");
+
+      if (logoMobile) {
+        // Show desktop logo
+        if (currentScroll <= checkpoint) {
+          opacity = 1 - currentScroll / checkpoint;
+        } else {
+          opacity = 0;
+        }
+
+        if (logo) logo.style.opacity = opacity;
+
+        // Show mobile logo
+        if (currentScroll >= checkpoint) {
+          opacity = 1.5 - checkpoint / currentScroll;
+        } else {
+          opacity = 0;
+        }
+
+        if (logoMobile) logoMobile.style.opacity = opacity;
+      } else {
+        // Only display desktop logo
+        opacity = 1;
+        if (logo) logo.style.opacity = opacity;
+      }
+
+    }
+  }
+
+  customElements.define('sticky-header', StickyHeader);
+{% endjavascript %}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    {% if section.settings.logo %}
+      "logo": "{{ section.settings.logo | img_url | prepend: "https:" }}",
+    {% endif %}
+    "sameAs": [
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_pinterest_link | json }},
+      {{ settings.social_instagram_link | json }},
+      {{ settings.social_tiktok_link | json }},
+      {{ settings.social_tumblr_link | json }},
+      {{ settings.social_snapchat_link | json }},
+      {{ settings.social_youtube_link | json }},
+      {{ settings.social_vimeo_link | json }}
+    ],
+    "url": {{ shop.url | append: page.url | json }}
+  }
+</script>
+
+{%- if request.page_type == 'index' -%}
+  {% assign potential_action_target = shop.url | append: routes.search_url | append: "?q={search_term_string}" %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ shop.url | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Header",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Primary logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo",
+      "info": "Usually a PNG file type."
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 250,
+      "step": 5,
+      "default": 100,
+      "unit": "px",
+      "label": "Desktop width"
+    },
+    {
+      "type": "range",
+      "id": "logo_width_mobile",
+      "min": 30,
+      "max": 250,
+      "step": 5,
+      "default": 100,
+      "unit": "px",
+      "label": "Mobile width"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Sticky Logo",
+      "info": "Optional. If provided, replaces the primary logo on mobile when the sticky header is present."
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_mobile",
+      "label": "Sticky logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width_mobile_sticky",
+      "min": 30,
+      "max": 250,
+      "step": 5,
+      "default": 100,
+      "unit": "px",
+      "label": "Width for sticky logo"
+    },
+    {
+      "type": "header",
+      "content": "Header menus"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Main menu",
+      "info": "Shown on desktop and mobile resolutions."
+    },
+    {
+      "type": "link_list",
+      "id": "utility_menu",
+      "default": "main-menu",
+      "label": "Utility menu",
+      "info": "Shown on mobile resolution below main menu links."
+    },
+    {
+      "type": "url",
+      "id": "help_link",
+      "label": "Help Link"
+    },
+    {
+      "type": "header",
+      "content": "Options"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_line_separator",
+      "default": true,
+      "label": "Show border line",
+      "info": "Show bottom border between header and main page contents."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_header",
+      "default": true,
+      "label": "Enable sticky header",
+      "info": "Header shows on the screen as customer scrolls up."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search_form",
+      "label": "Show full search form",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_help_icon",
+      "label": "Hide help icon",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Animations"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_header_animation",
+      "label": "Enable header animation",
+      "default": true,
+      "info": "Required to be true for all animation options below to display."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_header_items_animation",
+      "label": "Show header items fade in",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_icon_animation",
+      "label": "Show mobile menu icon animation",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Margins",
+      "info": "Apply global theme layout margins on the top and bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_margins",
+      "label": "Display margins",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "megamenu_link_lists",
+      "name": "Megamenu - link lists",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Parent menu item"
+        },
+        {
+          "type": "text",
+          "id": "parent_menu_item_name",
+          "label": "Menu item name",
+          "info": "Label of the top level menu item this megamenu will correspond to (e.g. Boys)."
+        },
+        {
+          "type": "header",
+          "content": "Link lists"
+        },
+        {
+          "type": "checkbox",
+          "id": "parent_menu_item_all",
+          "label": "Display 'All X' links?",
+          "default": true,
+          "info": "If checked, each level 2 link (e.g., Boys Sneakers) will display a final link to shop the L2 collection (e.g. All Boys Sneakers)."
+        },
+        {
+          "type": "header",
+          "content": "Promo content"
+        },
+        {
+          "type": "liquid",
+          "id": "promo_override",
+          "label": "Promo markup (liquid)",
+          "info": "If provided, this content will display instead of any configured promo images. Always use proper image optimization techniques."
+        },
+        {
+          "type": "image_picker",
+          "id": "promo_image__1",
+          "label": "Promo 1 image"
+        },
+        {
+          "type": "text",
+          "id": "promo_label__1",
+          "label": "Promo 1 label"
+        },
+        {
+          "type": "url",
+          "id": "promo_link__1",
+          "label": "Promo 1 link"
+        },
+        {
+          "type": "image_picker",
+          "id": "promo_image__2",
+          "label": "Promo 2 image"
+        },
+        {
+          "type": "text",
+          "id": "promo_label__2",
+          "label": "Promo 2 label"
+        },
+        {
+          "type": "url",
+          "id": "promo_link__2",
+          "label": "Promo 2 link"
+        },
+        {
+          "type": "image_picker",
+          "id": "promo_image__3",
+          "label": "Promo 3 image"
+        },
+        {
+          "type": "text",
+          "id": "promo_label__3",
+          "label": "Promo 3 label"
+        },
+        {
+          "type": "url",
+          "id": "promo_link__3",
+          "label": "Promo 3 link"
+        },
+        {
+          "type": "image_picker",
+          "id": "promo_image__4",
+          "label": "Promo 4 image"
+        },
+        {
+          "type": "text",
+          "id": "promo_label__4",
+          "label": "Promo 4 label"
+        },
+        {
+          "type": "url",
+          "id": "promo_link__4",
+          "label": "Promo 4 link"
+        }
+      ]
+    },
+    {
+      "type": "megamenu_image_blocks",
+      "name": "Megamenu - image blocks",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Parent menu item"
+        },
+        {
+          "type": "text",
+          "id": "parent_menu_item_name",
+          "label": "Menu item name",
+          "info": "Label of the top level menu item this megamenu will correspond to (e.g. Boys)."
+        },
+        {
+          "type": "header",
+          "content": "Image blocks content"
+        },
+        {
+          "type": "image_picker",
+          "id": "block_image__1",
+          "label": "Block 1 image"
+        },
+        {
+          "type": "text",
+          "id": "block_label__1",
+          "label": "Block 1 label",
+          "info": "Label of the menu item the image will correspond to (e.g., Stride Rite)."
+        },
+        {
+          "type": "image_picker",
+          "id": "block_image__2",
+          "label": "Block 2 image"
+        },
+        {
+          "type": "text",
+          "id": "block_label__2",
+          "label": "Block 2 label",
+          "info": "Label of the menu item the image will correspond to (e.g., Stride Rite)."
+        },
+        {
+          "type": "image_picker",
+          "id": "block_image__3",
+          "label": "Block 3 image"
+        },
+        {
+          "type": "text",
+          "id": "block_label__3",
+          "label": "Block 3 label",
+          "info": "Label of the menu item the image will correspond to (e.g., Stride Rite)."
+        },
+        {
+          "type": "image_picker",
+          "id": "block_image__4",
+          "label": "Block 4 image"
+        },
+        {
+          "type": "text",
+          "id": "block_label__4",
+          "label": "Block 4 label",
+          "info": "Label of the menu item the image will correspond to (e.g., Stride Rite)."
+        }
+      ]
+    },
+    {
+      "type": "menu_icons",
+      "name": "Utility menu - icons",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Decorate utility menu links with icons. Link label name must match menu link item name. All link labels must be accounted for in order."
+        },
+        {
+          "type": "header",
+          "content": "Icon 1"
+        },
+        {
+          "type": "text",
+          "id": "icon_label_1",
+          "label": "Link label"
+        },
+        {
+          "type": "select",
+          "id": "icon_1",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "account",
+              "label": "Account"
+            },
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "Chat bubble"
+            },
+            {
+              "value": "chat_headset",
+              "label": "Chat headset"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "clipboard",
+              "label": "Clipboard"
+            },
+            {
+              "value": "eye",
+              "label": "Eye"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "map_pin",
+              "label": "Map pin"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "ruler",
+              "label": "Ruler"
+            },
+            {
+              "value": "silhouette",
+              "label": "Silhouette"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "store_locator",
+              "label": "Store Locator"
+            }
+          ],
+          "default": "none",
+          "label": "Select icon"
+        },
+        {
+          "type": "header",
+          "content": "Icon 2"
+        },
+        {
+          "type": "text",
+          "id": "icon_label_2",
+          "label": "Link label"
+        },
+        {
+          "type": "select",
+          "id": "icon_2",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "account",
+              "label": "Account"
+            },
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "Chat bubble"
+            },
+            {
+              "value": "chat_headset",
+              "label": "Chat headset"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "clipboard",
+              "label": "Clipboard"
+            },
+            {
+              "value": "eye",
+              "label": "Eye"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "map_pin",
+              "label": "Map pin"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "ruler",
+              "label": "Ruler"
+            },
+            {
+              "value": "silhouette",
+              "label": "Silhouette"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "store_locator",
+              "label": "Store Locator"
+            }
+          ],
+          "default": "none",
+          "label": "Select icon"
+        },
+        {
+          "type": "header",
+          "content": "Icon 3"
+        },
+        {
+          "type": "text",
+          "id": "icon_label_3",
+          "label": "Link label"
+        },
+        {
+          "type": "select",
+          "id": "icon_3",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "account",
+              "label": "Account"
+            },
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "Chat bubble"
+            },
+            {
+              "value": "chat_headset",
+              "label": "Chat headset"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "clipboard",
+              "label": "Clipboard"
+            },
+            {
+              "value": "eye",
+              "label": "Eye"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "map_pin",
+              "label": "Map pin"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "ruler",
+              "label": "Ruler"
+            },
+            {
+              "value": "silhouette",
+              "label": "Silhouette"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "store_locator",
+              "label": "Store Locator"
+            }
+          ],
+          "default": "none",
+          "label": "Select icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

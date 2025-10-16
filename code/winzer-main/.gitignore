@@ -1,0 +1,13 @@
+/deploy
+/deploy_onesource
+/deploy_fastserv
+/deploy_corp
+/download
+node_modules
+yarn-error.log
+config.yml
+**/.DS_Store
+*.bundle.*
+
+# Prevent bundled svgs from being committed in source control
+**/assets/*.svg

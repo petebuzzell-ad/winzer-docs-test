@@ -1,0 +1,74 @@
+.ss__facet-palette-options {
+    max-width: 90rem !important;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.ss__facet--color_family .ss__facet-palette-options {
+    justify-content: flex-start;
+}
+
+.ss__facet-palette-options__option {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    grid-column: auto;
+    grid-row: auto;
+    width: calc(25% - 6px) !important;
+    flex: unset !important;
+    text-decoration: none !important;
+}
+
+
+.ss__facet-palette-options__option img {
+    padding: 3px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.ss__facet-palette-options__option:hover img {
+    border-color: #444;
+}
+
+.ss__facet-palette-options__option--filtered img,
+.ss__facet-palette-options__option--filtered:hover img {
+    border-color: #444;
+}
+
+.ss__dropdown__content .ss__facet-palette-options .ss__facet-palette-options__option:hover .ss__facet-palette-options__option__wrapper,
+.ss__dropdown__content .ss__facet-palette-options .ss__facet-palette-options__option.ss__facet-palette-options__option--filtered .ss__facet-palette-options__option__wrapper {
+    border-color: transparent;
+}
+
+.ss__facet-palette-options__option:hover .ss__facet-palette-options__option__value {
+    text-decoration: underline;
+}
+
+.ss__dropdown__content .ss__facet-palette-options .ss__facet-palette-options__option .ss__facet-palette-options__option__palette {
+    padding-top: 0;
+}
+
+.ss__facet[class*="variant_head_style"] .ss__facet-palette-options__option__wrapper,
+.ss__facet[class*="ss_generic_head_type"] .ss__facet-palette-options__option__wrapper {
+    border: 0;
+    margin-bottom: .7rem;
+}
+
+.ss__facet[class*="variant_head_style"] .ss__facet-palette-options__option__wrapper .ss__facet-palette-options__option__palette,
+.ss__facet[class*="ss_generic_head_type"] .ss__facet-palette-options__option__wrapper .ss__facet-palette-options__option__palette {
+    padding-top: calc(100% - 2px);
+    margin: 0;
+    border: 0;
+    border-radius: 0.6rem;
+    width: 100%;
+}
+
+.ss__dropdown__content .ss__facet-palette-options .ss__facet-palette-options__option.ss__facet-palette-options__option--filtered .ss__facet-palette-options__option__palette {
+    border: .1rem solid var(--color-brand-primary);
+}
+
+.ss__facet:not([class*="variant_head_style"]) .ss__dropdown__content .ss__facet-palette-options .ss__facet-palette-options__option.ss__facet-palette-options__option--filtered .ss__facet-palette-options__option__palette,
+.ss__facet:not([class*="ss_generic_head_type"]) .ss__dropdown__content .ss__facet-palette-options .ss__facet-palette-options__option.ss__facet-palette-options__option--filtered .ss__facet-palette-options__option__palette {
+    border: .1rem solid var(--color-brand-white);
+    outline: .1rem solid var(--color-brand-primary);
+}

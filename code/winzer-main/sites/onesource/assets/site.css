@@ -1,0 +1,6 @@
+/************************************
+Custom CSS for OneSource
+************************************/
+.livesdk__invitation::after {
+  content:url( "https://cdn.shopify.com/s/files/1/0882/6699/8069/files/onesource-zoom-chat-icon.svg?v=1726772720");
+}

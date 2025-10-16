@@ -1,0 +1,586 @@
+/************************************************
+* styles for variant row
+*************************************************/
+
+.variant-row {
+  border-bottom: .1rem solid color-mix(in srgb, var(--color-brand-text) 20%, transparent);
+  position: relative;
+}
+
+.variant-row-overview {
+  padding: 1.6rem 2rem;
+  line-height: 1.5;
+  color: var(--color-brand-text);
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.variant-row .variant-row-item {
+  flex-basis: 16.66666667%;
+  padding-right: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.variant-row .variant-row-item-sku a {
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.default-title .variant-row .variant-row-item-option {
+  display: none;
+}
+
+.variant-row .variant-row-item-price {
+  flex-basis: 31%;
+  margin-left: auto;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.variant-row .variant-row-item-price .loading-price {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #F2F0F2;
+  height: 100%;
+  width: 50%;
+}
+
+.loading-price::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(#fff, 0) 0,
+    rgba(#fff, 0.2) 20%,
+    rgba(#fff, 0.5) 60%,
+    rgba(#fff, 0)
+  );
+  animation: shimmer 2s infinite;
+  content: '';
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.variant-row .variant-row-item-price a {
+  font-weight: 700;
+}
+
+.plp-price-container {
+  line-height: 2.4rem;
+  position: relative;
+}
+
+.plp-price-container .variant-price,
+.plp-price-container .variant-compare-price {
+  color: var(--color-brand-text);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  margin-right: .3rem;
+}
+
+.plp-price-container .variant-compare-price {
+  color: color-mix(in srgb, var(--color-brand-text) 40%, transparent);
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.plp-price-container .divider {
+  margin-right: .3rem;
+}
+
+.variant-row-open-details {
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 1;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: .3s;
+}
+
+.variant-row-open-details.open {
+  transform: rotateX(180deg);
+}
+
+/************************************************
+* styles for variant details drawer
+*************************************************/
+
+.variant-details {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  /* to enable when I flesh out the details: */
+  transition: max-height .3s; 
+}
+
+.variant-details.open {
+  max-height: 25rem;
+}
+
+/* to be able to see .0000 tooltip */
+.variant-details.open:hover {
+  overflow: visible;
+}
+
+.variant-details-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  border-top: 0.1rem solid color-mix(in srgb, var(--color-brand-text) 20%, transparent);
+}
+
+.variant-details-section .image-wrapper {
+  background-color: var(--color-background-3);
+}
+
+.variant-details-section .image-wrapper.no-image {
+  width: 13.5rem;
+}
+
+.variant-details-section .image-wrapper img {
+  max-width: 13.5rem;
+  mix-blend-mode: darken;
+}
+
+/******** Info Details ********/
+.variant-details-section.variant-details-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-brand-text);
+}
+
+.variant-details-section.variant-details-info a:first-child {
+  font-weight: 700;
+}
+
+.variant-details-section.variant-details-info a.body-small {
+  color: var(--color-brand-secondary-variant);
+  margin-top: 1.2rem;
+}
+
+.variant-details-section.variant-details-info span {
+  line-height: 1.3;
+}
+
+.variant-details-section.variant-details-info span:first-of-type {
+  margin-top: 1.2rem;
+}
+
+/******** Price Details ********/
+
+.variant-details-section.variant-details-pricing {
+  flex-basis: 31%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.variant-details-section.variant-details-pricing .variant-price {
+  font-weight: 700;
+}
+
+.variant-details-section.variant-details-pricing .promo-message {
+  color: var(--color-brand-misc-1);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+}
+
+.variant-details-section.variant-details-pricing .shipping-qty-msgs {
+  display: flex;
+  align-items: center;
+  /* comp uses otherwise used color here...? */
+  color: #343541;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  gap: .4rem;
+}
+
+/* margin determination for 4 text elements that may or may not be there */
+.variant-details-section.variant-details-pricing .plp-price-container + .shipping-qty-msgs,
+.variant-details-section.variant-details-pricing .plp-price-container + .loading-animation,
+.variant-details-section.variant-details-pricing .promo-message + .shipping-qty-msgs,
+.variant-details-section.variant-details-pricing .promo-message + .loading-animation {
+  margin-top: 1.2rem;
+}
+
+.variant-details-section.variant-details-pricing a.shipping-qty-msgs {
+  text-decoration: underline;
+}
+
+.variant-details-section.variant-details-pricing a.shipping-qty-msgs:hover {
+  text-decoration: none;
+}
+
+.variant-details-section.variant-details-pricing .shipping-qty-msgs span + span::before {
+  content: "|";
+  margin-right: .4rem;
+}
+
+.loading-animation {
+  width: 1.3rem;
+  height: 1.3rem;
+  animation: spin 1s linear infinite;
+  line-height: 1;
+}
+
+.loading-animation svg {
+  /* same as shipping-qty-msgs, unique amonst comp */
+  fill: #343541;
+  width: 100%;
+  height: 100%;
+}
+
+/******** Bulk Pricing Table ********/
+.bulk-table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 38rem;
+  max-width: calc(100% - 2rem);
+  max-height: 90%;
+  border: 1px solid var(--color-brand-primary);
+  padding: 2.5rem 3rem 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.15);
+  background-color: var(--color-brand-white);
+  overflow: auto;
+  z-index: 1;
+}
+
+.bulk-table-header {
+  display: flex;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bulk-table-header a {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+
+/******** All .plp__bulk-pricing-table styles to match PLP table ********/
+.plp__bulk-pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.plp__bulk-pricing-table tr {
+  border-bottom: 1px solid rgba(66, 69, 81, 0.2);
+}
+
+.plp__bulk-pricing-table tr:first-child {
+  border-top: 1px solid rgba(66, 69, 81, 0.2);
+}
+
+.plp__bulk-pricing-table tr:nth-child(odd) {
+  background: #F8F8F8;
+}
+
+.plp__bulk-pricing-table td {
+  padding: 12px 20px;
+  color: var(--color-brand-primary);
+  font-family: var(--font-body-family);
+  font-size: 1.4rem;
+  font-style: var(--font-body-style);
+  font-weight: var(--font-body-weight);
+  line-height: 1.57143;
+}
+
+@media screen and (min-width: 750px) {
+  .rte table.plp__bulk-pricing-table td {
+    padding-left: 1.9rem;
+    padding-right: 1.9rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+
+  .site-winzerfastserv .rte table.plp__bulk-pricing-table td,
+  .site-winzercorp .rte table.plp__bulk-pricing-table td {
+    font-size: 1.5rem;
+  }
+}
+
+.plp__bulk-pricing-table td:nth-child(even) {
+  text-align: right;
+}
+
+/******** PLP Add to Cart styles ********/
+.plp-atc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: 2rem;
+}
+
+.plp-atc .increment-informer {
+  font-size: 1.3rem;
+}
+
+.plp-atc .quantity__input {
+  border: .1rem solid rgb(var(--color-base-accent-2));
+  border-top: 0;
+  border-bottom: 0;
+}
+
+.plp-atc .quantity__input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.plp-atc .loading-animation {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.plp-atc .loading-animation svg {
+  fill: var(--color-brand-white);
+}
+
+.plp-atc .button {
+  white-space: nowrap;
+}
+
+.plp-atc .atc-error-message {
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--color-brand-misc-1);
+}
+
+/* PLP sign in prompt styles */
+
+.plp__price-login-wrap p {
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: normal;
+  margin: 0 0 1.2rem;
+}
+
+.plp__price-login-cta-wrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem 1.2rem;
+}
+
+.plp__price-login-cta-wrap .button {
+  padding: 10px 50px;
+  border-radius: 5px;
+  background: var(--color-brand-primary);
+  color: var(--color-brand-white);
+  font-family: var(--font-button-family);
+  font-style: var(--font-button-style);
+  font-weight: var(--font-button-weight);
+  line-height: 1.5;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+}
+
+.plp__price-login-cta-wrap>span {
+  display: flex;
+  align-items: center;
+}
+
+.plp__price-login-cta-wrap span a {
+  color: var(--color-brand-secondary-variant);
+  font-family: var(--font-body-alt-family);
+  font-size: 1.4rem;
+  font-style: var(--font-body-style);
+  font-weight: 600;
+  line-height: 1.57143;
+  letter-spacing: normal;
+  margin-right: .25em;
+  text-decoration: none;
+  text-underline-offset: 0.3rem;
+}
+
+.plp__price-login-cta-wrap span a:hover,
+.plp__price-login-cta-wrap span a:focus {
+  text-decoration: underline;
+}
+
+.plp__price-login-cta-wrap svg {
+  display: inline-block;
+  width: 12px;
+  height: auto;
+  color: var(--color-brand-secondary-variant);
+  position: relative;
+  top: 2px;
+}
+
+/************************************************
+* Fastserv & Winzer styles, mainly sizes
+*************************************************/
+
+.site-winzerfastserv .plp-price-container .variant-price,
+.site-winzerfastserv .plp-price-container .variant-compare-price,
+.site-winzercorp .plp-price-container .variant-price,
+.site-winzercorp .plp-price-container .variant-compare-price {
+  font-size: 1.5rem;
+}
+
+.site-winzerfastserv .variant-details-section.variant-details-pricing .promo-message,
+.site-winzercorp .variant-details-section.variant-details-pricing .promo-message {
+  font-size: 1.3rem;
+}
+
+.site-winzerfastserv .variant-details-section.variant-details-pricing .shipping-qty-msgs,
+.site-winzercorp .variant-details-section.variant-details-pricing .shipping-qty-msgs {
+  font-size: 1.2rem;
+}
+
+.site-winzerfastserv .bulk-table-header,
+.site-winzercorp .bulk-table-header {
+  font-size: 1.3rem;
+}
+
+.site-winzerfastserv .bulk-table-header a,
+.site-winzercorp .bulk-table-header a {
+  font-size: 1.3rem;
+}
+
+.site-winzerfastserv .plp__bulk-pricing-table td,
+.site-winzercorp .plp__bulk-pricing-table td {
+  font-size: 1.3rem;
+}
+
+.site-winzerfastserv .plp-atc .atc-error-message,
+.site-winzercorp .plp-atc .atc-error-message {
+  font-size: .9rem;
+}
+
+.site-winzerfastserv .plp__price-login-wrap p,
+.site-winzercorp .plp__price-login-wrap p {
+  font-size: 1.3rem;
+}
+
+.site-winzerfastserv .plp__price-login-cta-wrap span a,
+.site-winzercorp .plp__price-login-cta-wrap span a {
+  font-size: 1.3rem;
+}
+
+/************************************************
+* Desktop & larger
+*************************************************/
+
+@media (min-width: 1200px) {
+
+}
+
+/************************************************
+* Tablet & smaller
+*************************************************/
+
+@media (max-width: 1199px) {
+  .variant-row-overview {
+    display: none;
+  }
+
+  .variant-details,
+  .variant-details.open {
+    max-height: none;
+  }
+
+  .variant-rows-container .variant-row {
+    display: none;
+  }
+
+  .view-all-mobile.variant-rows-container .variant-row {
+    display: block;
+  }
+
+  .variant-details-inner {
+    padding-left: 10rem;
+    border: 0;
+  }
+
+  .variant-details-section.variant-details-image {
+    display: none;
+  }
+
+  .variant-details-section.variant-details-pricing {
+    flex-basis: 23rem;
+  }
+}
+
+@media (max-width: 989px) {
+
+}
+
+
+/************************************************
+* Mobile & smaller
+*************************************************/
+
+@media (max-width: 600px) {
+  .variant-details-inner {
+    flex-direction: column;
+    padding: 1.7rem 0 2.4rem 10rem;
+    gap: .8rem;
+  }
+
+  .variant-details-inner .variant-details-section {
+    flex-basis: 100%;
+  }
+
+  .variant-details-section.variant-details-info a:not(:first-child) {
+    display: none;
+  }
+
+  .variant-details-section.variant-details-info span:first-of-type {
+    margin-top: .8rem;
+  }
+
+  .variant-details-section.variant-details-pricing .plp-price-container + .shipping-qty-msgs,
+  .variant-details-section.variant-details-pricing .plp-price-container + .loading-animation,
+  .variant-details-section.variant-details-pricing .promo-message + .shipping-qty-msgs,
+  .variant-details-section.variant-details-pricing .promo-message + .loading-animation {
+    margin-top: .8rem;
+  }
+
+  .plp-atc {
+    margin-top: .8rem;
+  }
+}
+
+/* Fixes ATC form overflows on tiny screens: */
+@media (max-width: 370px) {
+  .plp-atc .quantity {
+    width: 11rem;
+  }
+
+  .plp-atc .quantity__button {
+    width: 3.2rem;
+  }
+
+  .plp-atc .button {
+    padding: 1rem 2rem;
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "show_vendor": false,
+        "cart_message": "",
+        "cart_message_link": "",
+        "enable_shipping_message": false,
+        "shipping_threshold": 0,
+        "threshold_met": "",
+        "threshold_not_met": "",
+        "enable_gift_message": false,
+        "gift_message": ""
+      }
+    },
+    "cart-addons": {
+      "type": "main-cart-add-ons",
+      "settings": {
+        "headline": "CHECK OUT THESE GREAT ACCESSORIES",
+        "headline_size": "brighton-h3",
+        "button_label": "ADD TO CART",
+        "product_1": "cadence-spin-cycling-shoe",
+        "tag_list_1": "road_bike",
+        "product_2": "elite-team-mens-gel-glove-gloves",
+        "tag_list_2": "road_bike"
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {
+        "show_cart_note": true
+      }
+    },
+    "searchspring_recommendations_Kpjnpj": {
+      "type": "searchspring-recommendations",
+      "blocks": {
+        "recommendations_m4kmQd": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "cart-cross-sell",
+            "max_recommendations": 12,
+            "seed_profile": true,
+            "tab_title": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style_desktop": "primary",
+            "button_style_mobile": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "recommendations_m4kmQd"
+      ],
+      "settings": {
+        "section_theme": "section_theme_light",
+        "heading": "You May Also Like",
+        "heading_size": "h2",
+        "content_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "desktop_top_padding": 50,
+        "desktop_bottom_padding": 108,
+        "mobile_top_padding": 5,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-addons",
+    "cart-footer",
+    "searchspring_recommendations_Kpjnpj"
+  ]
+}

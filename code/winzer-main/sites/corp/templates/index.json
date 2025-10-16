@@ -1,0 +1,964 @@
+{
+  "sections": {
+    "custom_liquid_tiEey4": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<style>@media screen and (max-width: 749px) {\n    .image-banner__background-image__gradient {\n        padding-bottom: calc(41% - .1rem) !important;\n    }\n}\n<\/style>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "06b6a07c-684f-4f0a-b07a-0ef314bcbd70": {
+      "type": "image-banner",
+      "blocks": {
+        "ea298d00-f82d-427e-8b4e-663f1c6e96c5": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "Winzer",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color_desktop": "",
+            "eyebrow_color_mobile": ""
+          }
+        },
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Industrial Supply Solution",
+            "heading_size": "h1",
+            "heading_color_desktop": "",
+            "heading_color_mobile": ""
+          }
+        },
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Winzer offers franchisors and brands a dynamic ecosystem that will grow business by offering superior service and product.<\/p>",
+            "text_style": "text-body-large",
+            "text_color_desktop": "",
+            "text_color_mobile": ""
+          }
+        },
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-3": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Shop Best Sellers",
+            "button_link_1": "shopify:\/\/collections\/best-sellers",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "link-1",
+            "button_style_mobile_2": "link-1",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "#ffffff",
+            "links_color_override": false,
+            "links_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "ea298d00-f82d-427e-8b4e-663f1c6e96c5",
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-1",
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-2",
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-3"
+      ],
+      "settings": {
+        "desktop_large_image": "shopify:\/\/shop_images\/homepage-hero.webp",
+        "desktop_image": "shopify:\/\/shop_images\/homepage-hero.webp",
+        "mobile_image": "shopify:\/\/shop_images\/homepage-hero.webp",
+        "enable_parallax": false,
+        "desktop_max_height": 600,
+        "section_background_color": "#002437",
+        "content_background_color": "#002437",
+        "box_border_color": "#ffffff",
+        "show_text_box": false,
+        "show_container_mobile": false,
+        "content_background_opacity": 100,
+        "content_area_max_width": 600,
+        "show_border_desktop": false,
+        "show_border_offset_desktop": false,
+        "show_border_mobile": false,
+        "show_border_offset_mobile": false,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "hide_image_mobile": false,
+        "section_url": "",
+        "hide_section_mobile": false,
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false,
+        "custom_class": "dark-background"
+      }
+    },
+    "icon_list_Ni7AWM": {
+      "type": "icon-list",
+      "blocks": {
+        "icon_RLR6x7": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-fasteners.svg",
+            "text": "Fasteners",
+            "link": "shopify:\/\/collections\/fasteners"
+          }
+        },
+        "icon_HBLyF9": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-hydraulics.svg",
+            "text": "Hydraulics & Pneumatics",
+            "link": "shopify:\/\/collections\/hydraulics-pneumatics"
+          }
+        },
+        "icon_yjBqVm": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-electrical.svg",
+            "text": "Electrical",
+            "link": "shopify:\/\/collections\/electrical"
+          }
+        },
+        "icon_Cmx4jW": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-cutting-tools.svg",
+            "text": "Cutting Tools",
+            "link": "shopify:\/\/collections\/cutting-tools"
+          }
+        },
+        "icon_b4JFYy": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-abrasives.svg",
+            "text": "Chemicals & Abrasives",
+            "link": "shopify:\/\/collections\/chemicals"
+          }
+        },
+        "icon_FFrgbW": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-safety.svg",
+            "text": "Safety",
+            "link": "shopify:\/\/collections\/safety"
+          }
+        },
+        "icon_bFAmrL": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-cleaning.svg",
+            "text": "Shop Supplies",
+            "link": "shopify:\/\/collections\/shop-supplies"
+          }
+        },
+        "icon_RUUMwd": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-fluid-power.svg",
+            "text": "Fluid Power",
+            "link": "shopify:\/\/collections\/hydraulics-pneumatics"
+          }
+        },
+        "icon_93eXfB": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-assortments.svg",
+            "text": "Assortments",
+            "link": "shopify:\/\/collections\/assortments"
+          }
+        },
+        "icon_Ycj9be": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-vehicle-maintenance.svg",
+            "text": "Automotive",
+            "link": "shopify:\/\/collections\/automotive"
+          }
+        },
+        "icon_7eMFFL": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-security.svg",
+            "text": "Security",
+            "link": "shopify:\/\/collections\/security"
+          }
+        },
+        "icon_KyBXf9": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icon-best-sellers.svg",
+            "text": "Best Sellers",
+            "link": "shopify:\/\/collections\/best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "icon_RLR6x7",
+        "icon_HBLyF9",
+        "icon_yjBqVm",
+        "icon_Cmx4jW",
+        "icon_b4JFYy",
+        "icon_FFrgbW",
+        "icon_bFAmrL",
+        "icon_RUUMwd",
+        "icon_93eXfB",
+        "icon_Ycj9be",
+        "icon_7eMFFL",
+        "icon_KyBXf9"
+      ],
+      "settings": {
+        "eyebrow": "FEATURED CATEGORIES",
+        "eyebrow_style": "eyebrow",
+        "headline": "Parts for Every Job",
+        "headline_style": "h2",
+        "description": "",
+        "description_style": "text-body",
+        "background_color": "#f4f4f4",
+        "text_color": "#484a50",
+        "headline_color": "",
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 50,
+        "animation_effect": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false
+      }
+    },
+    "1645433899f17c1025": {
+      "type": "featured-links",
+      "blocks": {
+        "66deeb3a-8330-415c-8dac-71fc7a458e19": {
+          "type": "link",
+          "settings": {
+            "heading": "Essential Tools for DIY-ers",
+            "heading_size": "cql-headline-3",
+            "heading_color": "#00679b",
+            "heading_on_image": false,
+            "description": "<p>Keep your projects going with these top tools.<\/p>",
+            "link_url": "#",
+            "image_link_accessability_text": "Shop tools for DIYers",
+            "image": "shopify:\/\/shop_images\/promo-essential-diy-tools-fpo.jpg",
+            "image_hover": "noeffect",
+            "button_label": "Shop Tools",
+            "background_color": "rgba(0,0,0,0)",
+            "button_style": "primary",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "1255cb75-a05a-47dc-a3a6-4350dd8e04a8": {
+          "type": "link",
+          "settings": {
+            "heading": "Get Your Ride Summer Ready",
+            "heading_size": "cql-headline-3",
+            "heading_color": "#00679b",
+            "heading_on_image": false,
+            "description": "<p>Shine Brighter with 20% off detailing supplies.<\/p>",
+            "link_url": "#",
+            "image_link_accessability_text": "Shop sale items for summer",
+            "image": "shopify:\/\/shop_images\/promo-get-your-ride-ready-fpo.jpg",
+            "image_hover": "noeffect",
+            "button_label": "Shop the Sale",
+            "background_color": "",
+            "button_style": "primary",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "fcdc71e2-e4da-4bca-b322-a01bf8a12fc3": {
+          "type": "link",
+          "settings": {
+            "heading": "Last Chance Clearance Deals",
+            "heading_size": "cql-headline-3",
+            "heading_color": "#00679b",
+            "heading_on_image": false,
+            "description": "<p>Get them before they’re gone.<\/p>",
+            "link_url": "#",
+            "image_link_accessability_text": "Shop last chance clearance deals",
+            "image": "shopify:\/\/shop_images\/promo-last-chance-deals-fpo.jpg",
+            "image_hover": "noeffect",
+            "button_label": "Shop Clearance",
+            "background_color": "",
+            "button_style": "primary",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "66deeb3a-8330-415c-8dac-71fc7a458e19",
+        "1255cb75-a05a-47dc-a3a6-4350dd8e04a8",
+        "fcdc71e2-e4da-4bca-b322-a01bf8a12fc3"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "#ffffff",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_color": "#ffffff",
+        "eyebrow": "",
+        "eyebrow_color": "#ffffff",
+        "heading_wrapper_animation": "NoEffect",
+        "heading_wrapper_animation_time": "0.2s",
+        "link_display": "margins",
+        "desktop_columns": "3",
+        "desktop_tile_layout": "image-on-top",
+        "desktop_content_alignment": "center",
+        "mobile_tile_layout": "image-on-top",
+        "mobile_content_alignment": "center",
+        "desktop_top_padding": 100,
+        "desktop_bottom_padding": 100,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 50,
+        "display_margins": false
+      }
+    },
+    "bd76cfb5-0b5f-4511-adfe-dbc2a3b7df2d": {
+      "type": "searchspring-recommendations",
+      "blocks": {
+        "recommendations_daGDkb": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "fastener-best-sellers",
+            "max_recommendations": 8,
+            "seed_profile": true,
+            "tab_title": "Fasteners",
+            "button_label": "Shop All Fasteners",
+            "button_link": "shopify:\/\/collections\/fasteners",
+            "button_style_desktop": "primary",
+            "button_style_mobile": "primary"
+          }
+        },
+        "recommendations_cKcWzg": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "electrical-best-sellers",
+            "max_recommendations": 8,
+            "seed_profile": true,
+            "tab_title": "Electrical",
+            "button_label": "Shop All Electrical",
+            "button_link": "shopify:\/\/collections\/electrical",
+            "button_style_desktop": "primary",
+            "button_style_mobile": "primary"
+          }
+        },
+        "8b2c7334-4628-47a0-99c4-dc5938b75c70": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "fluid-power-best-sellers",
+            "max_recommendations": 8,
+            "seed_profile": true,
+            "tab_title": "Fluid Power",
+            "button_label": "Shop All Fluid Power",
+            "button_link": "shopify:\/\/collections\/hydraulics-pneumatics",
+            "button_style_desktop": "primary",
+            "button_style_mobile": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "recommendations_daGDkb",
+        "recommendations_cKcWzg",
+        "8b2c7334-4628-47a0-99c4-dc5938b75c70"
+      ],
+      "settings": {
+        "section_theme": "section_theme_light",
+        "heading": "BEST SELLERS",
+        "heading_size": "brighton-h2",
+        "content_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "desktop_top_padding": 60,
+        "desktop_bottom_padding": 60,
+        "mobile_top_padding": 45,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "rich_text_YrVrp8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_aKBXmn": {
+          "type": "heading",
+          "settings": {
+            "headline_animation": "NoEffect",
+            "headline_animation_time": "0.2s",
+            "heading": "Brands You Can Trust",
+            "heading_color": "#ffffff",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aKBXmn"
+      ],
+      "settings": {
+        "background_color": "#002437",
+        "desktop_max_content_width": 750,
+        "container_alignment": "center",
+        "text_alignment": "center",
+        "height_desktop": 0,
+        "height_mobile": 0,
+        "desktop_top_padding": 50,
+        "desktop_bottom_padding": 28,
+        "mobile_top_padding": 10,
+        "mobile_bottom_padding": 20,
+        "display_margins": false
+      }
+    },
+    "164273977304b2131b": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_ACDVN9": {
+          "type": "image",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/3M-logo-orange_1.png"
+          }
+        },
+        "164273977340c04936-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "100 Years of Innovation",
+            "heading_size": "h3",
+            "heading_color": "#002437",
+            "text_alignment": "align-left"
+          }
+        },
+        "164273977340c04936-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Car owners around the world trust 3M for cutting edge automotive solutions with auto body fillers, adhesives, cleaners, waxes, polishes and more.<\/p>",
+            "text_style": "text-body-large",
+            "text_color": "#484a50",
+            "text_alignment": "align-left"
+          }
+        },
+        "164273977340c04936-2": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Shop 3M Products",
+            "button_link_1": "shopify:\/\/collections\/3m",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_ACDVN9",
+        "164273977340c04936-0",
+        "164273977340c04936-1",
+        "164273977340c04936-2"
+      ],
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#002437",
+        "content_background_color": "#f4f4f4",
+        "dark_mode": false,
+        "image": "shopify:\/\/shop_images\/promo-3M-fpo.jpg",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "5s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "center",
+        "section_padding": "normal",
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "cards_tpXYgA": {
+      "type": "cards",
+      "blocks": {
+        "card_C96LN9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/v2-logo-lenox.svg",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": "shopify:\/\/collections\/lenox"
+          }
+        },
+        "card_a6kdYF": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/v2-logo-wd40.svg",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": "shopify:\/\/collections\/wd-40"
+          }
+        },
+        "card_y4xw8H": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/v2-logo-loctite.svg",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": "shopify:\/\/collections\/loctite"
+          }
+        },
+        "card_yDpMMd": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/v2-logo-3m.svg",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": "shopify:\/\/collections\/3m"
+          }
+        },
+        "card_JVMgTU": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/v2-logo-permatex.svg",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": "shopify:\/\/collections\/permatex"
+          }
+        },
+        "card_AtQUAz": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/v2-logo-weatherhead.svg",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": "shopify:\/\/collections\/eaton-weatherhead-hydraulics"
+          }
+        },
+        "card_eJcDkT": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/v2-logo-gates.svg",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": "shopify:\/\/collections\/gates-hydraulics"
+          }
+        },
+        "card_Ejb499": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-shop-pro.svg",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": "shopify:\/\/collections\/shoppro"
+          }
+        },
+        "card_8iijM4": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-kroil.svg",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": "shopify:\/\/collections\/kroil-lubricants"
+          }
+        },
+        "card_cVPBMb": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-star-alloys.svg",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": "shopify:\/\/collections\/star-alloys"
+          }
+        }
+      },
+      "block_order": [
+        "card_C96LN9",
+        "card_a6kdYF",
+        "card_y4xw8H",
+        "card_yDpMMd",
+        "card_JVMgTU",
+        "card_AtQUAz",
+        "card_eJcDkT",
+        "card_Ejb499",
+        "card_8iijM4",
+        "card_cVPBMb"
+      ],
+      "settings": {
+        "headline": "",
+        "eyebrow": "",
+        "headline_size": "h1",
+        "text_style": "subtitle",
+        "card_hover": false,
+        "card_slider": true,
+        "headline_color": "#f3f1ee",
+        "card_title_color": "#f3f1ee",
+        "text_bg_color": "#002437",
+        "desktop_top_padding": 50,
+        "desktop_bottom_padding": 50,
+        "mobile_top_padding": 35,
+        "mobile_bottom_padding": 10,
+        "display_margins": false
+      }
+    },
+    "d2f64278-8352-4f6a-868f-871986afcc6b": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<img class=\"small-hide medium-hide\" style=\"width:100%\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0882\/6699\/8069\/files\/Best-Sellers-FPO-Section.jpg?v=1725890230\">\n<img class=\"large-up-hide\" style=\"width:100%\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0882\/6699\/8069\/files\/Best-Sellers-FPO-Section-Mobile.jpg?v=1725896013\">",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_with_text_idVLeq": {
+      "type": "image-with-text",
+      "blocks": {
+        "eyebrow_tcQiLN": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "OUR COMMITMENT",
+            "text_color": "#484a50",
+            "text_alignment": "align-left"
+          }
+        },
+        "heading_Paxr3G": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Single Source Supplier for all Needs",
+            "heading_size": "cql-headline-1",
+            "heading_color": "#00679b",
+            "text_alignment": "align-left"
+          }
+        },
+        "text_Ty3YeN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With a fully automated warehouse system, 99% fill-rate, extensive customer service, and a network of independently owned franchises, Winzer is your single source supplier for all of your maintenance and repair needs. We are committed to helping customers succeed and thrive.<\/p>",
+            "text_style": "text-body-large",
+            "text_color": "#484a50",
+            "text_alignment": "align-left"
+          }
+        },
+        "button_76iGjx": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Resource Center",
+            "button_link_1": "shopify:\/\/pages\/help-page",
+            "button_style_desktop_1": "link-1",
+            "button_style_mobile_1": "link-1",
+            "button_label_2": "Talk with an Expert",
+            "button_link_2": "shopify:\/\/pages\/chat-with-an-expert",
+            "button_style_desktop_2": "link-1",
+            "button_style_mobile_2": "link-1",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_tcQiLN",
+        "heading_Paxr3G",
+        "text_Ty3YeN",
+        "button_76iGjx"
+      ],
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#f4f4f4",
+        "content_background_color": "#ffffff",
+        "dark_mode": false,
+        "image": "shopify:\/\/shop_images\/our-commitment.webp",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "none",
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "image_with_text_7XzHNJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "eyebrow_LzVLCq": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "OUR STORY",
+            "text_color": "#bcbec4",
+            "text_alignment": "align-left"
+          }
+        },
+        "heading_LtgfkX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Empowering Drivers Every Mile of the Way",
+            "heading_size": "cql-headline-1",
+            "heading_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        },
+        "text_YdXgPN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our team of passionate car care experts strives to make OneSource the one stop for your auto care needs. <\/p>",
+            "text_style": "text-body-large",
+            "text_color": "#bcbec4",
+            "text_alignment": "align-left"
+          }
+        },
+        "button_QwQ7kY": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "About Us",
+            "button_link_1": "shopify:\/\/pages\/about-us",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_LzVLCq",
+        "heading_LtgfkX",
+        "text_YdXgPN",
+        "button_QwQ7kY"
+      ],
+      "disabled": true,
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#002437",
+        "content_background_color": "#002437",
+        "dark_mode": false,
+        "image": "shopify:\/\/shop_images\/promo-empowering-drivers-fpo.jpg",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "none",
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "1645036574a6d98c9c": {
+      "type": "info-carousel",
+      "blocks": {
+        "16450365745b533c04-0": {
+          "type": "testimonial_slide",
+          "settings": {
+            "slide_animation": "NoEffect",
+            "testimonial": "<p>The support I receive from Winzer allows me to provide unsurpassed service to my customers. <\/p>",
+            "slide_animation_time": "0.2s",
+            "byline": "<p>— Tony P.<\/p>",
+            "slide_name_time": "0.2s",
+            "text_color": "#ffffff",
+            "display_icon": false,
+            "slide_icon_time": "0.2s",
+            "icon_color": "#0092ff"
+          }
+        },
+        "testimonial_slide_DiEHQd": {
+          "type": "testimonial_slide",
+          "settings": {
+            "slide_animation": "NoEffect",
+            "testimonial": "<p>The reason Matthew is our only source is because “He worries more about how I spend my money than I do myself.\"<\/p>",
+            "slide_animation_time": "0.2s",
+            "byline": "<p>— Mark B.<\/p>",
+            "slide_name_time": "0.2s",
+            "text_color": "#ffffff",
+            "display_icon": false,
+            "slide_icon_time": "0.2s",
+            "icon_color": "#0092ff"
+          }
+        },
+        "testimonial_slide_dT4H6W": {
+          "type": "testimonial_slide",
+          "settings": {
+            "slide_animation": "NoEffect",
+            "testimonial": "<p>I know that when my Winzer franchise show up, things will be taken care of.<\/p>",
+            "slide_animation_time": "0.2s",
+            "byline": "<p>— David D.<\/p>",
+            "slide_name_time": "0.2s",
+            "text_color": "#ffffff",
+            "display_icon": false,
+            "slide_icon_time": "0.2s",
+            "icon_color": "#0092ff"
+          }
+        },
+        "testimonial_slide_qL3iLg": {
+          "type": "testimonial_slide",
+          "settings": {
+            "slide_animation": "NoEffect",
+            "testimonial": "<p>As long as Winzer is servicing my account, we will not be considering any other vendors for our shop supplies.<\/p>",
+            "slide_animation_time": "0.2s",
+            "byline": "<p>— Randy A.<\/p>",
+            "slide_name_time": "0.2s",
+            "text_color": "#ffffff",
+            "display_icon": false,
+            "slide_icon_time": "0.2s",
+            "icon_color": "#0092ff"
+          }
+        }
+      },
+      "block_order": [
+        "16450365745b533c04-0",
+        "testimonial_slide_DiEHQd",
+        "testimonial_slide_dT4H6W",
+        "testimonial_slide_qL3iLg"
+      ],
+      "settings": {
+        "background_color": "#484a50",
+        "background_desktop_image": "shopify:\/\/shop_images\/technical-drawing.jpg",
+        "background_mobile_image": "shopify:\/\/shop_images\/technical-drawing.jpg",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "accessibility_info": "Slideshow about our brand",
+        "desktop_top_padding": 110,
+        "desktop_bottom_padding": 130,
+        "mobile_top_padding": 15,
+        "mobile_bottom_padding": 20,
+        "display_margins": false
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_tiEey4",
+    "06b6a07c-684f-4f0a-b07a-0ef314bcbd70",
+    "icon_list_Ni7AWM",
+    "1645433899f17c1025",
+    "bd76cfb5-0b5f-4511-adfe-dbc2a3b7df2d",
+    "rich_text_YrVrp8",
+    "164273977304b2131b",
+    "cards_tpXYgA",
+    "d2f64278-8352-4f6a-868f-871986afcc6b",
+    "image_with_text_idVLeq",
+    "image_with_text_7XzHNJ",
+    "1645036574a6d98c9c"
+  ]
+}

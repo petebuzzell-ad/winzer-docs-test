@@ -1,0 +1,12 @@
+@media screen and (max-width: 989px) {
+  div.product-count {
+    margin: 1.2rem 0;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .product-count.page-width {
+    margin: 0;
+    padding: 0;
+  }
+}

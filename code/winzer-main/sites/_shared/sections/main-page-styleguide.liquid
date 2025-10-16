@@ -1,0 +1,466 @@
+<div class="page-width">
+  <h1 class="h1">
+      {{ page.title | escape }}
+  </h1>
+
+  {% render 'styleguide-links' %}
+
+  <div style="padding: 3rem 0; padding: 1rem">
+      <h2>Colors</h2>
+      <div class="color-swatches-styleguide grid">
+        {% render 'styleguide-colors' %}
+      </div>
+
+      {% capture background_variance_styles %}
+      <h2>Typography</h2>
+
+      <div class="typography-styleguide" style="padding: 1rem 2rem;margin:2rem 0;">
+
+        <div style="display:flex; flex-wrap: wrap; gap: 3rem;">
+          <div>
+            <p><span class="eyebrow">Eyebrow Text</span></p>
+
+            <h1 class="h1">Headline 1</h1>
+            <h2 class="h2">Headline 2</h2>
+            <h3 class="h3">Headline 3</h3>
+
+            <h4 class="h4">Headline 4</h4>
+            <h5 class="h5">Headline 5</h5>
+            <h6 class="h6">Headline 6</h6>
+
+            <h1 class="cql-headline-1">Custom Headline 1</h1>
+
+            <p class="body-x-large">Body X Large</p>
+            <p class="body-large">Body Text Large</p>
+            <p class="body-regular">Body Text Medium</p>
+            <p class="body-small">Body Text Small</p>
+            <p class="body-special-large">Body Special Large</p>
+            <p class="body-special-medium">Body Special Medium</p>
+            <p class="body-special-small">Body Special Small</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Buttons</h2>
+      <div class="buttons-styleguide">
+          <h3>Button Primary (.button.button--primary)</h3>
+
+          <div style="display:flex; flex-wrap: wrap; gap: 3rem; margin-bottom: 2rem;">
+              <div>
+                  <p>Primary</p>
+                  <p>{% render 'button', label: 'Learn More' %}</p>
+              </div>
+              <div>
+                  <p>Primary - Hover</p>
+                  <p>{% render 'button', label: 'Learn More', class: 'hover' %}</p>
+              </div>
+              <div>
+                  <p>Primary - Disabled</p>
+                  <p>{% render 'button', label: 'Learn More', class: 'disabled' %}</p>
+              </div>
+              <div>
+                  <p>Primary - Large & disabled</p>
+                  <p>{% render 'button', label: 'Out of Stock', size: 'large', class: 'disabled' %}</p>
+              </div>
+              <div>
+                  <p>Primary - Active</p>
+                  <p>{% render 'button', label: 'Learn More', class: 'active' %}</p>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="buttons-styleguide">
+          <h3>Button Secondary (.button.button--secondary)</h3>
+
+          <div style="display:flex; flex-wrap: wrap; gap: 3rem; margin-bottom: 2rem;">
+              <div>
+                  <p>Secondary</p>
+                  <p>{% render 'button', label: 'Learn More', variation: 'secondary' %}</p>
+              </div>
+              <div>
+                  <p>Secondary - Hover</p>
+                  <p>{% render 'button', label: 'Learn More', variation: 'secondary', class: 'hover' %}</p>
+              </div>
+              <div>
+                  <p>Secondary - Active</p>
+                  <p>{% render 'button', label: 'Learn More', variation: 'secondary', class: 'active' %}</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="buttons-styleguide">
+          <h3>Button Outline (.button.button--outline)</h3>
+
+          <div style="display:flex; flex-wrap: wrap; gap: 3rem; margin-bottom: 2rem; background-color: var(--color-styleguide-carbon); color: white;">
+              <div>
+                  <p>Outline</p>
+                  <p>{% render 'button', label: 'Learn More', variation: 'outline' %}</p>
+              </div>
+              <div>
+                  <p>Outline - Hover</p>
+                  <p>{% render 'button', label: 'Learn More', variation: 'outline', class: 'hover' %}</p>
+              </div>
+              <div>
+                  <p>Outline - Active</p>
+                  <p>{% render 'button', label: 'Learn More', variation: 'outline', class: 'active' %}</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="buttons-styleguide">
+          <h3>"Button" Link (.button.button--link-1)</h3>
+
+          <div style="display:flex; flex-wrap: wrap; gap: 3rem; margin-bottom: 2rem;">
+              <div>
+                  <p>Default</p>
+                  <p>{% render 'button', label: 'Enter CTA Text', arrow: "right", variation: 'link-1' %}</p>
+              </div>
+              <div>
+                  <p>Hover</p>
+                  <p>{% render 'button', label: 'Enter CTA Text', arrow: "right", variation: 'link-1', class: 'hover' %}</p>
+              </div>
+              <div>
+                  <p>Active</p>
+                  <p>{% render 'button', label: 'Enter CTA Text', arrow: "right", variation: 'link-1', class: 'active' %}</p>
+              </div>
+          </div>
+      </div>
+
+      <div class="buttons-styleguide">
+          <h3>Links (.link or inline &lt;a&gt;)</h3>
+
+          <div style="display:flex; flex-wrap: wrap; gap: 3rem; margin-bottom: 2rem;">
+              <div>
+                <p>Default</p>
+                <a class="link" href="#">Learn More</a>
+              </div>
+              <div>
+                <p>Hover</p>
+                <a class="link hover" href="#">Learn More</a>
+              </div>
+              <div>
+                <p>Active</p>
+                <a class="link active" href="#">Learn More</a>
+              </div>
+          </div>
+      </div>
+      {% endcapture %}
+
+      {{ background_variance_styles }}
+
+      <h2 style="margin-bottom: 0;">Dark Background (.dark-background)</h2>
+      <h6 style="margin-top: 0;">(the .dark-background class only effects the child elements)</h6>
+
+      <div class="dark-background" style="background: var(--color-brand-primary);padding: 0.1rem 2rem;">
+        {{ background_variance_styles }}
+      </div>
+
+
+      <h2>Form Fields</h2>
+      <div class="inputs">
+        <div style="display:flex; gap: 3rem; margin-bottom: 2rem;">
+          <div style="flex-grow: 1;width:25%;">
+            <p>Input Field - Default</p>
+            <div class="name-form__field-wrapper" style="margin-bottom: 2rem;">
+              <div class="field">
+                <input class="field__input" value="" aria-required="true" autocorrect="off" autocapitalize="none" placeholder="Input" required="" type="text" /><span> </span>
+                <label class="field__label" for="name-form">Input</label>
+              </div>
+            </div>
+          </div>
+          <div style="flex-grow: 1;width:25%;">
+            <p>Input Field - Active</p>
+            <div class="name-form__field-wrapper" style="margin-bottom: 2rem;">
+              <div class="field">
+                <input class="field__input" value="Input" aria-required="true" autocorrect="off" autocapitalize="none" placeholder="Input" required="" type="text" /><span> </span>
+                <label class="field__label" for="name-form">Input</label>
+              </div>
+            </div>
+          </div>
+          <div style="flex-grow: 1;width:25%;">
+            <p>Input Field - Disabled</p>
+            <div class="name-form__field-wrapper" style="margin-bottom: 2rem;">
+              <div class="field">
+                <input class="field__input" value="email@example.com" aria-required="true" autocorrect="off" autocapitalize="none" placeholder="Input" required="" type="text" disabled/><span> </span>
+                <label class="field__label" for="name-form">Input</label>
+              </div>
+            </div>
+          </div>
+          <div style="flex-grow: 1;width:25%;">
+            <p>Input Field - Error</p>
+            <div class="name-form__field-wrapper" style="margin-bottom: 2rem;">
+              <div class="field error">
+                <input class="field__input error" value="my email address" aria-required="true" autocorrect="off" autocapitalize="none" placeholder="Input" required="" type="text" /><span> </span>
+                <label class="field__label" for="name-form">Email</label>
+                <span>Error message</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap: 3rem; margin-bottom: 2rem;">
+          <div style="flex-grow: 1;width:25%;">
+            <p>Dropdown - Default</p>
+            <div style="margin-bottom: 2rem;">
+              <div class="name__input--dropdown">
+                <div class="select">
+                  <span> </span>
+                  <select class="select__select" name="options[option]" form="form-name">
+                    <option value="" disabled selected>Dropdown</option>
+                    <option value="value-1">Value 1</option>
+                    <option value="value-2">Value 2</option>
+                    <option value="value-3">Value 3</option>
+                  </select>
+                  <span> </span>
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewbox="0 0 10 6">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+                  </svg>
+                  <label class="field__label" for="name-form">Dropdown</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="flex-grow: 1;width:25%;">
+            <p>Dropdown - Active</p>
+            <div style="margin-bottom: 2rem;">
+              <div class="name__input--dropdown">
+                <div class="select">
+                  <span> </span>
+                  <select class="select__select" name="options[option]" form="form-name">
+                    <option value="" disabled>Dropdown</option>
+                    <option value="value-1" selected>Value 1</option>
+                    <option value="value-2">Value 2</option>
+                    <option value="value-3">Value 3</option>
+                  </select>
+                  <span> </span>
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewbox="0 0 10 6">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+                  </svg>
+                  <label class="field__label" for="name-form">Dropdown</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="flex-grow: 1;width:25%;">
+            <p>Dropdown - Disabled</p>
+            <div style="margin-bottom: 2rem;">
+              <div class="name__input--dropdown">
+                <div class="select">
+                  <span> </span>
+                  <select class="select__select" name="options[option]" form="form-name" disabled>
+                    <option value="" disabled>Dropdown</option>
+                    <option value="value-1">Value 1</option>
+                    <option value="value-2" selected>Value 2</option>
+                    <option value="value-3">Value 3</option>
+                  </select>
+                  <span> </span>
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewbox="0 0 10 6">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+                  </svg>
+                  <label class="field__label" for="name-form">Dropdown</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="flex-grow: 1;width:25%;">
+            <p>Dropdown - Error</p>
+            <div style="margin-bottom: 2rem;">
+              <div class="name__input--dropdown">
+                <div class="select">
+                  <span> </span>
+                  <select class="select__select error" name="options[option]" form="form-name">
+                    <option value="" disabled selected>Dropdown</option>
+                    <option value="value-1">Value 1</option>
+                    <option value="value-2">Value 2</option>
+                    <option value="value-3" selected>Value 3</option>
+                  </select>
+                  <span> </span>
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewbox="0 0 10 6">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+                  </svg>
+                  <label class="field__label" for="name-form">Dropdown</label>
+                  <span>Error message</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div style="display:flex; gap: 3rem; margin-bottom: 2rem;">
+          <div style="width:25%;">
+            <p>Radio Fields</p>
+            <div class="radio" style="margin-bottom: 1rem;">
+              <input id="radio-example-1" type="radio" name="example-radio" />
+              <label for="radio-example-1">Radio Empty</label>
+            </div>
+            <div class="radio" style="margin-bottom: 1rem;">
+              <input id="radio-example-2" type="radio" name="example-radio" checked />
+              <label for="radio-example-2">Radio Selected</label>
+            </div>
+            <div class="radio">
+              <input id="radio-example-3" type="radio" name="example-radio" disabled />
+              <label for="radio-example-3">Radio Disabled</label>
+            </div>
+          </div>
+          <div style="width:25%;">
+            <p>Checkbox Fields</p>
+            <div class="checkbox" style="margin-bottom: 1rem;">
+              <input id="checkbox-example-1" type="checkbox" name="example-checkbox-1" />
+              <label for="checkbox-example-1">Checkbox Empty</label>
+            </div>
+            <div class="checkbox" style="margin-bottom: 1rem;">
+              <input id="checkbox-example-2" type="checkbox" name="example-checkbox-2" checked />
+              <label for="checkbox-example-2">Checkbox Selected</label>
+            </div>
+            <div class="checkbox">
+              <input id="checkbox-example-3" type="checkbox" name="example-checkbox-3" disabled />
+              <label for="checkbox-example-3">Checkbox Disabled</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Badges</h2>
+      <div class="badges">
+          <div style="display:flex; flex-wrap: wrap; gap: 3rem; margin-bottom: 2rem;">
+              <span class="badge">Badge</span>
+          </div>
+      </div>
+
+  </div>
+
+</div>
+
+<style>
+
+  .buttons-styleguide h3 {
+    margin: 2rem 0;
+  }
+
+  .color-swatches-styleguide .swatch {
+    display: flex;
+    align-items: flex-end;
+    min-height: 30rem;
+    margin: 1rem;
+    padding: 2rem;
+    border: 1px solid var(--color-brand-black);
+    border-radius: 10px;
+  }
+
+  .brand-primary {
+    color:  var(--color-brand-white);
+    background-color: var(--color-brand-primary);
+  }
+
+  .brand-secondary {
+    color:  var(--color-brand-white);
+    background-color: var(--color-brand-secondary);
+  }
+
+  .brand-secondary-variant {
+    color:  var(--color-brand-white);
+    background-color: var(--color-brand-secondary-variant);
+  }
+
+  .brand-accent-1 {
+    color: var(--color-brand-black);
+    background-color: var(--color-brand-accent-1);
+  }
+
+  .brand-accent-2 {
+    color: var(--color-brand-black);
+    background-color: var(--color-brand-accent-2);
+  }
+
+  .brand-text {
+    color: var(--color-brand-white);
+    background-color: var(--color-brand-text);
+  }
+
+  .brand-neutral-1 {
+    color: var(--color-brand-black);
+    background-color: var(--color-brand-neutral-1);
+  }
+
+  .brand-neutral-2 {
+    color: var(--color-brand-black);
+    background-color: var(--color-brand-neutral-2);
+  }
+
+  .brand-white {
+    color: var(--color-brand-black);
+    background-color: var(--color-brand-white);
+  }
+
+  .brand-black {
+    color: var(--color-brand-white);
+    background-color: var(--color-brand-black);
+  }
+
+  .brand-misc-1 {
+    color: var(--color-brand-white);
+    background-color: var(--color-brand-misc-1);
+  }
+
+  .brand-misc-2 {
+    color: var(--color-brand-white);
+    background-color: var(--color-brand-misc-2);
+  }
+
+  .styleguide-heading {
+    font-size: 1.7rem;
+    font-family: var(--font-body-family);
+    color: var(--color-styleguide-tan);
+  }
+
+  .styleguide-heading-1 {
+    font-size: 5.4rem;
+    font-family: var(--font-body-family);
+    line-height: 5.4rem;
+    font-weight: 800;
+    color: var(--color-brand-white)
+  }
+
+  .styleguide-heading-2 {
+    font-size: 5.4rem;
+    font-family: var(--font-body-family);
+    line-height: 5.4rem;
+    font-weight: 600;
+    color: var(--color-brand-white)
+  }
+
+  .styleguide-heading-3 {
+    font-size: 1.7rem;
+    font-family: var(--font-heading-family);
+    color: var(--styleguide-color-black);
+  }
+
+  .styleguide-heading-4 {
+    font-size: 5.4rem;
+    font-family: var(--font-heading-family);
+    line-height: 5.4rem;
+    font-weight: 600;
+  }
+
+  .styleguide-heading-5 {
+    font-size: 1.7rem;
+    font-family: var(--font-body-secondary-regular);
+  }
+
+  .styleguide-heading-6 {
+    font-size: 5.4rem;
+    font-family: var(--font-body-secondary-regular);
+    line-height: 5.4rem;
+  }
+
+</style>
+
+{% schema %}
+  {
+    "name": "Styleguide",
+    "tag": "section",
+    "class": "spaced-section"
+  }
+{% endschema %}

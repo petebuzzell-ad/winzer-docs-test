@@ -1,0 +1,9 @@
+{% comment %}theme-check-disable{% endcomment %}
+{%- layout none -%}
+{%- paginate pages by 1000 -%}
+{% for page in pages %}{"pageType":"page","id":{{ "page-" | append: page.id | json }},"title":{{ page.title | json }},"author":{{ page.author | json }},"url":{{ page.url | json }},"published_at":"{{ page.published_at }}","content":{{ page.content | strip_newlines | strip_html | truncate: 200 | json }}}
+{% endfor %}{%- endpaginate -%}{%- assign blogTypes = 'news,journey' | split: ',' -%}
+{% for type in blogTypes %}{%- paginate blogs[type].articles by 1000 -%}
+{%- for article in blogs[type].articles | sort: "published_at" | reverse -%}{"pageType":"blog", "type":{{ type | json }}, "id":{{ "blog-" | append: article.id | json }},"title":{{ article.title | json }},"author":{{ article.author | json }},"url":{{ article.url | json }},"published_at": "{{ article.published_at }}","image": "{{ article.image.src | img_url: 'master' }}","content":{{ article.excerpt_or_content | strip_html | json }},"tags": [{%- for tag in article.tags -%}"{{tag}}"{%- unless forloop.last -%},{%- endunless -%}{%- endfor -%}]}
+{% endfor %}{%- endpaginate -%}{%- endfor -%}
+{% comment %}theme-check-enable{% endcomment %}

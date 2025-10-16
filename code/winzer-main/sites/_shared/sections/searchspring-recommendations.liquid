@@ -1,0 +1,442 @@
+{{ 'section-recommendations.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+
+{% capture margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% capture mobile_margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.mobile_margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    margin-top: {{ margin_size | divided_by: 10 }}rem;
+    margin-bottom: {{ margin_size | divided_by: 10 }}rem;
+  }
+
+  @media screen and (max-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      margin-top: {{ mobile_margin_size | divided_by: 10 }}rem;
+      margin-bottom: {{ mobile_margin_size | divided_by: 10 }}rem;
+    }
+  }
+{% endstyle %}
+
+<div class="recommendations page-width {% if settings.scroll_appear == 'fadein' %} fadeIn {% endif %} {% if section.settings.section_theme == 'section_theme_light' %} recommendations-theme-light {% else %} recommendations-theme-dark {% endif %}">
+  <h2 class="recommendations__heading {{ section.settings.heading_size }}" style="text-align: {{ section.settings.content_alignment }};">{{ section.settings.heading | escape }}</h2>
+
+  {% if section.blocks.size > 1 %}
+    <div class="recommendations__collection-selectors">
+      {% for block in section.blocks %}
+
+        {% assign tab_nav_label = block.settings.tab_title %}
+
+        <a class="recommendations__collection-selector{% if forloop.first %} active{% endif %}" data-block-id="{{ block.id }}">
+          <span class="brighton-p2">{{ tab_nav_label }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <div class="recommendations__collection-carousels {% if section.blocks.size > 1 %}carousel{% endif %}">
+    {% for block in section.blocks %}
+      <div class="recommendations__collection{% if forloop.first %} active{% endif %}" data-block-id="{{ block.id }}">
+        <div class="recommendations__collection-inner">
+          <script type="searchspring/personalized-recommendations" profile="{{ block.settings.profile_id }}">
+            options = {
+              limit: {{ block.settings.max_recommendations }}
+            };
+
+            {% if block.settings.seed_profile %}
+              seed = '{{ product.variants[0].sku }}';
+            {% endif %}
+
+            {% if customer %}
+              shopper = '{{ customer.id }}';
+            {% endif %}
+
+          </script>
+
+          {%- if block.settings.button_label != blank -%}
+            <div class="banner__button-wrapper">
+                {% assign showArrow1 = '' %}
+                {% if block.settings.button_style contains 'link-1' %}
+                  {% assign showArrow1 = 'right' %}
+                {% endif %}
+
+                {% render 'button',
+                  label: block.settings.button_label,
+                  link: block.settings.button_link,
+                  variation: block.settings.button_style_mobile,
+                  arrow: showArrow1,
+                  class: "banner__button medium-hide large-up-hide"
+                %}
+
+                {% render 'button',
+                  label: block.settings.button_label,
+                  link: block.settings.button_link,
+                  variation: block.settings.button_style_desktop,
+                  arrow: showArrow1,
+                  class: "banner__button small-hide"
+                %}
+            </div>
+          {% endif %}
+
+          {%- case block.type -%}
+            {%- when 'button' -%}
+              <div
+                class="banner__button-wrapper {{ block.settings.links_color }} {% if block.settings.show_side_by_side %} side-by-side{%- endif -%} {% unless block.settings.animation contains 'No' %} animated{%- endunless -%} {{ block.settings.animation }}"
+                {{ block.shopify_attributes }} data-block-id="{{ block.id }}" id="block-section-{{ block.id }}">
+                {%- if block.settings.button_label != blank -%}
+                  {% assign showArrow1 = '' %}
+                  {% if block.settings.button_style contains 'link-1' %}
+                    {% assign showArrow1 = 'right' %}
+                  {% endif %}
+
+                  {% render 'button',
+                    label: block.settings.button_label,
+                    link: block.settings.button_link,
+                    variation: block.settings.button_style_mobile,
+                    arrow: showArrow1,
+                    class: "banner__button medium-hide large-up-hide"
+                  %}
+
+                  {% render 'button',
+                    label: block.settings.button_label,
+                    link: block.settings.button_link,
+                    variation: block.settings.button_style_desktop,
+                    arrow: showArrow1,
+                    class: "banner__button small-hide"
+                  %}
+                {%- endif -%}
+              </div>
+          {%- endcase -%}
+          </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script type="text/javascript">
+  let sectionSelectorSSRecs = '#shopify-section-{{ section.id }}';
+  let collectionSelectorsSSRecs = document.querySelectorAll(`${sectionSelectorSSRecs} .recommendations__collection-selector`);
+
+  for (let collectionSelector of collectionSelectorsSSRecs) {
+    let blockId = collectionSelector.dataset.blockId;
+
+    let collectionCarousel = document.querySelector(`${sectionSelectorSSRecs} .recommendations__collection[data-block-id="${blockId}"]`);
+    let otherCarousels = document.querySelectorAll(`${sectionSelectorSSRecs} .recommendations__collection:not([data-block-id="${blockId}"])`);
+
+    collectionSelector.addEventListener('click', () => {
+
+      for (let otherCarousel of otherCarousels) {
+        otherCarousel.classList.remove('active');
+      }
+
+      for (let collectionSelector of collectionSelectorsSSRecs) {
+        collectionSelector.classList.remove('active');
+      }
+
+      collectionSelector.classList.add('active');
+      collectionCarousel.classList.add('active');
+
+      window.dispatchEvent(new Event('resize'));
+    })
+  }
+</script>
+
+{% assign section_selector = '#shopify-section-' | append: section.id %}
+{% style %}
+
+  {{ section_selector }} {
+
+    {% if section.settings.section_theme == 'section_theme_light' %}
+      background-color: var(--color-brand-accent-1);
+    {% else %}
+      background-color: var(--color-brand-primary);
+    {% endif %}
+
+    {%- if section.settings.background_color != blank -%}
+      background-color: {{ section.settings.background_color }};
+    {%- endif -%}
+
+    {%- if section.settings.text_color != blank -%}
+      color: {{ section.settings.text_color }}
+    {%- endif -%}
+  }
+
+  @media screen and (max-width: 750px) {
+    {{ section_selector }} .recommendations {
+      {%- if section.settings.mobile_top_padding -%}
+        padding-top: {{ section.settings.mobile_top_padding }}px;
+      {%- endif -%}
+      {%- if section.settings.mobile_bottom_padding -%}
+        padding-bottom: {{ section.settings.mobile_bottom_padding }}px;
+      {%- endif -%}
+    }
+  }
+
+  @media screen and (min-width: 749px) {
+    {{ section_selector }} .recommendations {
+      {%- if section.settings.desktop_top_padding -%}
+        padding-top: {{ section.settings.desktop_top_padding }}px;
+      {%- endif -%}
+      {%- if section.settings.desktop_bottom_padding -%}
+        padding-bottom: {{ section.settings.desktop_bottom_padding }}px;
+      {%- endif -%}
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "SS Recommendations",
+    "tag": "section",
+    "class": "searchspring-reviews",
+    "settings": [
+      {
+        "type": "select",
+        "id": "section_theme",
+        "label": "Section theme",
+        "default": "section_theme_light",
+        "options": [
+          {
+            "value": "section_theme_light",
+            "label": "Light theme"
+          },{
+            "value": "section_theme_dark",
+            "label": "Dark theme"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Headline settings"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "default": "You may also like",
+        "label": "Text"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "cql-headline-1",
+            "label": "Custom Headline 1"
+          },
+          {
+            "value": "cql-headline-2",
+            "label": "Custom Headline 2"
+          },
+          {
+            "value": "cql-headline-3",
+            "label": "Custom Headline 3"
+          },
+          {
+            "value": "h4",
+            "label": "X-Small"
+          },
+          {
+            "value": "h3",
+            "label": "Small"
+          },
+          {
+            "value": "h2",
+            "label": "Medium"
+          },
+          {
+            "value": "h1",
+            "label": "Large"
+          },
+          {
+            "value": "h0",
+            "label": "X-Large"
+          }
+        ],
+        "default": "h2",
+        "label": "Headline size"
+      },
+      {
+        "type": "select",
+        "id": "content_alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center",
+        "label": "Content alignment"
+      }, {
+        "type": "header",
+        "content": "Section colors",
+        "info": "Use to overwrite the section theme colors if necessary"
+      }, {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color"
+      }, {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color"
+      }, {
+        "type": "header",
+        "content": "Section padding"
+      }, {
+        "type": "number",
+        "id": "desktop_top_padding",
+        "label": "Desktop top padding (px)",
+        "default": 50
+      }, {
+        "type": "number",
+        "id": "desktop_bottom_padding",
+        "label": "Desktop bottom padding (px)",
+        "default": 108
+      }, {
+        "type": "number",
+        "id": "mobile_top_padding",
+        "label": "Mobile top padding (px)",
+        "default": 5
+      }, {
+        "type": "number",
+        "id": "mobile_bottom_padding",
+        "label": "Mobile bottom padding (px)",
+        "default": 45
+      },
+      {
+      "type": "header",
+      "content": "Margins",
+      "info": "Apply global theme layout margins on the top and bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_margins",
+      "label": "Display margins",
+      "default": false
+    }
+    ],
+    "blocks": [
+      {
+        "type": "recommendations",
+        "name": "Recommendations",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "text",
+            "id": "profile_id",
+            "label": "Recommendations profile ID",
+            "info": "Find the right code in the Searchspring merchant admin > Product Recommendations tab"
+          }, {
+            "type": "number",
+            "id": "max_recommendations",
+            "label": "Maximum products to display",
+            "default": 12
+          },
+          {
+            "type": "checkbox",
+            "id": "seed_profile",
+            "label": "Seed slider profile",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "tab_title",
+            "label": "Tab title",
+            "info": "Only required if using more than 1 block in a section"
+          }, {
+            "type": "header",
+            "content": "Button options"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "default": "See All",
+            "label": "Label",
+            "info": "Leave the label blank to hide the button."
+          }, {
+            "type": "url",
+            "id": "button_link",
+            "label": "Link"
+          }, {
+            "type": "select",
+            "id": "button_style_desktop",
+            "label": "Style - desktop",
+            "default": "primary",
+            "options": [
+              {
+                "value": "primary",
+                "label": "Primary"
+              },
+              {
+                "value": "secondary",
+                "label": "Secondary"
+              },
+              {
+                "value": "tertiary",
+                "label": "Tertiary"
+              },
+              {
+                "value": "link-1",
+                "label": "Link style 1"
+              },
+              {
+                "value": "link-2",
+                "label": "Link style 2"
+              }
+            ]
+          }, {
+            "type": "select",
+            "id": "button_style_mobile",
+            "label": "Style - mobile",
+            "default": "primary",
+            "options": [
+              {
+                "value": "primary",
+                "label": "Primary"
+              },
+              {
+                "value": "secondary",
+                "label": "Secondary"
+              },
+              {
+                "value": "tertiary",
+                "label": "Tertiary"
+              },
+              {
+                "value": "link-1",
+                "label": "Link style 1"
+              },
+              {
+                "value": "link-2",
+                "label": "Link style 2"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Searchspring recommendations"
+      }
+    ]
+  }
+{% endschema %}

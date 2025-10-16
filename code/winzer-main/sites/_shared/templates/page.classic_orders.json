@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-classic-orders",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

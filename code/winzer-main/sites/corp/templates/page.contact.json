@@ -1,0 +1,225 @@
+{
+  "wrapper": "div.customer-service-page",
+  "sections": {
+    "16484545291ecbe325": {
+      "type": "image-banner",
+      "blocks": {
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "CUSTOMER SERVICE",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color_desktop": "",
+            "eyebrow_color_mobile": ""
+          }
+        },
+        "1648454529bf74fe13-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact Us",
+            "heading_size": "h1",
+            "heading_color_desktop": "",
+            "heading_color_mobile": ""
+          }
+        },
+        "text_tkUqKL": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Our mission is to help customers succeed and franchise owners thrive.<\/p>",
+            "text_style": "text-body-large",
+            "text_color_desktop": "#002437",
+            "text_color_mobile": "#002437"
+          }
+        }
+      },
+      "block_order": [
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343",
+        "1648454529bf74fe13-0",
+        "text_tkUqKL"
+      ],
+      "settings": {
+        "desktop_large_image": "shopify:\/\/shop_images\/contact-hero.webp",
+        "desktop_image": "shopify:\/\/shop_images\/contact-hero.webp",
+        "mobile_image": "shopify:\/\/shop_images\/contact-hero-mobile.webp",
+        "enable_parallax": false,
+        "desktop_max_height": 240,
+        "section_background_color": "",
+        "content_background_color": "#fbfaf9",
+        "box_border_color": "#333333",
+        "show_text_box": false,
+        "show_container_mobile": true,
+        "content_background_opacity": 100,
+        "content_area_max_width": 200,
+        "show_border_desktop": false,
+        "show_border_offset_desktop": false,
+        "show_border_mobile": false,
+        "show_border_offset_mobile": false,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "show_text_below": true,
+        "hide_image_mobile": false,
+        "section_url": "",
+        "hide_section_mobile": false,
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false,
+        "custom_class": ""
+      }
+    },
+    "164845455288097172": {
+      "type": "menu-bar",
+      "disabled": true,
+      "settings": {
+        "menu": "contact-us",
+        "menu_color": "#484a50",
+        "menu_color_active": "#00679b",
+        "menu_heading": "Customer Service Links",
+        "background_color": "#f4f4f4",
+        "display_margins": false
+      }
+    },
+    "164369946291b74f8d": {
+      "type": "customer-service",
+      "blocks": {
+        "padding_C9e4di": {
+          "type": "padding",
+          "settings": {
+            "mobile_padding_amount": 40,
+            "desktop_padding_amount": 150
+          }
+        },
+        "text_tUKnUf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We help customers succeed by providing quality products, by offering comprehensive solutions, and by delivering unmatched service through our diverse team of over 400 sales representatives located across North America. If you ever have a problem with one of your orders, please do not hesitate to contact us.<\/p>",
+            "text_color": "#002437"
+          }
+        },
+        "fe21ebdb-32d1-488e-a40b-869c0b4cfaa3": {
+          "type": "page_content",
+          "disabled": true,
+          "settings": {}
+        },
+        "d39eae62-3df9-47e9-8e98-7407fb92e5ff": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><em>Form is for placeholder purposes only.<\/em><\/p>",
+            "text_color": "#4a4a4a"
+          }
+        },
+        "f5dc79ac-7317-4985-8c2d-4c48e1dd2800": {
+          "type": "form",
+          "disabled": true,
+          "settings": {}
+        },
+        "padding_jDXHti": {
+          "type": "padding",
+          "settings": {
+            "mobile_padding_amount": 0,
+            "desktop_padding_amount": 0
+          }
+        }
+      },
+      "block_order": [
+        "padding_C9e4di",
+        "text_tUKnUf",
+        "fe21ebdb-32d1-488e-a40b-869c0b4cfaa3",
+        "d39eae62-3df9-47e9-8e98-7407fb92e5ff",
+        "f5dc79ac-7317-4985-8c2d-4c48e1dd2800",
+        "padding_jDXHti"
+      ],
+      "settings": {
+        "section_heading": "",
+        "address_heading": "",
+        "hours_heading": "Customer Service Hours:",
+        "call_heading": "Call Us:",
+        "email_heading": "Fax:",
+        "chat_heading": "Live Chat",
+        "heading_color": "#ffffff",
+        "heading_background_color": "#0092ff",
+        "text_color": "#002437",
+        "background_color": "#d4e2e8",
+        "display_margins": false
+      }
+    },
+    "rich_text_jXHr9f": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_GTnYjq": {
+          "type": "heading",
+          "settings": {
+            "headline_animation": "NoEffect",
+            "headline_animation_time": "0.2s",
+            "heading": "Get in Touch",
+            "heading_color": "#000000",
+            "heading_size": "h2"
+          }
+        },
+        "button_WwpDAy": {
+          "type": "button",
+          "settings": {
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "Become a Franchise",
+            "button_link": "https:\/\/form.jotform.com\/243235170010136",
+            "button_style": "primary",
+            "button_shape": "",
+            "button_size": "small",
+            "mobile_button_size": "small",
+            "button_arrow": "none"
+          }
+        },
+        "button_rzEELn": {
+          "type": "button",
+          "settings": {
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "Become a Customer",
+            "button_link": "https:\/\/form.jotform.com\/243234506013141",
+            "button_style": "primary",
+            "button_shape": "",
+            "button_size": "small",
+            "mobile_button_size": "small",
+            "button_arrow": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_GTnYjq",
+        "button_WwpDAy",
+        "button_rzEELn"
+      ],
+      "settings": {
+        "background_color": "",
+        "desktop_max_content_width": 500,
+        "container_alignment": "left",
+        "text_alignment": "center",
+        "height_desktop": 0,
+        "height_mobile": 0,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 60,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "16484545291ecbe325",
+    "164845455288097172",
+    "164369946291b74f8d",
+    "rich_text_jXHr9f",
+    "main"
+  ]
+}

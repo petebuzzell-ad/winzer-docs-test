@@ -1,0 +1,9 @@
+# To build the app and deploy to production, run these commands in this folder.
+# You'll need AWS CLI tools and docker installed to do this.  You'll also need an AWS profile
+# configured named 'winzer' with your AWS key/secret. 
+
+build.cmd
+docker build -t product-feed -f Dockerfile .
+docker tag product-feed 241533142651.dkr.ecr.us-east-2.amazonaws.com/product-feed-repository
+aws --profile winzer ecr get-login-password | docker login --username AWS --password-stdin 241533142651.dkr.ecr.us-east-2.amazonaws.com
+docker push 241533142651.dkr.ecr.us-east-2.amazonaws.com/product-feed-repository

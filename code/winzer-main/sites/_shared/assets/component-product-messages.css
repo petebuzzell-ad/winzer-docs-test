@@ -1,0 +1,31 @@
+.product_messages_wrapper .product_messages__item {
+    background-color: #FBFAF9;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--color-brand-text);
+}
+
+.product_messages_wrapper .product_messages__item:last-child {
+    margin-bottom: 0;
+}
+
+.product_messages_wrapper .product_messages__item .icon {
+    margin: 0.5rem 1rem 0 0;
+}
+
+.product_messages_wrapper .product_messages__item p {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+.product_messages_wrapper .product_messages__item a {
+    color: var(--color-brand-text);
+    text-decoration: underline;
+}
+
+.product_messages_wrapper .product_messages__item a:hover {
+    text-decoration: none;
+}

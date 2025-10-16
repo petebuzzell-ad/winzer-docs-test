@@ -1,0 +1,754 @@
+{
+  "wrapper": "div.about-us",
+  "sections": {
+    "16484545291ecbe325": {
+      "type": "image-banner",
+      "blocks": {
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "WHY WINZER",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color_desktop": "#ffffff",
+            "eyebrow_color_mobile": "#ffffff"
+          }
+        },
+        "1648454529bf74fe13-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "More Than A MRO Supplier",
+            "heading_size": "h1",
+            "heading_color_desktop": "#ffffff",
+            "heading_color_mobile": "#ffffff"
+          }
+        },
+        "text_adQpQw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are a long-term partner committed to supplying complete solutions through strategy, planning, and execution. Our tenured franchisees and service technicians will collaborate with you to develop a custom-tailored, on-site MRO solution, reducing downtime and optimizing productivity.<\/p>",
+            "text_style": "text-body-large",
+            "text_color_desktop": "#ffffff",
+            "text_color_mobile": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343",
+        "1648454529bf74fe13-0",
+        "text_adQpQw"
+      ],
+      "settings": {
+        "desktop_large_image": "shopify:\/\/shop_images\/why-winzer-hero.webp",
+        "desktop_image": "shopify:\/\/shop_images\/why-winzer-hero.webp",
+        "mobile_image": "shopify:\/\/shop_images\/why-winzer-hero-mobile.webp",
+        "enable_parallax": false,
+        "desktop_max_height": 640,
+        "section_background_color": "#ffffff",
+        "content_background_color": "#131c3b",
+        "box_border_color": "#ffffff",
+        "show_text_box": false,
+        "show_container_mobile": true,
+        "content_background_opacity": 100,
+        "content_area_max_width": 600,
+        "show_border_desktop": false,
+        "show_border_offset_desktop": false,
+        "show_border_mobile": false,
+        "show_border_offset_mobile": false,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "hide_image_mobile": false,
+        "section_url": "",
+        "hide_section_mobile": false,
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false,
+        "custom_class": ""
+      }
+    },
+    "image_with_text_49c9ap": {
+      "type": "image-with-text",
+      "blocks": {
+        "eyebrow_8nkY7f": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "",
+            "text_color": "",
+            "text_alignment": "align-left"
+          }
+        },
+        "heading_Fxqa3n": {
+          "type": "heading",
+          "settings": {
+            "heading": "Quality",
+            "heading_size": "cql-headline-2",
+            "heading_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        },
+        "text_A6ykPm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Winzer has over 2 million high-quality industrial supply products and equipment available to order. Do you want brands? Winzer has the name brands you know and trust.<\/p>",
+            "text_style": "body-special-large",
+            "text_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        },
+        "button_bjUtBb": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Contact Us",
+            "button_link_1": "shopify:\/\/pages\/contact",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_8nkY7f",
+        "heading_Fxqa3n",
+        "text_A6ykPm",
+        "button_bjUtBb"
+      ],
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#131c3b",
+        "content_background_color": "#131c3b",
+        "dark_mode": false,
+        "image": "shopify:\/\/shop_images\/why-winzer-quality.webp",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": true,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "none",
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "image_with_text_b8QChT": {
+      "type": "image-with-text",
+      "blocks": {
+        "eyebrow_Rzh4XT": {
+          "type": "eyebrow",
+          "disabled": true,
+          "settings": {
+            "text": "OUR COMMITMENT",
+            "text_color": "#db3700",
+            "text_alignment": "align-left"
+          }
+        },
+        "heading_RPRbAU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Expertise",
+            "heading_size": "cql-headline-2",
+            "heading_color": "",
+            "text_alignment": "align-left"
+          }
+        },
+        "text_hgbMDr": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Work with experienced Sales Professionals who know your industry and want you to succeed.<\/p>",
+            "text_style": "body-special-large",
+            "text_color": "",
+            "text_alignment": "align-left"
+          }
+        },
+        "button_mPnPWf": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Become a Customer",
+            "button_link_1": "https:\/\/form.jotform.com\/243234506013141",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_Rzh4XT",
+        "heading_RPRbAU",
+        "text_hgbMDr",
+        "button_mPnPWf"
+      ],
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#f3f1ee",
+        "content_background_color": "#ffffff",
+        "dark_mode": false,
+        "image": "shopify:\/\/shop_images\/why-winzer-expertise.webp",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "none",
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "image_with_text_iXQVBy": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Qra7wp": {
+          "type": "heading",
+          "settings": {
+            "heading": "Distribution",
+            "heading_size": "cql-headline-2",
+            "heading_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        },
+        "text_rAFVbM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With four automated Distribution Centers that are strategically located across the United States to deliver products to your doorstep when you need them.<\/p>",
+            "text_style": "body-special-large",
+            "text_color": "#b0bfd8",
+            "text_alignment": "align-left"
+          }
+        },
+        "button_JLk6dL": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "FAQ's",
+            "button_link_1": "",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_Qra7wp",
+        "text_rAFVbM",
+        "button_JLk6dL"
+      ],
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#131c3b",
+        "content_background_color": "#131c3b",
+        "dark_mode": false,
+        "image": "shopify:\/\/shop_images\/why-winzer-distribution.webp",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "none",
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "image_with_text_FfPzjb": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_7XKN7q": {
+          "type": "heading",
+          "settings": {
+            "heading": "Inventory Management",
+            "heading_size": "cql-headline-2",
+            "heading_color": "",
+            "text_alignment": "align-left"
+          }
+        },
+        "text_rtEeia": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Do you spend too much time maintaining your inventory of small parts and MRO consumables? Time is your most valuable commodity, and Winzer’s experts can help.We will take your current bin-stocking system and transform it into a well-organized, easy-to-re-order system so your business can continue running smoothly.<\/p>",
+            "text_style": "body-special-large",
+            "text_color": "",
+            "text_alignment": "align-left"
+          }
+        },
+        "button_TPpcHK": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Transform My Bins",
+            "button_link_1": "https:\/\/ttps:\/\/form.jotform.com\/243234506013141",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "https:\/\/form.jotform.com\/243234506013141",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_7XKN7q",
+        "text_rtEeia",
+        "button_TPpcHK"
+      ],
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#ffffff",
+        "content_background_color": "#ffffff",
+        "dark_mode": false,
+        "image": "shopify:\/\/shop_images\/why-winzer-inventory.webp",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "none",
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "image_with_text_JkYwit": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6c3Exk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Replace Old Assortment Bins",
+            "heading_size": "cql-headline-2",
+            "heading_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        },
+        "text_nU7g9Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our storage bins, made from cold-rolled steel and finished with rust and acid-resistant baked enamel, offer superior organization for all your small parts. When combined with our inventory control software and computer-generated, barcoded labels, these units make managing your product inventory easy.<\/p>",
+            "text_style": "body-special-large",
+            "text_color": "#b0bfd8",
+            "text_alignment": "align-left"
+          }
+        },
+        "button_LU6hkB": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "View Assortments",
+            "button_link_1": "shopify:\/\/collections\/assortments",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_6c3Exk",
+        "text_nU7g9Q",
+        "button_LU6hkB"
+      ],
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#131c3b",
+        "content_background_color": "#131c3b",
+        "dark_mode": false,
+        "image": "shopify:\/\/shop_images\/why-winzer-assortments.webp",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "none",
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "164858402647acb725": {
+      "type": "info-carousel",
+      "blocks": {
+        "164858402610c57dcf-0": {
+          "type": "testimonial_slide",
+          "settings": {
+            "slide_animation": "NoEffect",
+            "testimonial": "<p>\" The support I receive from Winzer allows me to provide unsurpassed service to my customers.\"<\/p>",
+            "slide_animation_time": "0.2s",
+            "byline": "<p>— Tony P.<\/p>",
+            "slide_name_time": "0.2s",
+            "text_color": "#ffffff",
+            "display_icon": true,
+            "slide_icon_time": "0.2s",
+            "icon_color": "#cccccc"
+          }
+        },
+        "testimonial_slide_iAK4ig": {
+          "type": "testimonial_slide",
+          "settings": {
+            "slide_animation": "NoEffect",
+            "testimonial": "<p>\"I know that when my Winzer franchise show up, things will be taken care of.\"<\/p>",
+            "slide_animation_time": "0.2s",
+            "byline": "<p>— David D.<\/p>",
+            "slide_name_time": "0.2s",
+            "text_color": "#ffffff",
+            "display_icon": true,
+            "slide_icon_time": "0.2s",
+            "icon_color": "#cccccc"
+          }
+        }
+      },
+      "block_order": [
+        "164858402610c57dcf-0",
+        "testimonial_slide_iAK4ig"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "#002437",
+        "background_desktop_image": "shopify:\/\/shop_images\/AdobeStock_64875500_1_cbbb0cde-2f10-465b-ba05-caae9f6f5238.png",
+        "background_mobile_image": "shopify:\/\/shop_images\/AdobeStock_64875500_1_cbbb0cde-2f10-465b-ba05-caae9f6f5238.png",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "accessibility_info": "Slideshow about our brand",
+        "desktop_top_padding": 110,
+        "desktop_bottom_padding": 130,
+        "mobile_top_padding": 40,
+        "mobile_bottom_padding": 40,
+        "display_margins": false
+      }
+    },
+    "16485777102148d576": {
+      "type": "features-list",
+      "blocks": {
+        "f8a296b8-ff86-4174-b59a-87c93618ddb1": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/winzer_1.png",
+            "image_hover": "noeffect",
+            "heading": "",
+            "heading_size": "h2",
+            "feature_heading_color": "",
+            "description": "",
+            "text_style": "text-body",
+            "feature_text_color": "",
+            "features_list_animation": "NoEffect",
+            "features_list_animation_time": "0.2s"
+          }
+        },
+        "4e013cd1-3a18-423a-9d04-1b9690a4b1e7": {
+          "type": "feature",
+          "settings": {
+            "image_hover": "noeffect",
+            "heading": "",
+            "heading_size": "h2",
+            "feature_heading_color": "",
+            "description": "",
+            "text_style": "text-body",
+            "feature_text_color": "",
+            "features_list_animation": "NoEffect",
+            "features_list_animation_time": "0.2s"
+          }
+        },
+        "99c633ab-ef8c-4cfc-a443-e409cf9676c6": {
+          "type": "feature",
+          "settings": {
+            "image_hover": "noeffect",
+            "heading": "",
+            "heading_size": "h2",
+            "feature_heading_color": "",
+            "description": "",
+            "text_style": "text-body",
+            "feature_text_color": "",
+            "features_list_animation": "NoEffect",
+            "features_list_animation_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "f8a296b8-ff86-4174-b59a-87c93618ddb1",
+        "4e013cd1-3a18-423a-9d04-1b9690a4b1e7",
+        "99c633ab-ef8c-4cfc-a443-e409cf9676c6"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Part of the Winzer Family of Brands",
+        "heading_size": "h2",
+        "features_head_animation": "NoEffect",
+        "features_head_animation_time": "0.2s",
+        "background_color": "",
+        "heading_color": "",
+        "feature_heading_color": "#ffffff",
+        "feature_text_color": "#ffffff",
+        "desktop_top_padding": 60,
+        "desktop_bottom_padding": 60,
+        "mobile_top_padding": 14,
+        "mobile_bottom_padding": 10,
+        "display_margins": false
+      }
+    },
+    "rich_text_mfLTmx": {
+      "type": "rich-text",
+      "blocks": {
+        "eyebrow_TMhjnG": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "Business Customers",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color": ""
+          }
+        },
+        "heading_mqhcpw": {
+          "type": "heading",
+          "settings": {
+            "headline_animation": "NoEffect",
+            "headline_animation_time": "0.2s",
+            "heading": "Looking for Parts for Your Business?",
+            "heading_color": "#131c3b",
+            "heading_size": "h1"
+          }
+        },
+        "text_n9p7PY": {
+          "type": "text",
+          "settings": {
+            "richtext_animation": "NoEffect",
+            "richtext_animation_time": "0.2s",
+            "text": "<p>Contact us, and we can help you get started.<\/p>",
+            "text_color": "#000000",
+            "text_style": "body-special-large"
+          }
+        },
+        "button_JrxgLh": {
+          "type": "button",
+          "settings": {
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "Contact us",
+            "button_link": "shopify:\/\/pages\/contact",
+            "button_style": "secondary",
+            "button_shape": "",
+            "button_size": "medium",
+            "mobile_button_size": "medium",
+            "button_arrow": "none"
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_TMhjnG",
+        "heading_mqhcpw",
+        "text_n9p7PY",
+        "button_JrxgLh"
+      ],
+      "settings": {
+        "background_color": "#f3f1ee",
+        "desktop_max_content_width": 600,
+        "container_alignment": "center",
+        "text_alignment": "center",
+        "height_desktop": 0,
+        "height_mobile": 0,
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 40,
+        "mobile_bottom_padding": 40,
+        "display_margins": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "16484545291ecbe325",
+    "image_with_text_49c9ap",
+    "image_with_text_b8QChT",
+    "image_with_text_iXQVBy",
+    "image_with_text_FfPzjb",
+    "image_with_text_JkYwit",
+    "164858402647acb725",
+    "16485777102148d576",
+    "rich_text_mfLTmx",
+    "main"
+  ]
+}

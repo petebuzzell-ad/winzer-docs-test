@@ -1,0 +1,396 @@
+{{ 'section-icon-list.css' | asset_url | stylesheet_tag }}
+
+{% capture margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% capture mobile_margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.mobile_margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    margin-top: {{ margin_size | divided_by: 10 }}rem;
+    margin-bottom: {{ margin_size | divided_by: 10 }}rem;
+  }
+
+  @media screen and (max-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      margin-top: {{ mobile_margin_size | divided_by: 10 }}rem;
+      margin-bottom: {{ mobile_margin_size | divided_by: 10 }}rem;
+    }
+  }
+
+  #Icon-List-{{ section.id }} .animated.active {
+    animation-duration: {{section.settings.animation_time}};
+    animation-fill-mode: both;
+    -webkit-animation-duration: {{section.settings.animation_time}};
+    -webkit-animation-fill-mode: both;
+  }
+{% endstyle %}
+
+<div id="Icon-List-{{ section.id }}">
+  <div class="icon-list {% if settings.scroll_appear == "fadein" %} fadeIn {% endif %}" style="background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};">
+    {%- if section.settings.background_image != blank or section.settings.background_image_mobile != blank -%}
+      {%- render 'background-media', desktop_image: section.settings.background_image, mobile_image: section.settings.background_image_mobile, class: 'icon-list__media ' -%}
+    {%- endif -%}
+
+    <div class="icon-list__heading page-width">
+      {% render 'eyebrow', text: section.settings.eyebrow, text_style: section.settings.eyebrow_style, text_color: section.settings.text_color, class: "icon-list__eyebrow animated" %}
+
+      {% render 'headline', text: section.settings.headline, text_style: section.settings.headline_style, text_color: section.settings.headline_color, class: "icon-list__headline"%}
+
+      {% render 'description', text: section.settings.description, text_style: section.settings.description_style, text_color: section.settings.text_color, class: "icon-list__description"%}
+    </div>
+
+    <div class="icon-list__content grid page-width">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+
+        {% when 'divider' %}
+          <div class="icon-list__divider">
+            {% if block.settings.display_line %} <hr/> {% endif %}
+            <h3>{{ block.settings.text }}</h3>
+          </div>
+
+        {% when 'icon' %}
+          {% if block.settings.link != blank %}
+            <a href="{{block.settings.link}}" class="icon-list__item grid__item link link-1 {% unless section.settings.animation contains 'No' %} animated{% endunless%}">
+              <span class="icon-list__item--wrapper">{% render 'image', image: block.settings.image, class: 'icon-list__img' %}</span>
+              <p>{{ block.settings.text }}</p>
+            </a>
+          {% else %}
+            <div class="icon-list__item grid__item {% unless section.settings.animation contains 'No' %} animated{% endunless%} {{ section.settings.animation }}">
+              <span class="icon-list__item--wrapper">{% render 'image', image: block.settings.image, class: 'icon-list__img' %}</span>
+              <p>{{ block.settings.text }}</p>
+            </div>
+          {% endif %}
+
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% assign section_selector = '#shopify-section-' | append: section.id %}
+{% style %}
+  @media screen and (max-width: 749px) {
+    {{ section_selector }} .icon-list {
+      {%- if section.settings.mobile_top_padding -%}
+        padding-top: {{ section.settings.mobile_top_padding }}px;
+      {%- endif -%}
+      {%- if section.settings.mobile_bottom_padding -%}
+        padding-bottom: {{ section.settings.mobile_bottom_padding }}px;
+      {%- endif -%}
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    {{ section_selector }} .icon-list {
+      {%- if section.settings.desktop_top_padding -%}
+        padding-top: {{ section.settings.desktop_top_padding }}px;
+      {%- endif -%}
+      {%- if section.settings.desktop_bottom_padding -%}
+        padding-bottom: {{ section.settings.desktop_bottom_padding }}px;
+      {%- endif -%}
+    }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Icon List",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Eyebrow"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "eyebrow_style",
+      "label": "Eyebrow style",
+      "default": "eyebrow",
+      "options": [
+        {
+          "value": "eyebrow",
+          "label": "Eyebrow - Small"
+        },
+        {
+          "value": "eyebrow-large",
+          "label": "Eyebrow - Large"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Headline",
+      "info": "Optional"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "headline_style",
+      "default": "h2",
+      "label": "Headline style",
+      "options": [
+        {
+          "value": "cql-headline-1",
+          "label": "Custom Headline 1"
+        },
+        {
+          "value": "cql-headline-2",
+          "label": "Custom Headline 2"
+        },
+        {
+          "value": "cql-headline-3",
+          "label": "Custom Headline 3"
+        },
+        {
+          "value": "h4",
+          "label": "X-Small"
+        },
+        {
+          "value": "h3",
+          "label": "Small"
+        },
+        {
+          "value": "h2",
+          "label": "Medium"
+        },
+        {
+          "value": "h1",
+          "label": "Large"
+        },
+        {
+          "value": "h0",
+          "label": "X-Large"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Description",
+      "info": "Optional"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "description_style",
+      "label": "Text style",
+      "default": "text-body",
+      "options": [
+        {
+          "value": "text-body",
+          "label": "Body - Default"
+        },
+        {
+          "value": "text-body-small",
+          "label": "Body - Small"
+        },
+        {
+          "value": "text-body-medium",
+          "label": "Body - Medium"
+        },
+        {
+          "value": "text-body-large",
+          "label": "Body - Large"
+        },
+        {
+          "value": "caption",
+          "label": "Caption"
+        },
+        {
+          "value": "subtitle",
+          "label": "Subtitle"
+        }
+      ]
+    },
+    {
+    "type": "header",
+    "content": "Section colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text"
+    },
+    {
+      "type": "color",
+      "id": "headline_color",
+      "label": "Headline"
+    },
+    {
+      "type": "header",
+      "content": "Section background image",
+      "info": "Optional"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Desktop background image",
+      "info": "Covers full screen width."
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Mobile background image",
+      "info": "Covers full screen width."
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "number",
+      "id": "desktop_top_padding",
+      "label": "Desktop top padding (px)",
+      "default": 80
+    },
+    {
+      "type": "number",
+      "id": "desktop_bottom_padding",
+      "label": "Desktop bottom padding (px)",
+      "default": 80
+    },
+    {
+      "type": "number",
+      "id": "mobile_top_padding",
+      "label": "Mobile top padding (px)",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "mobile_bottom_padding",
+      "label": "Mobile bottom padding (px)",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "select",
+      "id": "animation_effect",
+      "options":[
+        {
+          "value": "fadeIn",
+          "label": "Fade In"
+        },
+        {
+          "value": "fadeInUp",
+          "label": "Fade In Up"
+        },
+        {
+          "value": "NoEffect",
+          "label": "No Effect"
+        }
+      ],
+      "default": "NoEffect",
+      "label": "Select animation"
+    },
+    {
+      "type": "text",
+      "id": "animation_time",
+      "default":"0.2s",
+      "label": "Select animation time",
+      "info": "Must be a number and include 's' at the end. (Example, 0.2s)"
+    },
+    {
+      "type": "header",
+      "content": "Margins",
+      "info": "Apply global theme layout margins on the top and bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_margins",
+      "label": "Display margins",
+      "default": false
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Icon",
+       "type": "icon",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         },
+         {
+           "type": "text",
+           "id": "text",
+           "label": "Text"
+         },
+         {
+           "type": "url",
+           "id": "link",
+           "label": "Link",
+           "info": "Optional"
+         }
+       ]
+     },
+     {
+       "name": "Divider",
+       "type": "divider",
+       "settings": [
+         {
+           "type": "text",
+           "id": "text",
+           "label": "Text"
+         },
+         {
+           "type": "checkbox",
+           "id": "display_line",
+           "label": "Display line?",
+           "default": true
+         }
+       ]
+     }
+   ],
+   "presets": [
+    {
+      "name": "Icon list",
+      "blocks": [
+        {
+          "type": "icon"
+        },
+        {
+          "type": "icon"
+        },
+        {
+          "type": "icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

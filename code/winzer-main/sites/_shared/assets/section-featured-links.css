@@ -1,0 +1,300 @@
+/** General **/
+
+.featured-links {
+  position: relative;
+  overflow: hidden;
+}
+
+/** Top content **/
+
+.featured-links__eyebrow,
+.featured-links__heading {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.featured-links__heading {
+  letter-spacing: 0.256rem;
+}
+
+.featured-links__eyebrow {
+  margin-bottom: 1.4rem;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.featured-links__heading-wrapper {
+  margin-bottom: 4.7rem;
+}
+
+@media screen and (max-width: 749px) {
+  .featured-links__eyebrow {
+    margin-bottom: 1.1rem;
+    line-height: 1.7rem;
+  }
+
+  .featured-links__heading-wrapper {
+    margin-bottom: 3.9rem;
+  }
+
+  .featured-links__heading {
+    letter-spacing: 0.155rem;
+  }
+}
+
+/** Link grid **/
+
+.featured-links__link-grid {
+  display: flex;
+}
+
+
+@media screen and (min-width: 750px) {
+  .featured-link__heading-wrapper .h2 {
+    font-size: 3.2rem;
+  }
+
+  .featured-links__link-grid {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    justify-content: center;
+  }
+
+  .featured-links__link-grid.featured-links__link--style-margins {
+    gap: 3rem;
+  }
+
+  .featured-links__link-grid.featured-links__link-grid--\31\/2 .featured-link {
+    width: calc(100% / 2 - 2rem);
+  }
+
+  .featured-links__link-grid.featured-links__link-grid--\31\/3 .featured-link {
+    width: calc(100% / 3 - 2rem);
+  }
+
+  .featured-links__link-grid.featured-links__link-grid--\31\/4 .featured-link {
+    width: calc(100% / 4 - 2.5rem);
+  }
+
+  .featured-links__link-grid.featured-links__link-grid--\31\/5 .featured-link {
+    width: calc(100% / 5 - 2.5rem);
+  }
+
+
+
+}
+
+@media screen and (max-width: 749px) {
+  .featured-links__link-grid {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+/** Section media **/
+
+.featured-links__media {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.featured-links__media img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.featured-links__content {
+  position: relative;
+  z-index: 1;
+}
+
+/** Single link styles **/
+
+.featured-link__image {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.featured-link__heading {
+  margin: 0;
+  font-weight: 700;
+}
+
+.featured-link__heading.cql-headline-3 {
+  font-size: calc(var(--font-body-scale) * 2.4rem);
+}
+
+.featured-link-content .featured-link-content__description p {
+  font-size: calc(var(--font-body-scale) * 1.6rem);
+}
+
+@media screen and (max-width: 749px) {
+  .featured-link-content .featured-link-content__description p {
+    font-size: calc(var(--font-body-scale) * 1.4rem);
+  }
+}
+
+.featured-link__content-top {
+  line-height: 0;
+  position: relative;
+}
+
+.featured-link {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.featured-links__heading-wrapper {
+  text-align: center;
+}
+
+.featured-link__heading-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.featured-link-content__description p {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: var(--color-brand-text);
+}
+
+.featured-link__content-body .button {
+  margin-top: 2rem;
+}
+
+.featured-link__image-link {
+  text-decoration: none;
+  display: block;
+}
+
+.featured-link__content-top .featured-link__heading-wrapper {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.featured-link-content__margin-top {
+  margin-top: 3.9rem;
+}
+
+@media screen and (min-width: 750px) {
+  .featured-links__link--align-desktop-left .featured-link .featured-link__content-body {
+    text-align: left;
+  }
+
+  .featured-links__link--align-desktop-right .featured-link .featured-link__content-body {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .featured-links__link--align-mobile-left .featured-link .featured-link__content-body {
+    text-align: left;
+  }
+
+  .featured-links__link--align-mobile-right .featured-link .featured-link__content-body {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width:750px) {
+  .featured-links__link--tile-desktop-image-on-side .featured-links__link {
+    display: flex;
+  }
+
+  .featured-links__link--tile-desktop-image-on-side .featured-link__content-top {
+    width: 100%;
+    max-width: 35%;
+    flex-grow: 1;
+  }
+
+  .featured-links__link--tile-desktop-image-on-side .featured-link__content-body {
+    width: 65%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+  }
+
+  .featured-links__link--tile-desktop-image-on-side .featured-link__content-body,
+  .featured-link__heading-wrapper {
+    width: 100%;
+  }
+
+  .featured-links__link--tile-desktop-image-on-side .featured-link__content-top .featured-link__image {
+    width: 100%;
+    min-height: 28.9rem;
+    object-fit: cover;
+  }
+}
+
+.featured-link-content__description {
+  width: 100%;
+}
+
+@media screen and (min-width: 749px) and (max-width: 989px) {
+  .featured-links__link--tile-desktop-image-on-side .featured-links__link.featured-link {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .featured-link-content__margin-top {
+    margin-top: 2.02rem;
+  }
+
+  .featured-link__heading-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .featured-link__heading {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    font-weight: 700;
+  }
+
+  .featured-link-content__description p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .featured-links__link--tile-mobile-image-on-side .featured-links__link {
+    display: flex;
+  }
+
+  .featured-links__link--tile-mobile-image-on-side .featured-link__content-top {
+    width: 100%;
+    max-width: 35%;
+    flex-grow: 1;
+  }
+
+  .featured-links__link--tile-mobile-image-on-side .featured-link__content-body {
+    width: 65%;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+  }
+
+  .featured-links__link--tile-mobile-image-on-side .featured-link__content-body,
+  .featured-link__heading-wrapper {
+    width: 100%;
+  }
+
+  .featured-links__link--tile-mobile-image-on-side .featured-link__content-top .featured-link__image {
+    width: 100%;
+    min-height: 28.9rem;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,124 @@
+query InventoryAll($locationId: ID!) {
+  location(id: $locationId) {
+    ...locationFragment
+    inventoryLevels(first: 250) {
+      pageInfo {
+        ...pageInfoFragment
+      }
+      edges {
+        cursor
+        node {
+          ...inventoryLevelFragment
+          item {
+            ...inventoryItemFragment
+          }
+        }
+      }
+    }
+  }
+}
+
+query InventoryLookup(
+  $inventoryItemsQuery: String!
+  $locationId: ID!
+  $includeLocation: Boolean!
+) {
+  inventoryItems(first: 10, query: $inventoryItemsQuery) {
+    edges {
+      node {
+        ...inventoryItemFragment
+        inventoryLevel(locationId: $locationId) {
+          ...inventoryLevelFragment
+          location @include(if: $includeLocation) {
+            ...locationFragment
+          }
+        }
+      }
+    }
+  }
+}
+
+mutation InventoryBulkUpdate(
+  $inventoryItemAdjustments: [InventoryAdjustItemInput!]!
+  $locationID: ID!
+) {
+  inventoryBulkAdjustQuantityAtLocation(
+    inventoryItemAdjustments: $inventoryItemAdjustments
+    locationId: $locationID
+  ) {
+    inventoryLevels {
+      ...inventoryLevelFragment
+    }
+    userErrors {
+      ...userErrorParts
+    }
+  }
+}
+
+fragment userErrorParts on UserError {
+  field
+  message
+}
+
+fragment pageInfoFragment on PageInfo {
+  hasNextPage
+  hasPreviousPage
+}
+
+fragment locationFragment on Location {
+  activatable
+  deactivatable
+  deactivatedAt
+  deletable
+  fulfillsOnlineOrders
+  hasActiveInventory
+  hasUnfulfilledOrders
+  id
+  isActive
+  legacyResourceId
+  name
+  shipsInventory
+}
+
+fragment inventoryLevelFragment on InventoryLevel {
+  available
+  canDeactivate
+  createdAt
+  deactivationAlert
+  deactivationAlertHtml
+  id
+  incoming
+  updatedAt
+}
+
+fragment inventoryItemFragment on InventoryItem {
+  countryCodeOfOrigin
+  createdAt
+  duplicateSkuCount
+  harmonizedSystemCode
+  id
+  inventoryHistoryUrl
+  legacyResourceId
+  locationsCount
+  provinceCodeOfOrigin
+  requiresShipping
+  sku
+  tracked
+  updatedAt
+  trackedEditable {
+    ...editableFragment
+  }
+  unitCost {
+    ...moneyFragment
+  }
+}
+
+fragment editableFragment on EditableProperty {
+  locked
+  reason
+}
+
+fragment moneyFragment on MoneyV2 {
+  amount
+  currencyCode
+}

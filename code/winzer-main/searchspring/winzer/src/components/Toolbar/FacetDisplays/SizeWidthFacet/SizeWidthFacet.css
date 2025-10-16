@@ -1,0 +1,91 @@
+.ss__facet--size-width .ss__facet__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ss__dropdown__button .ss__facet__header {
+    border: none;
+}
+
+@media screen and (max-width: 990px) {
+    .ss__facet--size-width .ss__dropdown--open .ss__dropdown__content {
+        padding-top: 1rem;
+        position: relative;
+    }
+}
+
+.ss__facet--size-width .size-width-subgroups {
+    display: flex;
+}
+
+@media screen and (max-width: 990px) {
+    .ss__facet--size-width .size-width-subgroups {
+        flex-direction: column;
+    }
+}
+
+.ss__facet--size-width .size-width-subgroup {
+    flex: 1;
+    padding: 0 2.5rem 0;
+    max-width: 50%;
+}
+
+@media screen and (max-width: 990px) {
+    .ss__facet--size-width .ss__facet__options .size-width-subgroup {
+        padding: 0 1.1rem 2.5rem;
+        max-width: 100%;
+    }
+
+    .ss__facet--size-width .ss__facet__options .size-width-subgroup:last-child {
+        padding: 0 1.1rem 0;
+    }
+}
+
+.ss__facet--size-width .size-width-subgroup__options {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.3rem;
+}
+
+/* Option Values */
+.ss__facet--size-width .ss__facet-option-wrapper {
+    padding: 0 0.3rem 0.6rem;
+}
+
+.ss__facet--size-width .size-width-subgroup__label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    margin: 0 0 1.1rem;
+    color: var(--sr-dk-blue);
+}
+
+.ss__facet--size-width .ss__facet-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.5rem;
+    height: 4rem;
+    border: 2px solid var(--sr-white);
+    border-radius: 0.3rem;
+    text-decoration: none !important;
+    background: var(--sr-white);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--sr-text-dark-grey);
+}
+
+@media screen and (min-width: 991px) {
+    .ss__facet--size-width .ss__facet-option:hover {
+        border-color: #c2ced7;
+        color: var(--sr-blue);
+    }
+}
+
+.ss__facet--size-width .ss__facet-option--filtered {
+    border-color: var(--sr-blue);
+}
+
+.ss__facet--size-width .ss__facet-option__value {
+    text-transform: lowercase;
+}

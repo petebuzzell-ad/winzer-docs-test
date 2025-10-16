@@ -1,0 +1,21 @@
+{% comment %}Exact Pricing for PLP/PDP including tooltip and animation {% endcomment %}
+{{ 'component-tooltip.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-animation.css' | asset_url | stylesheet_tag }}
+{{ 'component-exact-pricing.css' | asset_url | stylesheet_tag }}
+<script>
+  // Creating JavaScript variables for exact pricing API
+  window.companyId = "{{ customer.current_company.id }}";
+  window.productId = "{{ product.id }}";
+  window.variantId = "{{ product.selected_or_first_available_variant.id }}";
+  window.cql__ExactPricesList = null;
+  window.showExactPrice = false;
+</script>
+<div class="exact-pricing-container">
+  <span class="loading-animation">{% render 'icon-loading' %}</span>
+  <a class="exact-pricing-msg exact-pricing-link">{{ 'products.product.exact_pricing.msg' | t }}
+    <div class="tooltip-container">
+      <span class="tooltip-icon">{% render 'icon-information' %}</span>
+      <div class="tooltip-box">{{ 'products.product.exact_pricing.tooltip_msg_html' | t }}</div>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,154 @@
+{% render 'font-variables' %}
+
+{% style %}
+  /* Colors */
+  :root {
+    --color-brand-primary: {{ settings.colors_brand_primary }}; /* Navy / Black / Midnight Blue */
+    --color-brand-secondary: {{ settings.colors_brand_secondary }}; /* Orange / Red / Azure */
+    --color-brand-secondary-variant: {{ settings.colors_brand_secondary_variant }}; /* Orange Link / Red / Azure */
+
+    --color-brand-text: {{ settings.colors_brand_text }}; /* Slate / Charcoal / =Charcoal */
+
+    --color-brand-accent-1: {{ settings.colors_brand_accent_1 }}; /* Poplar / Lite Gray / =Lite Gray */
+    --color-brand-accent-2: {{ settings.colors_brand_accent_2 }}; /* Steel / Gray / =Gray */
+
+    --color-brand-black: {{ settings.colors_brand_black }}; /* Black / Black? / Black? */
+    --color-brand-white: {{ settings.colors_brand_white }}; /* White / White? / White? */ 
+
+    --color-brand-misc-1: {{ settings.colors_brand_misc_1 }}; /* Red / --- / --- */
+    --color-brand-misc-2: {{ settings.colors_brand_misc_2 }}; /* Colbalt / --- / --- */
+
+    --color-brand-neutral-1: {{ settings.colors_brand_neutral_1 }}; /* ccc / --- / --- */
+    --color-brand-neutral-2: {{ settings.colors_brand_neutral_2 }}; /* ccc / --- / --- */ 
+
+    /* Hex values for base colors */
+    --color-styleguide-primary: {{ settings.colors_styleguide_primary }}; /* Navy / Black / Midnight Blue */
+    --color-styleguide-secondary: {{ settings.colors_styleguide_secondary }}; /* Orange / Red / Azure */
+    --color-styleguide-accent-1: {{ settings.colors_styleguide_accent_1 }}; /* Orange Link / Red / Azure */
+    --color-styleguide-accent-2: {{ settings.colors_styleguide_accent_2 }}; /* Poplar / Lite Gray / =Lite Gray */
+    --color-styleguide-accent-3: {{ settings.colors_styleguide_accent_3 }}; /* Steel / Gray / =Gray */
+    --color-styleguide-accent-4: {{ settings.colors_styleguide_accent_4 }}; /* Red / --- / --- */
+    --color-styleguide-text: {{ settings.colors_styleguide_text }}; /* Slate / Charcoal / =Charcoal */
+    --color-styleguide-black: {{ settings.colors_styleguide_black }}; /* Black / Black? / Black? */
+    --color-styleguide-white: {{ settings.colors_styleguide_white }}; /* White / White? / White? */
+
+    /* Hex values for styleguide use only */
+    --color-styleguide-navy: {{ settings.colors_styleguide_primary }};
+    --color-styleguide-orange-headlines: {{ settings.colors_styleguide_secondary }};
+    --color-styleguide-orange-link: {{ settings.colors_styleguide_accent_1 }};
+    --color-styleguide-poplar: {{ settings.colors_styleguide_accent_2 }};
+    --color-styleguide-slate: {{ settings.colors_styleguide_text }};
+    --color-styleguide-steel: {{ settings.colors_styleguide_accent_3 }};
+    --color-styleguide-white: {{ settings.colors_styleguide_white }};
+    --color-styleguide-black: {{ settings.colors_styleguide_black }};
+    --color-styleguide-red: {{ settings.colors_styleguide_accent_4 }};
+    --color-styleguide-colbalt: #2A6AC5;
+    --color-styleguide-disabled: #ccc;
+
+    /* Hex values for various form grays */
+    --input-border: #C6C7CB;
+    --input-placeholder: #888;
+    --input-disabled-bg: #F4F4F4;
+    --input-disabled-text: #999;
+    --input-disabled-border: #CED0D4;
+    --radio-stroke: #a8a8a9;
+    --radio-fill: #53565A;
+    --media-icon-fill: #D9D9D9;
+
+
+    /* Hex values for general use */
+    --color-background: {{ settings.colors_background }};
+    --color-background-3: {{ settings.colors_background_3 }};
+    --color-foreground: {{ settings.colors_foreground }};
+
+    --color-accent-1: {{ settings.colors_accent_1 }};
+    --color-accent-2: {{ settings.colors_accent_2 }};
+    --color-accent-3: {{ settings.colors_accent_3 }};
+    --color-accent-4: {{ settings.colors_accent_4 }};
+
+    --color-badge-background: var(--color-brand-black);
+    --color-badge-foreground: var(--color-brand-white);
+
+    --color-border: rgb(var(--color-base-accent-2));
+
+    --color-button-background-1: {{ settings.colors_button_background_1 }};
+    --color-button-foreground-1: {{ settings.colors_button_foreground_1 }};
+    --color-button-hover-1: {{ settings.colors_button_hover_1 }};
+    --color-button-active-1: {{ settings.colors_button_active_1 }};
+
+    --color-button-background-2: {{ settings.colors_button_background_2 }};
+    --color-button-foreground-2: {{ settings.colors_button_foreground_2 }};
+    --color-button-hover-2: {{ settings.colors_button_hover_2 }};
+    --color-button-active-2: {{ settings.colors_button_active_2 }};
+
+    --color-button-background-3: {{ settings.colors_button_background_3 }};
+    --color-button-foreground-3: {{ settings.colors_button_foreground_3 }};
+    --color-button-hover-3: {{ settings.colors_button_hover_3 }};
+    --color-button-active-3: {{ settings.colors_button_active_3 }};
+
+    --color-link: rgb(var(--color-base-link-1));
+    --color-link-hover: rgb(var(--color-base-link-hover-1));
+    --color-link-active: rgb(var(--color-base-link-active-1));
+
+    --color-link-1: {{ settings.colors_link_1 }};
+    --color-link-hover-1: {{ settings.colors_link_hover_1 }};
+    --color-link-active-1: {{ settings.colors_link_active_1 }};
+    --color-link-2: {{ settings.colors_link_2 }};
+    --color-link-hover-2: {{ settings.colors_link_hover_2 }};
+    --color-link-active-2: {{ settings.colors_link_hover_2 }};
+
+    /* RGB values for general use */
+    --color-base-background: {{ settings.colors_background.red }}, {{ settings.colors_background.green }}, {{ settings.colors_background.blue }};
+    --color-base-foreground: {{ settings.colors_foreground.red }}, {{ settings.colors_foreground.green }}, {{ settings.colors_foreground.blue }};
+    --color-base-accent-1: {{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }};
+    --color-base-accent-2: {{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }};
+    --color-base-accent-3: {{ settings.colors_accent_3.red }}, {{ settings.colors_accent_3.green }}, {{ settings.colors_accent_3.blue }};
+    --color-base-accent-4: {{ settings.colors_accent_4.red }}, {{ settings.colors_accent_4.green }}, {{ settings.colors_accent_4.blue }};
+
+    --color-base-button-background-1: {{ settings.colors_button_background_1.red }}, {{ settings.colors_button_background_1.green }}, {{ settings.colors_button_background_1.blue }};
+    --color-base-button-foreground-1: {{ settings.colors_button_foreground_1.red }}, {{ settings.colors_button_foreground_1.green }}, {{ settings.colors_button_foreground_1.blue }};
+
+    --color-base-button-background-2: {{ settings.colors_button_background_2.red }}, {{ settings.colors_button_background_2.green }}, {{ settings.colors_button_background_2.blue }};
+    --color-base-button-foreground-2: {{ settings.colors_button_foreground_2.red }}, {{ settings.colors_button_foreground_2.green }}, {{ settings.colors_button_foreground_2.blue }};
+
+    --color-base-button-background-3: {{ settings.colors_button_background_3.red }}, {{ settings.colors_button_background_3.green }}, {{ settings.colors_button_background_3.blue }};
+    --color-base-button-foreground-3: {{ settings.colors_button_foreground_3.red }}, {{ settings.colors_button_foreground_3.green }}, {{ settings.colors_button_foreground_3.blue }};
+
+    --color-base-link-1: {{ settings.colors_link_1.red }}, {{ settings.colors_link_1.green }}, {{ settings.colors_link_1.blue }};
+    --color-base-link-hover-1: {{ settings.colors_link_hover_1.red }}, {{ settings.colors_link_hover_1.green }}, {{ settings.colors_link_hover_1.blue }};
+    --color-base-link-active-1: {{ settings.colors_link_active_1.red }}, {{ settings.colors_link_active_1.green }}, {{ settings.colors_link_active_1.blue }};
+
+    --color-base-link-2: {{ settings.colors_link_2.red }}, {{ settings.colors_link_2.green }}, {{ settings.colors_link_2.blue }};
+    --color-base-link-hover-2: {{ settings.colors_link_hover_2.red }}, {{ settings.colors_link_hover_2.green }}, {{ settings.colors_link_hover_2.blue }};
+    --color-base-link-active-2: {{ settings.colors_link_active_2.red }}, {{ settings.colors_link_active_2.green }}, {{ settings.colors_link_active_2.blue }};
+
+    --color-badge-border: var(--color-base-foreground);
+    --color-card-hover: var(--color-base-foreground);
+    --color-icon: var(--color-base-accent-1);
+    --color-button: var(--color-base-button-background-1);
+    --color-button-text: var(--color-base-button-foreground-1);
+
+    /* Other settings */
+    --payment-terms-background-color: {{ settings.colors_background }};
+
+    --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+    --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
+
+    /* Animations settings */
+
+    --animation-scroll_appear: {{ settings.scroll_appear}};
+    --animation-scroll_appear_timing: {{ settings.scroll_appear_timing}}s;
+
+    --image-hover-timing: {{ settings.image_hover_timing}}s;
+  }
+{% endstyle %}
+
+{% style %}
+  .inputs-set {
+    display: flex;
+  }
+
+  .inputs-set input {
+    margin-right: 1rem !important;
+  }
+{% endstyle %}

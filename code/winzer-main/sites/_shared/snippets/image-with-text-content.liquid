@@ -1,0 +1,152 @@
+<div class="image-with-text__text-item grid__item">
+  <div id="ImageWithText--{{ section.id }}"
+      class="image-with-text__content
+      image-with-text__content--{{ section.settings.desktop_content_position }}
+      image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }}
+      image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }}
+      image-with-text__content--{{ section.settings.height }}">
+    {%- for block in blocks -%}
+      {% case block.type %}
+        {%- when 'eyebrow' -%}
+          <div class="image-with-text__eyebrow image-with-text__eyebrow--{{ block.settings.text_alignment }}" {{ block.shopify_attributes }} id="block-section-{{ block.id }}" style="color: {{ block.settings.text_color }};">
+            {{ block.settings.text | escape }}
+          </div>
+
+        {%- when 'image' -%}
+          <div class="logo_img">
+            {% render 'image', image: block.settings.logo_img, class: 'image-with-text__logo-image' %}
+          </div>
+
+        {%- when 'heading' -%}
+          <h2 class="image-with-text__heading image-with-text__heading--{{ block.settings.text_alignment }} {{ block.settings.heading_size }}" {{ block.shopify_attributes }} id="block-section-{{ block.id }}" style="color: {{ block.settings.heading_color }};">
+            {{ block.settings.heading | escape }}
+          </h2>
+
+        {%- when 'caption' -%}
+          <p class="image-with-text__text image-with-text__text--caption image-with-text__text--caption--{{ block.settings.text_alignment }} {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}" {{ block.shopify_attributes }} id="block-section-{{ block.id }}" style="color: {{ block.settings.text_color }};">
+            {{ block.settings.caption | escape }}
+          </p>
+
+        {%- when 'text' -%}
+          {% assign text_class = 'image-with-text__text rte image-with-text__text--' | append: block.settings.text_alignment %}
+          {% capture desktopColor %}
+            {% if block.settings.text_color != 'rgba(0,0,0,0)' %}
+              {{ block.settings.text_color }}
+            {% endif %}
+          {% endcapture %}
+
+          {% render 'description', text: block.settings.text, text_style: block.settings.text_style, text_color: desktopColor,
+            class: text_class %}
+
+        {%- when 'button' -%}
+          <div
+            class="banner__button-wrapper {{ block.settings.links_color }} {% if block.settings.show_side_by_side %} side-by-side{%- endif -%} {% unless block.settings.animation contains 'No' %} animated{%- endunless -%} {{ block.settings.animation }}"
+            {{ block.shopify_attributes }} data-block-id="{{ block.id }}" id="block-section-{{ block.id }}">
+            
+            {%- if block.settings.button_label_1 != blank -%}
+              {% assign showArrow1 = '' %}
+              {% if block.settings.button_style_desktop_1 contains 'link-1' %}
+                {% assign showArrow1 = 'right' %}
+              {% endif %}
+    
+              {% render 'button',
+                label: block.settings.button_label_1,
+                link: block.settings.button_link_1,
+                variation: block.settings.button_style_mobile_1,
+                arrow: showArrow1,
+                class: "banner__button medium-hide large-up-hide"
+              %}
+    
+              {% render 'button',
+                label: block.settings.button_label_1,
+                link: block.settings.button_link_1,
+                variation: block.settings.button_style_desktop_1,
+                arrow: showArrow1,
+                class: "banner__button small-hide"
+              %}
+            {%- endif -%}
+    
+            {%- if block.settings.button_label_2 != blank -%}
+              {% if block.settings.show_separator_vertical %}
+              <span class="banner__button-separator-vertical">&nbsp;</span>
+              {% endif %}
+              
+              {% if block.settings.show_separator_horizontal %}
+              <span class="banner__button-separator-horizontal">&nbsp;</span>
+              {% endif %}
+    
+              {% assign showArrow2 = '' %}
+              {% if block.settings.button_style_desktop_2 contains 'link-1' %}
+                {% assign showArrow2 = 'right' %}
+              {% endif %}
+    
+              {% render 'button',
+                label: block.settings.button_label_2,
+                link: block.settings.button_link_2,
+                variation: block.settings.button_style_mobile_2,
+                arrow: showArrow2,
+                class: "banner__button medium-hide large-up-hide"
+              %}
+    
+              {% render 'button',
+                label: block.settings.button_label_2,
+                link: block.settings.button_link_2,
+                variation: block.settings.button_style_desktop_2,
+                arrow: showArrow2,
+                class: "banner__button small-hide"
+              %}
+            {%- endif -%}
+            </div>
+    
+            {% assign block_selector = '#block-section-' | append: block.id %}
+            {% style %}
+            {{ block_selector }}.banner__button-wrapper {
+              {% if block.settings.show_side_by_side %}
+                display: inline-flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 2rem;
+                {% endif %}
+                }
+                
+                {{ block_selector }} .banner__button {
+                {% if block.settings.button_min_width == 'auto' %}
+                max-width: unset !important;
+                min-width: auto !important;
+                {% elsif block.settings.button_min_width == 'full' %}
+                max-width: unset !important;
+                width: 100% !important;
+                {% endif %}
+                
+                {% if block.settings.links_color_override %}
+                color: {{ block.settings.links_color }}!important;
+              {% endif %}
+            }
+    
+            {{ block_selector }} .banner__button-separator-vertical,
+            {{ block_selector }} .banner__button-separator-horizontal {
+            {% if block.settings.separator_color %}
+            border-color: {{ block.settings.separator_color }};
+              {% endif %}
+            }
+
+            #Image-with-text-{{ section.id }} .page-width .image-with-text__text-item {
+              {% if section.settings.content_background_color %}
+                background-color: {{ section.settings.content_background_color }};
+              {% endif %}
+            }   
+
+      {% endstyle %}
+
+        {%- when 'padding' -%}
+          {% render 'padding',
+            id: block.id,
+            mobile_padding_amount: block.settings.mobile_padding_amount,
+            desktop_padding_amount: block.settings.desktop_padding_amount
+          %}
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>

@@ -1,0 +1,270 @@
+/************************************
+Custom CSS for Fastserv
+************************************/
+.livesdk__invitation::after {
+  content:url( "https://cdn.shopify.com/s/files/1/0878/3822/8794/files/fastserv-zoom-chat-icon.svg?v=1726772705");
+}
+
+.eyebrow {
+  color: var(--color-brand-text);
+  font-size: calc(var(--font-body-scale) * 1.2rem);
+}
+
+@media only screen and (min-width: 750px) {
+  .eyebrow {
+    font-size: calc(var(--font-body-scale) * 1.3rem);
+  }
+}
+
+.dark-background .eyebrow {
+  color: var(--color-brand-accent-2);
+}
+
+.h0,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: var(--color-brand-secondary-variant);
+}
+
+.h0 {
+  font-size: calc(var(--font-heading-scale) * 4rem);
+}
+
+@media only screen and (min-width: 750px) {
+  .h0 {
+    font-size: calc(var(--font-heading-scale) * 6.2rem);
+  }
+}
+
+h1,
+.h1 {
+  font-size: calc(var(--font-heading-scale) * 3.6rem);
+  line-height: 4.2rem;
+}
+
+@media only screen and (min-width: 750px) {
+
+  h1,
+  .h1 {
+    font-size: calc(var(--font-heading-scale) * 4.5rem);
+    line-height: 5.4rem;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+
+  h1,
+  .h1 {
+    font-size: calc(var(--font-heading-scale) * 5.4rem);
+    line-height: 6.4rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: calc(var(--font-heading-scale) * 3.2rem);
+  line-height: 3.8rem;
+}
+
+@media only screen and (min-width: 750px) {
+
+  h2,
+  .h2 {
+    font-size: calc(var(--font-heading-scale) * 3.9rem);
+    line-height: 4.7rem;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+
+  h2,
+  .h2 {
+    font-size: calc(var(--font-heading-scale) * 4.6rem);
+    line-height: 5.6rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: calc(var(--font-heading-scale) * 2.4rem);
+  line-height: 3.2rem;
+}
+
+@media only screen and (min-width: 750px) {
+
+  h3,
+  .h3 {
+    font-size: calc(var(--font-heading-scale) * 3.3rem);
+    line-height: 4rem;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+
+  h3,
+  .h3 {
+    font-size: calc(var(--font-heading-scale) * 3.8rem);
+    line-height: 4.8rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: calc(var(--font-heading-scale) * 2rem);
+  line-height: 2.4rem;
+}
+
+@media only screen and (min-width: 750px) {
+
+  h4,
+  .h4 {
+    font-size: calc(var(--font-heading-scale) * 2.3rem);
+    line-height: 2.9rem;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+
+  h4,
+  .h4 {
+    font-size: calc(var(--font-heading-scale) * 2.6rem);
+    line-height: 3.4rem;
+  }
+}
+
+h5,
+.h5 {
+  font-size: calc(var(--font-heading-scale) * 2rem);
+  line-height: 2.4rem;
+}
+
+@media only screen and (min-width: 750px) {
+
+  h5,
+  .h5 {
+    font-size: calc(var(--font-heading-scale) * 2.1rem);
+    line-height: 2.7rem;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+
+  h5,
+  .h5 {
+    font-size: calc(var(--font-heading-scale) * 2.2rem);
+    line-height: 3rem;
+  }
+}
+
+h6,
+.h6 {
+  font-size: calc(var(--font-heading-scale) * 1.9rem);
+  line-height: 2.4rem;
+}
+
+.dark-background .h0,
+.dark-background h1,
+.dark-background .h1,
+.dark-background h2,
+.dark-background .h2,
+.dark-background h3,
+.dark-background .h3,
+.dark-background h4,
+.dark-background .h4,
+.dark-background h5,
+.dark-background .h5,
+.dark-background h6,
+.dark-background .h6 {
+  color: var(--color-brand-white);
+}
+
+.body-small {
+  font-size: calc(var(--font-body-scale) * 1.2rem);
+  line-height: 2.2rem;
+}
+
+@media only screen and (min-width: 750px) {
+  .body-small {
+    font-size: calc(var(--font-body-scale) * 1.3rem);
+    line-height: 2.2rem;
+  }
+}
+
+p,
+.text-body,
+.body-regular {
+  font-size: calc(var(--font-body-scale) * 1.3rem);
+  line-height: 2.2rem;
+}
+
+@media only screen and (min-width: 750px) {
+
+  p,
+  .text-body,
+  .body-regular {
+    font-size: calc(var(--font-body-scale) * 1.5rem);
+    line-height: 2.4rem;
+  }
+}
+
+.body-large {
+  font-size: calc(var(--font-body-scale) * 1.5rem);
+  line-height: 2.4rem;
+}
+
+@media only screen and (min-width: 750px) {
+  .body-large {
+    font-size: calc(var(--font-body-scale) * 1.7rem);
+    line-height: 3rem;
+  }
+}
+
+.body-x-large {
+  font-size: calc(var(--font-body-scale) * 2rem);
+  line-height: 2.8rem;
+}
+
+@media only screen and (min-width: 750px) {
+  .body-x-large {
+    font-size: 2.2rem;
+    line-height: 3.6rem;
+  }
+}
+
+a, .link {
+  font-size: 1.5rem;
+}
+
+.button,
+.button-label,
+.shopify-challenge__button,
+.customer button,
+.button--medium,
+.button--link-1,
+.button--link-2 {
+  font-size: 1.5rem;
+}
+
+.button--xsmall,
+.button--small {
+  font-size: 1.1rem;
+}
+
+header .menu-opening .header__icon .menu-icon::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' role='presentation' class='icon icon-close' viewBox='0 0 17 17'%3E%3Cpolygon points='17.061 1.061 16 0 8.53 7.47 1.061 0 0 1.061 7.47 8.53 0 16 1.061 17.061 8.53 9.591 16 17.061 17.061 16 9.591 8.53 17.061 1.061' fill='%23000000'%3E%3C/polygon%3E%3C/svg%3E");
+}
+
+
+header .header__icon .menu-icon::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='13' viewBox='0 0 15 13' fill='none'%3E%3Crect width='15' height='1.5' fill='%23000000'/%3E%3Crect y='5.5' width='15' height='1.5' fill='%23000000'/%3E%3Crect y='11' width='15' height='1.5' fill='%23000000'/%3E%3C/svg%3E");
+}

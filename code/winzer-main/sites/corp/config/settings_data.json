@@ -1,0 +1,298 @@
+{
+  "current": {
+    "scroll_appear": "fadein",
+    "scroll_appear_timing": ".3",
+    "hide_store_locator_icon": true,
+    "hide_store_panel": false,
+    "cart_type": "notification",
+    "show_vendor": true,
+    "show_cart_note": true,
+    "enable_view_cart_button": true,
+    "enable_continue_shopping_button": false,
+    "cart_drawer_collection": "bikes",
+    "colors_brand_primary": "#002437",
+    "colors_brand_secondary": "#00679b",
+    "colors_brand_secondary_variant": "#00679b",
+    "colors_brand_text": "#484a50",
+    "colors_brand_accent_1": "#f4f4f4",
+    "colors_brand_accent_2": "#bcbec4",
+    "colors_brand_misc_1": "#c80000",
+    "colors_brand_misc_2": "#d22630",
+    "colors_brand_neutral_1": "#cccccc",
+    "colors_brand_neutral_2": "#d4e2e8",
+    "colors_brand_black": "#000000",
+    "colors_brand_white": "#ffffff",
+    "colors_background": "#fff",
+    "colors_foreground": "#4a4a4a",
+    "colors_accent_1": "#f5f5f7",
+    "colors_accent_2": "#cccccc",
+    "colors_button_background_2": "#0092ff",
+    "colors_button_foreground_3": "#4a4a4a",
+    "colors_button_hover_3": "#131313",
+    "colors_button_active_3": "#131313",
+    "colors_link_1": "#0092ff",
+    "colors_styleguide_primary": "#131c3b",
+    "colors_styleguide_secondary": "#f05400",
+    "colors_styleguide_accent_1": "#db3700",
+    "colors_styleguide_accent_2": "#f3f1ee",
+    "colors_styleguide_accent_3": "#b0bfd8",
+    "colors_styleguide_accent_4": "#c80000",
+    "colors_styleguide_text": "#424551",
+    "contact_address": "<p><strong>Winzer Corporation\u2028<\/strong><\/p><p><strong>4060 E. Plano Pkwy.<\/strong><\/p><p><strong>\u2028Plano, Texas 75074<\/strong><\/p>",
+    "hours_available": "<p>Monday - Friday<br\/>9AM - 5PM CST<\/p>",
+    "contact_call": "(214) 341-2122\u2028or (800) 527-4126",
+    "contact_email": "(800) 867-7714",
+    "contact_chat": "",
+    "currency_code_enabled": false,
+    "plp_search_appearance": "searchspring",
+    "predictive_search_left_column_layout": true,
+    "favicon": "shopify:\/\/shop_images\/winzer-favicon.webp",
+    "page_width": "1600",
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/winzercorp",
+    "social_linkedin_link": "https:\/\/www.linkedin.com\/company\/936459",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/winzercorporation",
+    "social_youtube_link": "https:\/\/www.youtube.com\/@WinzerMRO",
+    "predictive_search_enabled": true,
+    "predictive_search_show_price": false,
+    "predictive_search_collections": false,
+    "predictive_search_pages": false,
+    "predictive_search_articles": false,
+    "checkout_logo_image": "shopify:\/\/shop_images\/propel-logo-x245.png",
+    "checkout_accent_color": "#0092ff",
+    "checkout_button_color": "#000000",
+    "filter_appearance": "left_column",
+    "colors_background_1": "#FFFFFF",
+    "colors_background_2": "#F3F3F3",
+    "colors_solid_button_labels": "#FFFFFF",
+    "colors_text": "#4a4a4a",
+    "colors_outline_button_labels": "#000000",
+    "type_header_font": "assistant_n4",
+    "type_body_font": "assistant_n4",
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "message": "Why Choose Winzer?",
+          "link_label": "Learn More",
+          "link_url": "shopify:\/\/pages\/why-winzer",
+          "text_color": "#ffffff",
+          "link_color": "#ffffff",
+          "background_color": "#00679b",
+          "announcement_menu": "announcement-menu",
+          "menu_link_color": "#ffffff",
+          "display_margins": false
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "d8781d80-9e4a-4b95-ab87-4ab904599cfc": {
+            "type": "megamenu_link_lists",
+            "settings": {
+              "parent_menu_item_name": "Shop",
+              "parent_menu_item_all": true,
+              "promo_override": "",
+              "promo_image__1": "shopify:\/\/shop_images\/promo-nav-best-sellers-fpo.jpg",
+              "promo_label__1": "Top Sellers",
+              "promo_link__1": "shopify:\/\/collections\/best-sellers",
+              "promo_label__2": "",
+              "promo_link__2": "",
+              "promo_label__3": "",
+              "promo_link__3": "",
+              "promo_label__4": "",
+              "promo_link__4": ""
+            }
+          }
+        },
+        "block_order": [
+          "d8781d80-9e4a-4b95-ab87-4ab904599cfc"
+        ],
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/Winzer-logo_2.svg",
+          "logo_width": 175,
+          "logo_width_mobile": 85,
+          "logo_width_mobile_sticky": 100,
+          "menu": "main-menu",
+          "utility_menu": "announcement-menu",
+          "help_link": "",
+          "show_line_separator": false,
+          "enable_sticky_header": true,
+          "show_search_form": true,
+          "hide_help_icon": false,
+          "enable_header_animation": true,
+          "enable_header_items_animation": true,
+          "enable_mobile_icon_animation": true,
+          "display_margins": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "201a365d-125a-496b-bd59-93978d9917f3": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Customer Care",
+              "menu": "customer-care"
+            }
+          },
+          "bcedc8a4-d5cd-4d75-ba7c-ab120311e279": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Our Company",
+              "menu": "our-company"
+            }
+          },
+          "64c67642-c67e-40b4-b4cd-b0ef8379e6e3": {
+            "type": "link_list",
+            "settings": {
+              "heading": "More Ways to Shop",
+              "menu": "more-ways-to-shop"
+            }
+          }
+        },
+        "block_order": [
+          "201a365d-125a-496b-bd59-93978d9917f3",
+          "bcedc8a4-d5cd-4d75-ba7c-ab120311e279",
+          "64c67642-c67e-40b4-b4cd-b0ef8379e6e3"
+        ],
+        "settings": {
+          "logo_image": "shopify:\/\/shop_images\/winzer-white_1.png",
+          "logo_text": "<p>4060 Plano Pkwy<\/p><p>Plano, Texas 75074\u2028<\/p><p>(214) 341-2122 <\/p>",
+          "color_scheme": "accent-1",
+          "newsletter_enable": true,
+          "newsletter_heading": "Stay in the Know!",
+          "newsletter_text": "<p>Get exclusive offers and expert tips.<\/p>",
+          "sms_signup_show": false,
+          "sms_signup_heading": "SIGN UP FOR TEXTS",
+          "sms_signup_text": "for first access to all things Propel!<br>\n<a href=\"#SMS\" class=\"trigger-attentive\">Click Here to Sign Up<\/a>",
+          "show_social": true,
+          "copyright_menu": "copyright",
+          "copyright_menu_display_mobile": "row",
+          "copyright_text": "Winzer. All Rights Reserved.",
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "payment_enable": false,
+          "display_margins": false
+        }
+      },
+      "promos-banner": {
+        "type": "promos-banner",
+        "blocks": {
+          "c85a71f4-ee1e-4150-8946-e7b28bec0ae7": {
+            "type": "promo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/winzer-customer-service.svg",
+              "message": "<p><strong>Expert Customer Support<\/strong><\/p><p><a href=\"\/pages\/contact\" title=\"Contact\">Contact Us<\/a> <\/p>",
+              "link_label": "",
+              "link_url": "shopify:\/\/pages\/contact"
+            }
+          },
+          "promo_GzyHMk": {
+            "type": "promo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/winzer-shipping.svg",
+              "message": "<p><strong>Parts Delivered<\/strong><\/p><p>Most of our in-stock products ship next day.<\/p>",
+              "link_label": "",
+              "link_url": ""
+            }
+          },
+          "promo_D9RVqr": {
+            "type": "promo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/winzer-guarantee.svg",
+              "message": "<p><strong>100% Quality Assurance Guarantee<\/strong><\/p><p>90 day quality assurance warranty.<\/p>",
+              "link_label": "Learn More",
+              "link_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "c85a71f4-ee1e-4150-8946-e7b28bec0ae7",
+          "promo_GzyHMk",
+          "promo_D9RVqr"
+        ],
+        "settings": {
+          "show_section": true,
+          "background_color": "#00679b",
+          "display_margins": false
+        }
+      },
+      "filter-helpers": {
+        "type": "filter-helpers",
+        "blocks": {
+          "4689432e-5f83-49ce-b10a-923c35432050": {
+            "type": "helper",
+            "settings": {
+              "title": "Red",
+              "color_options": "<p>Red, Viper Red<\/p>"
+            }
+          },
+          "dae73353-d827-45a9-bec2-80b429f5ab1e": {
+            "type": "helper",
+            "settings": {
+              "title": "Black",
+              "color_options": "<p>Black, Slate<\/p>"
+            }
+          },
+          "de5c4675-d4d2-494a-8e1b-e0e6bf3b572d": {
+            "type": "helper",
+            "settings": {
+              "title": "Blue",
+              "color_options": "<p>Blue, Blue Lightning<\/p>"
+            }
+          },
+          "359c9c3a-97a7-4328-9ec4-30d6c72c6a33": {
+            "type": "helper",
+            "settings": {
+              "title": "Smoke",
+              "color_options": "<p>Smoke<\/p>"
+            }
+          },
+          "bf95e203-62bc-4220-80cd-a07f6b15a366": {
+            "type": "helper",
+            "settings": {
+              "title": "Gray",
+              "color_options": "<p>Gray<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "4689432e-5f83-49ce-b10a-923c35432050",
+          "dae73353-d827-45a9-bec2-80b429f5ab1e",
+          "de5c4675-d4d2-494a-8e1b-e0e6bf3b572d",
+          "359c9c3a-97a7-4328-9ec4-30d6c72c6a33",
+          "bf95e203-62bc-4220-80cd-a07f6b15a366"
+        ],
+        "settings": {
+          "display_margins": false
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {
+          "color_scheme": "background-1"
+        }
+      },
+      "breadcrumb-bar": {
+        "type": "breadcrumb-bar",
+        "settings": {}
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "15685250022964305326": {
+        "type": "shopify:\/\/apps\/elevar-conversion-tracking\/blocks\/dataLayerEmbed\/bc30ab68-b15c-4311-811f-8ef485877ad6",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  }
+}

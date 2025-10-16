@@ -1,0 +1,16 @@
+<modal-dialog id="login-prompt-modal" class="warranty-popup-modal" {{ block.shopify_attributes }}>
+  <div role="dialog" aria-label="{{ block.settings.text }}" aria-modal="true" class="warranty-popup-modal__content" tabindex="-1">
+    <div class="warranty-popup-modal__header dark-background">
+      <h1 class="warranty-popup-modal__headline">{{ 'products.product.product_price_sign_in.modal_headline' | t }}</h1>
+      <button id="ModalClose-{{ block.id }}" type="button" class="button-reset warranty-popup-modal__toggle">{{ 'accessibility.close' | t }}</button>
+    </div>
+
+    <div class="warranty-popup-modal__content-info">
+      <p>{{ 'products.product.product_price_sign_in.modal_text' | t }}</p>
+      <div class="modal-buttons">
+        <a class="button" href="{{ routes.account_login_url }}" target="_blank">{{ 'products.product.product_price_sign_in.sign_in_cta' | t }}</a>
+        <button class="button secondary" onclick="location.reload()" target="_blank">{{ 'products.product.product_price_sign_in.modal_refresh' | t }}</button>
+      </div>
+    </div>
+  </div>
+</modal-dialog>

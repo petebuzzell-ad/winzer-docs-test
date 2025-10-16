@@ -1,0 +1,109 @@
+@media screen and (max-width: 990px) {
+  .desktop-filter-summary a.ss__filter {
+      display: none;
+  }
+
+  .desktop-filter-summary div.clear-all {
+      display: none;
+  }
+
+  div.desktop-filter-summary {
+      margin-top: 2.1rem;
+  }
+}
+
+.desktop-filter-summary {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 130rem;
+  min-width: 30rem;
+  width: 100%;
+  margin: 0.5rem 1.5rem 1.5rem 0;
+}
+
+.desktop-filter-summary .number-of-products {
+  font-size: 1.4rem;
+  color: var(--color-foreground);
+  margin: 0.5rem 1.5rem 0 0;
+  display: flex;
+  align-items: center;
+}
+
+.desktop-filter-summary .ss-toolbar.ss-toolbar-top {
+  padding: 0 !important;
+}
+
+.desktop-filter-summary .ss__filter__button {
+  display: flex;
+  align-items: baseline !important;
+  background-color: var(--color-brand-white);
+  border: 1px solid var(--color-brand-primary);
+  border-radius: 4px;
+  font-size: 1.3rem;
+  color: var(--color-brand-primary);
+  text-transform: capitalize;
+  padding: 0.2rem 1rem;
+}
+
+.desktop-filter-summary .ss__slideout__button {
+  display: none;
+}
+
+.desktop-filter-summary .ss-toolbar .ss-sort-by .ss__select__dropdown__button {
+  height: auto;
+  padding-right: 0;
+}
+
+.desktop-filter-summary .ss-toolbar.ss-toolbar-top {
+  padding: 0;
+}
+
+.desktop-filter-summary .ss__filter__button .ss__filter__value {
+  margin-bottom: -2px;
+}
+
+.desktop-filter-summary a.ss__filter {
+  margin: 0.5rem 0.5rem 0 0;
+}
+
+.desktop-filter-summary .ss__filter__button svg {
+  order: 2;
+  margin-left: 1.8rem;
+  fill: var(--color-brand-primary);
+  width: 0.9rem;
+}
+
+.desktop-filter-summary span.left-hand-group {
+  width: 25%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.desktop-filter-summary span.active-filters {
+  display: flex;
+  align-items: center;
+  margin-left: 3.5rem;
+}
+
+.desktop-filter-summary .clear-all {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 12%;
+  visibility: visible;
+}
+
+.desktop-filter-summary .clear-all button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font-family: var(--font-body-family);
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+  outline: inherit;
+  margin-top: 0.5rem;
+  color: var(--color-brand-primary);
+}

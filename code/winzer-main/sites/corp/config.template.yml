@@ -1,0 +1,15 @@
+development:
+  password: <your themekit password>
+  theme_id: <your development theme id>
+  store: winzercorp.myshopify.com
+
+staging:
+  password: <your themekit password>
+  theme_id: "128003932336"
+  store: winzercorp.myshopify.com
+
+production:
+  password: <your themekit password>
+  theme_id: "128003899568"
+  store: winzercorp.myshopify.com
+  

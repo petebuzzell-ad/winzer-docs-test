@@ -1,0 +1,123 @@
+.promo__image img {
+  max-width: 90px;
+  max-height: 90px;
+  height: auto;
+  width: 100%;
+}
+
+.promos-banner .promo {
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+  padding: 0 2rem 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+  flex-grow: 1;
+  gap: 2.4rem;
+  width: 33.33%;
+}
+
+.promo__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.promo__image {
+  height: 90px;
+  line-height: 0;
+  width: 90px;
+  flex-shrink: 0;
+}
+
+.promo__content .link {
+  color: var(--color-brand-white);
+}
+
+.promo-content__message p,
+.promo-content__message p a {
+  color: var(--color-brand-accent-2);
+  margin: 0;
+}
+
+.promo-content__message p strong {
+  color: #fff;
+}
+
+.promos-banner .promo:only-child {
+  text-align: center;
+}
+
+.promos-banner {
+  display: flex;
+}
+
+@media screen and (min-width: 750px) {
+  .promo-content__message {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  .promos-banner {
+    flex-direction: row;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .promos-banner .promo:not(:only-child):first-child {
+    padding-right: 2.5rem;
+    max-width: 50%;
+  }
+
+  .promos-banner .promo:not(:only-child):last-child {
+    padding-left: 2.5rem;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .promos-banner {
+    flex-direction: column;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  .promos-banner .promo {
+    border: none;
+    justify-content: left;
+    text-align: left;
+    width: 100%;
+  }
+
+  .promos-banner .promo:not(:only-child):last-child {
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+    padding-bottom: 4rem;
+  }
+
+  .promo__image,
+  .promo__image img {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .promo-content__message {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+
+  .promo-content__message p strong {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 990px) and (max-width: 1199px) {
+  .promos-banner .promo {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}

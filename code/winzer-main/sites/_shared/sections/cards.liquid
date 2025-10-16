@@ -1,0 +1,425 @@
+{{ 'section-cards.css' | asset_url | stylesheet_tag }}
+{{ 'swiper-carousel-custom.css' | asset_url | stylesheet_tag }}
+
+{% capture margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% capture mobile_margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.mobile_margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    margin-top: {{ margin_size | divided_by: 10 }}rem;
+    margin-bottom: {{ margin_size | divided_by: 10 }}rem;
+    background-color: {{ section.settings.text_bg_color }}; 
+  }
+
+  @media screen and (max-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      margin-top: {{ mobile_margin_size | divided_by: 10 }}rem;
+      margin-bottom: {{ mobile_margin_size | divided_by: 10 }}rem;
+    }
+  }
+{% endstyle %}
+
+{% assign bg_brightness = section.settings.text_bg_color | color_brightness %}
+
+<div data-section-id="{{ section.id }}" class="card-main{% if bg_brightness < 100 %} dark-background{% endif %}{% if settings.scroll_appear == 'fadein' %} fadeIn{% endif %}">
+  <div>
+  <div class="card__main-content">
+    <p class="eyebrow">{{ section.settings.eyebrow }}</p>
+    {% if section.settings.headline != blank %}
+      <h2 class="headline {{ section.settings.headline_size }}">{{ section.settings.headline }}</h2>
+    {% endif %}
+  </div>
+    <div class="page-width {% if section.settings.card_slider == false %} card__main {% endif %} {% if section.settings.card_slider == true %} card__carousel {% endif %}">
+      {% if section.settings.card_slider == true %}
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+      {% endif %}
+          {% for block in section.blocks %}
+            <div class="card__item {% if section.settings.card_hover == true %} card-item__hover {% endif %} {% if section.settings.card_slider == true %} swiper-slide {% endif %}">
+              <div 
+              class="card-item-inner"
+              {% if block.settings.clickable_card_url != blank %}
+              style="cursor: pointer;" onclick="window.location.href = '{{ block.settings.clickable_card_url }}';" id="ImageWithText--{{ section.id }}"
+              {% endif %}  
+              >
+                  <div>
+                    {%- if block.settings.image != blank -%}
+                      {%- render 'image', image: block.settings.image -%}
+                    {%- endif -%}
+
+                    <div class="card__details">
+                      <div class="card__details__inner">
+                        {% if block.settings.description %}
+                          <div class="card-desc {{ section.settings.text_style }}">{{ block.settings.description }}</div>
+                        {% endif %}
+
+                        {% if block.settings.features %}
+                          <p class="card-features">{{ block.settings.features }}</p>
+                        {% endif %}
+
+                        {% if block.settings.link and block.settings.label %}
+                          <a href="{{ block.settings.link }}">{{ block.settings.label }}</a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card_name small-hide">
+                    {%- if block.settings.heading != blank -%}
+                      <h3 class="h4 card_title {{ block.settings.text_align }} ">{{ block.settings.heading }} </h3>
+                    {%- endif -%}
+                  </div>
+
+                  {% if block.settings.description and section.settings.card_hover == false %}
+                  <div class="card-content {{ block.settings.text_align }} ">
+                    <div class="card-desc {{ section.settings.text_style }}">{{ block.settings.description }}</div>
+                  </div>
+                  {% endif %}
+
+                  <div class="card_name medium-hide large-up-hide">
+                    {% if block.settings.link %}<a href="{{ block.settings.link }}" class="card_link">{% endif %}
+                    <div class="card_name-inner">
+                      {%- if block.settings.heading != blank -%}
+                      <h3 class="h4">{{ block.settings.heading }}</h3>
+                      {%- endif -%}
+
+                      <p class="card-features__mobile card-features">{{ block.settings.features }}</p>
+                    </div>
+
+                    {%- render 'icon-arrow-down' -%}
+                    {% if block.settings.link %}</a>{% endif %}
+                  </div>
+              </div>
+            </div>
+            {% endfor %}
+        {% if section.settings.card_slider == true %}
+          </div>
+        </div>
+        
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination">&nbsp</div>
+        <div class="swiper-button-next"></div>
+        {% endif %}
+    </div>
+  </div>
+</div>
+
+{% assign section_selector = '#shopify-section-' | append: section.id %}
+{% style %}
+.card-desc p, .card-features, .card__details__inner a {
+  color:{{ section.settings.text_color }};
+}
+
+h2.headline {
+  color: {{ section.settings.headline_color }}
+}
+
+h3.card_title {
+  color: {{ section.settings.card_title_color}}
+}
+
+.card__details{
+  background:{{ section.settings.text_bg_color }};
+}
+
+@media screen and (max-width: 750px) {
+  {{ section_selector }} .card-main {
+    padding: {{ section.settings.mobile_top_padding }}px 0 {{ section.settings.mobile_bottom_padding }}px;
+  }
+}
+
+@media screen and (min-width: 749px) {
+  {{ section_selector }} .card-main {
+    padding: {{ section.settings.desktop_top_padding }}px 0 {{ section.settings.desktop_bottom_padding }}px;
+  }
+}
+
+{% endstyle %}
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', () => {
+
+    cellAlign = (window.innerWidth > 450) ? "left" : "left"; 
+
+    let swiper = new Swiper( 
+      document.querySelector('#shopify-section-{{ section.id }} .card__carousel .mySwiper'),
+      {
+        slidesPerView: 2.5,
+        slidesPerGroup: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 'auto',
+            slidesPerGroup: 1,
+            spaceBetween: 50,
+          },
+          750: {
+            slidesPerView: 'auto',
+            slidesPerGroup: 1,
+            spaceBetween: 50,
+          },
+          990: {
+            slidesPerView: 'auto',
+            slidesPerGroup: 4,
+            spaceBetween: 60,
+          },
+          1366: {
+            slidesPerView: 'auto',
+            slidesPerGroup: 6,
+            spaceBetween: 100,
+          }
+        }
+      }
+    );
+  })
+</script>
+
+{% schema %}
+{
+  "name": "Cards",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content options"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "headline"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "select",
+      "id": "headline_size",
+      "options": [
+        {
+          "value": "cql-headline-1",
+          "label": "Custom Headline 1"
+        },
+        {
+          "value": "cql-headline-2",
+          "label": "Custom Headline 2"
+        },
+        {
+          "value": "cql-headline-3",
+          "label": "Custom Headline 3"
+        },
+        {
+          "value": "h4",
+          "label": "X-Small"
+        },
+        {
+          "value": "h3",
+          "label": "Small"
+        },
+        {
+          "value": "h2",
+          "label": "Medium"
+        },
+        {
+          "value": "h1",
+          "label": "Large"
+        },
+        {
+          "value": "h0",
+          "label": "X-Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Headline size"
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "options": [
+        {
+          "value": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "value": "caption",
+          "label": "Caption"
+        },
+        {
+          "value": "caption-with-letter-spacing",
+          "label": "Uppercase"
+        },
+        {
+          "value": "caption-with-letter-spacing--medium",
+          "label": "Uppercase - Medium"
+        },
+        {
+          "value": "caption-with-letter-spacing--large",
+          "label": "Uppercase - Large"
+        }
+      ],
+      "default": "subtitle",
+      "label": "Text style"
+    },
+    {
+      "type": "header",
+      "content": "Card display options"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_hover",
+      "label": "Show card contents on hover",
+      "info": "Displays card contents on hover on desktop only.",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "card_slider",
+      "label": "Show cards as carousel",
+      "info": "Displays cards as carousel on both desktop and mobile.",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "headline_color",
+      "label": "Headline color",
+      "default": "#F3F1EE"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "#F3F1EE"
+    },
+    {
+      "type": "color",
+      "id": "text_bg_color",
+      "label": "Background color",
+      "default": "#fff"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "number",
+      "id": "desktop_top_padding",
+      "label": "Desktop top padding (px)",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "desktop_bottom_padding",
+      "label": "Desktop bottom padding (px)",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "mobile_top_padding",
+      "label": "Mobile top padding (px)",
+      "default": 45
+    },
+    {
+      "type": "number",
+      "id": "mobile_bottom_padding",
+      "label": "Mobile bottom padding (px)",
+      "default": 45
+    },
+    {
+      "type": "header",
+      "content": "Margins",
+      "info": "Apply global theme layout margins on the top and bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_margins",
+      "label": "Display margins",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Headline"
+        },
+        {
+          "type": "select",
+          "id": "text_align",
+          "options": [
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            },
+            {
+              "value": "left",
+              "label": "Left"
+            }
+          ],
+          "default": "center",
+          "label": "Text Alignment"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "features",
+          "label": "Features"
+        },
+        {
+          "type": "url",
+          "id": "clickable_card_url",
+          "label": "Card URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cards"
+    }
+  ]
+}
+{% endschema %}

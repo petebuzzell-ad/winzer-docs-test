@@ -1,34 +1,54 @@
-# Winzer eCommerce Documentation (Jekyll Test)
+# Winzer eCommerce Platform Documentation
 
-This is a test version of the Winzer eCommerce documentation converted to Jekyll format.
+Comprehensive technical documentation for Winzer's multi-brand eCommerce platform, including platform architecture, middleware systems, data flows, and third-party integrations.
 
-## Local Development
+## Overview
 
-1. Install dependencies:
-   ```bash
-   bundle install
-   ```
+This documentation covers Winzer's complete eCommerce ecosystem across three brands:
+- **Winzer** (store.winzer.com)
+- **OneSource Supply Co** (onesourcesupplyco.com) 
+- **FastServ Supply** (store.fastservsupply.com)
 
-2. Run Jekyll locally:
-   ```bash
-   bundle exec jekyll serve
-   ```
+## Documentation Sections
 
-3. View at: `http://localhost:4000`
+- **Platform Overview** - Architecture, content management, and operational procedures
+- **AWS Middleware System** - .NET 6-based Lambda functions and ECS Fargate tasks
+- **Product Data Map** - Oracle PIM to Shopify metafield transformations
+- **SearchSpring Integration** - Search and filtering configuration
+- **ShipperHQ Rules** - Product-based shipping restrictions and carrier management
 
-## Deployment
+## Usage
 
-This site is configured for GitHub Pages deployment. Simply push to the `main` branch and GitHub Pages will automatically build and deploy the site.
+Simply open `index.html` in your browser to access the complete documentation hub. This repository serves as a one-stop shop for:
 
-## Structure
+- **Documentation** - Complete technical documentation in HTML and Markdown
+- **Source Code** - Full codebase for both frontend and backend systems
+- **Developer Handoff** - Comprehensive guide for new developers
 
-- `_config.yml` - Jekyll configuration
-- `_layouts/` - HTML templates
-- `assets/css/` - Stylesheets
-- `*.md` - Documentation pages
+### Documentation Access
+- **HTML files** - Ready-to-view documentation with Arcadia Digital styling
+- **Markdown files** - Source files for editing and version control
 
-## Testing
+### Source Code Access
+- **Main Codebase** (`code/winzer-main/`) - Shopify themes, SearchSpring React app, multi-brand configurations
+- **Middleware System** (`code/winzer-middleware/`) - .NET 6 AWS Lambda functions and ECS tasks
 
-This is a test version to compare with the current HTML-based documentation at:
-- Current: `https://your-username.github.io/winzer/`
-- Test: `https://your-username.github.io/winzer-docs-test/`
+## Repository Structure
+
+- `index.html` - Main documentation hub with navigation
+- `arcadia-style.css` - Arcadia Digital branded stylesheet
+- `DEVELOPER_HANDOFF.md` - Complete handoff guide for new developers
+- `code/` - Complete source code for all systems
+  - `winzer-main/` - Shopify theme and SearchSpring React app
+  - `winzer-middleware/` - .NET 6 AWS middleware system
+- `*.html` - Individual documentation pages (HTML format)
+- `*.md` - Source documentation pages (Markdown format)
+- `DEPLOYMENT.md` - Deployment procedures and notes
+
+## Contact
+
+For questions or feedback about this documentation:
+**pete.buzzell@arcadiadigital.com**
+
+---
+*Maintained by Arcadia Digital*

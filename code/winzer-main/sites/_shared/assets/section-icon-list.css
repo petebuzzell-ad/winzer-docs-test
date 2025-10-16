@@ -1,0 +1,163 @@
+.icon-list {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 100%;
+  min-height: 24rem;
+}
+
+.icon-list__media {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.icon-list__heading {
+  text-align: center;
+  z-index: 1;
+}
+
+.icon-list__heading .icon-list__headline {
+  margin: 1rem 0 2.4rem;
+}
+
+.icon-list__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  gap: 2rem 3rem;
+  padding: 0 3rem;
+  z-index: 1;
+}
+
+.icon-list__content a,
+.icon-list__content a.active,
+.icon-list__content .link,
+.icon-list__content .link.active,
+.icon-list__content a p {
+  font-family: var(--font-body-alt-family);
+  text-decoration: none;
+  color: var(--color-brand-secondary-variant);
+  font-weight: 600;
+}
+
+.icon-list__content p {
+  width: 100%;
+}
+
+.icon-list__divider {
+  display: block;
+  width: 100%;
+  margin: 0 2rem;
+}
+
+.icon-list__divider>hr,
+.icon-list__divider>h3 {
+  margin: 1rem auto;
+}
+
+.icon-list__item {
+  width: calc(15% - 6rem);
+  max-width: 19rem;
+  margin: 1rem 2rem;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+  color: var(--color-brand-secondary-variant);
+}
+
+@media screen and (min-width: 990px) {
+  .icon-list__item {
+    width: calc(20% - 6rem);
+  }
+}
+
+@media screen and (min-width: 1330px) {
+  .icon-list__item {
+    width: calc(16% - 6rem);
+  }
+}
+
+.icon-list__item .icon-list__item--wrapper {
+  background-color: var(--color-brand-primary);
+  border-radius: 100%;
+  display: flex;
+  height: 18rem;
+  width: 18rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 990px) {
+  .icon-list__item .icon-list__item--wrapper {
+    height: 17rem;
+    width: 17rem;
+  }
+}
+
+.icon-list__item .icon-list__item--wrapper:hover {
+  background-color: var(--color-brand-secondary-variant);
+}
+
+.icon-list__item .icon-list__item--wrapper>img {
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 989px) {
+  .icon-list__item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    width: calc(33.33% - 6rem);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .icon-list__content {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .icon-list__item {
+    width: calc(50% - 6rem);
+    min-width: 14rem;
+    margin: 0;
+  }
+
+  .icon-list__item .icon-list__item--wrapper {
+    height: 14rem;
+    width: 14rem;
+  }
+}
+
+/********************
+  Fastserv Styles
+********************/
+.site-winzerfastserv .icon-list__item .icon-list__item--wrapper {
+  background-color: var(--color-brand-text);
+}
+
+.site-winzerfastserv .icon-list__item .icon-list__item--wrapper:hover {
+  background-color: var(--color-brand-secondary);
+}
+
+/********************
+  Winzer Corp Styles
+********************/
+.site-winzercorp .icon-list__item .icon-list__item--wrapper {
+  background-color: var(--color-brand-secondary);
+}
+
+.site-winzercorp .icon-list__item .icon-list__item--wrapper:hover {
+  background-color: var(--color-brand-misc-2);
+}
+
+.site-winzercorp .icon-list__content a p {
+  color: var(--color-brand-primary);
+}

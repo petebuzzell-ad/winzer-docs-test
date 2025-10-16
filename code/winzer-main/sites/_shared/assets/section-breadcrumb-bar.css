@@ -1,0 +1,87 @@
+.breadcrumb-bar {
+    background-color: #fff;
+  }
+
+  @media screen and (min-width: 750px) {
+    .breadcrumb-bar {
+      background-color: var(--color-brand-accent-1);
+    }
+    .breadcrumb-bar__inner ul > li:not(:last-child)::after {
+      content: "";
+      display: inline-block;
+      height: 0.8rem;
+      width: 0.4rem;
+      margin-left: 0.8rem;
+      margin-right: 0.4rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='8' viewBox='0 0 4 8' fill='none'%3E%3Cpath d='M0.0893533 7.17885C0.0117586 7.26532 -0.0185456 7.39135 0.00985599 7.50947C0.0382576 7.62758 0.12105 7.71984 0.227046 7.75149C0.333043 7.78314 0.446139 7.74937 0.523734 7.6629L3.59356 4.24203C3.6512 4.17786 3.68359 4.09079 3.68359 4C3.68359 3.90921 3.6512 3.82214 3.59356 3.75797L0.523734 0.337098C0.403783 0.20343 0.209304 0.20343 0.0893533 0.337098C-0.0305977 0.470766 -0.0305977 0.687484 0.0893533 0.821152L2.94237 4L0.0893533 7.17885Z' fill='black'/%3E%3C/svg%3E");
+    }
+  }
+
+  .breadcrumb-bar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+    width: 100%;
+  }
+  .breadcrumb-bar__inner ul {
+    margin: 0;
+    padding-inline-start: 0;
+  }
+  .breadcrumb-bar__inner ul > li,
+  .breadcrumb-bar__inner ul > li > a {
+    display: inline;
+    color: var(--color-brand-primary);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+  }
+
+  .breadcrumb-bar__inner ul > li:not(.current) > a {
+    text-decoration: underline;
+  }
+
+  @media screen and (min-width: 990px) {
+    .breadcrumb-bar__inner {
+      min-height: 50px;
+    }
+  }
+
+  .breadcrumb-bar__share-link {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: var(--color-brand-primary);
+  }
+
+  .breadcrumb-bar__share-link-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .breadcrumb-bar__share-link-icon svg {
+    position: absolute;
+    inset: 0;
+    stroke: var(--color-brand-primary);
+  }
+
+  .breadcrumb-bar__share-link-text {
+    display: inline-block;
+    font-family: var(--font-body-family);
+    font-size: 1.4rem;
+    font-style: var(--font-body-style);
+    font-weight: var(--font-body-weight);
+    line-height: 1.57143;
+    line-height: 1;
+    margin-left: 0.5em;
+  }
+
+  @media screen and (max-width: 989px) {
+    .breadcrumb-bar__share-link-text {
+      display: none;
+    }
+  }

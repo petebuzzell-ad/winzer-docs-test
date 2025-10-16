@@ -1,0 +1,249 @@
+{
+  "wrapper": "div.faqs-page",
+  "sections": {
+    "16484545291ecbe325": {
+      "type": "image-banner",
+      "blocks": {
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "CUSTOMER SERVICE",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color_desktop": "",
+            "eyebrow_color_mobile": ""
+          }
+        },
+        "1648454529bf74fe13-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ page.title }}",
+            "heading_size": "h1",
+            "heading_color_desktop": "",
+            "heading_color_mobile": ""
+          }
+        }
+      },
+      "block_order": [
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343",
+        "1648454529bf74fe13-0"
+      ],
+      "settings": {
+        "desktop_large_image": "shopify:\/\/shop_images\/AdobeStock_64875500_1_cbbb0cde-2f10-465b-ba05-caae9f6f5238.png",
+        "desktop_image": "shopify:\/\/shop_images\/AdobeStock_64875500_1_cbbb0cde-2f10-465b-ba05-caae9f6f5238.png",
+        "mobile_image": "shopify:\/\/shop_images\/AdobeStock_64875500_1_cbbb0cde-2f10-465b-ba05-caae9f6f5238.png",
+        "enable_parallax": false,
+        "desktop_max_height": 240,
+        "section_background_color": "",
+        "content_background_color": "#f3f1ee",
+        "box_border_color": "#333333",
+        "show_text_box": false,
+        "show_container_mobile": true,
+        "content_background_opacity": 100,
+        "content_area_max_width": 400,
+        "show_border_desktop": false,
+        "show_border_offset_desktop": false,
+        "show_border_mobile": false,
+        "show_border_offset_mobile": false,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "show_text_below": true,
+        "hide_image_mobile": false,
+        "section_url": "",
+        "hide_section_mobile": false,
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false,
+        "custom_class": ""
+      }
+    },
+    "164845455288097172": {
+      "type": "menu-bar",
+      "settings": {
+        "menu": "contact-us",
+        "menu_color": "#424551",
+        "menu_color_active": "#f05400",
+        "menu_heading": "Customer Service Links",
+        "background_color": "#f3f1ee",
+        "display_margins": false
+      }
+    },
+    "164369946291b74f8d": {
+      "type": "customer-service",
+      "blocks": {
+        "padding_pXcJji": {
+          "type": "padding",
+          "settings": {
+            "desktop_padding_amount": 15
+          }
+        },
+        "9764f7a5-7e53-4c41-8201-eb0eb0621245": {
+          "type": "heading",
+          "settings": {
+            "text": "Quick Links",
+            "text_color": "#424551",
+            "text_size": "h4",
+            "quick_link": ""
+          }
+        },
+        "e542e291-0a60-48c1-8802-03abf12c99ee": {
+          "type": "quick_links",
+          "settings": {
+            "link_text_1": "Shipping Policy",
+            "link_id_1": "shipping-policy",
+            "link_text_2": "Return & Refund Policy",
+            "link_id_2": "return-refund",
+            "link_text_3": "Orders",
+            "link_id_3": "orders",
+            "link_text_4": "Product Support",
+            "link_id_4": "product-support",
+            "link_text_5": "",
+            "link_id_5": "",
+            "link_text_6": "",
+            "link_id_6": ""
+          }
+        },
+        "d707c5e1-4857-4886-92cd-229481cd0853": {
+          "type": "heading",
+          "settings": {
+            "text": "Shipping Policy",
+            "text_color": "#424551",
+            "text_size": "h4",
+            "quick_link": "shipping-policy"
+          }
+        },
+        "74c70fa2-cbb0-478d-a67c-d175c7e101b7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Do you offer free shipping?",
+            "heading_color": "#424551",
+            "content": "<p>Yes, we offer free shipping on all orders using standard ground shipping. The discount will be automatically applied at checkout for all qualifying orders. Please note that this offer does not apply to expedited shipping options.<\/p>",
+            "content_color": "#424551"
+          }
+        },
+        "dd8819d5-f1f4-4c82-8eab-dc47d858af1f": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How quickly will my order ship?",
+            "heading_color": "#424551",
+            "content": "<ul><li>Most of our in-stock products ship next business day. <\/li><li>If we are experiencing a high volume of orders, shipments may be delayed by a few days. Please allow additional days in transit for delivery. <\/li><li>If there will be a significant delay in shipment of your order, we may contact you via email or telephone.<\/li><li>Orders are not shipped on weekends or holidays.<\/li><\/ul>",
+            "content_color": "#424551"
+          }
+        },
+        "45fdf5a4-164b-49b7-9efd-1f3acd04f26d": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What shipping methods do you offer?",
+            "heading_color": "#424551",
+            "content": "<h6>Domestic Shipping Policy<\/h6><ul><li>UPS Ground - FREE<\/li><li>UPS 2nd Day Air - Cost varies based on shipping location<\/li><li>UPS Next Day Air - Cost varies based on shipping location<\/li><\/ul>",
+            "content_color": "#424551"
+          }
+        },
+        "heading_3c7NFC": {
+          "type": "heading",
+          "settings": {
+            "text": "Return & Refund Policy",
+            "text_color": "#424551",
+            "text_size": "h4",
+            "quick_link": ""
+          }
+        },
+        "b685d222-982f-47d4-b123-867eae0e94a0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "What is your return & refund policy?",
+            "heading_color": "#424551",
+            "content": "<p><strong>Returns<\/strong><\/p><p>We have a 30-day return policy, which means you have 30 days after receiving your item to request a return.<br\/><br\/>To be eligible for a return, your item must be in the same condition that you received it, unworn or unused, with tags, and in its original packaging. You’ll also need the receipt or proof of purchase.<br\/><br\/>To start a return, contact our Customer Service team at (214) 503-4555 or email us at <a href=\"mailto:support@onesourcesupplyco.com\" target=\"_top\" title=\"mailto:support@onesourcesupplyco.com\">support@onesourcesupplyco.com<\/a>. <br\/><br\/>If your return is accepted, we’ll provide you with an RMA number along with instructions on how and where to send your package. Please note that the customer is responsible for return shipping costs. OneSource does not accept Cash on Delivery (C.O.D.) shipments. <strong>Items sent back to us without first requesting a return will not be accepted. <\/strong><br\/><\/p><p>You can always contact us for any return question at <a href=\"mailto:support@onesourcesupplyco.com\" target=\"_top\" title=\"mailto:support@onesourcesupplyco.com\">support@onesourcesupplyco.com<\/a> or call Customer Service at (214) 503-4555.<br\/><\/p><p><strong>Damages and issues<\/strong><br\/>Please inspect your order upon reception and contact us immediately if the item is defective, damaged or if you receive the wrong item, so that we can evaluate the issue and make it right.<\/p><p><strong>Exceptions \/ non-returnable items<\/strong><br\/>Certain types of items cannot be returned, like perishable goods (such as food, flowers, or plants), custom products (such as special orders or personalized items), and personal care goods (such as beauty products). We also do not accept returns for hazardous materials, flammable liquids, or gases. Please get in touch if you have questions or concerns about your specific item.<br\/><br\/>Unfortunately, we cannot accept returns on sale items or gift cards.<\/p><p><strong>Exchanges<\/strong><br\/>The fastest way to ensure you get what you want is to return the item you have, and once the return is accepted, make a separate purchase for the new item.<\/p><p><strong>Refunds<\/strong><br\/>We will notify you once we’ve received and inspected your return, and let you know if the refund was approved or not. If approved, you’ll be automatically refunded on your original payment method within 14 business days. Please remember it can take some time for your bank or credit card company to process and post the refund too.<br\/>If more than 15 business days have passed since we’ve approved your return, please contact us at <a href=\"mailto:support@onesourcesupplyco.com\" target=\"_top\" title=\"mailto:support@onesourcesupplyco.com\">support@onesourcesupplyco.com<\/a>.<\/p>",
+            "content_color": "#424551"
+          }
+        },
+        "983a7845-5cfe-4a26-bedf-c1b73adcd3e8": {
+          "type": "heading",
+          "settings": {
+            "text": "Orders",
+            "text_color": "#424551",
+            "text_size": "h4",
+            "quick_link": "orders-returns"
+          }
+        },
+        "8564d1ba-7bc9-4df0-a15a-778c42921235": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How can I track my order?",
+            "heading_color": "#424551",
+            "content": "<p>Depending on shipping method, order tracking will be provided from carrier when the order has been placed. You will receive a tracking # in the shipping confirmation email.<\/p>",
+            "content_color": "#424551"
+          }
+        },
+        "42a81b35-548d-40ce-9d08-10223125c8ed": {
+          "type": "heading",
+          "settings": {
+            "text": "Product Support",
+            "text_color": "#424551",
+            "text_size": "h4",
+            "quick_link": "product-support"
+          }
+        },
+        "d9c9da53-eaba-4a3d-b784-0bdc736055c7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Is there a warranty on my product?",
+            "heading_color": "#424551",
+            "content": "<p>OneSource warrants that products delivered by OneSource to customers will be free from defects in material or workmanship under normal use for a period of ninety (90) days from the date of delivery. It is the responsibility of the customer to return defective products within the warranty period. If OneSource determines that the products returned for warranty refund are not defective within the terms of the warranty, the purchaser shall be responsible for all handling and transportation costs.<\/p><p> If an item is returned as defective and it is determined that the product is not, a restocking fee may be charged. Refunds will be issued in the form of an account credit or back to the original payment method.<\/p>",
+            "content_color": "#424551"
+          }
+        },
+        "padding_jDXHti": {
+          "type": "padding",
+          "settings": {
+            "mobile_padding_amount": 20,
+            "desktop_padding_amount": 60
+          }
+        }
+      },
+      "block_order": [
+        "padding_pXcJji",
+        "9764f7a5-7e53-4c41-8201-eb0eb0621245",
+        "e542e291-0a60-48c1-8802-03abf12c99ee",
+        "d707c5e1-4857-4886-92cd-229481cd0853",
+        "74c70fa2-cbb0-478d-a67c-d175c7e101b7",
+        "dd8819d5-f1f4-4c82-8eab-dc47d858af1f",
+        "45fdf5a4-164b-49b7-9efd-1f3acd04f26d",
+        "heading_3c7NFC",
+        "b685d222-982f-47d4-b123-867eae0e94a0",
+        "983a7845-5cfe-4a26-bedf-c1b73adcd3e8",
+        "8564d1ba-7bc9-4df0-a15a-778c42921235",
+        "42a81b35-548d-40ce-9d08-10223125c8ed",
+        "d9c9da53-eaba-4a3d-b784-0bdc736055c7",
+        "padding_jDXHti"
+      ],
+      "settings": {
+        "section_heading": "",
+        "address_heading": "",
+        "hours_heading": "Customer Service Hours",
+        "call_heading": "Call Us",
+        "email_heading": "Email Us",
+        "chat_heading": "Live Chat",
+        "heading_color": "#ffffff",
+        "heading_background_color": "#f5f5f7",
+        "text_color": "#424551",
+        "background_color": "#f5f5f7",
+        "display_margins": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "16484545291ecbe325",
+    "164845455288097172",
+    "164369946291b74f8d",
+    "main"
+  ]
+}

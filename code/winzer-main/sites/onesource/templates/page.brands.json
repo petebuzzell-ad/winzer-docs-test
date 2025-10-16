@@ -1,0 +1,675 @@
+{
+  "wrapper": "div.customer-service-page",
+  "sections": {
+    "16484545291ecbe325": {
+      "type": "image-banner",
+      "blocks": {
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "BRANDS",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color_desktop": "#ffffff",
+            "eyebrow_color_mobile": "#ffffff"
+          }
+        },
+        "1648454529bf74fe13-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Brands You Can Trust",
+            "heading_size": "h1",
+            "heading_color_desktop": "#ffffff",
+            "heading_color_mobile": ""
+          }
+        },
+        "text_hQzzeF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We source the most durable parts in the market from the top brands.<\/p>",
+            "text_style": "text-body",
+            "text_color_desktop": "#ffffff",
+            "text_color_mobile": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343",
+        "1648454529bf74fe13-0",
+        "text_hQzzeF"
+      ],
+      "settings": {
+        "desktop_image": "shopify:\/\/shop_images\/brand-landing-hero.webp",
+        "mobile_image": "shopify:\/\/shop_images\/brand-landing-hero.webp",
+        "enable_parallax": false,
+        "desktop_max_height": 600,
+        "section_background_color": "",
+        "content_background_color": "#131313",
+        "box_border_color": "#333333",
+        "show_text_box": false,
+        "show_container_mobile": true,
+        "content_background_opacity": 100,
+        "content_area_max_width": 400,
+        "show_border_desktop": false,
+        "show_border_offset_desktop": false,
+        "show_border_mobile": false,
+        "show_border_offset_mobile": false,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "show_text_below": true,
+        "hide_image_mobile": false,
+        "section_url": "",
+        "hide_section_mobile": false,
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false,
+        "custom_class": ""
+      }
+    },
+    "6839685d-32ce-493e-b561-f71d060cedd0": {
+      "type": "icon-list",
+      "blocks": {
+        "91ca7a11-0eaa-4fd3-9366-968e96f57b25": {
+          "type": "divider",
+          "settings": {
+            "text": "#",
+            "display_line": true
+          }
+        },
+        "template--16050059739312__6839685d-32ce-493e-b561-f71d060cedd0-1672153091b3a4543f-0": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3m-icon.svg",
+            "text": "3M",
+            "link": "shopify:\/\/collections\/3m"
+          }
+        },
+        "template--16050059739312__6839685d-32ce-493e-b561-f71d060cedd0-1672153091b3a4543f-1": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "BIKE LOGO 2",
+            "link": "shopify:\/\/products\/dark-denim-top"
+          }
+        },
+        "template--16050059739312__6839685d-32ce-493e-b561-f71d060cedd0-1672153091b3a4543f-2": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "BIKE LOGO 3",
+            "link": ""
+          }
+        },
+        "3529ef41-6e9e-4437-b39b-1a613b8fd9a8": {
+          "type": "divider",
+          "settings": {
+            "text": "G",
+            "display_line": true
+          }
+        },
+        "4ba8303a-21da-4d36-9d9a-2b8ae70ba2e6": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gates-icon.svg",
+            "text": "Gates Hydraulics",
+            "link": "shopify:\/\/collections\/gates"
+          }
+        },
+        "cc231a14-b27f-43ec-a69f-e6a7ca8d2bd5": {
+          "type": "divider",
+          "disabled": true,
+          "settings": {
+            "text": "K",
+            "display_line": true
+          }
+        },
+        "5ec7dc96-f2b6-432b-848b-9d9b96e8fbb8": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "Kroil Lubricants",
+            "link": "shopify:\/\/collections\/kroil-lubricants"
+          }
+        },
+        "221f9638-0795-431e-a85f-327ac87c0728": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "BIKE LOGO 6",
+            "link": ""
+          }
+        },
+        "38d762bd-58e9-4635-b722-7cb0873b4f7e": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "BIKE LOGO 7",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "91ca7a11-0eaa-4fd3-9366-968e96f57b25",
+        "template--16050059739312__6839685d-32ce-493e-b561-f71d060cedd0-1672153091b3a4543f-0",
+        "template--16050059739312__6839685d-32ce-493e-b561-f71d060cedd0-1672153091b3a4543f-1",
+        "template--16050059739312__6839685d-32ce-493e-b561-f71d060cedd0-1672153091b3a4543f-2",
+        "3529ef41-6e9e-4437-b39b-1a613b8fd9a8",
+        "4ba8303a-21da-4d36-9d9a-2b8ae70ba2e6",
+        "cc231a14-b27f-43ec-a69f-e6a7ca8d2bd5",
+        "5ec7dc96-f2b6-432b-848b-9d9b96e8fbb8",
+        "221f9638-0795-431e-a85f-327ac87c0728",
+        "38d762bd-58e9-4635-b722-7cb0873b4f7e"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "eyebrow_style": "eyebrow",
+        "headline": "",
+        "headline_style": "h2",
+        "description": "",
+        "description_style": "text-body",
+        "background_color": "#ffffff",
+        "text_color": "#0092ff",
+        "headline_color": "",
+        "desktop_top_padding": 60,
+        "desktop_bottom_padding": 30,
+        "mobile_top_padding": 30,
+        "mobile_bottom_padding": 30,
+        "animation_effect": "fadeInUp",
+        "animation_time": "0.2s",
+        "display_margins": false
+      }
+    },
+    "icon_list_MWjPmA": {
+      "type": "icon-list",
+      "blocks": {
+        "divider_mUNzT3": {
+          "type": "divider",
+          "settings": {
+            "text": "L",
+            "display_line": true
+          }
+        },
+        "icon_bPCbyB": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lennox-icon.svg",
+            "text": "Lenox",
+            "link": "shopify:\/\/collections\/lenox"
+          }
+        },
+        "icon_NECUqB": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/loctite-icon.svg",
+            "text": "Loctite",
+            "link": "shopify:\/\/collections\/loctite"
+          }
+        },
+        "icon_8GCbmx": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "divider_mUNzT3",
+        "icon_bPCbyB",
+        "icon_NECUqB",
+        "icon_8GCbmx"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "eyebrow_style": "eyebrow",
+        "headline": "",
+        "headline_style": "h2",
+        "description": "",
+        "description_style": "text-body",
+        "background_color": "",
+        "text_color": "",
+        "headline_color": "",
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 50,
+        "animation_effect": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false
+      }
+    },
+    "icon_list_MJNVgX": {
+      "type": "icon-list",
+      "blocks": {
+        "divider_rLxTJW": {
+          "type": "divider",
+          "settings": {
+            "text": "N",
+            "display_line": true
+          }
+        },
+        "icon_kVQc6z": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nucor-icon.svg",
+            "text": "Nucor USA-Made Fasteners",
+            "link": "shopify:\/\/collections\/nucor-usa-made-fasteners"
+          }
+        },
+        "icon_UQwbKt": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        },
+        "icon_JhAtVr": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "divider_rLxTJW",
+        "icon_kVQc6z",
+        "icon_UQwbKt",
+        "icon_JhAtVr"
+      ],
+      "disabled": true,
+      "settings": {
+        "eyebrow": "",
+        "eyebrow_style": "eyebrow",
+        "headline": "",
+        "headline_style": "h2",
+        "description": "",
+        "description_style": "text-body",
+        "background_color": "",
+        "text_color": "",
+        "headline_color": "",
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 50,
+        "animation_effect": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false
+      }
+    },
+    "icon_list_Qkn4Gp": {
+      "type": "icon-list",
+      "blocks": {
+        "divider_Tzwb86": {
+          "type": "divider",
+          "settings": {
+            "text": "P",
+            "display_line": true
+          }
+        },
+        "icon_wYB4rm": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/permatex-icon.svg",
+            "text": "Permatex",
+            "link": "shopify:\/\/collections\/permatex"
+          }
+        },
+        "icon_KXwdcH": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        },
+        "icon_z7F3fE": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "divider_Tzwb86",
+        "icon_wYB4rm",
+        "icon_KXwdcH",
+        "icon_z7F3fE"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "eyebrow_style": "eyebrow",
+        "headline": "",
+        "headline_style": "h2",
+        "description": "",
+        "description_style": "text-body",
+        "background_color": "",
+        "text_color": "",
+        "headline_color": "",
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 50,
+        "animation_effect": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false
+      }
+    },
+    "b11f94f6-f356-44cb-999d-ad3133050a2e": {
+      "type": "icon-list",
+      "blocks": {
+        "b4b13f2c-81d0-4ade-9b5e-97e510bc9744": {
+          "type": "divider",
+          "settings": {
+            "text": "W",
+            "display_line": true
+          }
+        },
+        "template--16050059739312__b11f94f6-f356-44cb-999d-ad3133050a2e-1672172551752ac81f-0": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/wd40-ivon.svg",
+            "text": "WD-40",
+            "link": "shopify:\/\/collections\/wd-40"
+          }
+        },
+        "template--16050059739312__b11f94f6-f356-44cb-999d-ad3133050a2e-1672172551752ac81f-1": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/weatherhead-icon.svg",
+            "text": "Weatherhead by Danfos",
+            "link": "shopify:\/\/collections\/weatherhead-by-danfoss-1"
+          }
+        },
+        "template--16050059739312__b11f94f6-f356-44cb-999d-ad3133050a2e-1672172551752ac81f-2": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "TBD",
+            "link": ""
+          }
+        },
+        "f313176c-28d3-479c-b65c-71e47c4c0de7": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "BIKE LOGO 11",
+            "link": ""
+          }
+        },
+        "c9ea09fc-0f5c-4579-975f-a99a3f37cc9d": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "TBD",
+            "link": ""
+          }
+        },
+        "7c97faac-0e0b-4d36-bb51-3a93f22df74c": {
+          "type": "icon",
+          "disabled": true,
+          "settings": {
+            "text": "TBD",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b4b13f2c-81d0-4ade-9b5e-97e510bc9744",
+        "template--16050059739312__b11f94f6-f356-44cb-999d-ad3133050a2e-1672172551752ac81f-0",
+        "template--16050059739312__b11f94f6-f356-44cb-999d-ad3133050a2e-1672172551752ac81f-1",
+        "template--16050059739312__b11f94f6-f356-44cb-999d-ad3133050a2e-1672172551752ac81f-2",
+        "f313176c-28d3-479c-b65c-71e47c4c0de7",
+        "c9ea09fc-0f5c-4579-975f-a99a3f37cc9d",
+        "7c97faac-0e0b-4d36-bb51-3a93f22df74c"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "eyebrow_style": "eyebrow",
+        "headline": "",
+        "headline_style": "h2",
+        "description": "",
+        "description_style": "text-body",
+        "background_color": "",
+        "text_color": "#0092ff",
+        "headline_color": "",
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "animation_effect": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false
+      }
+    },
+    "1648577549163c6fb6": {
+      "type": "image-with-text",
+      "blocks": {
+        "164857754923514a04-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Thoughtful designs, masterful execution",
+            "heading_size": "h1",
+            "heading_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        },
+        "164857754923514a04-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every one of our bikes has been designed by hand by our incredibly skilled engineers, has undergone hours of rigorous stress testing, and is assembled by hand. <\/p>",
+            "text_style": "body",
+            "text_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        }
+      },
+      "block_order": [
+        "164857754923514a04-0",
+        "164857754923514a04-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#131313",
+        "content_background_color": "#ffffff",
+        "dark_mode": false,
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "none",
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 50,
+        "display_margins": false
+      }
+    },
+    "164930271283413e9a": {
+      "type": "rich-text",
+      "blocks": {
+        "565a6fae-4a52-4037-a827-6f446313d911": {
+          "type": "padding",
+          "settings": {
+            "mobile_padding_amount": 10,
+            "desktop_padding_amount": 30
+          }
+        },
+        "1649302712ef604f65-1": {
+          "type": "text",
+          "settings": {
+            "richtext_animation": "NoEffect",
+            "richtext_animation_time": "0.2s",
+            "text": "<p>For 26 years, we’ve been dedicated to crafting the finest, most durable and reliable bikes and gear so that you can explore faster, farther, and longer.<\/p>",
+            "text_color": "#4a4a4a",
+            "text_style": "text-body-medium"
+          }
+        },
+        "4889f14e-f51e-4275-9817-67660293ad94": {
+          "type": "padding",
+          "settings": {
+            "mobile_padding_amount": 10,
+            "desktop_padding_amount": 35
+          }
+        }
+      },
+      "block_order": [
+        "565a6fae-4a52-4037-a827-6f446313d911",
+        "1649302712ef604f65-1",
+        "4889f14e-f51e-4275-9817-67660293ad94"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "",
+        "desktop_max_content_width": 750,
+        "container_alignment": "center",
+        "text_alignment": "center",
+        "height_desktop": 0,
+        "height_mobile": 0,
+        "desktop_top_padding": 60,
+        "desktop_bottom_padding": 60,
+        "mobile_top_padding": 45,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "16485840856b5bdf42": {
+      "type": "featured-links",
+      "blocks": {
+        "be14624b-dceb-49ef-b1d2-7734573d4e39": {
+          "type": "link",
+          "settings": {
+            "heading": "Product Guides",
+            "heading_size": "h4",
+            "heading_color": "#ffffff",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "",
+            "background_color": "",
+            "button_style": "primary",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "91556af7-4727-4f26-bccc-2cd0a943beef": {
+          "type": "link",
+          "settings": {
+            "heading": "Bike Care",
+            "heading_size": "h4",
+            "heading_color": "#ffffff",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "",
+            "background_color": "",
+            "button_style": "primary",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "c7ecf95e-15e8-4e5b-ba6a-77231f4035fe": {
+          "type": "link",
+          "settings": {
+            "heading": "Pro Tips",
+            "heading_size": "h4",
+            "heading_color": "#ffffff",
+            "heading_on_image": false,
+            "description": "",
+            "link_url": "",
+            "image_link_accessability_text": "",
+            "image_hover": "noeffect",
+            "button_label": "",
+            "background_color": "",
+            "button_style": "primary",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "be14624b-dceb-49ef-b1d2-7734573d4e39",
+        "91556af7-4727-4f26-bccc-2cd0a943beef",
+        "c7ecf95e-15e8-4e5b-ba6a-77231f4035fe"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "#131313",
+        "heading": "Explore insights from our experts",
+        "heading_size": "h1",
+        "heading_color": "#ffffff",
+        "eyebrow": "",
+        "eyebrow_color": "",
+        "heading_wrapper_animation": "NoEffect",
+        "heading_wrapper_animation_time": "0.2s",
+        "link_display": "margins",
+        "desktop_columns": "3",
+        "desktop_tile_layout": "image-on-top",
+        "desktop_content_alignment": "center",
+        "mobile_tile_layout": "image-on-top",
+        "mobile_content_alignment": "center",
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 50,
+        "display_margins": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "16484545291ecbe325",
+    "6839685d-32ce-493e-b561-f71d060cedd0",
+    "icon_list_MWjPmA",
+    "icon_list_MJNVgX",
+    "icon_list_Qkn4Gp",
+    "b11f94f6-f356-44cb-999d-ad3133050a2e",
+    "1648577549163c6fb6",
+    "164930271283413e9a",
+    "16485840856b5bdf42",
+    "main"
+  ]
+}

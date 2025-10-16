@@ -1,0 +1,201 @@
+{{ 'in-page-promo-banner.css' | asset_url | stylesheet_tag }}
+
+<div id="promo-banner-{{ section.id }}" class="in-page-promo-banner js-in-page-promo-banner visually-hidden">
+    <div class="in-page-promo-banner__inner-wrap {% if section.settings.full_width_mobile %}in-page-promo-banner__inner-wrap--full-width-mobile{% endif %}">
+        {% if section.settings.image != blank %}
+            <div class="in-page-promo-banner__img-wrap {% if section.settings.hide_mobile_image%}small-hide{% endif %}">
+                {% render 'image',
+                    image: section.settings.image,
+                    class: 'in-page-promo-banner__img',
+                %}
+            </div>
+        {% endif %}
+
+        <div class="in-page-promo-banner__text-content {% if section.settings.section_theme == 'dark_theme' %}dark-background{% endif %}">
+            {% if section.settings.eyebrow_text != blank %}
+                <p class="in-page-promo-banner__eyebrow eyebrow">{{ section.settings.eyebrow_text }}</p>
+            {% endif %}
+            {% if section.settings.headline_text != blank %}
+                <h2 class="in-page-promo-banner__headline {{ section.settings.headline_size }}">{{ section.settings.headline_text }}</h2>
+            {% endif %}
+            {% if section.settings.message_text != blank %}
+                <div class="in-page-promo-banner__message">
+                    {{ section.settings.message_text }}
+                </div>
+            {% endif %}
+            {% if section.settings.link_text != blank %}
+                <a class="in-page-promo-banner__link button button--link-1 " href="{{ section.settings.link.url }}">
+                    {{ section.settings.link_text }}
+                    {%  render 'icon-arrow-right' %}
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% style %}
+
+@media screen and (max-width: 749px) {
+    {% if section.settings.mobile_layout == 'text_first'%}
+        #promo-banner-{{ section.id }} .in-page-promo-banner__inner-wrap {
+            flex-direction: column-reverse;
+        }
+    {% endif %}
+}
+
+@media screen and (min-width: 750px) {
+    {% if section.settings.desktop_layout == 'text_first'%}
+        #promo-banner-{{ section.id }} .in-page-promo-banner__inner-wrap {
+            flex-direction: row-reverse;
+        }
+    {% endif %}
+}
+
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "In Page Promo Banner",
+  "tag": "section",
+  "class": "in_page_promo_banner",
+  "settings": [
+    {
+        "type": "select",
+        "id": "section_theme",
+        "options": [
+            {
+            "value": "light_theme",
+            "label": "Brand light"
+            },
+            {
+            "value": "dark_theme",
+            "label": "Brand dark"
+            }
+        ],
+        "default": "light_theme",
+        "label": "Color theme"
+    },
+    {
+        "type": "header",
+        "content": "Layout settings"
+    },
+    {
+        "type": "checkbox",
+        "id": "hide_mobile_image",
+        "label": "Hide image on mobile",
+        "default": false
+    },
+    {
+        "type": "select",
+        "id": "desktop_layout",
+        "options": [
+            {
+            "value": "image_first",
+            "label": "Image first"
+            },
+            {
+            "value": "text_first",
+            "label": "Text first"
+            }
+        ],
+        "default": "text_first",
+        "label": "Desktop image placement"
+    },
+    {
+        "type": "select",
+        "id": "mobile_layout",
+        "options": [
+            {
+            "value": "image_first",
+            "label": "Image first"
+            },
+            {
+            "value": "text_first",
+            "label": "Text first"
+            }
+        ],
+        "default": "image_first",
+        "label": "Mobile image placement"
+    },
+    {
+        "type": "checkbox",
+        "id": "full_width_mobile",
+        "label": "Enforce full width on mobile",
+        "default": false,
+        "info": "Overwrite any desktop margin or padding settings and display as full width on mobile."
+    },
+    {
+        "type": "header",
+        "content": "Content",
+        "info": "All values are optional"
+    },
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Desktop Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile Image",
+        "info": "Option image for mobile display.  The section will default to desktop image if no mobile image is provided."
+    },
+    {
+        "type": "text",
+        "id": "eyebrow_text",
+        "label": "Eyebrow text"
+    },
+    {
+        "type": "text",
+        "id": "headline_text",
+        "label": "Headline text"
+    },
+    {
+        "type": "select",
+        "id": "headline_size",
+        "options": [
+            {
+            "value": "h2",
+            "label": "Extra Large"
+            },
+            {
+            "value": "h3",
+            "label": "Large"
+            },
+            {
+            "value": "h4",
+            "label": "Medium"
+            },
+            {
+            "value": "h5",
+            "label": "Small"
+            },
+            {
+            "value": "h6",
+            "label": "Extra small"
+            }
+        ],
+        "default": "h3",
+        "label": "Headline font size"
+    },
+    {
+        "type": "richtext",
+        "id": "message_text",
+        "label": "Message text"
+    },
+    {
+        "type": "text",
+        "id": "link_text",
+        "label": "Link label"
+    },
+    {
+        "type": "url",
+        "id": "link",
+        "label": "Link URL"
+    }
+  ],
+  "presets": [{
+    "name": "In-Page Promo Banner"
+  }]
+}
+{% endschema %}

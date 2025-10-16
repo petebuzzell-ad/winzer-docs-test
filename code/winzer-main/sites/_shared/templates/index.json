@@ -1,0 +1,1685 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "06b6a07c-684f-4f0a-b07a-0ef314bcbd70": {
+      "type": "image-banner",
+      "blocks": {
+        "ea298d00-f82d-427e-8b4e-663f1c6e96c5": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "OneSource",
+            "eyebrow_style": "eyebrow"
+          }
+        },
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Source for Garage Must-Haves",
+            "heading_size": "h1"
+          }
+        },
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We offer all the essentials for car enthusiasts, restorers and do-it-yourselfers.<\/p>",
+            "text_style": "text-body-large"
+          }
+        },
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-3": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Shop Best Sellers",
+            "button_link_1": "shopify:\/\/collections\/accessories",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "link-1",
+            "button_style_mobile_2": "link-1",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "#ffffff",
+            "links_color_override": false,
+            "links_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "ea298d00-f82d-427e-8b4e-663f1c6e96c5",
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-1",
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-2",
+        "template--15472212902064__06b6a07c-684f-4f0a-b07a-0ef314bcbd70-16727642128400674a-3"
+      ],
+      "settings": {
+        "desktop_image": "shopify:\/\/shop_images\/Billboard_desk.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/Billboard_mob.jpg",
+        "enable_parallax": false,
+        "desktop_max_height": 600,
+        "section_background_color": "#000000",
+        "content_background_color": "#131c3b",
+        "box_border_color": "#ffffff",
+        "show_text_box": false,
+        "show_container_mobile": false,
+        "content_background_opacity": 100,
+        "content_area_max_width": 600,
+        "show_border_desktop": false,
+        "show_border_offset_desktop": false,
+        "show_border_mobile": false,
+        "show_border_offset_mobile": false,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "hide_image_mobile": false,
+        "section_url": "",
+        "hide_section_mobile": false,
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false
+      }
+    },
+    "icon_list_Ni7AWM": {
+      "type": "icon-list",
+      "blocks": {
+        "icon_RLR6x7": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Fasteners.png",
+            "text": "Fasteners",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "icon_HBLyF9": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hydraulic.png",
+            "text": "Hydraulics & Pneumatics",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "icon_yjBqVm": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Electrical.png",
+            "text": "Electrical",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "icon_Cmx4jW": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cutting_Tools.png",
+            "text": "Cutting Tools",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "icon_b4JFYy": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Cleaning.png",
+            "text": "Cleaning & Organization",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "icon_FFrgbW": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Safety.png",
+            "text": "Safety",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "icon_bFAmrL": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Abrasives.png",
+            "text": "Abrasives",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "icon_RUUMwd": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Exclude.png",
+            "text": "Paint & Body",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "icon_93eXfB": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Tools.png",
+            "text": "Tools",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "icon_Ycj9be": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Automotive.png",
+            "text": "Vehicle Maintenance",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "icon_7eMFFL": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Clearance.png",
+            "text": "Clearance",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        },
+        "icon_KyBXf9": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Best_Sellers.png",
+            "text": "Best Sellers",
+            "link": "shopify:\/\/pages\/contact"
+          }
+        }
+      },
+      "block_order": [
+        "icon_RLR6x7",
+        "icon_HBLyF9",
+        "icon_yjBqVm",
+        "icon_Cmx4jW",
+        "icon_b4JFYy",
+        "icon_FFrgbW",
+        "icon_bFAmrL",
+        "icon_RUUMwd",
+        "icon_93eXfB",
+        "icon_Ycj9be",
+        "icon_7eMFFL",
+        "icon_KyBXf9"
+      ],
+      "settings": {
+        "eyebrow": "FEATURED CATEGORIES",
+        "eyebrow_style": "eyebrow",
+        "headline": "Parts for Every Project",
+        "headline_style": "h2",
+        "description": "",
+        "description_style": "text-body",
+        "background_color": "#f3f1ee",
+        "text_color": "#db3700",
+        "headline_color": "",
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 50,
+        "animation_effect": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false
+      }
+    },
+    "1645433899f17c1025": {
+      "type": "featured-links",
+      "blocks": {
+        "66deeb3a-8330-415c-8dac-71fc7a458e19": {
+          "type": "link",
+          "settings": {
+            "heading": "Essential Tools for DIY-ers",
+            "heading_size": "cql-headline-3",
+            "heading_color": "#db3700",
+            "heading_on_image": false,
+            "link_url": "#",
+            "image": "shopify:\/\/shop_images\/Group_934.jpg",
+            "image_hover": "noeffect",
+            "description": "<p>Keep your projects going with these top tools.<\/p>",
+            "button_label": "Shop Tools",
+            "background_color": "rgba(0,0,0,0)",
+            "button_style": "primary",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "1255cb75-a05a-47dc-a3a6-4350dd8e04a8": {
+          "type": "link",
+          "settings": {
+            "heading": "Get Your Ride Summer Ready",
+            "heading_size": "cql-headline-3",
+            "heading_color": "#db3700",
+            "heading_on_image": false,
+            "link_url": "#",
+            "image": "shopify:\/\/shop_images\/Group_934_1.jpg",
+            "image_hover": "noeffect",
+            "description": "<p>Shine Brighter with 20% off detailing supplies.<\/p>",
+            "button_label": "Shop the Sale",
+            "background_color": "",
+            "button_style": "primary",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "fcdc71e2-e4da-4bca-b322-a01bf8a12fc3": {
+          "type": "link",
+          "settings": {
+            "heading": "Last Chance Clearance Deals",
+            "heading_size": "cql-headline-3",
+            "heading_color": "#db3700",
+            "heading_on_image": false,
+            "link_url": "#",
+            "image": "shopify:\/\/shop_images\/Group_934_2.jpg",
+            "image_hover": "noeffect",
+            "description": "<p>Get them before they’re gone.<\/p>",
+            "button_label": "Shop Clearance",
+            "background_color": "",
+            "button_style": "primary",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_qXPmpE": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "heading": "Triathalon Bikes",
+            "heading_size": "h4",
+            "heading_color": "#ffffff",
+            "heading_on_image": false,
+            "link_url": "shopify:\/\/collections\/bikes",
+            "image_hover": "noeffect",
+            "description": "<p>lorem ipsum adaptable, built with reliability in mind<\/p>",
+            "button_label": "",
+            "background_color": "",
+            "button_style": "primary",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        },
+        "link_EfXFMM": {
+          "type": "link",
+          "disabled": true,
+          "settings": {
+            "heading": "Road Bike",
+            "heading_size": "h4",
+            "heading_color": "#ffffff",
+            "heading_on_image": false,
+            "link_url": "shopify:\/\/collections\/bikes",
+            "image_hover": "noeffect",
+            "description": "<p>lorem ipsum built for beginners to experience the thrill of cycling<\/p>",
+            "button_label": "",
+            "background_color": "",
+            "button_style": "primary",
+            "featured_animation": "NoEffect",
+            "featured_animation_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "66deeb3a-8330-415c-8dac-71fc7a458e19",
+        "1255cb75-a05a-47dc-a3a6-4350dd8e04a8",
+        "fcdc71e2-e4da-4bca-b322-a01bf8a12fc3",
+        "link_qXPmpE",
+        "link_EfXFMM"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_color": "#ffffff",
+        "eyebrow": "",
+        "eyebrow_color": "#ffffff",
+        "heading_wrapper_animation": "NoEffect",
+        "heading_wrapper_animation_time": "0.2s",
+        "link_display": "margins",
+        "desktop_columns": "3",
+        "desktop_tile_layout": "image-on-top",
+        "desktop_content_alignment": "center",
+        "mobile_tile_layout": "image-on-top",
+        "mobile_content_alignment": "center",
+        "desktop_top_padding": 100,
+        "desktop_bottom_padding": 100,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 50,
+        "display_margins": false
+      }
+    },
+    "rich_text_YrVrp8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_aKBXmn": {
+          "type": "heading",
+          "settings": {
+            "headline_animation": "NoEffect",
+            "headline_animation_time": "0.2s",
+            "heading": "Brands You Can Trust",
+            "heading_color": "#ffffff",
+            "heading_size": "h2"
+          }
+        },
+        "text_DfkNFU": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "richtext_animation": "NoEffect",
+            "richtext_animation_time": "0.2s",
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>",
+            "text_color": "#000000",
+            "text_style": "text-body"
+          }
+        },
+        "button_yJjMy4": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style": "primary",
+            "button_shape": "round",
+            "button_size": "small",
+            "mobile_button_size": "small",
+            "button_arrow": "none"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aKBXmn",
+        "text_DfkNFU",
+        "button_yJjMy4"
+      ],
+      "settings": {
+        "background_color": "#131c3b",
+        "desktop_max_content_width": 750,
+        "container_alignment": "center",
+        "text_alignment": "center",
+        "height_desktop": 0,
+        "height_mobile": 0,
+        "desktop_top_padding": 50,
+        "desktop_bottom_padding": 28,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 20,
+        "display_margins": false
+      }
+    },
+    "164273977304b2131b": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_ACDVN9": {
+          "type": "image",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/3M-logo-orange_1.png"
+          }
+        },
+        "fad43971-a4c0-43e4-9989-dc34e94fe512": {
+          "type": "eyebrow",
+          "disabled": true,
+          "settings": {
+            "text": "Bike Care",
+            "text_color": "#4a4a4a",
+            "text_alignment": "align-left"
+          }
+        },
+        "164273977340c04936-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "100 Years of Innovation",
+            "heading_size": "h3",
+            "heading_color": "#131c3b",
+            "text_alignment": "align-left"
+          }
+        },
+        "164273977340c04936-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Car owners around the world trust 3M for cutting edge automotive solutions with auto body fillers, adhesives, cleaners, waxes, polishes and more.<\/p>",
+            "text_style": "text-body-large",
+            "text_color": "#131c3b",
+            "text_alignment": "align-left"
+          }
+        },
+        "164273977340c04936-2": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Shop 3M Products",
+            "button_link_1": "shopify:\/\/collections\/custom-test-1",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_ACDVN9",
+        "fad43971-a4c0-43e4-9989-dc34e94fe512",
+        "164273977340c04936-0",
+        "164273977340c04936-1",
+        "164273977340c04936-2"
+      ],
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#131c3b",
+        "content_background_color": "#ffffff",
+        "image": "shopify:\/\/shop_images\/hp.jpg",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "5s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "center",
+        "section_padding": "normal",
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "cards_tpXYgA": {
+      "type": "cards",
+      "blocks": {
+        "card_C96LN9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WD40-logo-white-2_1.png",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": ""
+          }
+        },
+        "card_U4BRqJ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nebo-logo-white_1.png",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": ""
+          }
+        },
+        "card_a6kdYF": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/morse-logo-white_1.png",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": ""
+          }
+        },
+        "card_TRnzdf": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_936.png",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": ""
+          }
+        },
+        "card_y4xw8H": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3M-logo-white_1.png",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": ""
+          }
+        },
+        "card_yDpMMd": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WD40-logo-white-2_1.png",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": ""
+          }
+        },
+        "card_NWkpgH": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_936.png",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": ""
+          }
+        },
+        "card_qi78MF": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/morse-logo-white_1.png",
+            "heading": "",
+            "text_align": "center",
+            "description": "",
+            "features": "",
+            "clickable_card_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_C96LN9",
+        "card_U4BRqJ",
+        "card_a6kdYF",
+        "card_TRnzdf",
+        "card_y4xw8H",
+        "card_yDpMMd",
+        "card_NWkpgH",
+        "card_qi78MF"
+      ],
+      "settings": {
+        "headline": "",
+        "eyebrow": "",
+        "headline_size": "h1",
+        "text_style": "subtitle",
+        "card_hover": false,
+        "card_slider": true,
+        "text_color": "#131c3b",
+        "text_bg_color": "#131c3b",
+        "desktop_top_padding": 50,
+        "desktop_bottom_padding": 50,
+        "mobile_top_padding": 35,
+        "mobile_bottom_padding": 10,
+        "display_margins": false
+      }
+    },
+    "info_carousel_wntMek": {
+      "type": "info-carousel",
+      "blocks": {
+        "media_slide_CjkWfY": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WD40-logo-white-2_1.png",
+            "description": "",
+            "text_color": "",
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "media_slide_bpV3G6": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nebo-logo-white_1.png",
+            "description": "",
+            "text_color": "",
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "media_slide_EN9GAT": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/morse-logo-white_1.png",
+            "description": "",
+            "text_color": "",
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "media_slide_YypBJ8": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_936.png",
+            "description": "",
+            "text_color": "",
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        },
+        "media_slide_pAcWyj": {
+          "type": "media_slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3M-logo-white_1.png",
+            "description": "",
+            "text_color": "",
+            "button_animation": "NoEffect",
+            "button_animation_time": "0.2s",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "media_slide_CjkWfY",
+        "media_slide_bpV3G6",
+        "media_slide_EN9GAT",
+        "media_slide_YypBJ8",
+        "media_slide_pAcWyj"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "#131c3b",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "accessibility_info": "Slideshow about our brand",
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 30,
+        "mobile_bottom_padding": 30,
+        "display_margins": false
+      }
+    },
+    "1642739949b5943f7b": {
+      "type": "image-with-text",
+      "blocks": {
+        "4dae092b-07ac-42c2-b8d6-7c7041b2dd9e": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "Our Story",
+            "text_color": "#b0bfd8",
+            "text_alignment": "align-left"
+          }
+        },
+        "9854f8f5-b738-4267-b36b-084cdea5a5c4": {
+          "type": "heading",
+          "settings": {
+            "heading": "Empowering Drivers Every Mile of the Way",
+            "heading_size": "cql-headline-2",
+            "heading_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        },
+        "cee0aaa9-88ea-4a8d-95a6-3fe7cb136199": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our team of passionate car care experts strives to make OneSource the one stop for your auto care needs. <\/p>",
+            "text_style": "body",
+            "text_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        },
+        "62aba382-bfae-409c-a10f-33322ed3d244": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_desktop_1": "primary",
+            "button_style_mobile_1": "primary",
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "4dae092b-07ac-42c2-b8d6-7c7041b2dd9e",
+        "9854f8f5-b738-4267-b36b-084cdea5a5c4",
+        "cee0aaa9-88ea-4a8d-95a6-3fe7cb136199",
+        "62aba382-bfae-409c-a10f-33322ed3d244"
+      ],
+      "disabled": true,
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#131c3b",
+        "content_background_color": "#ffffff",
+        "background_desktop_image": "shopify:\/\/shop_images\/Image_Locked_Aspect_Ratios.jpg",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "5s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "small",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "normal",
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 80,
+        "desktop_bottom_padding": 80,
+        "mobile_top_padding": 50,
+        "mobile_bottom_padding": 50,
+        "display_margins": false
+      }
+    },
+    "16427360944b4df878": {
+      "type": "image-with-text",
+      "blocks": {
+        "image_4NdwTw": {
+          "type": "image",
+          "settings": {
+            "logo_img": "shopify:\/\/shop_images\/3M-logo-orange_1.png"
+          }
+        },
+        "1642736094243701cb-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "100 Years of Innovation",
+            "heading_size": "h1",
+            "heading_color": "#131c3b",
+            "text_alignment": "align-left"
+          }
+        },
+        "1642736094243701cb-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Car owners around the world trust 3M for cutting edge automotive solutions with auto body fillers, adhesives, cleaners, waxes, polishes and more.<\/p>",
+            "text_style": "text-body",
+            "text_color": "#131c3b",
+            "text_alignment": "align-left"
+          }
+        },
+        "1642736094243701cb-2": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_desktop_1": "primary",
+            "button_style_mobile_1": "primary",
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_4NdwTw",
+        "1642736094243701cb-0",
+        "1642736094243701cb-1",
+        "1642736094243701cb-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "shopify:\/\/collections\/all",
+        "background_color": "#131c3b",
+        "content_background_color": "#ffffff",
+        "image": "shopify:\/\/shop_images\/5x4_Locked_Aspect_Ratio.jpg",
+        "video_url": "",
+        "video_alt": "Alt text here",
+        "button_color_option": "#ffffff",
+        "animation": "fadeInUp",
+        "animation_time": "2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "small",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "center",
+        "section_padding": "normal",
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "1645547036f674b80e": {
+      "type": "featured-collections",
+      "blocks": {
+        "a63dcd66-b10a-43c4-8bb4-6718c4ce479f": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories",
+            "card_animation": "NoEffect",
+            "card_animation_time": "0.2s",
+            "tab_nav_label": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "cta_animation": "NoEffect",
+            "cta_animation_time": "0.2s"
+          }
+        },
+        "b5d8c657-14ee-469f-a352-085b67c0792a": {
+          "type": "collection",
+          "settings": {
+            "collection": "mens-apparel",
+            "card_animation": "NoEffect",
+            "card_animation_time": "0.2s",
+            "tab_nav_label": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "cta_animation": "NoEffect",
+            "cta_animation_time": "0.2s"
+          }
+        },
+        "7f515f38-8198-4945-88ee-2a4f2bf1883e": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-apparel",
+            "card_animation": "NoEffect",
+            "card_animation_time": "0.2s",
+            "tab_nav_label": "",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "cta_animation": "NoEffect",
+            "cta_animation_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "a63dcd66-b10a-43c4-8bb4-6718c4ce479f",
+        "b5d8c657-14ee-469f-a352-085b67c0792a",
+        "7f515f38-8198-4945-88ee-2a4f2bf1883e"
+      ],
+      "disabled": true,
+      "settings": {
+        "eyebrow": "",
+        "eyebrow_style": "eyebrow",
+        "heading": "TOP RATED GEAR",
+        "heading_size": "h0",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "description": "",
+        "description_style": "text-body",
+        "heading_color": "#4a4a4a",
+        "background_color": "rgba(0,0,0,0)",
+        "desktop_top_padding": 60,
+        "desktop_bottom_padding": 60,
+        "mobile_top_padding": 45,
+        "mobile_bottom_padding": 45,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_product_labels": true,
+        "image_hover": "noeffect",
+        "display_margins": false
+      }
+    },
+    "1644980664e60e5196": {
+      "type": "features-list",
+      "blocks": {
+        "16449806640b52a474-0": {
+          "type": "feature",
+          "settings": {
+            "image_hover": "noeffect",
+            "heading": "Thoughtful Designs",
+            "description": "<p>Award-winning, premium products from the minds of top designers<\/p>",
+            "features_list_animation": "NoEffect",
+            "features_list_animation_time": "0.2s"
+          }
+        },
+        "25de0845-330d-4672-baed-c0824608a602": {
+          "type": "feature",
+          "settings": {
+            "image_hover": "noeffect",
+            "heading": "Built to Last",
+            "description": "<p>Guaranteed to bring you years of top-notch comfort and value<\/p>",
+            "features_list_animation": "NoEffect",
+            "features_list_animation_time": "0.2s"
+          }
+        },
+        "f259baf4-82ca-413f-beb8-40ee35d591f3": {
+          "type": "feature",
+          "settings": {
+            "image_hover": "noeffect",
+            "heading": "Sustainable Materials",
+            "description": "<p>We’re committed to using eco-conscious, recycled materials<\/p>",
+            "features_list_animation": "NoEffect",
+            "features_list_animation_time": "0.2s"
+          }
+        },
+        "8b60e6a4-df3f-4919-a6fe-88021c3ab0f9": {
+          "type": "feature",
+          "settings": {
+            "image_hover": "noeffect",
+            "heading": "Free Shipping & Returns",
+            "description": "<p>All orders ship free; we’ll even assemble your bike!<\/p>",
+            "features_list_animation": "NoEffect",
+            "features_list_animation_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "16449806640b52a474-0",
+        "25de0845-330d-4672-baed-c0824608a602",
+        "f259baf4-82ca-413f-beb8-40ee35d591f3",
+        "8b60e6a4-df3f-4919-a6fe-88021c3ab0f9"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "features_head_animation": "NoEffect",
+        "features_head_animation_time": "0.2s",
+        "background_color": "#131313",
+        "heading_color": "#ffffff",
+        "feature_heading_color": "#ffffff",
+        "feature_text_color": "#ffffff",
+        "desktop_top_padding": 125,
+        "desktop_bottom_padding": 20,
+        "mobile_top_padding": 55,
+        "mobile_bottom_padding": 5,
+        "display_margins": false
+      }
+    },
+    "bd76cfb5-0b5f-4511-adfe-dbc2a3b7df2d": {
+      "type": "searchspring-recommendations",
+      "blocks": {
+        "recommendations_cKcWzg": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "",
+            "max_recommendations": 8,
+            "tab_title": ""
+          }
+        },
+        "8b2c7334-4628-47a0-99c4-dc5938b75c70": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "test",
+            "max_recommendations": 8,
+            "tab_title": "Off Road Bikes"
+          }
+        },
+        "453b42d6-8f78-487c-8cfe-c336af78251f": {
+          "type": "recommendations",
+          "settings": {
+            "profile_id": "test-two",
+            "max_recommendations": 8,
+            "tab_title": "Best Sellers"
+          }
+        }
+      },
+      "block_order": [
+        "recommendations_cKcWzg",
+        "8b2c7334-4628-47a0-99c4-dc5938b75c70",
+        "453b42d6-8f78-487c-8cfe-c336af78251f"
+      ],
+      "settings": {
+        "heading": "TOP RATED GEAR",
+        "heading_size": "brighton-h2",
+        "content_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "desktop_top_padding": 60,
+        "desktop_bottom_padding": 60,
+        "mobile_top_padding": 45,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "c3f9583d-0b59-4d04-b0f1-57093dd650ad": {
+      "type": "image-with-text-alternate",
+      "blocks": {
+        "template--15472212902064__c3f9583d-0b59-4d04-b0f1-57093dd650ad-1671144108aeb870c7-0": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "BIKE",
+            "eyebrow_style": "caption-with-letter-spacing",
+            "text_color": "#ffffff"
+          }
+        },
+        "template--15472212902064__c3f9583d-0b59-4d04-b0f1-57093dd650ad-1671144108aeb870c7-1": {
+          "type": "heading",
+          "settings": {
+            "text": "SAMPLE HEADLINE",
+            "text_color": "#ffffff",
+            "text_size": "cql-headline-2"
+          }
+        },
+        "template--15472212902064__c3f9583d-0b59-4d04-b0f1-57093dd650ad-1671144108aeb870c7-2": {
+          "type": "description",
+          "settings": {
+            "text": "<p>Give customers details about the image or content on the template.<\/p>",
+            "text_style": "text-body",
+            "text_color": "#ffffff"
+          }
+        },
+        "template--15472212902064__c3f9583d-0b59-4d04-b0f1-57093dd650ad-1671144108aeb870c7-3": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "BUTTON LABEL 1",
+            "button_link_1": "",
+            "button_style_1": "tertiary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": "secondary",
+            "show_side_by_side": false,
+            "show_separator": false,
+            "separator_color": "#51b5ff"
+          }
+        }
+      },
+      "block_order": [
+        "template--15472212902064__c3f9583d-0b59-4d04-b0f1-57093dd650ad-1671144108aeb870c7-0",
+        "template--15472212902064__c3f9583d-0b59-4d04-b0f1-57093dd650ad-1671144108aeb870c7-1",
+        "template--15472212902064__c3f9583d-0b59-4d04-b0f1-57093dd650ad-1671144108aeb870c7-2",
+        "template--15472212902064__c3f9583d-0b59-4d04-b0f1-57093dd650ad-1671144108aeb870c7-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "",
+        "content_background_color": "#000000",
+        "show_timeline": false,
+        "layout": "image_first",
+        "image_size": "image-default",
+        "layout_mobile": "image_first",
+        "layout_mobile_width": "mobile-content-default",
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 70,
+        "mobile_top_padding": 10,
+        "mobile_bottom_padding": 30,
+        "display_margins": false
+      }
+    },
+    "d366be9c-211a-47f1-99c1-dfe0aac81b7c": {
+      "type": "image-with-text-alternate",
+      "blocks": {
+        "template--15472212902064__d366be9c-211a-47f1-99c1-dfe0aac81b7c-1671142909ec401afb-0": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "BIKE DISPLAY",
+            "eyebrow_style": "caption-with-letter-spacing",
+            "text_color": "#000000"
+          }
+        },
+        "template--15472212902064__d366be9c-211a-47f1-99c1-dfe0aac81b7c-1671142909ec401afb-1": {
+          "type": "heading",
+          "settings": {
+            "text": "SAMPLE HEADLINE",
+            "text_color": "#000000",
+            "text_size": "cql-headline-2"
+          }
+        },
+        "template--15472212902064__d366be9c-211a-47f1-99c1-dfe0aac81b7c-1671142909ec401afb-2": {
+          "type": "description",
+          "settings": {
+            "text": "<p>Give customers details about the image or content on the template.<\/p>",
+            "text_style": "text-body",
+            "text_color": "#000000"
+          }
+        },
+        "template--15472212902064__d366be9c-211a-47f1-99c1-dfe0aac81b7c-1671142909ec401afb-3": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "BUTTON LABEL 1",
+            "button_link_1": "",
+            "button_style_1": "secondary",
+            "button_label_2": "BUTTON LABEL 2",
+            "button_link_2": "",
+            "button_style_2": "primary",
+            "show_side_by_side": false,
+            "show_separator": false,
+            "separator_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--15472212902064__d366be9c-211a-47f1-99c1-dfe0aac81b7c-1671142909ec401afb-0",
+        "template--15472212902064__d366be9c-211a-47f1-99c1-dfe0aac81b7c-1671142909ec401afb-1",
+        "template--15472212902064__d366be9c-211a-47f1-99c1-dfe0aac81b7c-1671142909ec401afb-2",
+        "template--15472212902064__d366be9c-211a-47f1-99c1-dfe0aac81b7c-1671142909ec401afb-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "background_color": "#131c3b",
+        "image": "shopify:\/\/shop_images\/5x4_Locked_Aspect_Ratio.jpg",
+        "content_background_color": "#f3f1ee",
+        "show_timeline": false,
+        "layout": "image_first",
+        "image_size": "image-default",
+        "layout_mobile": "image_first",
+        "layout_mobile_width": "mobile-content-default",
+        "desktop_top_padding": 20,
+        "desktop_bottom_padding": 70,
+        "mobile_top_padding": 30,
+        "mobile_bottom_padding": 60,
+        "display_margins": false
+      }
+    },
+    "6da2a7c1-1a9e-4d4c-ad90-5c519f97aa76": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "image_hover": "noeffect",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_alt_text": "Bicycle riding person",
+        "background_video": false,
+        "full_width": true,
+        "enable_autoplay": false,
+        "enable_modal": false,
+        "enable_autoplay_modal": false,
+        "background_color": "#131313",
+        "text_color": "#ffffff",
+        "button_fill_color": "#ffffff",
+        "overlay_color": "rgba(0,0,0,0)",
+        "overlay_opacity": 100,
+        "eyebrow": "",
+        "eyebrow_style": "eyebrow",
+        "headline": "",
+        "headline_style": "cql-headline-2",
+        "description": "",
+        "description_style": "text-body",
+        "animation_effect": "fadeInUp",
+        "animation_time": "5s",
+        "desktop_top_padding": 0,
+        "desktop_right_padding": 0,
+        "desktop_bottom_padding": 0,
+        "desktop_left_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_right_padding": 0,
+        "mobile_bottom_padding": 0,
+        "mobile_left_padding": 0,
+        "display_margins": false
+      }
+    },
+    "164489916253b02aca": {
+      "type": "social-media-feed",
+      "blocks": {
+        "1cd85fd4-9601-4a64-812b-10c674e09e66": {
+          "type": "media_item",
+          "disabled": true,
+          "settings": {
+            "add_hover": true,
+            "link": "#",
+            "image_animation": "NoEffect",
+            "image_time": "0.2s"
+          }
+        },
+        "53ed41b5-01d4-4447-ac6b-deaa01c2a95c": {
+          "type": "media_item",
+          "disabled": true,
+          "settings": {
+            "add_hover": true,
+            "link": "#",
+            "image_animation": "NoEffect",
+            "image_time": "0.2s"
+          }
+        },
+        "ed89e76c-c814-42db-97bd-5fdd3cbf3182": {
+          "type": "media_item",
+          "disabled": true,
+          "settings": {
+            "add_hover": true,
+            "link": "#",
+            "image_animation": "NoEffect",
+            "image_time": "0.2s"
+          }
+        },
+        "949baa90-ddbe-4a21-8dda-867fd76e8075": {
+          "type": "media_item",
+          "disabled": true,
+          "settings": {
+            "add_hover": true,
+            "link": "#",
+            "image_animation": "NoEffect",
+            "image_time": "0.2s"
+          }
+        }
+      },
+      "block_order": [
+        "1cd85fd4-9601-4a64-812b-10c674e09e66",
+        "53ed41b5-01d4-4447-ac6b-deaa01c2a95c",
+        "ed89e76c-c814-42db-97bd-5fdd3cbf3182",
+        "949baa90-ddbe-4a21-8dda-867fd76e8075"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "#Propel Your Adventure",
+        "heading_size": "h2",
+        "description": "",
+        "media_text_animation": "NoEffect",
+        "media_text_time": "0.2s",
+        "background_color": "#ffffff",
+        "heading_color": "#4a4a4a",
+        "text_color": "#4a4a4a",
+        "desktop_top_padding": 10,
+        "desktop_bottom_padding": 10,
+        "mobile_top_padding": 45,
+        "mobile_bottom_padding": 45,
+        "display_margins": false
+      }
+    },
+    "d2f64278-8352-4f6a-868f-871986afcc6b": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div\n     class=\"yotpo yotpo-pictures-widget\"\n     data-gallery-id=\"635ac26fc5e0e91b4323ca08\">\n<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "5a7ced97-f825-46d3-a21e-00802daa09eb": {
+      "type": "banner-grid",
+      "blocks": {
+        "1770da06-68af-40ad-ad68-090f71740ae1": {
+          "type": "cards",
+          "settings": {
+            "title": "Wood Deals Up to 50% Off",
+            "description": "<p>Surinam Ironwood, Ebiara S2S, 3-Pack Rough Sawn Padauk<\/p>",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_text": "Shop Now",
+            "button_width": "button--custom-large"
+          }
+        },
+        "0b747dfd-1f72-4150-a145-55e19e2a5ada": {
+          "type": "cards",
+          "settings": {
+            "title": "Small Projects for Food Lovers",
+            "description": "<p>Projects for your kitchen, home, workshop and more!<\/p>",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_text": "Shop Now",
+            "button_width": "button--custom-large"
+          }
+        },
+        "c20b17e0-f370-4d0b-833e-08068db3b9c5": {
+          "type": "cards",
+          "settings": {
+            "title": "Shop Sale",
+            "description": "",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_text": "Shop Now",
+            "button_width": "button--custom-small"
+          }
+        },
+        "d7efcde2-f39b-4980-a219-7e652f04fe28": {
+          "type": "cards",
+          "settings": {
+            "title": "Shop Clearance",
+            "description": "",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_text": "Shop Now",
+            "button_width": "button--custom-small"
+          }
+        }
+      },
+      "block_order": [
+        "1770da06-68af-40ad-ad68-090f71740ae1",
+        "0b747dfd-1f72-4150-a145-55e19e2a5ada",
+        "c20b17e0-f370-4d0b-833e-08068db3b9c5",
+        "d7efcde2-f39b-4980-a219-7e652f04fe28"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Make Some Sawdust with These Specials",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_text": "Shop All Special",
+        "section_button_style": "button--secondary",
+        "cards_button_style": "button--tertiary",
+        "display_margins": false
+      }
+    },
+    "image_with_text_7XzHNJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "eyebrow_LzVLCq": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "OUR STORY",
+            "text_color": "#b0bfd8",
+            "text_alignment": "align-left"
+          }
+        },
+        "heading_LtgfkX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Empowering Drivers Every Mile of the Way",
+            "heading_size": "cql-headline-1",
+            "heading_color": "#ffffff",
+            "text_alignment": "align-left"
+          }
+        },
+        "text_YdXgPN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our team of passionate car care experts strives to make OneSource the one stop for your auto care needs. <\/p>",
+            "text_style": "text-body-large",
+            "text_color": "#b0bfd8",
+            "text_alignment": "align-left"
+          }
+        },
+        "button_QwQ7kY": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "About Us",
+            "button_link_1": "shopify:\/\/pages\/about-us",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_LzVLCq",
+        "heading_LtgfkX",
+        "text_YdXgPN",
+        "button_QwQ7kY"
+      ],
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#131c3b",
+        "content_background_color": "#ffffff",
+        "image": "shopify:\/\/shop_images\/Image_Locked_Aspect_Ratios.jpg",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "none",
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "image_with_text_idVLeq": {
+      "type": "image-with-text",
+      "blocks": {
+        "eyebrow_tcQiLN": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "OUR COMMITMENT",
+            "text_color": "#db3700",
+            "text_alignment": "align-left"
+          }
+        },
+        "heading_Paxr3G": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Source for\u2028Quality & Service",
+            "heading_size": "cql-headline-1",
+            "heading_color": "#131c3b",
+            "text_alignment": "align-left"
+          }
+        },
+        "text_Ty3YeN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are committed to providing you with a hardware partner you can trust. We have a comprehensive selection of specialty products from the latest power tools to hard-to-find fasteners and fittings.<\/p>",
+            "text_style": "text-body-large",
+            "text_color": "#424551",
+            "text_alignment": "align-left"
+          }
+        },
+        "button_76iGjx": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Visit our Help Page",
+            "button_link_1": "shopify:\/\/pages\/help-page",
+            "button_style_desktop_1": "link-1",
+            "button_style_mobile_1": "link-1",
+            "button_label_2": "Chat with an Expert",
+            "button_link_2": "shopify:\/\/pages\/chat-with-an-expert",
+            "button_style_desktop_2": "link-1",
+            "button_style_mobile_2": "link-1",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_tcQiLN",
+        "heading_Paxr3G",
+        "text_Ty3YeN",
+        "button_76iGjx"
+      ],
+      "settings": {
+        "entire_section_clickable": false,
+        "entire_cta_url": "",
+        "background_color": "#f3f1ee",
+        "content_background_color": "#ffffff",
+        "image": "shopify:\/\/shop_images\/5x4_Locked_Aspect_Ratio_fb1b28ab-523a-469f-b313-d683a483da61.jpg",
+        "video_url": "",
+        "video_alt": "",
+        "button_color_option": "#ffffff",
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "height": "adapt",
+        "image_hover": "noeffect",
+        "desktop_image_width": "normal",
+        "mobile_image_width": "large",
+        "hide_corner_images_mobile": false,
+        "upper_left_image_width_desktop": 50,
+        "upper_left_image_width_tablet": 50,
+        "upper_left_image_width_mobile": 50,
+        "upper_right_image_width_desktop": 50,
+        "upper_right_image_width_tablet": 50,
+        "upper_right_image_width_mobile": 50,
+        "lower_left_image_width_desktop": 50,
+        "lower_left_image_width_tablet": 50,
+        "lower_left_image_width_mobile": 50,
+        "lower_right_image_width_desktop": 50,
+        "lower_right_image_width_tablet": 50,
+        "lower_right_image_width_mobile": 50,
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "mobile_content_alignment": "left",
+        "section_padding": "none",
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "full_width_mobile": false,
+        "desktop_top_padding": 0,
+        "desktop_bottom_padding": 0,
+        "mobile_top_padding": 0,
+        "mobile_bottom_padding": 0,
+        "display_margins": false
+      }
+    },
+    "1645036574a6d98c9c": {
+      "type": "info-carousel",
+      "blocks": {
+        "16450365745b533c04-0": {
+          "type": "testimonial_slide",
+          "settings": {
+            "slide_animation": "NoEffect",
+            "testimonial": "<p>OneSource’s selection, competitive pricing, and knowledgeable customer service make them my go-to source for all my automotive needs. They truly understand what it takes to keep a car performing at its best.<\/p>",
+            "slide_animation_time": "0.2s",
+            "byline": "<p>— Joe Ford, Robert’s Auto body<\/p>",
+            "slide_name_time": "0.2s",
+            "text_color": "#ffffff",
+            "display_icon": false,
+            "slide_icon_time": "0.2s",
+            "icon_color": "#0092ff"
+          }
+        },
+        "testimonial_slide_DiEHQd": {
+          "type": "testimonial_slide",
+          "settings": {
+            "slide_animation": "NoEffect",
+            "testimonial": "<p>OneSource’s selection, competitive pricing, and knowledgeable customer service make them my go-to source for all my automotive needs. They truly understand what it takes to keep a car performing at its best.<\/p>",
+            "slide_animation_time": "0.2s",
+            "byline": "<p>— Joe Ford, Robert’s Auto body<\/p>",
+            "slide_name_time": "0.2s",
+            "text_color": "#ffffff",
+            "display_icon": false,
+            "slide_icon_time": "0.2s",
+            "icon_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "16450365745b533c04-0",
+        "testimonial_slide_DiEHQd"
+      ],
+      "settings": {
+        "background_color": "#f05400",
+        "background_desktop_image": "shopify:\/\/shop_images\/AdobeStock_64875500_1.png",
+        "background_mobile_image": "shopify:\/\/shop_images\/AdobeStock_64875500_1_1.png",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "accessibility_info": "Slideshow about our brand",
+        "desktop_top_padding": 110,
+        "desktop_bottom_padding": 130,
+        "mobile_top_padding": 15,
+        "mobile_bottom_padding": 20,
+        "display_margins": false
+      }
+    }
+  },
+  "order": [
+    "06b6a07c-684f-4f0a-b07a-0ef314bcbd70",
+    "icon_list_Ni7AWM",
+    "1645433899f17c1025",
+    "rich_text_YrVrp8",
+    "164273977304b2131b",
+    "cards_tpXYgA",
+    "info_carousel_wntMek",
+    "1642739949b5943f7b",
+    "16427360944b4df878",
+    "1645547036f674b80e",
+    "1644980664e60e5196",
+    "bd76cfb5-0b5f-4511-adfe-dbc2a3b7df2d",
+    "c3f9583d-0b59-4d04-b0f1-57093dd650ad",
+    "d366be9c-211a-47f1-99c1-dfe0aac81b7c",
+    "6da2a7c1-1a9e-4d4c-ad90-5c519f97aa76",
+    "164489916253b02aca",
+    "d2f64278-8352-4f6a-868f-871986afcc6b",
+    "5a7ced97-f825-46d3-a21e-00802daa09eb",
+    "image_with_text_7XzHNJ",
+    "image_with_text_idVLeq",
+    "1645036574a6d98c9c"
+  ]
+}

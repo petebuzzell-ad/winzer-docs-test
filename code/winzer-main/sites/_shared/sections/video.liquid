@@ -1,0 +1,429 @@
+{{ 'section-video.css' | asset_url | stylesheet_tag }}
+{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+
+{% capture margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% capture mobile_margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.mobile_margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    margin-top: {{ margin_size | divided_by: 10 }}rem;
+    margin-bottom: {{ margin_size | divided_by: 10 }}rem;
+  }
+
+  @media screen and (max-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      margin-top: {{ mobile_margin_size | divided_by: 10 }}rem;
+      margin-bottom: {{ mobile_margin_size | divided_by: 10 }}rem;
+    }
+  }
+{% endstyle %}
+
+<section id="section-{{ section.id }}" data-section-id="{{ section.id }}"
+  class="video__wrapper
+  {% if settings.scroll_appear == "fadein" %} fadeIn {% endif %}
+  {% if section.settings.image_hover == 'easein' %} hoverAnimation {% endif %}
+  {% if section.settings.background_video %} background-video{% endif %}"
+  {% if section.settings.background_color != 'rgba(0,0,0,0)' %}
+    style="background-color: {{ section.settings.background_color }};"
+  {% endif %}
+  >
+
+  {% if section.settings.overlay_color != 'rgba(0,0,0,0)' and section.settings.background_video %}
+    {% assign backgroundOpacity = section.settings.overlay_opacity | divided_by: 100.00 %}
+    <div class="video__overlay" style="background: {{ section.settings.overlay_color }}; background: {{ section.settings.overlay_color | color_to_rgb | color_modify: 'alpha', backgroundOpacity }};
+    {% if section.settings.cover_image != blank %} padding-bottom: {{ 1 | divided_by: section.settings.cover_image.aspect_ratio | times: 100 }}%;{% endif %}">
+    </div>
+  {% endif %}
+
+  <div class="video__heading page-width{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}">
+    {% render 'eyebrow', text: section.settings.eyebrow, text_style: section.settings.eyebrow_style, text_color: section.settings.text_color, class: "video__eyebrow" %}
+
+    {% render 'headline', text: section.settings.headline , text_style: section.settings.headline_style, text_color: section.settings.text_color, class: "video__title"%}
+
+    {% render 'description', text: section.settings.description, text_style: section.settings.description_style, text_color: section.settings.text_color, class: "video__description"%}
+  </div>
+
+  {%- if section.settings.background_video -%}
+    {% render 'video-background' %}
+  {%- elsif section.settings.enable_modal -%}
+    {% render 'video-modal' %}
+  {%- else -%}
+    {% render 'video-player' %}
+  {%- endif -%}
+</section>
+
+{%- if section.settings.background_video == false -%}
+{% assign section_selector = '#shopify-section-' | append: section.id %}
+{% style %}
+  @media screen and (max-width: 750px) {
+    {{ section_selector }} .video__wrapper {
+      padding-top: {{ section.settings.mobile_top_padding }}px;
+      padding-right: {{ section.settings.mobile_right_padding }}px;
+      padding-bottom: {{ section.settings.mobile_bottom_padding }}px;
+      padding-left: {{ section.settings.mobile_left_padding }}px;
+    }
+  }
+
+  @media screen and (min-width: 749px) {
+    {{ section_selector }} .video__wrapper {
+      padding-top: {{ section.settings.desktop_top_padding }}px;
+      padding-right: {{ section.settings.desktop_right_padding }}px;
+      padding-bottom: {{ section.settings.desktop_bottom_padding }}px;
+      padding-left: {{ section.settings.desktop_left_padding }}px;
+    }
+  }
+{% endstyle %}
+{%- endif -%}
+
+
+{% schema %}
+{
+  "name": "Video",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "cover_image",
+      "label": "Cover image",
+      "info": "Image ratio: 16/9."
+    },
+    {
+      "type": "select",
+      "id": "image_hover",
+      "options": [
+        {
+          "value": "easein",
+          "label": "Ease in"
+        },
+        {
+          "value": "noeffect",
+          "label": "No effect"
+        }
+      ],
+      "default": "noeffect",
+      "label": "Image hover"
+    },
+    {
+      "type": "header",
+      "content": "Video options"
+    },
+    {
+      "type": "video_url",
+      "id": "video_url",
+      "accept": [
+        "youtube",
+        "vimeo"
+      ],
+      "default": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+      "label": "Video URL",
+      "info": "Video plays in the page."
+    },
+    {
+      "type": "text",
+      "id": "video_alt_text",
+      "label": "Video alt text",
+      "info": "Describe the video to make it accessible for customers using screen readers."
+    },
+    {
+      "type": "paragraph",
+      "content": "Background videos are automatically muted to allow autoplay. Supports only YouTube videos at this time."
+    },
+    {
+      "type": "checkbox",
+      "id": "background_video",
+      "label": "Display as background video?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Make section full width?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_autoplay",
+      "label": "Autoplay video on page load?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_modal",
+      "label": "Display video player in modal?",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_autoplay_modal",
+      "label": "Autoplay video on modal load?",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Section colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "color",
+      "id": "button_fill_color",
+      "label": "Button fill color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "info": "Only used when video background in use."
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 100,
+      "label": "Overlay opacity"
+    },
+    {
+      "type": "header",
+      "content": "Eyebrow",
+      "info": "Optional"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "eyebrow_style",
+      "label": "Eyebrow style",
+      "default": "eyebrow",
+      "options": [
+        {
+          "value": "eyebrow",
+          "label": "Eyebrow - Small"
+        },
+        {
+          "value": "eyebrow-large",
+          "label": "Eyebrow - Large"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Headline",
+      "info": "Optional"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "default": "Headline",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "headline_style",
+      "default": "cql-headline-2",
+      "label": "Text size",
+      "options": [
+        {
+          "value": "cql-headline-1",
+          "label": "Custom Headline 1"
+        },
+        {
+          "value": "cql-headline-2",
+          "label": "Custom Headline 2"
+        },
+        {
+          "value": "cql-headline-3",
+          "label": "Custom Headline 3"
+        },
+        {
+          "value": "h4",
+          "label": "X-Small"
+        },
+        {
+          "value": "h3",
+          "label": "Small"
+        },
+        {
+          "value": "h2",
+          "label": "Medium"
+        },
+        {
+          "value": "h1",
+          "label": "Large"
+        },
+        {
+          "value": "h0",
+          "label": "X-Large"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Description",
+      "info": "Optional"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "description_style",
+      "label": "Text style",
+      "default": "text-body",
+      "options": [
+        {
+          "value": "text-body",
+          "label": "Body - Default"
+        },
+        {
+          "value": "text-body-small",
+          "label": "Body - Small"
+        },
+        {
+          "value": "text-body-medium",
+          "label": "Body - Medium"
+        },
+        {
+          "value": "text-body-large",
+          "label": "Body - Large"
+        },
+        {
+          "value": "caption",
+          "label": "Caption"
+        },
+        {
+          "value": "subtitle",
+          "label": "Subtitle"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Section animation"
+    },
+    {
+      "type": "select",
+      "id": "animation_effect",
+      "options":[
+        {
+          "value": "fadeIn",
+          "label": "Fade In"
+        },
+        {
+          "value": "fadeInUp",
+          "label": "Fade In Up"
+        },
+        {
+          "value": "NoEffect",
+          "label": "No Effect"
+        }
+      ],
+      "default": "NoEffect",
+      "label": "Select animation"
+    },
+    {
+      "type": "text",
+      "id": "animation_time",
+      "default":"0.2s",
+      "label": "Select animation time",
+      "info": "Must be a number and include 's' at the end. (Example, 0.2s)"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "number",
+      "id": "desktop_top_padding",
+      "label": "Desktop top padding (px)",
+      "default": 60
+    },
+    {
+      "type": "number",
+      "id": "desktop_right_padding",
+      "label": "Desktop right padding (px)",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "desktop_bottom_padding",
+      "label": "Desktop bottom padding (px)",
+      "default": 60
+    },
+    {
+      "type": "number",
+      "id": "desktop_left_padding",
+      "label": "Desktop left padding (px)",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "mobile_top_padding",
+      "label": "Mobile top padding (px)",
+      "default": 30
+    },
+    {
+      "type": "number",
+      "id": "mobile_right_padding",
+      "label": "Mobile right padding (px)",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "mobile_bottom_padding",
+      "label": "Mobile bottom padding (px)",
+      "default": 30
+    },
+    {
+      "type": "number",
+      "id": "mobile_left_padding",
+      "label": "Mobile left padding (px)",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Margins",
+      "info": "Apply global theme layout margins on the top and bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_margins",
+      "label": "Display margins",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video"
+    }
+  ]
+}
+  {% endschema %}

@@ -1,0 +1,20 @@
+LiquidTag:
+  enabled: false
+
+MatchingTranslations:
+  enabled: false
+
+AssetUrlFilters:
+  enabled: false
+
+SpaceInsideBraces:
+  enabled: false
+
+DeprecatedFilter:
+  enabled: false
+
+SchemaJsonFormat:
+  enabled: false
+
+RemoteAsset:
+  enabled: false

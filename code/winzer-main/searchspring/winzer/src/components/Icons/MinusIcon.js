@@ -1,0 +1,8 @@
+import { h } from 'preact'
+export const MinusIcon = () => {
+	return (
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 3">
+			<path d="M.5.75h13v1.5H.5V.75Z"/>
+		</svg>
+	)
+}

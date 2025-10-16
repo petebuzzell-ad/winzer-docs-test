@@ -1,0 +1,53 @@
+{{ 'section-seo-content.css' | asset_url | stylesheet_tag }}
+
+{% comment %} ENTODO remove placholder - update with real references {% endcomment %}
+{% if collection.description != blank %}
+  <div id="seo-section-{{ section.id }}" class="seo__section  {% if settings.scroll_appear == "fadein" %} fadeIn {% endif %}">
+    <div class="page-width">
+      <div class="inner-container-seo">
+        <div class="center-seo-content">
+          <div class="seo__collection_title-wrap">
+            {% if collection.metafields.cql.seo_collection_image != blank %}
+              {% assign seo_image = collection.metafields.cql.seo_collection_image | image_url %}
+              {% assign lower_collection_title = collection.title | downcase %}
+              {% assign seo_image_alt = seo_image.alt | default: lower_collection_title %}
+
+              <span class="seo__collection_image-frame">{% render 'image', image: seo_image, alt: seo_image_alt, class:"seo__collection_image" %}</span>
+            {% endif %}
+
+            {% if collection.metafields.cql.seo_collection_heading != blank %}
+              <h2 class="seo__collection_title">{{ collection.metafields.cql.seo_collection_heading }}</h2>
+            {% endif %}
+          </div>
+          <div class="seo__collection_text">{{ collection.metafields.cql.seo_collection_tagline }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% style %}
+#seo-section-{{ section.id }} .center-seo-content {
+  max-width: {{ section.settings.max_content_width }}px;
+}
+
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "SEO Content",
+  "class": "seo-content-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout settings"
+    },
+    {
+      "type": "number",
+      "id": "max_content_width",
+      "label": "Desktop content max width (px)",
+      "default": 873,
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,170 @@
+{{ 'section-announcement-bar.css' | asset_url | stylesheet_tag }}
+
+{% capture margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% capture mobile_margin_size %}
+  {% if section.settings.display_margins %}
+    {{ settings.mobile_margin_size }}
+  {% else %}
+    0
+  {% endif %}
+{% endcapture %}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    margin-top: {{ margin_size | divided_by: 10 }}rem;
+    margin-bottom: {{ margin_size | divided_by: 10 }}rem;
+    background: {{ section.settings.background_color }};
+  }
+
+  #shopify-section-{{ section.id }} .accouncement-bar-container,
+  .announcement-bar__message {
+    color: {{ section.settings.text_color }};
+  }
+
+  #shopify-section-{{ section.id }} .accouncement-bar-container a {
+    color: {{ section.settings.link_color }};
+  }
+
+  #shopify-section-{{ section.id }} .accouncement-bar-container .announcement-bar__menu-link {
+    color: {{ section.settings.menu_link_color }};
+  }
+  
+
+  @media screen and (max-width: 750px) {
+    #shopify-section-{{ section.id }} {
+      margin-top: {{ mobile_margin_size | divided_by: 10 }}rem;
+      margin-bottom: {{ mobile_margin_size | divided_by: 10 }}rem;
+    }
+  }
+{% endstyle %}
+
+<div class="accouncement-bar-container container-fluid-4">
+  <div id="announcement-bar-wrapper" class="announcement-block">
+
+    <div id="block-section-{{ section.id }}" class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+      <div class="announcement-bar-inner">
+        {%- if section.settings.message != blank -%}
+          <p class="announcement-bar__message">{{ section.settings.message }}&nbsp;</p>
+          {%- if section.settings.link_label != blank and section.settings.link_url != blank -%}
+            <a class="announcement-bar__link" href="{{ section.settings.link_url }}">{{ section.settings.link_label }}</a>
+          {%- endif -%}
+          {% if section.settings.announcement_menu != blank %}
+            {%- assign block_settings = section.settings -%}
+          {% endif %}
+        {%- endif -%}
+      </div>
+    </div>
+
+  </div>
+  <div class="announcement-block">
+    {% if block_settings != blank %}
+      <div class='announcement-bar_menu-wrapper menu-small-hide menu-medium-hide'>
+        {%  unless shop.phone == blank %}
+          {% capture formatted_phone %}{{ shop.phone | slice: -10, 3 }}-{{ shop.phone | slice: -7, 3 }}-{{ shop.phone | slice: -4, 4 }}{% endcapture %}
+          <a class="announcement-bar__menu-link" href="tel:{{ settings.contact_call |  remove: '-' |  remove: '(' |  remove: ')' }}"><span>Need Help?</span> &nbsp; {{ settings.contact_call }}</a>
+        {% endunless %}
+        {% for link in block_settings.announcement_menu.links %}
+          <span class="announcement-bar__menu-link-pipe">|</span>
+          <a class="announcement-bar__menu-link" href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script type="text/javascript">
+  window.addEventListener('DOMContentLoaded', () => {
+    const delay = {{ section.settings.scroll_speed }} * 1000;
+    const carousel = document.querySelector('#announcement-bar-wrapper.carousel');
+
+    if (carousel) {
+      let flkty = new Flickity( carousel, {
+        wrapAround: true,
+        autoPlay: delay,
+        prevNextButtons: false,
+        pageDots: false
+      });
+    }
+  })
+</script>
+
+{% style %}
+  {% assign block_selector = '#block-section-' | append: section.id %}
+
+  {{block_selector}} .announcement-bar__menu:hover {
+    color:{{ section.settings.link_color }}!important;
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "message",
+      "default": "Welcome to our store",
+      "label": "Message",
+      "info": "Keep the message short (40 characters) as the overflow will be truncated on mobile."
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link url"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#0092ff"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "link_list",
+      "id": "announcement_menu",
+      "label": "Announcement right menu"
+    },
+    {
+      "type": "color",
+      "id": "menu_link_color",
+      "label": "Menu color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Margins",
+      "info": "Apply global theme layout margins on the top and bottom"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_margins",
+      "label": "Display margins",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

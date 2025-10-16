@@ -1,0 +1,159 @@
+{
+  "sections": {
+    "1642992090ad755862": {
+      "type": "info-accordion",
+      "blocks": {
+        "a217400f-cbb0-4c4b-9095-76a14c38141b": {
+          "type": "accordion_dropdown",
+          "settings": {
+            "heading": "Where can I buy Kan Jam products in person?",
+            "heading_color": "#000000",
+            "content": "<p>Kan Jam is sold by a variety of major retailers such as Walmart and Target. To find all locations near you where Kan Jam is sold, see our Where to Buy page.<\/p>",
+            "content_color": "#000000"
+          }
+        },
+        "2ef7ef5a-6ecb-4010-97f1-dfa46afe8d3e": {
+          "type": "accordion_dropdown",
+          "settings": {
+            "heading": "What should I do if I lost \/ broke part of my set?",
+            "heading_color": "#000000",
+            "content": "<p>Powder croissant jelly marzipan pudding cake gingerbread pie. Jelly beans lollipop I love croissant caramels cake. Jelly-o ice cream danish I love jujubes pudding sesame snaps cake pie. Chocolate soufflé icing muffin apple pie bonbon wafer pastry pie.<\/p>",
+            "content_color": "#000000"
+          }
+        },
+        "0537cf95-00f5-428e-b333-59e7eb2aa587": {
+          "type": "accordion_dropdown",
+          "settings": {
+            "heading": "Is there a warranty on my product?",
+            "heading_color": "#000000",
+            "content": "<p>Lemon drops gingerbread ice cream dragée lollipop marzipan. Soufflé pie lemon drops biscuit soufflé I love tiramisu. Liquorice I love cake tiramisu donut lollipop croissant topping ice cream.<\/p>",
+            "content_color": "#000000"
+          }
+        },
+        "f9f725f4-dac0-4521-99cf-7c8048216972": {
+          "type": "accordion_dropdown",
+          "settings": {
+            "heading": "Can I get my Kan Jam set customized?",
+            "heading_color": "#000000",
+            "content": "<p>Ice cream pudding cake I love topping toffee. Halvah fruitcake I love lollipop chocolate cake. Sweet donut pudding muffin tiramisu lollipop cookie liquorice pie. Donut cake danish cake soufflé.<\/p>",
+            "content_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "a217400f-cbb0-4c4b-9095-76a14c38141b",
+        "2ef7ef5a-6ecb-4010-97f1-dfa46afe8d3e",
+        "0537cf95-00f5-428e-b333-59e7eb2aa587",
+        "f9f725f4-dac0-4521-99cf-7c8048216972"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Product Support",
+        "heading_color": "#000000",
+        "heading_size": "h2",
+        "display_margins": false
+      }
+    },
+    "1642992158ef1b9794": {
+      "type": "info-accordion",
+      "blocks": {
+        "2a4be9a9-53e0-44c1-b4c2-22eeaa98be5a": {
+          "type": "accordion_dropdown",
+          "settings": {
+            "heading": "How can I get help scoring a play?",
+            "heading_color": "#000000",
+            "content": "<p>Topping chupa chups pastry brownie macaroon sugar plum chupa chups. I love I love pastry sweet roll candy liquorice. Toffee liquorice donut sweet I love. Soufflé cupcake cotton candy biscuit gummi bears I love brownie.<\/p>",
+            "content_color": "#000000"
+          }
+        },
+        "b1f6fc1c-4339-44a6-8495-0d7686bb6dd0": {
+          "type": "accordion_dropdown",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit amet?",
+            "heading_color": "#000000",
+            "content": "<p>Gummi bears macaroon oat cake lollipop sweet roll I love jelly-o jujubes cheesecake. Carrot cake lollipop ice cream topping jelly beans gummi bears macaroon I love muffin. Oat cake donut I love chocolate cake gummi bears cake. Sweet marshmallow gummi bears lollipop gingerbread donut halvah.<\/p>",
+            "content_color": "#000000"
+          }
+        },
+        "64fc248d-89c4-4bc5-aa4d-92b730c85efe": {
+          "type": "accordion_dropdown",
+          "settings": {
+            "heading": "Adipiscing consectetur dolor amet ipsum?",
+            "heading_color": "#000000",
+            "content": "<p>Ice cream pudding cake I love topping toffee. Halvah fruitcake I love lollipop chocolate cake. Sweet donut pudding muffin tiramisu lollipop cookie liquorice pie. Donut cake danish cake soufflé.<\/p>",
+            "content_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "2a4be9a9-53e0-44c1-b4c2-22eeaa98be5a",
+        "b1f6fc1c-4339-44a6-8495-0d7686bb6dd0",
+        "64fc248d-89c4-4bc5-aa4d-92b730c85efe"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Rules & Gameplay",
+        "heading_color": "#000000",
+        "heading_size": "h2",
+        "display_margins": false
+      }
+    },
+    "1642992277d864ded3": {
+      "type": "info-accordion",
+      "blocks": {
+        "eb3dbd23-fa17-46d4-999c-332977c478da": {
+          "type": "accordion_dropdown",
+          "settings": {
+            "heading": "What is the World League?",
+            "heading_color": "#000000",
+            "content": "<p>Lemon drops gingerbread ice cream dragée lollipop marzipan. Soufflé pie lemon drops biscuit soufflé I love tiramisu. Liquorice I love cake tiramisu donut lollipop croissant topping ice cream.<\/p>",
+            "content_color": "#000000"
+          }
+        },
+        "6f895ec7-50ae-43f5-8ee4-71dd2f101d5d": {
+          "type": "accordion_dropdown",
+          "settings": {
+            "heading": "Does it cost money to attend events?",
+            "heading_color": "#000000",
+            "content": "<p>Powder croissant jelly marzipan pudding cake gingerbread pie. Jelly beans lollipop I love croissant caramels cake. Jelly-o ice cream danish I love jujubes pudding sesame snaps cake pie. Chocolate soufflé icing muffin apple pie bonbon wafer pastry pie.<\/p>",
+            "content_color": "#000000"
+          }
+        },
+        "4e1796b2-6255-46eb-b5fe-3546691a95b6": {
+          "type": "accordion_dropdown",
+          "settings": {
+            "heading": "What does it take to become an ambassador?",
+            "heading_color": "#000000",
+            "content": "<p>Topping chupa chups pastry brownie macaroon sugar plum chupa chups. I love I love pastry sweet roll candy liquorice. Toffee liquorice donut sweet I love. Soufflé cupcake cotton candy biscuit gummi bears I love brownie.<\/p>",
+            "content_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "eb3dbd23-fa17-46d4-999c-332977c478da",
+        "6f895ec7-50ae-43f5-8ee4-71dd2f101d5d",
+        "4e1796b2-6255-46eb-b5fe-3546691a95b6"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Kan Jam World League",
+        "heading_color": "#000000",
+        "heading_size": "h2",
+        "display_margins": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "1642992090ad755862",
+    "1642992158ef1b9794",
+    "1642992277d864ded3",
+    "main"
+  ]
+}

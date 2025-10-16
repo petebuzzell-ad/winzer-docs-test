@@ -1,0 +1,34 @@
+.exact-pricing-container {
+  display: flex;
+  align-items: center;
+}
+
+.exact-pricing-container .loading-animation {
+  width: 16.5px;
+  height: 20px;
+}
+
+.exact-pricing-container .loading-animation .icon-loading {
+  fill: var(--color-brand-secondary-variant);
+}
+
+.exact-pricing-container .tooltip-container {
+  margin-left: 6px;
+}
+
+.exact-pricing-container .tooltip-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.exact-pricing-container .tooltip-icon .icon-information circle {
+  stroke: var(--color-brand-secondary-variant);
+}
+
+.exact-pricing-container .tooltip-icon .icon-information path {
+  fill: var(--color-brand-secondary-variant);
+}
+
+.exact-pricing-container .exact-pricing-msg {
+  display: flex;
+}

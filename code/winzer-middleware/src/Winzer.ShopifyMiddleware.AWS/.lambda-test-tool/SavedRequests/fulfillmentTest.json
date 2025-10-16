@@ -1,0 +1,6 @@
+{
+  "path": "/shipments/",
+  "pattern": "SHOP-SHIP-.*.csv",
+  "dryrun": true,
+  "test": true
+}

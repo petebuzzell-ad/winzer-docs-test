@@ -1,0 +1,114 @@
+pipelines:
+  default:
+    - step: &build-and-test
+        name: Build and Test
+        image: mcr.microsoft.com/dotnet/sdk:6.0
+        caches:
+          - dotnetcore
+        script:
+          # build
+          - dotnet restore
+          - dotnet build --no-restore --configuration Release
+          # test
+          - dotnet test --no-build --configuration Release
+          # publish
+          - ./build/build.sh
+        artifacts:
+          - src/Brighton.ShopifyMiddleware.AWS/out/ShopifyMiddleware.zip
+          - Brighton.ShopifyMiddleware.InventoryFeedConsoleApp/out/**
+          - Brighton.ShopifyMiddleware.SalsifyInventoryFeedConsoleApp/out/**
+          - Brighton.ShopifyMiddleware.ProductFeedConsoleApp/out/**
+
+    - step:
+        name: Deploy Staging
+        trigger: manual
+        image: node:18.7.0-buster
+        deployment: Staging
+        caches:
+          - docker
+          - node
+        script:
+          # build the inventory feed image
+          - docker build -t inventory-feed-repository -f Brighton.ShopifyMiddleware.InventoryFeedConsoleApp/Dockerfile ./Brighton.ShopifyMiddleware.InventoryFeedConsoleApp
+          # build the salsify inventory feed image
+          - docker build -t salsify-inventory-feed-repository -f Brighton.ShopifyMiddleware.SalsifyInventoryFeedConsoleApp/Dockerfile ./Brighton.ShopifyMiddleware.SalsifyInventoryFeedConsoleApp
+          # build the product feed image
+          - docker build -t product-feed-repository -f Brighton.ShopifyMiddleware.ProductFeedConsoleApp/Dockerfile ./Brighton.ShopifyMiddleware.ProductFeedConsoleApp
+          # use the pipe to push inventory feed image to AWS ECR
+          - pipe: atlassian/aws-ecr-push-image:1.5.0
+            variables:
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              IMAGE_NAME: inventory-feed-repository
+              TAGS: "${BITBUCKET_COMMIT} latest"
+          # use the pipe to push salsify inventory feed image to AWS ECR
+          - pipe: atlassian/aws-ecr-push-image:1.5.0
+            variables:
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              IMAGE_NAME: salsify-inventory-feed-repository
+              TAGS: "${BITBUCKET_COMMIT} latest"
+          # use the pipe to push product feed image to AWS ECR
+          - pipe: atlassian/aws-ecr-push-image:1.5.0
+            variables:
+              AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+              AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+              AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+              IMAGE_NAME: product-feed-repository
+              TAGS: "${BITBUCKET_COMMIT} latest"
+          # deploy lambdas with Serverless
+          - npm install -g serverless@3.19.0
+          - serverless config credentials --provider aws --key ${AWS_ACCESS_KEY_ID} --secret ${AWS_SECRET_ACCESS_KEY}
+          - cd src/Brighton.ShopifyMiddleware.AWS
+          - serverless deploy --stage staging
+
+  tags:
+      "*":
+          - step: *build-and-test
+
+          - step:
+              name: Deploy Production
+              trigger: manual
+              image: node:18.7.0-buster
+              deployment: Production
+              caches:
+                - docker
+                - node
+              script:
+                # build the inventory feed image
+                - docker build -t inventory-feed-repository -f Brighton.ShopifyMiddleware.InventoryFeedConsoleApp/Dockerfile ./Brighton.ShopifyMiddleware.InventoryFeedConsoleApp
+                # build the salsify inventory feed image
+                - docker build -t salsify-inventory-feed-repository -f Brighton.ShopifyMiddleware.SalsifyInventoryFeedConsoleApp/Dockerfile ./Brighton.ShopifyMiddleware.SalsifyInventoryFeedConsoleApp
+                # build the product feed image
+                - docker build -t product-feed-repository -f Brighton.ShopifyMiddleware.ProductFeedConsoleApp/Dockerfile ./Brighton.ShopifyMiddleware.ProductFeedConsoleApp
+                # use the pipe to push inventory feed image to AWS ECR
+                - pipe: atlassian/aws-ecr-push-image:1.5.0
+                  variables:
+                    AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                    AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                    AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                    IMAGE_NAME: inventory-feed-repository
+                    TAGS: "${BITBUCKET_TAG} latest"
+                # use the pipe to push salsify inventory feed image to AWS ECR
+                - pipe: atlassian/aws-ecr-push-image:1.5.0
+                  variables:
+                    AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                    AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                    AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                    IMAGE_NAME: salsify-inventory-feed-repository
+                    TAGS: "${BITBUCKET_TAG} latest"
+                # use the pipe to push product feed image to AWS ECR
+                - pipe: atlassian/aws-ecr-push-image:1.5.0
+                  variables:
+                    AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                    AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                    AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
+                    IMAGE_NAME: product-feed-repository
+                    TAGS: "${BITBUCKET_TAG} latest"
+                # deploy lambdas with Serverless
+                - npm install -g serverless@3.19.0
+                - serverless config credentials --provider aws --key ${AWS_ACCESS_KEY_ID} --secret ${AWS_SECRET_ACCESS_KEY}
+                - cd src/Brighton.ShopifyMiddleware.AWS
+                - serverless deploy --stage prod

@@ -1,0 +1,228 @@
+{
+  "wrapper": "div.about-us",
+  "sections": {
+    "16484545291ecbe325": {
+      "type": "image-banner",
+      "blocks": {
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343": {
+          "type": "eyebrow",
+          "settings": {
+            "eyebrow": "Industries We Serve",
+            "eyebrow_style": "eyebrow",
+            "eyebrow_color_desktop": "#ffffff",
+            "eyebrow_color_mobile": "#ffffff"
+          }
+        },
+        "1648454529bf74fe13-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Customers",
+            "heading_size": "h1",
+            "heading_color_desktop": "#ffffff",
+            "heading_color_mobile": "#ffffff"
+          }
+        },
+        "text_adQpQw": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Resources to help point you in the right direction when you need them. Need additional help?<\/p>",
+            "text_style": "text-body-large",
+            "text_color_desktop": "#ffffff",
+            "text_color_mobile": "#ffffff"
+          }
+        },
+        "button_bUzG4A": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Contact Us",
+            "button_link_1": "shopify:\/\/pages\/contact",
+            "button_style_desktop_1": "secondary",
+            "button_style_mobile_1": "secondary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_desktop_2": "primary",
+            "button_style_mobile_2": "primary",
+            "show_side_by_side": false,
+            "button_min_width": "inherit",
+            "show_separator_vertical": false,
+            "show_separator_horizontal": false,
+            "separator_color": "",
+            "links_color_override": false,
+            "links_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "fbd0b846-a9e2-4c65-98a2-cdbb22d29343",
+        "1648454529bf74fe13-0",
+        "text_adQpQw",
+        "button_bUzG4A"
+      ],
+      "settings": {
+        "desktop_large_image": "shopify:\/\/shop_images\/our-customers-hero.webp",
+        "desktop_image": "shopify:\/\/shop_images\/our-customers-hero.webp",
+        "mobile_image": "shopify:\/\/shop_images\/our-customers-hero-mobile.webp",
+        "enable_parallax": false,
+        "desktop_max_height": 350,
+        "section_background_color": "#ffffff",
+        "content_background_color": "#131c3b",
+        "box_border_color": "#ffffff",
+        "show_text_box": false,
+        "show_container_mobile": true,
+        "content_background_opacity": 100,
+        "content_area_max_width": 600,
+        "show_border_desktop": false,
+        "show_border_offset_desktop": false,
+        "show_border_mobile": false,
+        "show_border_offset_mobile": false,
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "center",
+        "show_text_below": true,
+        "hide_image_mobile": false,
+        "section_url": "",
+        "hide_section_mobile": false,
+        "animation": "NoEffect",
+        "animation_time": "0.2s",
+        "display_margins": false,
+        "custom_class": ""
+      }
+    },
+    "collapsible_content_7kPYHy": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_Mk8Wwq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Automotive",
+            "icon": "none",
+            "row_content": "<p>Winzer specializes in automotive solutions. We offer fasteners, chemicals, electrical, body hardware, as well as shop supplies. Winzer is your premier source for automotive specialty items that are certain to cover your maintenance needs. A Winzer automotive solution can save your operation costly downtime.<\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDF20AD9A9712B306F0E2F71E382192B62D8A3EE2A51\/fileview\/D995CBACC8F64AAAB1E158C1E88293ADA89FFB38B83B\/_979.00.09_automotive_solutions.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDF20AD9A9712B306F0E2F71E382192B62D8A3EE2A51\/fileview\/D995CBACC8F64AAAB1E158C1E88293ADA89FFB38B83B\/_979.00.09_automotive_solutions.pdf\">Automotive Brochure<\/a><\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\">Winzer Catalog<\/a><\/p><p><a href=\"https:\/\/form.jotform.com\/243235170010136\" target=\"_blank\" title=\"https:\/\/form.jotform.com\/243235170010136\">Become a Customer<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_K4hrHd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collision",
+            "icon": "none",
+            "row_content": "<p>Having cut our teeth in the automotive world, we fully understand that auto repair extends beyond trucks and other vehicles. Winzer offers an unmatched variety of automotive specialty products, from automotive fasteners and clamps to tire and wheel products. To help monitor low air pressure, Winzer has access to a large inventory of professional TPMS products and solutions that are easy to install and program.<\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDF20AD9A9712B306F0E2F71E382192B62D8A3EE2A51\/fileview\/D995CBACC8F64AAAB1E158C1E88293ADA89FFB38B83B\/_979.00.09_automotive_solutions.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDF20AD9A9712B306F0E2F71E382192B62D8A3EE2A51\/fileview\/D995CBACC8F64AAAB1E158C1E88293ADA89FFB38B83B\/_979.00.09_automotive_solutions.pdf\">Automotive Brochure<\/a><\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\">Winzer Catalog<\/a><\/p><p><a href=\"https:\/\/form.jotform.com\/243235170010136\" target=\"_blank\" title=\"https:\/\/form.jotform.com\/243235170010136\">Become a Customer<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_Q7ML8c": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Construction & Agriculture",
+            "icon": "none",
+            "row_content": "<p>Winzer specializes in automotive solutions. We offer fasteners, chemicals, electrical, body hardware, as well as shop supplies. Winzer is your premier source for automotive specialty items that are certain to cover your maintenance needs. A Winzer automotive solution can save your operation costly downtime.<\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD407DD948CB4AE304C8830BA14200C69B20737D0ABF\/fileview\/D30289D109CB1555E0F689461AAF1AB8A28351306D42\/_FLEET_SOLUTIONS_-_979.8925.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD407DD948CB4AE304C8830BA14200C69B20737D0ABF\/fileview\/D30289D109CB1555E0F689461AAF1AB8A28351306D42\/_FLEET_SOLUTIONS_-_979.8925.pdf\">Fleet Solutions Brochure<\/a><\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\">Winzer Catalog<\/a><\/p><p><a href=\"https:\/\/form.jotform.com\/243235170010136\" target=\"_blank\" title=\"https:\/\/form.jotform.com\/243235170010136\">Become a Customer<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_aB9Yff": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Fleet",
+            "icon": "none",
+            "row_content": "<p>Winzer’s fleet and vehicle maintenance equipment include auto and vehicle supplies, parts, and tools for keeping your vehicles on the road. Oil and air filters, wiper blades, and automotive fluids must be regularly replaced to keep your vehicles in good working order. Diagnostic and inspection equipment can measure the degree of coolant protection, determine battery cell condition, locate engine troubles, and more.  <br\/><br\/>Think of all of the miles your vehicles put on them. Winzer’s tire and wheel equipment keeps those tires in good shape and ensures they are balanced. Brake cleaners, fuel additives, and other automotive chemicals are used to maximize the life of the vehicle’s components.<\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD407DD948CB4AE304C8830BA14200C69B20737D0ABF\/fileview\/D30289D109CB1555E0F689461AAF1AB8A28351306D42\/_FLEET_SOLUTIONS_-_979.8925.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD407DD948CB4AE304C8830BA14200C69B20737D0ABF\/fileview\/D30289D109CB1555E0F689461AAF1AB8A28351306D42\/_FLEET_SOLUTIONS_-_979.8925.pdf\">Fleet Solutions Brochure<\/a><\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\">Winzer Catalog<\/a><\/p><p><a href=\"https:\/\/form.jotform.com\/243235170010136\" target=\"_blank\" title=\"https:\/\/form.jotform.com\/243235170010136\">Become a Customer<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_WfFRkc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Heavy-Duty Trucks",
+            "icon": "none",
+            "row_content": "<p>Driving a heavy-duty truck you need parts that you can rely on. Winzer has a large selection of heavy-duty parts and accessories that are proven to get the job done. Winzer offers parts and components for haul trucks, loaders, dozers, excavators, scrapers, graders, and backhoes. Let us show you how we can save you time and money.<\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDEE55C5B3363B3A87FD8271DEEEBBE86B7C144A3C23\/fileview\/D90E30487B9F8680B2CAB0A4AB200E902F3E3ED5D1EF\/_HEAVY_EQUIPMENT_-_979.00.11.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LDEE55C5B3363B3A87FD8271DEEEBBE86B7C144A3C23\/fileview\/D90E30487B9F8680B2CAB0A4AB200E902F3E3ED5D1EF\/_HEAVY_EQUIPMENT_-_979.00.11.pdf\">Heavy Equipment Brochure<\/a><\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\">Winzer Catalog<\/a><\/p><p><a href=\"https:\/\/form.jotform.com\/243235170010136\" target=\"_blank\" title=\"https:\/\/form.jotform.com\/243235170010136\">Become a Customer<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wyApBc": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Hospitality",
+            "icon": "none",
+            "row_content": "<p>Do you have the right janitorial products when you need them? Do you get the attentive service your business’s cleaning and maintenance products require? Do you have a janitorial business partner or just several individual companies you do business with? Whatever your challenge may be, Winzer can help you reach your individual goals and help you plan for the future. Winzer has more than 65,000 stocked Janitorial & Safety products in four automated distribution centers.<br\/><br\/>Safety is always a concern, and our supplies and parts go beyond standard PPE. We offer items that are specific to tasks and are used to help protect workers. These items could be preventing slips and falls, electrical shocks, or provide early warning signals to other potential hazards. Safety supplies are not confined to just indoor use. There are various types of safety products that are designed for outdoor use to eliminate possible injuries. Call us so we can help.<\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD42476F19665F5D079AC03516E2CBE57BA816C20831\/fileview\/D8CF24324B078D020313A7AFD703A5A67145F0E0A588\/_HOSPITALITY_BROCHURE_-_979.00.13.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD42476F19665F5D079AC03516E2CBE57BA816C20831\/fileview\/D8CF24324B078D020313A7AFD703A5A67145F0E0A588\/_HOSPITALITY_BROCHURE_-_979.00.13.pdf\">Hospitality Brochure<\/a><\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\">Winzer Catalog<\/a><\/p><p><a href=\"https:\/\/form.jotform.com\/243235170010136\" target=\"_blank\" title=\"https:\/\/form.jotform.com\/243235170010136\">Become a Customer<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_di9aKN": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Industrial Manufacturing",
+            "icon": "none",
+            "row_content": "<p>With industrial parts manufacturing, it’s important to choose partners that provide reliable service and can fill your part needs. Winzer has a long history of providing parts for industrial equipment, including process control instruments used in oil and gas, technology, and heavy-duty equipment industries. Our customers know they can depend on Winzer because we put a custom plan together with you, so you are never worried about downtime. <\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD1F67E6629EA59FF84D9DD91173004F4160B22CBD8D\/fileview\/D05446318CAF41D0B7FDCDD7F9AF6CC4BF84E6CF26DD\/_INDUSTRIAL_SOLUTIONS_-_979.00.10.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD1F67E6629EA59FF84D9DD91173004F4160B22CBD8D\/fileview\/D05446318CAF41D0B7FDCDD7F9AF6CC4BF84E6CF26DD\/_INDUSTRIAL_SOLUTIONS_-_979.00.10.pdf\">Industrial Solutions Brochure<\/a><\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\">Winzer Catalog<\/a><\/p><p><a href=\"https:\/\/form.jotform.com\/243235170010136\" target=\"_blank\" title=\"https:\/\/form.jotform.com\/243235170010136\">Become a Customer<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_wkKyaY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Military",
+            "icon": "none",
+            "row_content": "<p>Winzer Corporation is an authorized GSA Contractor serving our GSA Customers with a full line of high-quality maintenance and repair products. We offer a full line of Fasteners, Air & Fluid Power, Electrical, Shop & Safety Supplies, Chemicals, Cutting Tools, Abrasives, Vehicle Hardware, and Welding Supplies.<\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD55A0249706C085BFD6A3B4A6CFAFD81AC6E32AFD47\/fileview\/DD4588F024DC1A827DD04EC7C73A79D48A17550EC9E7\/_MILITARY_MODULE_MAINTENANCE_-_979.4100.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD55A0249706C085BFD6A3B4A6CFAFD81AC6E32AFD47\/fileview\/DD4588F024DC1A827DD04EC7C73A79D48A17550EC9E7\/_MILITARY_MODULE_MAINTENANCE_-_979.4100.pdf\">Military Brochure<\/a><\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\">Winzer Catalog<\/a><\/p><p><a href=\"https:\/\/form.jotform.com\/243235170010136\" target=\"_blank\" title=\"https:\/\/form.jotform.com\/243235170010136\">Become a Customer<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_AYAhNW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Oil & Gas",
+            "icon": "none",
+            "row_content": "<p>Protect your most valuable asset…your employees. From personal protection to first aid, Winzer stocks a quality line of safety supplies to ensure your facility and job sites are covered from head to toe. Our cutting tools and abrasives reduce downtime, increase efficiency, and provide you with longer tool life. Our ever-expanding chemical lines feature the brand names you know and trust, as well as our professional-grade house line of products. Winzer maintains a complete inventory of hydraulic and fluid power adapters, fittings, and hoses. Whether in the field or a plant, your hydraulics and fluid power needs are ready to ship directly to you. Winzer Storage systems designed to fit your storage needs offer a wide variety of drawer options that are fully customizable.<\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD27B7A3AFB6E057FE68A5C3FFD532A473017208E7E4\/fileview\/D26295BA367C4E493AC488D43A075121AD573EDB5281\/_OIL_AND_GAS_SOLUTIONS_-_979.00.08.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD27B7A3AFB6E057FE68A5C3FFD532A473017208E7E4\/fileview\/D26295BA367C4E493AC488D43A075121AD573EDB5281\/_OIL_AND_GAS_SOLUTIONS_-_979.00.08.pdf\">Oil & Gas Brochure<\/a><\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\">Winzer Catalog<\/a><\/p><p><a href=\"https:\/\/form.jotform.com\/243235170010136\" target=\"_blank\" title=\"https:\/\/form.jotform.com\/243235170010136\">Become a Customer<\/a><\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_PKtMtm": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Powersports",
+            "icon": "none",
+            "row_content": "<p>Fasteners are the common thread in today’s power sports industry. Winzer stocks the most comprehensive line of bolts, washers, nuts, clips, springs, screws, rivets, and specialty fasteners. Electrical failures are one of the most common issues that plague any motorcycle, ATV, or watercraft. Winzer has everything you need to ensure you get connected and stay connected.<br\/><br\/>Increase productivity today with the highest quality drills and abrasives available. Our exclusive Shop Pro™ and Wolverine product lines have a solution that will fit your job, budget, or demands! Winzer has long been the source for specialty hardware and products in the Powersports industry. When you are trying to find that elusive item that is holding up progress, look to Winzer.<\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD31BA56BF985CBEB87EDFE55C6EFAB310DE048D5122\/fileview\/DA6638CD93797F22CFD1955F9879BB0487438818E1CB\/_POWERSPORTS_-_979.00.07.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD31BA56BF985CBEB87EDFE55C6EFAB310DE048D5122\/fileview\/DA6638CD93797F22CFD1955F9879BB0487438818E1CB\/_POWERSPORTS_-_979.00.07.pdf\">Powersports Brochure<\/a><\/p><p><a href=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\" target=\"_blank\" title=\"https:\/\/winzerce-caccteonh.cec.ocp.oraclecloud.com\/documents\/link\/LD0405247AC2835E846FDA3B925A6795EBD334366E55\/fileview\/D0F1AA3040E7539291EFB489E839C59168477DAE2C94\/_Winzer-Catalog.pdf\">Winzer Catalog<\/a><\/p><p><a href=\"https:\/\/form.jotform.com\/243235170010136\" target=\"_blank\" title=\"https:\/\/form.jotform.com\/243235170010136\">Become a Customer<\/a><\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_Mk8Wwq",
+        "collapsible_row_K4hrHd",
+        "collapsible_row_Q7ML8c",
+        "collapsible_row_aB9Yff",
+        "collapsible_row_WfFRkc",
+        "collapsible_row_wyApBc",
+        "collapsible_row_di9aKN",
+        "collapsible_row_wkKyaY",
+        "collapsible_row_AYAhNW",
+        "collapsible_row_PKtMtm"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Solutions by Industry",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "16484545291ecbe325",
+    "collapsible_content_7kPYHy",
+    "main"
+  ]
+}
