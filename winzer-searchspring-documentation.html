@@ -561,5 +561,29 @@ const { width, height, valuesWithImages } = useMemo(() => {
         </div>
         </div>
     </div>
+    
+    <!-- Include Footer Component -->
+    <div id="footer-container"></div>
+    
+    <script>
+        // Load footer component
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                // Fallback footer if component fails to load
+                document.getElementById('footer-container').innerHTML = `
+                    <footer class="arcadia-footer">
+                        <div class="footer-content">
+                            <p>This documentation is proprietary and confidential. Unauthorized distribution is prohibited.</p>
+                            <p><a href="https://arcadiadigital.com" target="_blank">Arcadia Digital</a> | <a href="https://github.com/petebuzzell-ad/winzer-documentation" target="_blank">GitHub Repository</a></p>
+                        </div>
+                    </footer>
+                `;
+            });
+    </script>
 </body>
 </html>

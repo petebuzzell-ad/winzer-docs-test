@@ -41,6 +41,11 @@
                 <a href="winzer-shipperhq-documentation.html" class="doc-link">ShipperHQ Shipping Rules</a>
                 <div class="doc-description">Product-based shipping restrictions, carrier limitations, and state-specific shipping rules using hashbang-delimited metafields.</div>
             </li>
+            
+            <li class="doc-item">
+                <a href="video-demos.html" class="doc-link">Video Demos & Walkthroughs</a>
+                <div class="doc-description">Comprehensive video documentation covering platform walkthroughs, system demonstrations, and operational procedures with Google Drive and Loom integration.</div>
+            </li>
         </ul>
 
         <h2>External Resources</h2>
@@ -118,12 +123,30 @@
             </div>
         </div>
         
-        <div class="footer">
-            <p>Last Updated: September 25, 2025 | <a href="https://arcadiadigital.com">Arcadia Digital</a></p>
-            <p>
-                <a href="https://github.com/petebuzzell-ad/winzer-documentation" class="contact-link">📁 Winzer Documentation Repository</a>
-            </p>
-        </div>
     </div>
+    
+    <!-- Include Footer Component -->
+    <div id="footer-container"></div>
+    
+    <script>
+        // Load footer component
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                // Fallback footer if component fails to load
+                document.getElementById('footer-container').innerHTML = `
+                    <footer class="arcadia-footer">
+                        <div class="footer-content">
+                            <p>This documentation is proprietary and confidential. Unauthorized distribution is prohibited.</p>
+                            <p><a href="https://arcadiadigital.com" target="_blank">Arcadia Digital</a> | <a href="https://github.com/petebuzzell-ad/winzer-documentation" target="_blank">GitHub Repository</a></p>
+                        </div>
+                    </footer>
+                `;
+            });
+    </script>
 </body>
 </html>

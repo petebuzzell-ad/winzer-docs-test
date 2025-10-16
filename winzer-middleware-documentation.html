@@ -238,10 +238,6 @@
         </div>
         
         <hr />
-        <p><strong>Document Version:</strong> 1.0<br />
-        <strong>Last Updated:</strong> September 24, 2025<br />
-        <strong>Next Review:</strong> December 24, 2025<br />
-        <strong>Document Owner:</strong> Winzer eCommerce Team<br />
         <strong>Related Documentation:</strong> <a href="winzer-documentation.html">Main Platform Documentation</a></p>
         
         <div class="download-section">
@@ -250,5 +246,29 @@
             <a href="winzer-middleware-documentation.md" download class="download-btn download-btn-accent">📄 Download Markdown</a>
         </div>
     </div>
+    
+    <!-- Include Footer Component -->
+    <div id="footer-container"></div>
+    
+    <script>
+        // Load footer component
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                // Fallback footer if component fails to load
+                document.getElementById('footer-container').innerHTML = `
+                    <footer class="arcadia-footer">
+                        <div class="footer-content">
+                            <p>This documentation is proprietary and confidential. Unauthorized distribution is prohibited.</p>
+                            <p><a href="https://arcadiadigital.com" target="_blank">Arcadia Digital</a> | <a href="https://github.com/petebuzzell-ad/winzer-documentation" target="_blank">GitHub Repository</a></p>
+                        </div>
+                    </footer>
+                `;
+            });
+    </script>
 </body>
 </html>
