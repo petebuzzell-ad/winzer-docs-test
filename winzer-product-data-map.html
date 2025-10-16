@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winzer Product Data Map - Oracle PIM to Shopify</title>
     <link rel="stylesheet" href="arcadia-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -43,6 +47,38 @@
             <div class="flow-step">Lambda Processing</div>
             <div class="flow-arrow">→</div>
             <div class="flow-step">Shopify API</div>
+        </div>
+
+        <div class="mermaid-diagram">
+            <h4>Complete System Data Flow Architecture</h4>
+            <div class="mermaid">
+                graph TD
+                    A[Oracle PIM<br/>Product Data<br/>Pricing Data<br/>Inventory Data] -->|Data Export| E[SFTP Server]
+                    E -->|File Transfer| B[AWS Middleware<br/>Lambda Functions<br/>ECS Tasks]
+                    B -->|API Sync| C[Shopify<br/>Products & Variants<br/>Smart Collections<br/>Price Lists<br/>Inventory Management]
+                    C -->|Product Data| D[External Systems<br/>Google Merchant Center<br/>Meta<br/>TikTok<br/>Bing]
+                    C -->|Product Data| G[Klaviyo<br/>Email Marketing<br/>Customer Data<br/>Automation]
+                    C -->|Customer Data| G
+                    G -->|Customer Sync| C
+                    F[Oracle ERP<br/>Order Management] -->|Pull Orders| C
+                    C -->|Fulfillment Updates| F
+                    
+                    classDef oracle fill:#fff5f5,stroke:#8E293C,stroke-width:2px
+                    classDef middleware fill:#ff9900,stroke:#ff6600,stroke-width:2px,color:#fff
+                    classDef shopify fill:#f8fff5,stroke:#BDDBB9,stroke-width:2px
+                    classDef external fill:#F1F4F4,stroke:#B7B6C1,stroke-width:2px
+                    classDef sftp fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
+                    classDef erp fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+                    classDef klaviyo fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+                    
+                    class A oracle
+                    class B middleware
+                    class C shopify
+                    class D external
+                    class E sftp
+                    class F erp
+                    class G klaviyo
+            </div>
         </div>
 
         <h2 id="oracle-pim-fields">Oracle PIM Fields</h2>

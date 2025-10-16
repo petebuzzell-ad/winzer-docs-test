@@ -77,6 +77,38 @@
             
             <h3 id="data-flow-architecture">Data Flow Architecture</h3>
             <p><strong>Note:</strong> For the complete system data flow diagram showing all integrations, see the <a href="winzer-documentation.html#data-flow-and-integration">main documentation</a>.</p>
+
+            <div class="mermaid-diagram">
+                <h4>Complete System Data Flow Architecture</h4>
+                <div class="mermaid">
+                    graph TD
+                        A[Oracle PIM<br/>Product Data<br/>Pricing Data<br/>Inventory Data] -->|Data Export| E[SFTP Server]
+                        E -->|File Transfer| B[AWS Middleware<br/>Lambda Functions<br/>ECS Tasks]
+                        B -->|API Sync| C[Shopify<br/>Products & Variants<br/>Smart Collections<br/>Price Lists<br/>Inventory Management]
+                        C -->|Product Data| D[External Systems<br/>Google Merchant Center<br/>Meta<br/>TikTok<br/>Bing]
+                        C -->|Product Data| G[Klaviyo<br/>Email Marketing<br/>Customer Data<br/>Automation]
+                        C -->|Customer Data| G
+                        G -->|Customer Sync| C
+                        F[Oracle ERP<br/>Order Management] -->|Pull Orders| C
+                        C -->|Fulfillment Updates| F
+                        
+                        classDef oracle fill:#fff5f5,stroke:#8E293C,stroke-width:2px
+                        classDef middleware fill:#ff9900,stroke:#ff6600,stroke-width:2px,color:#fff
+                        classDef shopify fill:#f8fff5,stroke:#BDDBB9,stroke-width:2px
+                        classDef external fill:#F1F4F4,stroke:#B7B6C1,stroke-width:2px
+                        classDef sftp fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
+                        classDef erp fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+                        classDef klaviyo fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+                        
+                        class A oracle
+                        class B middleware
+                        class C shopify
+                        class D external
+                        class E sftp
+                        class F erp
+                        class G klaviyo
+                </div>
+            </div>
             
             <h4>Middleware-Specific Data Flows</h4>
             <p><strong>Product Data Flow:</strong></p>
