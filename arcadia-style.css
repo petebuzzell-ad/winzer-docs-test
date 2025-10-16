@@ -192,6 +192,24 @@ button:hover, .cta:hover {
     margin-bottom: 15px;
 }
 
+.download-note {
+    background-color: var(--digital-gray-3);
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 0.9em;
+    border-left: 3px solid var(--highlight-yellow);
+}
+
+.download-note code {
+    background-color: var(--charcoal);
+    color: var(--newsprint-white);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85em;
+}
+
 .download-buttons {
     display: flex;
     flex-wrap: wrap;
