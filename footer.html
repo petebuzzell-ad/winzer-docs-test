@@ -52,8 +52,8 @@
 </footer>
 
 <script>
-// Auto-update last updated date
-document.addEventListener('DOMContentLoaded', function() {
+// Auto-update last updated date immediately
+(function() {
     const lastUpdatedElement = document.getElementById('lastUpdated');
     if (lastUpdatedElement) {
         const now = new Date();
@@ -63,5 +63,5 @@ document.addEventListener('DOMContentLoaded', function() {
             day: 'numeric' 
         });
     }
-});
+})();
 </script>
