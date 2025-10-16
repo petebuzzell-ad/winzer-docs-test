@@ -17,24 +17,149 @@
         <h1>Video Demos & Walkthroughs</h1>
         <p class="video-intro">Comprehensive video documentation covering platform walkthroughs, system demonstrations, and operational procedures for the Winzer eCommerce platform.</p>
         
-        <div class="video-controls">
-            <button id="refreshVideos" class="download-btn download-btn-primary">🔄 Refresh Video List</button>
-            <div class="video-count" id="videoCount">Loading videos...</div>
+        <div class="video-stats">
+            <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Total Videos</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2.5+</span>
+                <span class="stat-label">Hours of Content</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Categories</span>
+            </div>
         </div>
 
-        <div class="video-grid" id="videoGrid">
-            <div class="loading-message">
-                <p>Loading videos...</p>
+        <div class="video-grid">
+            <!-- Google Drive Video -->
+            <div class="video-card">
+                <div class="video-thumbnail" onclick="window.open('https://drive.google.com/file/d/14vtsC1WbzEmrYlRjB8xi3FwaNg959I4o/view', '_blank')">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Winzer + CQL AWS Middleware Walkthrough</h3>
+                    <div class="video-meta">
+                        <span class="video-category">System Architecture</span>
+                        <span class="video-date">March 12, 2025</span>
+                    </div>
+                    <p class="video-description">Comprehensive walkthrough of the Winzer eCommerce platform integration with CQL AWS Middleware system, covering data flow, Lambda functions, and ECS Fargate tasks.</p>
+                    <div class="video-actions">
+                        <a href="https://drive.google.com/file/d/14vtsC1WbzEmrYlRjB8xi3FwaNg959I4o/view" class="video-btn video-btn-primary" target="_blank">
+                            ▶ Watch Video
+                        </a>
+                        <a href="https://drive.google.com/uc?export=download&id=14vtsC1WbzEmrYlRjB8xi3FwaNg959I4o" class="video-btn video-btn-secondary" target="_blank">
+                            📥 Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loom Videos -->
+            <div class="video-card">
+                <div class="video-thumbnail" onclick="window.open('https://www.loom.com/share/151364a420b04460af10cae101e5f424?sid=af8536d3-bb29-4512-9cdd-06fe0c9f4a6f', '_blank')">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Platform Overview & Navigation</h3>
+                    <div class="video-meta">
+                        <span class="video-category">Platform Overview</span>
+                        <span class="video-date">March 2025</span>
+                    </div>
+                    <p class="video-description">Introduction to the Winzer eCommerce platform, covering main navigation, key features, and user interface overview.</p>
+                    <div class="video-actions">
+                        <a href="https://www.loom.com/share/151364a420b04460af10cae101e5f424?sid=af8536d3-bb29-4512-9cdd-06fe0c9f4a6f" class="video-btn video-btn-primary" target="_blank">
+                            ▶ Watch Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-thumbnail" onclick="window.open('https://www.loom.com/share/e62a95d08c174155b92350489da0a3a2?sid=f3e3ddf4-3dd9-4e31-8b3d-44422a6417b8', '_blank')">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Product Management Workflow</h3>
+                    <div class="video-meta">
+                        <span class="video-category">Product Management</span>
+                        <span class="video-date">March 2025</span>
+                    </div>
+                    <p class="video-description">Step-by-step guide to managing products in the Winzer platform, including adding, editing, and organizing product data.</p>
+                    <div class="video-actions">
+                        <a href="https://www.loom.com/share/e62a95d08c174155b92350489da0a3a2?sid=f3e3ddf4-3dd9-4e31-8b3d-44422a6417b8" class="video-btn video-btn-primary" target="_blank">
+                            ▶ Watch Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-thumbnail" onclick="window.open('https://www.loom.com/share/d212496f8c3f4137934a2fe48d840363?sid=2f049af8-9053-41af-b21b-7385ec74ceaf', '_blank')">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Order Processing & Fulfillment</h3>
+                    <div class="video-meta">
+                        <span class="video-category">Order Management</span>
+                        <span class="video-date">March 2025</span>
+                    </div>
+                    <p class="video-description">Complete walkthrough of order processing, fulfillment workflows, and inventory management within the platform.</p>
+                    <div class="video-actions">
+                        <a href="https://www.loom.com/share/d212496f8c3f4137934a2fe48d840363?sid=2f049af8-9053-41af-b21b-7385ec74ceaf" class="video-btn video-btn-primary" target="_blank">
+                            ▶ Watch Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-thumbnail" onclick="window.open('https://www.loom.com/share/3002365fa67742ec8f882dffdd537bb1?sid=9e0a1ff8-378e-49d6-b4cf-906577e47515', '_blank')">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">SearchSpring Configuration</h3>
+                    <div class="video-meta">
+                        <span class="video-category">Search & Discovery</span>
+                        <span class="video-date">March 2025</span>
+                    </div>
+                    <p class="video-description">Detailed guide to configuring SearchSpring filters, search functionality, and product discovery features.</p>
+                    <div class="video-actions">
+                        <a href="https://www.loom.com/share/3002365fa67742ec8f882dffdd537bb1?sid=9e0a1ff8-378e-49d6-b4cf-906577e47515" class="video-btn video-btn-primary" target="_blank">
+                            ▶ Watch Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-thumbnail" onclick="window.open('https://www.loom.com/share/fd0b14b949b94820bf0d9975766c3c08?sid=c065c2db-a76a-4beb-a7a4-5a4ed67e6259', '_blank')">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">Shipping & Logistics Setup</h3>
+                    <div class="video-meta">
+                        <span class="video-category">Shipping & Logistics</span>
+                        <span class="video-date">March 2025</span>
+                    </div>
+                    <p class="video-description">Comprehensive tutorial on configuring shipping rules, carrier settings, and logistics management with ShipperHQ integration.</p>
+                    <div class="video-actions">
+                        <a href="https://www.loom.com/share/fd0b14b949b94820bf0d9975766c3c08?sid=c065c2db-a76a-4beb-a7a4-5a4ed67e6259" class="video-btn video-btn-primary" target="_blank">
+                            ▶ Watch Video
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="video-info">
             <h3>📹 Video Information</h3>
             <ul>
-                <li><strong>Google Drive:</strong> High-quality recordings stored securely in Google Drive</li>
+                <li><strong>Google Drive:</strong> High-quality recordings stored securely in Google Drive with download capabilities</li>
                 <li><strong>Loom Videos:</strong> Interactive walkthroughs with screen recording and voice narration</li>
-                <li><strong>Accessibility:</strong> Videos can be viewed directly or downloaded for offline viewing</li>
-                <li><strong>Updates:</strong> New videos are automatically detected when added to the system</li>
+                <li><strong>Accessibility:</strong> All videos can be viewed directly in your browser</li>
+                <li><strong>Categories:</strong> Videos are organized by platform functionality for easy navigation</li>
             </ul>
         </div>
 
@@ -46,192 +171,6 @@
         <div id="footer-container"></div>
         
         <script>
-            // Video data - this would typically be generated server-side
-            const videoData = [
-                {
-                    filename: "Winzer + CQL_ AWS_Middleware Walkthrough (WSSBPB-613) - 2025_03_12 10_00 EDT - Recording.mp4",
-                    title: "Winzer + CQL AWS Middleware Walkthrough",
-                    description: "Comprehensive walkthrough of the Winzer eCommerce platform integration with CQL AWS Middleware system, covering data flow, Lambda functions, and ECS Fargate tasks.",
-                    duration: "45:30",
-                    date: "March 12, 2025",
-                    size: "2.1 GB",
-                    category: "System Architecture",
-                    watchUrl: "https://drive.google.com/file/d/14vtsC1WbzEmrYlRjB8xi3FwaNg959I4o/view",
-                    downloadUrl: "https://drive.google.com/uc?export=download&id=14vtsC1WbzEmrYlRjB8xi3FwaNg959I4o",
-                    type: "google-drive"
-                },
-                {
-                    filename: "Loom Video 1",
-                    title: "Platform Overview & Navigation",
-                    description: "Introduction to the Winzer eCommerce platform, covering main navigation, key features, and user interface overview.",
-                    duration: "12:45",
-                    date: "March 2025",
-                    size: "Loom Video",
-                    category: "Platform Overview",
-                    watchUrl: "https://www.loom.com/share/151364a420b04460af10cae101e5f424?sid=af8536d3-bb29-4512-9cdd-06fe0c9f4a6f",
-                    downloadUrl: "#",
-                    type: "loom"
-                },
-                {
-                    filename: "Loom Video 2",
-                    title: "Product Management Workflow",
-                    description: "Step-by-step guide to managing products in the Winzer platform, including adding, editing, and organizing product data.",
-                    duration: "18:30",
-                    date: "March 2025",
-                    size: "Loom Video",
-                    category: "Product Management",
-                    watchUrl: "https://www.loom.com/share/e62a95d08c174155b92350489da0a3a2?sid=f3e3ddf4-3dd9-4e31-8b3d-44422a6417b8",
-                    downloadUrl: "#",
-                    type: "loom"
-                },
-                {
-                    filename: "Loom Video 3",
-                    title: "Order Processing & Fulfillment",
-                    description: "Complete walkthrough of order processing, fulfillment workflows, and inventory management within the platform.",
-                    duration: "15:20",
-                    date: "March 2025",
-                    size: "Loom Video",
-                    category: "Order Management",
-                    watchUrl: "https://www.loom.com/share/d212496f8c3f4137934a2fe48d840363?sid=2f049af8-9053-41af-b21b-7385ec74ceaf",
-                    downloadUrl: "#",
-                    type: "loom"
-                },
-                {
-                    filename: "Loom Video 4",
-                    title: "SearchSpring Configuration",
-                    description: "Detailed guide to configuring SearchSpring filters, search functionality, and product discovery features.",
-                    duration: "22:15",
-                    date: "March 2025",
-                    size: "Loom Video",
-                    category: "Search & Discovery",
-                    watchUrl: "https://www.loom.com/share/3002365fa67742ec8f882dffdd537bb1?sid=9e0a1ff8-378e-49d6-b4cf-906577e47515",
-                    downloadUrl: "#",
-                    type: "loom"
-                },
-                {
-                    filename: "Loom Video 5",
-                    title: "Shipping & Logistics Setup",
-                    description: "Comprehensive tutorial on configuring shipping rules, carrier settings, and logistics management with ShipperHQ integration.",
-                    duration: "19:45",
-                    date: "March 2025",
-                    size: "Loom Video",
-                    category: "Shipping & Logistics",
-                    watchUrl: "https://www.loom.com/share/fd0b14b949b94820bf0d9975766c3c08?sid=c065c2db-a76a-4beb-a7a4-5a4ed67e6259",
-                    downloadUrl: "#",
-                    type: "loom"
-                }
-            ];
-
-            function formatFileSize(bytes) {
-                if (bytes === 0) return '0 Bytes';
-                const k = 1024;
-                const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
-                const i = Math.floor(Math.log(bytes) / Math.log(k));
-                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-            }
-
-            function extractVideoInfo(filename) {
-                // Extract title from filename (remove extension and clean up)
-                const title = filename.replace(/\.(mp4|mov|avi|mkv)$/i, '')
-                    .replace(/_/g, ' ')
-                    .replace(/\s+/g, ' ')
-                    .trim();
-                
-                return {
-                    filename: filename,
-                    title: title,
-                    description: `Video walkthrough: ${title}`,
-                    duration: "Unknown",
-                    date: "Unknown",
-                    size: "Unknown",
-                    category: "General",
-                    watchUrl: "#",
-                    downloadUrl: "#",
-                    type: "unknown"
-                };
-            }
-
-            function loadVideos() {
-                const videoGrid = document.getElementById('videoGrid');
-                const videoCount = document.getElementById('videoCount');
-                
-                // For now, we'll use the static data
-                // In a real implementation, this would fetch from a server endpoint
-                const videos = videoData;
-                
-                console.log('Loading videos:', videos.length);
-                
-                if (videoCount) {
-                    videoCount.textContent = `${videos.length} video${videos.length !== 1 ? 's' : ''} available`;
-                }
-                
-                if (!videoGrid) {
-                    console.error('Video grid element not found');
-                    return;
-                }
-                
-                if (videos.length === 0) {
-                    videoGrid.innerHTML = `
-                        <div class="no-videos">
-                            <h3>No videos found</h3>
-                            <p>No video files were found in the recordings directory. Add MP4 files to the recordings folder to see them here.</p>
-                        </div>
-                    `;
-                    return;
-                }
-
-                videoGrid.innerHTML = videos.map(video => `
-                    <div class="video-card">
-                        <div class="video-thumbnail" onclick="window.open('${video.watchUrl}', '_blank')">
-                            <div class="play-icon">▶</div>
-                            <div class="video-overlay">
-                                <div class="video-duration">${video.duration}</div>
-                                <div class="video-type">${video.type === 'google-drive' ? '📁 Google Drive' : video.type === 'loom' ? '🎥 Loom' : '📹 Video'}</div>
-                            </div>
-                        </div>
-                        <div class="video-content">
-                            <h3 class="video-title">${video.title}</h3>
-                            <div class="video-meta">
-                                <span class="video-category">${video.category}</span>
-                                <span class="video-date">${video.date}</span>
-                                <span class="video-size">${video.size}</span>
-                            </div>
-                            <p class="video-description">${video.description}</p>
-                            <div class="video-actions">
-                                <a href="${video.watchUrl}" class="video-btn video-btn-primary" target="_blank">
-                                    ▶ Watch Video
-                                </a>
-                                ${video.downloadUrl !== '#' ? `<a href="${video.downloadUrl}" class="video-btn video-btn-secondary" target="_blank">📥 Download</a>` : ''}
-                            </div>
-                        </div>
-                    </div>
-                `).join('');
-            }
-
-            function updateLastUpdated() {
-                const now = new Date();
-                const lastUpdated = document.getElementById('lastUpdated');
-                if (lastUpdated) {
-                    lastUpdated.textContent = now.toLocaleDateString('en-US', { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                    });
-                }
-            }
-
-            // Initialize page immediately
-            loadVideos();
-            updateLastUpdated();
-            
-            // Add refresh functionality
-            document.addEventListener('DOMContentLoaded', function() {
-                document.getElementById('refreshVideos').addEventListener('click', function() {
-                    loadVideos();
-                    updateLastUpdated();
-                });
-            });
-
             // Load footer component
             fetch('footer.html')
                 .then(response => response.text())
