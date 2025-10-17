@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# This is proprietary and confidential documentation
+# Unauthorized access and indexing is prohibited
