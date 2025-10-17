@@ -18,52 +18,136 @@
             <nav class="toc-sidebar">
                 <h3>Table of Contents</h3>
                 <ul>
-                    <li><a href="#executive-summary">Executive Summary</a></li>
-                    <li><a href="#platform-architecture">Platform Architecture</a></li>
-                    <li><a href="#content-management">Content Management</a></li>
+                    <li><a href="#executive-summary">Executive Summary</a>
+                        <ul>
+                            <li><a href="#platform-overview">Platform Overview</a></li>
+                            <li><a href="#key-technical-components">Key Technical Components</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#platform-architecture">Platform Architecture</a>
+                        <ul>
+                            <li><a href="#multi-site-structure">Multi-Site Structure</a></li>
+                            <li><a href="#site-specific-configurations">Site-Specific Configurations</a></li>
+                            <li><a href="#technology-stack">Technology Stack</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#content-management">Content Management</a>
+                        <ul>
+                            <li><a href="#page-templates-content-structure">Page Templates & Content Structure</a></li>
+                            <li><a href="#content-components-sections">Content Components & Sections</a>
+                                <ul>
+                                    <li><a href="#core-content-sections">Core Content Sections</a></li>
+                                    <li><a href="#grid-and-layout-sections">Grid and Layout Sections</a></li>
+                                    <li><a href="#interactive-content-sections">Interactive Content Sections</a></li>
+                                    <li><a href="#product-and-collection-sections">Product and Collection Sections</a></li>
+                                    <li><a href="#blog-and-content-sections">Blog and Content Sections</a></li>
+                                    <li><a href="#navigation-and-header-sections">Navigation and Header Sections</a></li>
+                                    <li><a href="#footer-and-utility-sections">Footer and Utility Sections</a></li>
+                                    <li><a href="#specialized-content-sections">Specialized Content Sections</a></li>
+                                    <li><a href="#product-detail-sections">Product Detail Sections</a></li>
+                                    <li><a href="#collection-and-search-sections">Collection and Search Sections</a></li>
+                                    <li><a href="#search-and-discovery-sections">Search and Discovery Sections</a></li>
+                                    <li><a href="#cart-and-checkout-sections">Cart and Checkout Sections</a></li>
+                                    <li><a href="#account-and-customer-sections">Account and Customer Sections</a></li>
+                                    <li><a href="#specialized-display-sections">Specialized Display Sections</a></li>
+                                    <li><a href="#utility-and-helper-sections">Utility and Helper Sections</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#metafield-integration">Metafield Integration</a></li>
+                            <li><a href="#content-management-workflows">Content Management Workflows</a></li>
+                            <li><a href="#metafields-in-content-management">Metafields in Content Management</a></li>
+                            <li><a href="#content-management-best-practices">Content Management Best Practices</a></li>
+                            <li><a href="#content-management-tools">Content Management Tools</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#product-management">Product Management</a>
                         <ul>
+                            <li><a href="#current-product-inventory">Current Product Inventory</a></li>
+                            <li><a href="#product-data-standards">Product Data Standards</a></li>
+                            <li><a href="#metaobjects">Metaobjects</a></li>
                             <li><a href="#product-grouping-and-variants">Product Grouping & Variants</a></li>
+                            <li><a href="#product-creation-workflow">Product Creation Workflow</a></li>
                             <li><a href="#data-flow-and-integration">Data Flow & Integration</a></li>
                         </ul>
                     </li>
-                    <li><a href="#site-management">Site Management</a></li>
+                    <li><a href="#site-management">Site Management</a>
+                        <ul>
+                            <li><a href="#theme-management">Theme Management</a></li>
+                            <li><a href="#app-management">App Management</a>
+                                <ul>
+                                    <li><a href="#winzer-pricing-api-app">Winzer Pricing API App</a></li>
+                                    <li><a href="#b2b-catalog-pricing-solution">B2B Catalog Pricing Solution</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
                     <li><a href="#custom-elements">Custom Elements</a>
                         <ul>
                             <li><a href="#searchspring-integration">SearchSpring Integration</a></li>
                             <li><a href="#external-integrations-and-feeds">External Integrations & Feeds</a></li>
+                            <li><a href="#custom-javascript-functions">Custom JavaScript Functions</a></li>
+                            <li><a href="#custom-css-classes">Custom CSS Classes</a></li>
                         </ul>
                     </li>
-                    <li><a href="#operations--runbooks">Operations & Runbooks</a></li>
-                    <li><a href="#kpi--analytics">KPI & Analytics</a></li>
-                    <li><a href="#documentation-sources">Documentation Sources</a></li>
+                    <li><a href="#operations--runbooks">Operations & Runbooks</a>
+                        <ul>
+                            <li><a href="#user-access-provisioning">User & Access Provisioning</a></li>
+                            <li><a href="#theme-build-deploy-workflow">Theme Build & Deploy Workflow</a></li>
+                            <li><a href="#matrixify-backup-restore">Matrixify Backup & Restore</a></li>
+                            <li><a href="#searchspring-incident-handling">SearchSpring Incident Handling</a></li>
+                            <li><a href="#aws-middleware-incident-handling">AWS Middleware Incident Handling</a></li>
+                            <li><a href="#monitoring-tasks">Monitoring Tasks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#kpi--analytics">KPI & Analytics</a>
+                        <ul>
+                            <li><a href="#key-performance-indicators">Key Performance Indicators</a></li>
+                            <li><a href="#analytics-dashboards">Analytics Dashboards</a></li>
+                            <li><a href="#reporting-cadence">Reporting Cadence</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#documentation-sources">Documentation Sources</a>
+                        <ul>
+                            <li><a href="#data-sources">Data Sources</a></li>
+                            <li><a href="#code-analysis">Code Analysis</a></li>
+                            <li><a href="#export-data-summary">Export Data Summary</a></li>
+                            <li><a href="#data-freshness">Data Freshness</a></li>
+                            <li><a href="#maintenance-schedule">Maintenance Schedule</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             
             <main>
                 <section id="executive-summary">
                     <h2 id="executive-summary">Executive Summary</h2>
-<h3 id="platform-overview">Platform Overview</h3>
+                    <section id="platform-overview">
+                        <h3 id="platform-overview">Platform Overview</h3>
 <p>Winzer operates three distinct Shopify Plus stores under a unified Dawn-based architecture:</p>
 <ul>
 <li><strong>OneSource</strong> - <a href="https://www.onesourcesupplyco.com">https://www.onesourcesupplyco.com</a> -  (<code>winzeronesource.myshopify.com</code>) - Primary DTC store (695 products, 44 blog posts)</li>
 <li><strong>FastServ</strong> - <a href="https://store.fastservsupplyco.com">https://store.fastservsupplyco.com</a> - (<code>winzerfastserv.myshopify.com</code>) - Fastserv Supply Co B2B store (42,529 products, 3 blog posts)</li>
 <li><strong>Winzer Corp</strong> - <a href="https://store.winzer.com">https://store.winzer.com</a> - (<code>winzercorp.myshopify.com</code>) - Winzer B2B store (48,718 products, 3 blog posts)</li>
 </ul>
-<h3 id="key-technical-components">Key Technical Components</h3>
-<ul>
-<li><strong>Base Theme:</strong> Dawn with heavy customization</li>
-<li><strong>SearchSpring Integration:</strong> Advanced search, filtering, and recommendations</li>
-<li><strong>Multi-site Architecture:</strong> Shared components with site-specific overrides</li>
-<li><strong>Node.js Build System:</strong> Webpack-based development and deployment</li>
-<li><strong>Metafield System:</strong> 20+ custom metafields for product data and SearchSpring integration</li>
-<li><strong>AWS Middleware System:</strong> Critical .NET-based integration layer for data synchronization</li>
-</ul>
+                    </section>
+                    
+                    <section id="key-technical-components">
+                        <h3 id="key-technical-components">Key Technical Components</h3>
+                        <ul>
+                            <li><strong>Base Theme:</strong> Dawn with heavy customization</li>
+                            <li><strong>SearchSpring Integration:</strong> Advanced search, filtering, and recommendations</li>
+                            <li><strong>Multi-site Architecture:</strong> Shared components with site-specific overrides</li>
+                            <li><strong>Node.js Build System:</strong> Webpack-based development and deployment</li>
+                            <li><strong>Metafield System:</strong> 20+ custom metafields for product data and SearchSpring integration</li>
+                            <li><strong>AWS Middleware System:</strong> Critical .NET-based integration layer for data synchronization</li>
+                        </ul>
+                    </section>
                 </section>
                 
                 <section id="platform-architecture">
                     <h2 id="platform-architecture">Platform Architecture</h2>
-<h3 id="multi-site-structure">Multi-Site Structure</h3>
+                    <section id="multi-site-structure">
+                        <h3 id="multi-site-structure">Multi-Site Structure</h3>
 <pre><code>winzer-main/
 ├── sites/
 │   ├── _shared/          # Core Dawn overrides (shared across all sites)
