@@ -137,6 +137,14 @@ th {
     grid-template-columns: 280px 1fr;
     gap: 2rem;
     margin-top: 2rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.two-column-layout main {
+    min-width: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .toc-sidebar {
@@ -180,6 +188,27 @@ th {
 
 .toc-sidebar a:hover {
     color: var(--sage-green);
+}
+
+/* Responsive two-column layout */
+@media (max-width: 1200px) {
+    .two-column-layout {
+        grid-template-columns: 240px 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .two-column-layout {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .toc-sidebar {
+        position: static;
+        max-height: none;
+        margin-bottom: 2rem;
+    }
 }
 
 /* Legacy TOC styles for backward compatibility */
