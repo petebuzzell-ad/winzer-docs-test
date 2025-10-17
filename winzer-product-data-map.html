@@ -14,27 +14,32 @@
     <div class="container">
         <h1 id="winzer-product-data-map">Winzer Product Data Map - Oracle PIM to Shopify</h1>
         
-        <div class="toc">
-            <h2 id="table-of-contents">Table of Contents</h2>
-            <ol>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#data-flow-architecture">Data Flow Architecture</a></li>
-                <li><a href="#oracle-pim-fields">Oracle PIM Fields</a></li>
-                <li><a href="#middleware-transformations">Middleware Transformations</a></li>
-                <li><a href="#shopify-metafields">Shopify Metafields</a></li>
-                <li><a href="#special-logic">Special Logic & Business Rules</a></li>
-                <li><a href="#data-quality-considerations">Data Quality Considerations</a></li>
-            </ol>
-        </div>
-
-        <h2 id="overview">Overview</h2>
+        <div class="two-column-layout">
+            <nav class="toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#data-flow-architecture">Data Flow Architecture</a></li>
+                    <li><a href="#oracle-pim-fields">Oracle PIM Fields</a></li>
+                    <li><a href="#middleware-transformations">Middleware Transformations</a></li>
+                    <li><a href="#shopify-metafields">Shopify Metafields</a></li>
+                    <li><a href="#special-logic">Special Logic & Business Rules</a></li>
+                    <li><a href="#data-quality-considerations">Data Quality Considerations</a></li>
+                </ul>
+            </nav>
+            
+            <main>
+                <section id="overview">
+                    <h2 id="overview">Overview</h2>
         <p>This document maps the complete data flow from Oracle PIM (Product Information Management) through the AWS Middleware system to Shopify metafields. The middleware system performs critical transformations and data enrichment during this process.</p>
 
         <div class="alert info">
             <p><strong>Data Source:</strong> Oracle ERP exports CSV files via SFTP to AWS S3, which are then processed by Lambda functions and transformed into Shopify products with custom metafields.</p>
         </div>
-
-        <h2 id="data-flow-architecture">Data Flow Architecture</h2>
+                </section>
+                
+                <section id="data-flow-architecture">
+                    <h2 id="data-flow-architecture">Data Flow Architecture</h2>
         <div class="flow-diagram">
             <div class="flow-step">Oracle PIM</div>
             <div class="flow-arrow">→</div>
@@ -80,8 +85,10 @@
                     class G klaviyo
             </div>
         </div>
-
-        <h2 id="oracle-pim-fields">Oracle PIM Fields</h2>
+                </section>
+                
+                <section id="oracle-pim-fields">
+                    <h2 id="oracle-pim-fields">Oracle PIM Fields</h2>
         <p>The following table shows all Oracle PIM fields from the CSV export and their corresponding transformations:</p>
 
         <table>
@@ -354,8 +361,10 @@
                 </tr>
             </tbody>
         </table>
-
-        <h2 id="middleware-transformations">Middleware Transformations</h2>
+                </section>
+                
+                <section id="middleware-transformations">
+                    <h2 id="middleware-transformations">Middleware Transformations</h2>
         <p>The AWS Lambda middleware performs several critical transformations during the data processing:</p>
 
         <h3>Data Type Conversions</h3>
@@ -375,8 +384,10 @@
             <li><strong>Duplicate Prevention:</strong> Variants with identical option combinations are filtered out</li>
             <li><strong>Variant Limiting:</strong> Maximum 250 variants per product (first 100 if exceeded)</li>
         </ul>
-
-        <h2 id="shopify-metafields">Shopify Metafields</h2>
+                </section>
+                
+                <section id="shopify-metafields">
+                    <h2 id="shopify-metafields">Shopify Metafields</h2>
         <p>All custom data is stored in Shopify metafields with the namespace <code>cql</code>:</p>
 
         <h3>Product-Level Metafields</h3>
@@ -508,8 +519,10 @@
                 </tr>
             </tbody>
         </table>
-
-        <h2 id="special-logic">Special Logic & Business Rules</h2>
+                </section>
+                
+                <section id="special-logic">
+                    <h2 id="special-logic">Special Logic & Business Rules</h2>
 
         <h3>Pricing Logic</h3>
         <div class="special-logic">
@@ -535,8 +548,10 @@
         <div class="special-logic">
             <p><strong>Dynamic Attributes:</strong> <code>ATTTRIBUTE_NAMES</code> and <code>ATTRIBUTE_VALUES</code> are split by '|' and combined into a JSON object for SearchSpring filtering. This enables dynamic product filtering based on technical specifications.</p>
         </div>
-
-        <h2 id="data-quality-considerations">Data Quality Considerations</h2>
+                </section>
+                
+                <section id="data-quality-considerations">
+                    <h2 id="data-quality-considerations">Data Quality Considerations</h2>
 
         <!--<div class="alert critical">
             <p><strong>Data Inconsistencies:</strong> The meeting summary highlighted several data quality issues that affect the mapping process:</p>
@@ -564,6 +579,9 @@
             <li><strong>Duplicate Prevention:</strong> Duplicate variants are logged and filtered out</li>
             <li><strong>Size Limits:</strong> Products exceeding variant limits are truncated with warnings</li>
         </ul>
+                </section>
+            </main>
+        </div>
 
         <hr />
         <p><strong>Document Version:</strong> 1.0<br />
@@ -578,6 +596,9 @@
             <a href="winzer-product-data-map.md" download class="download-btn download-btn-success">📄 Download Markdown</a>
         </div>
     </div>
+    
+    <!-- Enhanced TOC Script -->
+    <script src="enhanced-toc.js"></script>
     
     <!-- Include Footer Component -->
     <div id="footer-container"></div>
