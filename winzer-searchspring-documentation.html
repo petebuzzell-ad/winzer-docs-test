@@ -9,23 +9,27 @@
 <body>
     <div class="container">
         <h1>SearchSpring Custom Implementation Documentation</h1>
-      
-        <h2 id="table-of-contents">Table of Contents</h2>
-        <ol>
-            <li><a href="#custom-implementation-overview">Custom Implementation Overview</a></li>
-            <li><a href="#site-specific-configurations">Site-Specific Configurations</a></li>
-            <li><a href="#custom-filter-components">Custom Filter Components</a></li>
-            <li><a href="#image-filter-implementations">Image Filter Implementations</a></li>
-            <li><a href="#custom-pricing-logic">Custom Pricing Logic</a></li>
-            <li><a href="#custom-styling-branding">Custom Styling & Branding</a></li>
-            <li><a href="#dynamic-variant-handling">Dynamic Variant Handling</a></li>
-            <li><a href="#metafield-integrations">Metafield Integrations</a></li>
-            <li><a href="#custom-search-behaviors">Custom Search Behaviors</a></li>
-            <li><a href="#technical-maintenance">Technical Maintenance</a></li>
-        </ol>
-        <hr />
-
-        <h2 id="custom-implementation-overview">Custom Implementation Overview</h2>
+        
+        <div class="two-column-layout">
+            <nav class="toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#custom-implementation-overview">Custom Implementation Overview</a></li>
+                    <li><a href="#site-specific-configurations">Site-Specific Configurations</a></li>
+                    <li><a href="#custom-filter-components">Custom Filter Components</a></li>
+                    <li><a href="#image-filter-implementations">Image Filter Implementations</a></li>
+                    <li><a href="#custom-pricing-logic">Custom Pricing Logic</a></li>
+                    <li><a href="#custom-styling-branding">Custom Styling & Branding</a></li>
+                    <li><a href="#dynamic-variant-handling">Dynamic Variant Handling</a></li>
+                    <li><a href="#metafield-integrations">Metafield Integrations</a></li>
+                    <li><a href="#custom-search-behaviors">Custom Search Behaviors</a></li>
+                    <li><a href="#technical-maintenance">Technical Maintenance</a></li>
+                </ul>
+            </nav>
+            
+            <main>
+                <section id="custom-implementation-overview">
+                    <h2 id="custom-implementation-overview">Custom Implementation Overview</h2>
         
         <p>This document details the custom SearchSpring implementations built specifically for the Winzer eCommerce ecosystem. The implementation includes site-specific configurations, custom components, and brand-specific functionality across three distinct stores.</p>
         
@@ -41,8 +45,10 @@
         <div class="alert-box alert-info">
             <strong>Technical Note:</strong> The implementation uses a single SearchSpring codebase with site-specific configurations determined by <code>window.Resources.searchspring.liquid_data.sitename</code> to deliver customized experiences for each brand.
         </div>
-
-        <h2 id="site-specific-configurations">Site-Specific Configurations</h2>
+                </section>
+                
+                <section id="site-specific-configurations">
+                    <h2 id="site-specific-configurations">Site-Specific Configurations</h2>
         
         <p>The implementation uses site-specific feature flags to deliver different functionality across the three Winzer brands:</p>
 
@@ -108,8 +114,10 @@
   }
 }</code>
         </div>
-
-        <h2 id="custom-filter-components">Custom Filter Components</h2>
+                </section>
+                
+                <section id="custom-filter-components">
+                    <h2 id="custom-filter-components">Custom Filter Components</h2>
         
         <p>The implementation includes several custom components built specifically for the Winzer brands:</p>
 
@@ -161,8 +169,10 @@
   &lt;/a&gt;
 };</code>
         </div>
-
-        <h2 id="custom-pricing-logic">Custom Pricing Logic</h2>
+                </section>
+                
+                <section id="custom-pricing-logic">
+                    <h2 id="custom-pricing-logic">Custom Pricing Logic</h2>
         
         <p>The implementation includes sophisticated pricing logic that varies by site and customer authentication status:</p>
 
@@ -213,8 +223,10 @@ if (currentSiteFeatures.b2b_pricing) {
   // Show pricing
 )}</code>
         </div>
-
-        <h2 id="custom-styling-branding">Custom Styling & Branding</h2>
+                </section>
+                
+                <section id="custom-styling-branding">
+                    <h2 id="custom-styling-branding">Custom Styling & Branding</h2>
         
         <p>The implementation includes extensive custom styling with site-specific branding and responsive design:</p>
 
@@ -269,8 +281,10 @@ if (currentSiteFeatures.b2b_pricing) {
                 </tr>
             </tbody>
         </table>
-
-        <h2 id="dynamic-variant-handling">Dynamic Variant Handling</h2>
+                </section>
+                
+                <section id="dynamic-variant-handling">
+                    <h2 id="dynamic-variant-handling">Dynamic Variant Handling</h2>
         
         <p>The implementation includes sophisticated variant selection and display logic that responds to user interactions and search filters:</p>
 
@@ -335,8 +349,10 @@ const handleSelectedURL = () => {
   setSelectedURL(variantID);
 }</code>
         </div>
-
-        <h2 id="metafield-integrations">Metafield Integrations</h2>
+                </section>
+                
+                <section id="metafield-integrations">
+                    <h2 id="metafield-integrations">Metafield Integrations</h2>
         
         <p>The implementation leverages multiple Shopify metafields for advanced filtering and product display:</p>
 
@@ -426,8 +442,10 @@ const handleSelectedURL = () => {
   });
 }</code>
         </div>
-
-        <h2 id="custom-search-behaviors">Custom Search Behaviors</h2>
+                </section>
+                
+                <section id="custom-search-behaviors">
+                    <h2 id="custom-search-behaviors">Custom Search Behaviors</h2>
         
         <p>The implementation includes several custom search and filtering behaviors tailored to the Winzer product catalog:</p>
 
@@ -470,8 +488,10 @@ const { width, height, valuesWithImages } = useMemo(() => {
   return { width, height, valuesWithImages }
 }, [facet.field, values, isMobile])</code>
         </div>
-
-        <h2 id="technical-maintenance">Technical Maintenance</h2>
+                </section>
+                
+                <section id="technical-maintenance">
+                    <h2 id="technical-maintenance">Technical Maintenance</h2>
         
         <p>This section covers ongoing maintenance and troubleshooting for the custom SearchSpring implementation:</p>
 
@@ -558,9 +578,13 @@ const { width, height, valuesWithImages } = useMemo(() => {
                 <li><strong>SearchSpring User Documentation:</strong> <a href="https://help.searchspring.net/hc/en-us" target="_blank">https://help.searchspring.net/hc/en-us</a></li>
                 <li><strong>SearchSpring API Reference:</strong> <a href="https://docs.searchspring.com/reference/getting-started-welcome" target="_blank">https://docs.searchspring.com/reference/getting-started-welcome</a></li>
             </ul>
-        </div>
+                </section>
+            </main>
         </div>
     </div>
+    
+    <!-- Enhanced TOC Script -->
+    <script src="enhanced-toc.js"></script>
     
     <!-- Include Footer Component -->
     <div id="footer-container"></div>

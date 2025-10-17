@@ -13,30 +13,36 @@
 <body>
     <div class="container">
         <h1 id="winzer-ecommerce-platform-onboarding-documentation">Winzer eCommerce Platform Onboarding Documentation</h1>
-<h2 id="table-of-contents">Table of Contents</h2>
-<ol>
-<li><a href="#executive-summary">Executive Summary</a></li>
-<li><a href="#platform-architecture">Platform Architecture</a></li>
-<li><a href="#content-management">Content Management</a></li>
-<li><a href="#product-management">Product Management</a>
-  <ul>
-    <li><a href="#product-grouping-and-variants">Product Grouping & Variants</a></li>
-    <li><a href="#data-flow-and-integration">Data Flow & Integration</a></li>
-  </ul>
-</li>
-<li><a href="#site-management">Site Management</a></li>
-<li><a href="#custom-elements">Custom Elements</a>
-  <ul>
-    <li><a href="#searchspring-integration">SearchSpring Integration</a></li>
-    <li><a href="#external-integrations-and-feeds">External Integrations & Feeds</a></li>
-  </ul>
-</li>
-<li><a href="#operations--runbooks">Operations &amp; Runbooks</a></li>
-<li><a href="#kpi--analytics">KPI &amp; Analytics</a></li>
-<li><a href="#documentation-sources">Documentation Sources</a></li>
-</ol>
-<hr />
-<h2 id="executive-summary">Executive Summary</h2>
+        
+        <div class="two-column-layout">
+            <nav class="toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#executive-summary">Executive Summary</a></li>
+                    <li><a href="#platform-architecture">Platform Architecture</a></li>
+                    <li><a href="#content-management">Content Management</a></li>
+                    <li><a href="#product-management">Product Management</a>
+                        <ul>
+                            <li><a href="#product-grouping-and-variants">Product Grouping & Variants</a></li>
+                            <li><a href="#data-flow-and-integration">Data Flow & Integration</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#site-management">Site Management</a></li>
+                    <li><a href="#custom-elements">Custom Elements</a>
+                        <ul>
+                            <li><a href="#searchspring-integration">SearchSpring Integration</a></li>
+                            <li><a href="#external-integrations-and-feeds">External Integrations & Feeds</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#operations--runbooks">Operations & Runbooks</a></li>
+                    <li><a href="#kpi--analytics">KPI & Analytics</a></li>
+                    <li><a href="#documentation-sources">Documentation Sources</a></li>
+                </ul>
+            </nav>
+            
+            <main>
+                <section id="executive-summary">
+                    <h2 id="executive-summary">Executive Summary</h2>
 <h3 id="platform-overview">Platform Overview</h3>
 <p>Winzer operates three distinct Shopify Plus stores under a unified Dawn-based architecture:</p>
 <ul>
@@ -53,8 +59,10 @@
 <li><strong>Metafield System:</strong> 20+ custom metafields for product data and SearchSpring integration</li>
 <li><strong>AWS Middleware System:</strong> Critical .NET-based integration layer for data synchronization</li>
 </ul>
-<hr />
-<h2 id="platform-architecture">Platform Architecture</h2>
+                </section>
+                
+                <section id="platform-architecture">
+                    <h2 id="platform-architecture">Platform Architecture</h2>
 <h3 id="multi-site-structure">Multi-Site Structure</h3>
 <pre><code>winzer-main/
 ├── sites/
@@ -97,9 +105,10 @@
 <li><strong>Data Integration:</strong> Oracle ERP, SFTP, AWS, S3</li>
 <li><strong>Monitoring:</strong> Elevar (conversion tracking), UpTimeRobot (uptime monitoring), Calibre (performance monitoring), Google Lighthouse/PSI (performance, accessibility &amp; SEO monitoring)</li>
 </ul>
-<hr />
-<div class="content-management">
-<h2 id="content-management">Content Management</h2>
+                </section>
+                
+                <section id="content-management">
+                    <h2 id="content-management">Content Management</h2>
 <p><strong>Content Inventory:</strong></p>
 <ul>
   <li><strong>Pages:</strong> 39 pages across all sites</li>
@@ -1397,8 +1406,10 @@ The Winzer theme uses a modular section-based approach for content management, a
   <li><strong>Brand Consistency:</strong> Follow Winzer brand guidelines</li>
   <li><strong>Accessibility:</strong> Ensure WCAG 2.1 AA compliance</li>
 </ul>
-<hr />
-<h2 id="product-management">Product Management</h2>
+                </section>
+                
+                <section id="product-management">
+                    <h2 id="product-management">Product Management</h2>
 <h3 id="current-product-inventory">Current Product Inventory</h3>
 <p><strong>OneSource Site:</strong></p>
 <ul>
@@ -1575,8 +1586,10 @@ The Winzer theme uses a modular section-based approach for content management, a
   <li>Reduces manual work for category managers</li>
   <li>Improves data consistency across product variants</li>
 </ul>
-<hr />
-<h2 id="site-management">Site Management</h2>
+                </section>
+                
+                <section id="site-management">
+                    <h2 id="site-management">Site Management</h2>
 <h3 id="theme-management">Theme Management</h3>
 <p><strong>Current Theme Structure:</strong></p>
 <ul>
@@ -1925,8 +1938,10 @@ sites/{site}/
   <li>Maintains professional appearance while encouraging inquiry</li>
   <li>Enables sales team to follow up on pricing requests</li>
 </ul>
-<hr />
-<h2 id="custom-elements">Custom Elements</h2>
+                </section>
+                
+                <section id="custom-elements">
+                    <h2 id="custom-elements">Custom Elements</h2>
 <h3 id="searchspring-integration">SearchSpring Integration</h3>
 <p><strong>Configuration:</strong></p>
 <ul>
@@ -2001,8 +2016,10 @@ sites/{site}/
   <li><code>.pdp__</code> - Product detail page components</li>
   <li><code>.ss__</code> - SearchSpring components</li>
 </ul>
-<hr />
-<h2 id="operations-runbooks">Operations &amp; Runbooks</h2>
+                </section>
+                
+                <section id="operations--runbooks">
+                    <h2 id="operations--runbooks">Operations & Runbooks</h2>
 <h3 id="user-access-provisioning">User &amp; Access Provisioning</h3>
 <p><strong>Shopify Admin Access:</strong><br />
 1. <strong>Request Access:</strong> Contact Shopify admin for access.<br />
@@ -2150,8 +2167,10 @@ sites/{site}/
   <li><strong>Data Integration Audit:</strong> Review all data flows and dependencies</li>
   <li><strong>Middleware Configuration Review:</strong> Update and optimize settings</li>
 </ul>
-<hr />
-<h2 id="kpi-analytics">KPI &amp; Analytics</h2>
+                </section>
+                
+                <section id="kpi--analytics">
+                    <h2 id="kpi--analytics">KPI & Analytics</h2>
 <h3 id="key-performance-indicators">Key Performance Indicators</h3>
 <p><strong>Traffic Metrics:</strong></p>
 <ul>
@@ -2222,8 +2241,10 @@ sites/{site}/
   <li><strong>Monitoring:</strong> AWS CloudWatch logs and alerts</li>
   <li><strong>Access:</strong> Winzer IT (owner), CQL Corp (emergency support)</li>
 </ul>
-<hr />
-<h2 id="documentation-sources">Documentation Sources</h2>
+                </section>
+                
+                <section id="documentation-sources">
+                    <h2 id="documentation-sources">Documentation Sources</h2>
 <h3 id="data-sources">Data Sources</h3>
 <ul>
 <li><strong>OneSource Export:</strong> <code>EVERYTHING-Export_2025-09-24_115603.zip</code> (September 24, 2025)</li>
@@ -2260,15 +2281,19 @@ sites/{site}/
 <li><strong>Monthly:</strong> Full site audits and performance reviews</li>
 <li><strong>Quarterly:</strong> Comprehensive documentation updates</li>
 </ul>
-<hr />
+                </section>
+            </main>
+        </div>
 
-<div class="download-section">
-    <h3>📄 Download Markdown Version</h3>
-    <p>Download the markdown version of this document for easier editing and version control:</p>
-    <a href="winzer-documentation.md" download class="download-btn download-btn-primary">📄 Download Markdown</a>
-</div>
-
+        <div class="download-section">
+            <h3>📄 Download Markdown Version</h3>
+            <p>Download the markdown version of this document for easier editing and version control:</p>
+            <a href="winzer-documentation.md" download class="download-btn download-btn-primary">📄 Download Markdown</a>
+        </div>
     </div>
+    
+    <!-- Enhanced TOC Script -->
+    <script src="enhanced-toc.js"></script>
     
     <!-- Include Footer Component -->
     <div id="footer-container"></div>

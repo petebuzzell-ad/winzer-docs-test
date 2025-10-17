@@ -131,6 +131,58 @@ th {
     color: #0c5460;
 }
 
+/* Two-column layout for enhanced TOC */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.toc-sidebar {
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    background: var(--newsprint-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--forest-green);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.toc-sidebar h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: var(--forest-green);
+    margin-bottom: 1rem;
+}
+
+.toc-sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.toc-sidebar ul ul {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.toc-sidebar a {
+    color: var(--charcoal);
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.toc-sidebar a:hover {
+    color: var(--sage-green);
+}
+
+/* Legacy TOC styles for backward compatibility */
 .toc {
     background: var(--digital-gray-3);
     padding: 1.5rem;

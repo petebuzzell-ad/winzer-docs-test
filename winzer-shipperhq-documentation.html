@@ -10,20 +10,24 @@
     <div class="container">
         <h1>ShipperHQ Shipping Rules Documentation</h1>
         
-        <h2 id="table-of-contents">Table of Contents</h2>
-        <ol>
-            <li><a href="#shipping-rules-overview">Shipping Rules Overview</a></li>
-            <li><a href="#shipping-groups-metafield">Shipping Groups Metafield</a></li>
-            <li><a href="#shipping-group-values">Shipping Group Values</a></li>
-            <li><a href="#shipping-rules-logic">Shipping Rules Logic</a></li>
-            <li><a href="#shipperhq-integration">ShipperHQ Integration</a></li>
-            <li><a href="#customer-experience">Customer Experience</a></li>
-            <li><a href="#data-flow">Data Flow & Processing</a></li>
-            <li><a href="#maintenance-troubleshooting">Maintenance & Troubleshooting</a></li>
-        </ol>
-        <hr />
-
-        <h2 id="shipping-rules-overview">Shipping Rules Overview</h2>
+        <div class="two-column-layout">
+            <nav class="toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#shipping-rules-overview">Shipping Rules Overview</a></li>
+                    <li><a href="#shipping-groups-metafield">Shipping Groups Metafield</a></li>
+                    <li><a href="#shipping-group-values">Shipping Group Values</a></li>
+                    <li><a href="#shipping-rules-logic">Shipping Rules Logic</a></li>
+                    <li><a href="#shipperhq-integration">ShipperHQ Integration</a></li>
+                    <li><a href="#customer-experience">Customer Experience</a></li>
+                    <li><a href="#data-flow">Data Flow & Processing</a></li>
+                    <li><a href="#maintenance-troubleshooting">Maintenance & Troubleshooting</a></li>
+                </ul>
+            </nav>
+            
+            <main>
+                <section id="shipping-rules-overview">
+                    <h2 id="shipping-rules-overview">Shipping Rules Overview</h2>
         
         <p>ShipperHQ is integrated with all three Winzer eCommerce sites to handle complex shipping rules that are product-based. The system uses variant-level metafields to control shipping restrictions, carrier limitations, and state-specific shipping rules.</p>
         
@@ -39,8 +43,10 @@
         <div class="alert-box alert-info">
             <strong>Integration Note:</strong> ShipperHQ reads shipping restriction data from Shopify variant metafields and automatically applies rules during the checkout process to determine available shipping options.
         </div>
-
-        <h2 id="shipping-groups-metafield">Shipping Groups Metafield</h2>
+                </section>
+                
+                <section id="shipping-groups-metafield">
+                    <h2 id="shipping-groups-metafield">Shipping Groups Metafield</h2>
         
         <p>The core of the shipping rules system is the <code>global.SHIPPING_GROUPS</code> variant metafield, which contains all shipping restriction identifiers for each product variant.</p>
 
@@ -100,8 +106,10 @@
         <div class="alert-box alert-warning">
             <strong>Critical Format Note:</strong> ShipperHQ requires the hash delimiter (<code>#</code>) to properly parse shipping restriction values. Using commas or other delimiters will cause the restrictions to not be recognized.
         </div>
-
-        <h2 id="shipping-group-values">Shipping Group Values</h2>
+                </section>
+                
+                <section id="shipping-group-values">
+                    <h2 id="shipping-group-values">Shipping Group Values</h2>
         
         <p>The shipping groups system uses several types of identifiers to control shipping behavior:</p>
 
@@ -173,8 +181,10 @@
 "CA"                             // Restricted from CA only
 "SMALL#CA#NY"                    // Small product restricted from CA and NY</code>
         </div>
-
-        <h2 id="shipping-rules-logic">Shipping Rules Logic</h2>
+                </section>
+                
+                <section id="shipping-rules-logic">
+                    <h2 id="shipping-rules-logic">Shipping Rules Logic</h2>
         
         <p>ShipperHQ processes the shipping groups data to apply specific shipping rules during checkout:</p>
 
@@ -285,8 +295,10 @@ switch (size_classification) {
                 </tr>
             </tbody>
         </table>
-
-        <h2 id="shipperhq-integration">ShipperHQ Integration</h2>
+                </section>
+                
+                <section id="shipperhq-integration">
+                    <h2 id="shipperhq-integration">ShipperHQ Integration</h2>
         
         <p>ShipperHQ integrates with Shopify to read shipping restriction data and apply rules during the checkout process:</p>
 
@@ -326,8 +338,10 @@ switch (size_classification) {
                 </tr>
             </tbody>
         </table>
-
-        <h2 id="customer-experience">Customer Experience</h2>
+                </section>
+                
+                <section id="customer-experience">
+                    <h2 id="customer-experience">Customer Experience</h2>
         
         <p>The shipping rules system provides a seamless experience while ensuring compliance with shipping restrictions:</p>
 
@@ -348,8 +362,10 @@ switch (size_classification) {
             <li><strong>Restriction Handling:</strong> Restricted methods are automatically excluded</li>
             <li><strong>Order Completion:</strong> Order processes with compliant shipping method</li>
         </ol>
-
-        <h2 id="data-flow">Data Flow & Processing</h2>
+                </section>
+                
+                <section id="data-flow">
+                    <h2 id="data-flow">Data Flow & Processing</h2>
         
         <p>The shipping restriction data flows through the system as follows:</p>
 
@@ -376,8 +392,10 @@ Oracle PIM → Middleware → Shopify Metafields → ShipperHQ → Checkout
             <li><strong>Hazmat Identification:</strong> Hazardous material flags converted to "Hazardous Products"</li>
             <li><strong>Size Classification:</strong> Product dimensions converted to SMALL/MEDIUM/LARGE</li>
         </ul>
-
-        <h2 id="maintenance-troubleshooting">Maintenance & Troubleshooting</h2>
+                </section>
+                
+                <section id="maintenance-troubleshooting">
+                    <h2 id="maintenance-troubleshooting">Maintenance & Troubleshooting</h2>
         
         <p>This section covers ongoing maintenance and troubleshooting for the ShipperHQ shipping rules system:</p>
 
@@ -453,9 +471,13 @@ Oracle PIM → Middleware → Shopify Metafields → ShipperHQ → Checkout
                 <li><strong>ShipperHQ Documentation:</strong> <a href="https://help.shipperhq.com/" target="_blank">https://help.shipperhq.com/</a></li>
                 <li><strong>ShipperHQ API Reference:</strong> <a href="https://docs.shipperhq.com/" target="_blank">https://docs.shipperhq.com/</a></li>
             </ul>
-        </div>
+                </section>
+            </main>
         </div>
     </div>
+    
+    <!-- Enhanced TOC Script -->
+    <script src="enhanced-toc.js"></script>
     
     <!-- Include Footer Component -->
     <div id="footer-container"></div>

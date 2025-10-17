@@ -14,29 +14,33 @@
     <div class="container">
         <h1 id="winzer-aws-middleware-system-documentation">Winzer AWS Middleware System Documentation</h1>
         
-        <div class="toc">
-            <h2 id="table-of-contents">Table of Contents</h2>
-            <ol>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#architecture-components">Architecture Components</a></li>
-                <li><a href="#collection-management">Collection Management</a></li>
-                <li><a href="#data-flow-architecture">Data Flow Architecture</a></li>
-                <li><a href="#critical-dependencies">Critical Dependencies</a></li>
-                <li><a href="#middleware-configuration">Middleware Configuration</a></li>
-                <li><a href="#monitoring-and-alerts">Monitoring and Alerts</a></li>
-                <li><a href="#operational-procedures">Operational Procedures</a></li>
-                <li><a href="#emergency-procedures">Emergency Procedures</a></li>
-                <li><a href="#access-and-permissions">Access and Permissions</a></li>
-                <li><a href="#cost-management">Cost Management</a></li>
-            </ol>
-        </div>
-
-        <div class="aws-middleware-system">
-            <h2 id="aws-middleware-system">AWS Middleware System</h2>
-            <h3 id="overview">Overview</h3>
-            <p>The Winzer eCommerce platform relies on a critical .NET 6-based middleware system deployed on AWS that handles all data synchronization between external systems and Shopify. This system is essential for the platform's operation and must be understood by the eCommerce team.</p>
+        <div class="two-column-layout">
+            <nav class="toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#architecture-components">Architecture Components</a></li>
+                    <li><a href="#collection-management">Collection Management</a></li>
+                    <li><a href="#data-flow-architecture">Data Flow Architecture</a></li>
+                    <li><a href="#critical-dependencies">Critical Dependencies</a></li>
+                    <li><a href="#middleware-configuration">Middleware Configuration</a></li>
+                    <li><a href="#monitoring-and-alerts">Monitoring and Alerts</a></li>
+                    <li><a href="#operational-procedures">Operational Procedures</a></li>
+                    <li><a href="#emergency-procedures">Emergency Procedures</a></li>
+                    <li><a href="#access-and-permissions">Access and Permissions</a></li>
+                    <li><a href="#cost-management">Cost Management</a></li>
+                </ul>
+            </nav>
             
-            <h3 id="architecture-components">Architecture Components</h3>
+            <main>
+                <div class="aws-middleware-system">
+                    <section id="overview">
+                        <h2 id="overview">Overview</h2>
+                        <p>The Winzer eCommerce platform relies on a critical .NET 6-based middleware system deployed on AWS that handles all data synchronization between external systems and Shopify. This system is essential for the platform's operation and must be understood by the eCommerce team.</p>
+                    </section>
+                    
+                    <section id="architecture-components">
+                        <h2 id="architecture-components">Architecture Components</h2>
             <p><strong>AWS Lambda Functions:</strong></p>
             <ul>
                 <li><strong>Product Feed Handler:</strong> Imports product data from Oracle PIM</li>
@@ -51,8 +55,10 @@
                 <li><strong>Product Feed Console App:</strong> Long-running product import processes</li>
                 <li><strong>Pricing Feed Console App:</strong> Bulk pricing synchronization</li>
             </ul>
-            
-            <h3 id="collection-management">Collection Management</h3>
+                    </section>
+                    
+                    <section id="collection-management">
+                        <h2 id="collection-management">Collection Management</h2>
             <p><strong>Automatic Collection Creation:</strong></p>
             <ul>
                 <li><strong>Smart Collections:</strong> Middleware creates smart collections based on product categories</li>
@@ -74,8 +80,10 @@
                 <li><strong>Relation:</strong> EQUALS</li>
                 <li><strong>Applied Disjunctively:</strong> false (products must match ALL rules)</li>
             </ul>
-            
-            <h3 id="data-flow-architecture">Data Flow Architecture</h3>
+                    </section>
+                    
+                    <section id="data-flow-architecture">
+                        <h2 id="data-flow-architecture">Data Flow Architecture</h2>
             <p><strong>Note:</strong> For the complete system data flow diagram showing all integrations, see the <a href="winzer-documentation.html#data-flow-and-integration">main documentation</a>.</p>
 
             <div class="mermaid-diagram">
@@ -147,8 +155,10 @@
                 <li><strong>Fulfillment Updates</strong> → <strong>External Systems</strong></li>
                 <li><strong>Return Processing</strong> → <strong>Loop Returns API</strong></li>
             </ol>
-            
-            <h3 id="critical-dependencies">Critical Dependencies</h3>
+                    </section>
+                    
+                    <section id="critical-dependencies">
+                        <h2 id="critical-dependencies">Critical Dependencies</h2>
             <p><strong>External Systems:</strong></p>
             <ul>
                 <li><strong>Oracle PIM:</strong> Primary source of product, pricing, and inventory data</li>
@@ -165,8 +175,10 @@
                 <li><strong>EventBridge:</strong> Scheduled task execution</li>
                 <li><strong>ECR:</strong> Container image registry</li>
             </ul>
-            
-            <h3 id="middleware-configuration">Middleware Configuration</h3>
+                    </section>
+                    
+                    <section id="middleware-configuration">
+                        <h2 id="middleware-configuration">Middleware Configuration</h2>
             <p><strong>Environment Variables:</strong></p>
             <ul>
                 <li><code>SHOPIFY_ACCESS_TOKEN</code>: API access for each site</li>
@@ -180,8 +192,10 @@
                 <li><strong>FastServ:</strong> High-volume B2B inventory management</li>
                 <li><strong>Winzer Corp:</strong> Enterprise pricing and contract management</li>
             </ul>
-            
-            <h3 id="monitoring-and-alerts">Monitoring and Alerts</h3>
+                    </section>
+                    
+                    <section id="monitoring-and-alerts">
+                        <h2 id="monitoring-and-alerts">Monitoring and Alerts</h2>
             <p><strong>AWS CloudWatch:</strong></p>
             <ul>
                 <li>Lambda function execution logs</li>
@@ -197,8 +211,10 @@
                 <li>SFTP connection issues</li>
                 <li>Shopify API rate limit exceeded</li>
             </ul>
-            
-            <h3 id="operational-procedures">Operational Procedures</h3>
+                    </section>
+                    
+                    <section id="operational-procedures">
+                        <h2 id="operational-procedures">Operational Procedures</h2>
             <p><strong>Daily Monitoring:</strong></p>
             <ol>
                 <li>Check CloudWatch logs for errors</li>
@@ -219,8 +235,10 @@
                 <li>Update configuration as needed</li>
                 <li>Performance optimization review</li>
             </ol>
-            
-            <h3 id="emergency-procedures">Emergency Procedures</h3>
+                    </section>
+                    
+                    <section id="emergency-procedures">
+                        <h2 id="emergency-procedures">Emergency Procedures</h2>
             <p><strong>Middleware Failure Response:</strong></p>
             <ol>
                 <li><strong>Immediate:</strong> Check CloudWatch logs for error details</li>
@@ -236,8 +254,10 @@
                 <li><strong>Workaround:</strong> Manual data entry if critical</li>
                 <li><strong>Resolution:</strong> Restart failed processes or redeploy functions</li>
             </ol>
-            
-            <h3 id="access-and-permissions">Access and Permissions</h3>
+                    </section>
+                    
+                    <section id="access-and-permissions">
+                        <h2 id="access-and-permissions">Access and Permissions</h2>
             <p><strong>AWS Console Access:</strong></p>
             <ul>
                 <li><strong>Owner:</strong> Winzer IT</li>
@@ -251,8 +271,10 @@
                 <li>ECS task status checking</li>
                 <li>SNS notification viewing</li>
             </ul>
-            
-            <h3 id="cost-management">Cost Management</h3>
+                    </section>
+                    
+                    <section id="cost-management">
+                        <h2 id="cost-management">Cost Management</h2>
             <p><strong>AWS Costs:</strong></p>
             <ul>
                 <li><strong>Lambda:</strong> Pay-per-execution (minimal cost)</li>
@@ -267,6 +289,9 @@
                 <li>Archive old S3 data regularly</li>
                 <li>Review SNS notification frequency</li>
             </ul>
+                    </section>
+                </div>
+            </main>
         </div>
         
         <hr />
@@ -278,6 +303,9 @@
             <a href="winzer-middleware-documentation.md" download class="download-btn download-btn-accent">📄 Download Markdown</a>
         </div>
     </div>
+    
+    <!-- Enhanced TOC Script -->
+    <script src="enhanced-toc.js"></script>
     
     <!-- Include Footer Component -->
     <div id="footer-container"></div>
